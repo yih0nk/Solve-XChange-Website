@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Login</title>
+<link href="{{ url_for('static', filename='css/login.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<div class="vcenter fstretch">
+    <form id="main">
+        <h1>Register</h1>
+        Create a new account!<br>
+        <div class="text-input">
+            <input type="text" placeholder="HDSB Email"><br>
+        </div>
+        <div class="text-input">
+            <input type="checkbox" style="display: none;" id="show-password" onclick="showPassword()">
+            <div class="stretch flex">
+                <input id="password-input" type="password" placeholder="Password">
+                <label id="show-text" for="show-password">Show</label>
+            </div>
+        </div>
+        <input type="submit" value="Register!">
+    </form>
+</div>
+
+<script>
+    const showLabel = document.querySelector('#show-text'),
+          showCheckbox = document.querySelector('#show-password'),
+          passwordInput = document.querySelector('#password-input')
+
+    function showPassword() {
+        if (showCheckbox.checked){
+            showLabel.innerHTML = 'Hide';
+            passwordInput.type = 'text';
+        }
+        else{
+            showLabel.innerHTML = 'Show';
+            passwordInput.type = 'password';
+        }
+    }
+</script>
+{% endblock %}

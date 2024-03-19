@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Comments</title>
+<link href="{{ url_for('static', filename='css/comments.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<section class="post">
+    <form action="/comments" method="POST">
+        <div class="wrapper split">
+            <div id="username">
+                <input name="username" type="text" autocomplete="off" placeholder="Username...">
+            </div>
+            <input id="submit" type="submit" value="Post!">
+        </div>
+        <textarea id="content" wrap="soft" name="content" rows="5" placeholder="What would you like to share?"></textarea>
+    </form>
+</section>
+<section id="sort">
+    <form class="wrapper split" id="sort-form" action="/comments" method="POST">
+        <div>
+            Sort by: <select name="sort-by" id="sort-by" onchange="changeFilter()" >
+                {% if sort == 'date' %}
+                <option value="date" selected>Date</option>
+                <option value="user">User</option>
+                {% else %}
+                <option value="date">Date</option>
+                <option value="user" selected>User</option>
+                {% endif %}
+            </select>
+        </div>
+        <div>
+            {% if sort == 'date' %}
+            <input name="sort-username" style="display: none;" type="text" id="sort-username" placeholder="Username..." value="{{ s_user }}">
+            {% else %}
+            <input name="sort-username" style="display: inline;" type="text" id="sort-username" placeholder="Username..." value="{{ s_user }}">
+            {% endif %}
+        </div>
+    </form>
+</section>
+<section id="comments">
+    {% for comment in comments %}
+    <div id="post">
+        <p id="post-content">
+            {{ comment.content | replace('\r\n', '<br>') | safe }}
+        </p>
+        <div id="post-footer-{{comment.id}}" class="post-footer">
+            <div class="spaced">
+                <div class="inline">
+                    <label for="show-{{comment.id}}"><img id="arrow-{{comment.id}}" src="{{ url_for('static', filename='images/drarrow-dark.png') }}" class="icon"></label>
+                    <input id="show-{{comment.id}}" type="submit" value="View Replies" onclick="ToggleReplies('{{comment.id}}')">
+                </div>
+                <p id="post-metadata" class="inline">
+                    Posted by 
+                    <a id="post-username">{{ comment.username }},</a> 
+                    {{ comment.time_posted | calculate_time }} ago
+                </p>
+            </div>
+            <div id="replies-{{comment.id}}" class="replies" data-displayed="no">
+                <div class="container">
+                {% for reply in replies %}
+                    {% if reply.parent_id == comment.id %}
+                    <div id="post">
+                        <p id="post-content">
+                            {{ reply.content }}
+                        </p>
+                        <div class="hright">
+                            <p id="post-metadata" class="inline">
+                                Posted by
+                                <a id="post-username">{{ reply.username }},</a> 
+                                {{ reply.time_posted | calculate_time }} ago
+                            </p>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+                    <div class="hcenter">
+                        <div id="reply-button-{{comment.id}}" class="reply-button">
+                            <form id="reply-form-{{comment.id}}" class="reply-form" onsubmit="AddReply('{{comment.id}}'); event.preventDefault();">
+                                <input type="text" id="reply-input-{{comment.id}}" class="reply-input" style="width:100%;text-align:left;">
+                                <input type="submit" id="reply-submit-{{comment.id}}" class="reply-submit" value=">" style="opacity:0;border-radius:50%;width:1rem;height:1rem;text-align:center;line-height:.2rem;">
+                            </form>
+                            <label id="add-label-{{comment.id}}" class="add-label" for="add-reply-{{comment.id}}">+</label>
+                            <input id="add-reply-{{comment.id}}" type="submit" value="&nbsp;&nbsp;Post Reply" onclick="ToggleReplyInput('{{comment.id}}')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+<script src="{{ url_for('static', filename='js/comments.js') }}"></script>
+{% endblock %}

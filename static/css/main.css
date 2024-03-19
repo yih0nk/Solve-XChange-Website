@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+input:not([type="checkbox"]), textarea, select {
+    all: unset;
+    background-color: #121212;
+    text-align: left;
+}
+
+body {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    background-color: #121212;
+    font-size: 1.75vh;
+}
+
+textarea {
+    overflow-wrap: break-word;
+    resize: none;
+}
+
+input:not([type="checkbox"]), textarea {
+    border: solid 1px white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    background-color: #2f2f2f;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #1f1f1f;
+}
+
+label {
+    user-select: none;
+}
+
+.wrapper {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.wrapper-border {
+    border: solid 1px white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+label:hover, input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex .stretch {
+    flex: 1;
+}
+
+.fstretch {
+    width: 100vw;
+    height: 100vh;
+}
+
+.vcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hcenter {
+    display: flex;
+    justify-content: space-around;
+}
+
+.center {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    margin: 0;
+}
+
+.split {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hright {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.icon {
+    height: 1rem;
+    width: 1rem;
+}
+
+.spaced {
+    display: flex;
+    justify-content: space-between;
+}

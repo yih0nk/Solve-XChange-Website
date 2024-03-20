@@ -1,15 +1,16 @@
 //#region Constants
-const sortUsernameInput = document.querySelector('#sort-username'),
-    sortDropdown = document.querySelector('#sort-by'),
-    sortForm = document.querySelector('#sort-form');
+const sortUsernameInput = document.getElementById('sort-username'),
+    sortDropdown = document.getElementById('sort-by'),
+    sortForm = document.getElementById('sort-form');
 
 const offset = '(3rem)';
 
-const posts = document.querySelector('#comments');
-const replies = document.querySelectorAll('.replies');
+const posts = document.getElementById('comments'),
+      replies = document.querySelectorAll('.replies');
 
 const specialCharacters = { space: '\u00A0', doubleSpace: '\u00A0 \u00A0' };
 
+const usernameInput = document.getElementById('username-input');
 //Variables
 let currentOpenReplyIndex = -1,
     addReplyInputOpen = false,
@@ -26,25 +27,16 @@ replies.forEach((reply) => {
 setTimeout(() => posts.style.opacity = '1', 300)
 //#endregion
 
-function changeFilter() {
-    if (sortDropdown.value == 'user')
-        sortUsernameInput.style.display = 'inline'; 
-    else{
-        sortUsernameInput.style.display = 'none';
-        sortForm.submit();
-    }
-}
-
 //#region Animations
 function ToggleReplies(id) {
     if (currentOpenReplyIndex != -1 && currentOpenReplyIndex != id) {
         ToggleReplies(currentOpenReplyIndex);
     }
 
-    const reply = document.querySelector(`#replies-${id}`),
-        showButton = document.querySelector(`#show-${id}`),
-        arrow = document.querySelector(`#arrow-${id}`),
-        postFooter = document.querySelector(`#post-footer-${id}`);
+    const reply = document.getElementById(`replies-${id}`),
+        showButton = document.getElementById(`show-${id}`),
+        arrow = document.getElementById(`arrow-${id}`),
+        postFooter = document.getElementById(`post-footer-${id}`);
 
     if (reply.dataset.displayed == 'no'){
         currentOpenReplyIndex = id;
@@ -78,10 +70,11 @@ function ToggleReplyInput(id) {
     if (animating.replyInput)
         return;
 
-    const label = document.querySelector(`#add-label-${id}`),
-          button = document.querySelector(`#add-reply-${id}`),
-          input = document.querySelector(`#reply-form-${id}`),
-          submit = document.querySelector(`#reply-submit-${id}`);
+    const label = document.getElementById(`add-label-${id}`),
+          button = document.getElementById(`add-reply-${id}`),
+          form = document.getElementById(`reply-form-${id}`),
+          submit = document.getElementById(`reply-submit-${id}`),
+          input = document.getElementById(`reply-input-${id}`);
 
           addReplyInputOpen = !addReplyInputOpen;
           animating.replyInput = true;
@@ -95,7 +88,7 @@ function ToggleReplyInput(id) {
             }
         label.animate({ rotate: '180deg', translate: '1vw 0', margin: '0 1vw' }, 
         { duration: 1000, fill: 'forwards', easing: 'ease' });
-        input.animate(keyframes,
+        form.animate(keyframes,
         { duration: 1000, fill: 'forwards', easing: 'ease' }).onfinish = 
             () => {
                 submit.animate({ opacity: '1' }, 
@@ -114,19 +107,68 @@ function ToggleReplyInput(id) {
             }
             label.animate({ rotate: '0deg', translate: '0', margin: '0' }, 
             { duration: 1000, fill: 'forwards', easing: 'ease' });
-            input.animate(reversedKeyframes,
+            form.animate(reversedKeyframes,
             { duration: 1000, fill: 'forwards', easing: 'ease' }).onfinish =
                 () => {
                     animating.replyInput = false; 
                     label.innerHTML = '+';
+                    input.value = '';
                 };
         }
     }
 }
 //#endregion
 
-function AddReply(id) {
-    const replyInput = document.querySelector(`#reply-input-${replyInput}`);
-
-    console.log(replyInput);
+//#region Functions
+function changeFilter() {
+    if (sortDropdown.value == 'user')
+        sortUsernameInput.style.display = 'inline'; 
+    else{
+        sortUsernameInput.style.display = 'none';
+        sortForm.submit();
+    }
 }
+
+function AddReply(id, event) {
+    //Stop the website from reloading
+    event.preventDefault();
+
+    const replyInput = document.querySelector(`#reply-input-${id}`);
+
+    $.ajax({
+        url: '/reply',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ 'username': usernameInput.value,
+                               'reply-content': replyInput.value,
+                               'reply-to': id }),
+        success: function(response) {
+            if (response.result == 'database error'){
+                console.error('Database error occurred');
+            }
+            else {
+                let content = response.content,
+                    username = response.username,
+                    timePosted = response.timePosted,
+                    parentId = response.parentId;
+
+                let replyHTML = `
+                <div id="post">
+                    <p id="post-content">${content}</p>
+                    <div class="hright">
+                        <p id="post-metadata" class="inline">
+                            Posted by <a id="post-username">${username},</a> ${timePosted} ago
+                        </p>
+                    </div>
+                </div>`;
+
+                document.getElementById(`add-replies-div-${parentId}`).insertAdjacentHTML('beforebegin', replyHTML);
+                ToggleReplyInput(parentId);
+            }
+        },
+        error: function(xhr, status, error) {
+            console.error('Error: ', error);
+        }
+    });
+}
+//#endregion

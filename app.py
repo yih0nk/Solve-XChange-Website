@@ -1,5 +1,5 @@
 #region Imports
-from flask import Flask, url_for, render_template, request, redirect
+from flask import Flask, url_for, render_template, request, redirect, jsonify, json
 from sqlalchemy import case, select, text
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
@@ -36,11 +36,12 @@ def Sort(request, replies):
         
 @app.route('/comments', methods=['POST', 'GET'])
 def index():
+    print(request.form.keys());
     replies = Reply.query.order_by(Reply.time_posted).all()
     if request.method == 'POST':
         if 'sort-by' in request.form.keys():
             return Sort(request, replies)
-        else:
+        elif 'content' in request.form.keys():
             new_comment = Comment(username=request.form['username'], 
                 content=request.form['content'],
                 time_posted=datetime.now())
@@ -51,6 +52,8 @@ def index():
                 return redirect('/comments')
             except:
                 return 'There was an issue posting your comment.'
+        elif 'reply-content' in request.form.keys():
+            return 'received return!'
     else:
         comments = Comment.query.order_by(Comment.time_posted).all()
         return render_template('comments.html', replies=replies, comments=reversed(comments), sort='date', s_user='')
@@ -89,6 +92,25 @@ class Reply(db.Model):
 
     def __repr__(self):
         return f'<Reply {self.id}>'
+    
+@app.route('/reply', methods=['POST'])
+def reply():
+    form_data = json.loads(request.data)
+    
+    new_reply = Reply(username=form_data['username'],
+                      content=form_data['reply-content'],
+                      time_posted=datetime.now(),
+                      parent_id=form_data['reply-to'])
+    try:
+        db.session.add(new_reply)
+        db.session.commit()
+        return jsonify({ 'result': 'success',
+                         'username': form_data['username'],
+                         'content': form_data['reply-content'],
+                         'timePosted': '0 seconds',
+                         'parentId': form_data['reply-to'] })
+    except:
+        return jsonify({'result':'database error'})
 #endregion
 
 #region Users

@@ -10,7 +10,7 @@
     <form action="/comments" method="POST">
         <div class="wrapper split">
             <div id="username">
-                <input name="username" type="text" autocomplete="off" placeholder="Username...">
+                <input id="username-input" name="username" type="text" autocomplete="off" placeholder="Username...">
             </div>
             <input id="submit" type="submit" value="Post!">
         </div>
@@ -75,10 +75,10 @@
                     </div>
                     {% endif %}
                 {% endfor %}
-                    <div class="hcenter">
+                    <div id="add-replies-div-{{comment.id}}" class="hcenter">
                         <div id="reply-button-{{comment.id}}" class="reply-button">
-                            <form id="reply-form-{{comment.id}}" class="reply-form" onsubmit="AddReply('{{comment.id}}'); event.preventDefault();">
-                                <input type="text" id="reply-input-{{comment.id}}" class="reply-input" style="width:100%;text-align:left;">
+                            <form id="reply-form-{{comment.id}}" class="reply-form" onsubmit="AddReply('{{comment.id}}', event)">
+                                <input type="text" id="reply-input-{{comment.id}}" class="reply-input" style="width:100%;text-align:left;" autocomplete="off">
                                 <input type="submit" id="reply-submit-{{comment.id}}" class="reply-submit" value=">" style="opacity:0;border-radius:50%;width:1rem;height:1rem;text-align:center;line-height:.2rem;">
                             </form>
                             <label id="add-label-{{comment.id}}" class="add-label" for="add-reply-{{comment.id}}">+</label>

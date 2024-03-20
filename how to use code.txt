@@ -1,0 +1,33 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Instructions on how to fork this repository:                   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Signup for a Github account.
+2. Download Github desktop.
+3. Open and log in to Github desktop.
+4. Click "Clone a Repository from the Internet...".
+5. Select "URL".
+6. Paste this url, "https://github.com/paidvbux/Stock-XChange-Website".
+7. Click "Clone".
+8. Click "Fetch origin" at the top.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Instructions on how to use after forking this repository:      
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Whenever I update the code, in the same place of "Fetch origin" will either remain unchanged or be replaced with "Push to origin"
+
+---------------------------
+If it says "Fetch origin" |
+---------------------------
+
+1. Just click the button.
+2. Code should be updated.
+
+----------------------------
+If it says "Push to origin"
+----------------------------
+
+1. Right click the bar that says changes
+2. Click "Discard all changes".
+3. Follow same steps as "Fetch origin".

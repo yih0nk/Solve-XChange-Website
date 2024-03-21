@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block body %}
-<section class="post">
+<section id="post-form">
     <form action="/comments" method="POST">
         <div class="wrapper split">
             <div id="username">
@@ -15,10 +15,11 @@
             <input id="submit" type="submit" value="Post!">
         </div>
         <textarea id="content" wrap="soft" name="content" rows="5" placeholder="What would you like to share?"></textarea>
+        <input type="hidden" name="channel" value="{{channel_id}}">
     </form>
 </section>
-<section id="sort">
-    <form class="wrapper split" id="sort-form" action="/comments" method="POST">
+<section id="sort-form">
+    <form class="wrapper split" action="/comments" method="POST">
         <div>
             Sort by: <select name="sort-by" id="sort-by" onchange="changeFilter()" >
                 {% if sort == 'date' %}
@@ -41,8 +42,8 @@
 </section>
 <section id="comments">
     {% for comment in comments %}
-    <div id="post">
-        <p id="post-content">
+    <div class="post">
+        <p class="post-content">
             {{ comment.content | replace('\r\n', '<br>') | safe }}
         </p>
         <div id="post-footer-{{comment.id}}" class="post-footer">
@@ -51,30 +52,14 @@
                     <label for="show-{{comment.id}}"><img id="arrow-{{comment.id}}" src="{{ url_for('static', filename='images/drarrow-dark.png') }}" class="icon"></label>
                     <input id="show-{{comment.id}}" type="submit" value="View Replies" onclick="ToggleReplies('{{comment.id}}')">
                 </div>
-                <p id="post-metadata" class="inline">
+                <p class="post-metadata inline">
                     Posted by 
-                    <a id="post-username">{{ comment.username }},</a> 
+                    <a class="post-username">{{ comment.username }},</a> 
                     {{ comment.time_posted | calculate_time }} ago
                 </p>
             </div>
-            <div id="replies-{{comment.id}}" class="replies" data-displayed="no">
-                <div class="container">
-                {% for reply in replies %}
-                    {% if reply.parent_id == comment.id %}
-                    <div id="post">
-                        <p id="post-content">
-                            {{ reply.content }}
-                        </p>
-                        <div class="hright">
-                            <p id="post-metadata" class="inline">
-                                Posted by
-                                <a id="post-username">{{ reply.username }},</a> 
-                                {{ reply.time_posted | calculate_time }} ago
-                            </p>
-                        </div>
-                    </div>
-                    {% endif %}
-                {% endfor %}
+            <div id="replies-{{comment.id}}" class="replies" data-displayed="no" data-replies-loaded="no">
+                <div class="wrapper">
                     <div id="add-replies-div-{{comment.id}}" class="hcenter">
                         <div id="reply-button-{{comment.id}}" class="reply-button">
                             <form id="reply-form-{{comment.id}}" class="reply-form" onsubmit="AddReply('{{comment.id}}', event)">

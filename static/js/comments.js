@@ -45,9 +45,12 @@ function ToggleReplies(id) {
         arrow.animate({ rotate: '90deg' }, { duration: 300, fill: 'forwards', easing: 'ease' });
         postFooter.animate({ backgroundColor: '#292929' }, { duration: 300, fill: 'forwards', easing: 'ease' });
         reply.firstElementChild.style.margin = '0';
+        if (reply.dataset.repliesLoaded == 'no')
+            InstantiateReplies(id);
     }
     else {
-        ToggleReplyInput(id);
+        if (addReplyInputOpen)
+            ToggleReplyInput(id);
         currentOpenReplyIndex = -1;
         addReplyInputOpen = false;
         reply.dataset.displayed = 'no'
@@ -128,9 +131,10 @@ function changeFilter() {
         sortForm.submit();
     }
 }
+//#endregion
 
+//#region Server Messages
 function AddReply(id, event) {
-    //Stop the website from reloading
     event.preventDefault();
 
     const replyInput = document.querySelector(`#reply-input-${id}`);
@@ -144,26 +148,70 @@ function AddReply(id, event) {
                                'reply-to': id }),
         success: function(response) {
             if (response.result == 'database error'){
-                console.error('Database error occurred');
+                console.error('A database error occurred...');
             }
             else {
                 let content = response.content,
                     username = response.username,
-                    timePosted = response.timePosted,
+                    timeElapsed = response.timeElapsed,
                     parentId = response.parentId;
 
-                let replyHTML = `
+                const newReplyHTML = `
                 <div id="post">
                     <p id="post-content">${content}</p>
                     <div class="hright">
                         <p id="post-metadata" class="inline">
-                            Posted by <a id="post-username">${username},</a> ${timePosted} ago
+                            Posted by <a id="post-username">${username},</a> ${timeElapsed} ago
                         </p>
                     </div>
                 </div>`;
 
-                document.getElementById(`add-replies-div-${parentId}`).insertAdjacentHTML('beforebegin', replyHTML);
+                document.getElementById(`add-replies-div-${parentId}`).insertAdjacentHTML('beforebegin', newReplyHTML);
                 ToggleReplyInput(parentId);
+            }
+        },
+        error: function(xhr, status, error) {
+            console.error('Error: ', error);
+        }
+    });
+}
+
+function InstantiateReplies(id) {
+    $.ajax({
+        url: '/get-replies',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ 'reply-id': id }),
+        success: function(response) {
+            console.log(response);
+            if (response.result == 'success') {
+                const commentReplies = document.getElementById(`replies-${id}`);
+    
+                for (let i = 0; i < response.replyCount; i++) {
+                    let content = response.contents[i],
+                        username = response.usernames[i],
+                        timeElapsed = response.timeElapsed[i];
+                    
+                    const replyHTML = `
+                    <div class="post">
+                        <p class="post-content">
+                            ${content}
+                        </p>
+                        <div class="hright">
+                            <p class="post-metadata" class="inline">
+                                Posted by
+                                <a class="post-username">${username},</a> 
+                                ${timeElapsed} ago
+                            </p>
+                        </div>
+                    </div>`
+                    commentReplies.firstElementChild.insertAdjacentHTML('afterbegin', replyHTML);
+                }
+    
+                commentReplies.dataset.repliesLoaded = 'yes';
+            }
+            else {
+                console.log('A database error occurred...');
             }
         },
         error: function(xhr, status, error) {

@@ -1,0 +1,5 @@
+2024-03-20
+ - Separated all database classes into a separate file called 'database.py'.
+ - Reworked all how the server communicates with the client.
+ - Made it so that replies only load if clicked instead of loading everything in the beginning.
+ - Added Channels database for future use.

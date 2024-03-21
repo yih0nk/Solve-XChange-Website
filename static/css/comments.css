@@ -1,4 +1,4 @@
-.post {
+#post-form {
     margin: 0 auto;
     width: 40vw;
     background-color: #1f1f1f;
@@ -29,16 +29,16 @@
     width: calc(100% - 25px);
 }
 
-#post * {
+.post * {
     user-select: none;
 }
 
-#post {
+.post {
     border-radius: 5px;
     margin: 25px;
 }
 
-#post-content {
+.post-content {
     background-color: #1f1f1f;
     border-radius: 5px;
     padding: 10px;
@@ -47,7 +47,7 @@
     margin: 0;
 }
 
-#post-metadata {
+.post-metadata {
     background-color: #121212;
     border-radius: 0 0 5px 5px;
     font-size: .8rem;
@@ -58,11 +58,11 @@
     margin: 0;
 }
 
-#post-username {
+.post-username {
     color: white;
 }
 
-#sort {
+#sort-form {
     display: flex;
     align-items: center;
     margin: 0 auto;
@@ -74,7 +74,7 @@
     text-align: center;
 }
 
-#sort > .wrapper {
+#sort-form > .wrapper {
     width: 100%;
     margin: 10px;
 }
@@ -84,11 +84,11 @@
     border-radius: 5px;
 }
 
-#post > :not(#post-content) {
+.post > :not(#post-content) {
     margin: 0 5px;
 }
 
-#post input:not(.reply-submit) {
+.post input:not(.reply-submit) {
     all: unset;
 }
 
@@ -107,7 +107,7 @@
     border-radius: 0 0 5px 5px;
 }
 
-.replies > .container {
+.replies > .wrapper {
     transition: margin 0.3s ease;
 }
 
@@ -125,7 +125,7 @@
 }
 
 .reply-form {
-    border: solid 1px transparent;
+    border: none;
     transform: translate(.5rem);
     background-color: #121212;
     align-items: center;

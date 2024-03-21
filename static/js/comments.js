@@ -183,7 +183,6 @@ function InstantiateReplies(id) {
         contentType: 'application/json',
         data: JSON.stringify({ 'reply-id': id }),
         success: function(response) {
-            console.log(response);
             if (response.result == 'success') {
                 const commentReplies = document.getElementById(`replies-${id}`);
     

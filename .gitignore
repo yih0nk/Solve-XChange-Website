@@ -1,2 +1,5 @@
-/instance
+#Folders
 /__pycache__
+
+#File Types
+*.db

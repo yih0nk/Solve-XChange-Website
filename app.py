@@ -33,7 +33,8 @@ def index():
         elif 'content' in request.form.keys():
             new_comment = Comment(username=request.form['username'], 
                 content=request.form['content'],
-                time_posted=datetime.now())
+                time_posted=datetime.now(),
+                channel_posted=channel_id)
             try:
                 db.session.add(new_comment)
                 db.session.commit()
@@ -48,7 +49,7 @@ def index():
                                comments=comments[::-1], 
                                sort='date', 
                                s_user='',
-                               channel_id=channel_id)
+                               channel_posted=channel_id)
 #endregion
 
 #region Replies    

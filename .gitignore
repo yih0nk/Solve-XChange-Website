@@ -1,6 +1,2 @@
-*.db
+
 *.pyc
-/instance
-/__pycache__
-instance/database.db
-/__pycache__

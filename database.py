@@ -14,7 +14,7 @@ class Comment(db.Model):
     username = db.Column(db.String, nullable=False)
     content = db.Column(db.String, nullable=False)
     time_posted = db.Column(db.DateTime)
-    channel_posted = db.Column(db.Integer, db.ForeignKey('Channel.id'), nullable=False)
+    channel_posted = db.Column(db.Integer, db.ForeignKey('Channels.id'), nullable=False)
 
     def __repr__(self):
         return f'<Comment {self.id}>'

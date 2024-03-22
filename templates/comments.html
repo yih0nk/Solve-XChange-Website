@@ -6,6 +6,9 @@
 {% endblock %}
 
 {% block body %}
+<header>
+    
+</header>
 <section id="post-form">
     <form action="/comments" method="POST">
         <div class="wrapper split">
@@ -21,15 +24,13 @@
 <section id="sort-form">
     <form class="wrapper split" action="/comments" method="POST">
         <div>
-            Sort by: <select name="sort-by" id="sort-by" onchange="changeFilter()" >
-                {% if sort == 'date' %}
-                <option value="date" selected>Date</option>
-                <option value="user">User</option>
-                {% else %}
-                <option value="date">Date</option>
-                <option value="user" selected>User</option>
-                {% endif %}
-            </select>
+            Sort by: <div name="sort-by" id="sort-by" class="dropdown inline" onchange="changeFilter()" >
+                <p class="dropdown-selected">{{ sort | capitalize }}</p>
+                <div class="dropdown-values">
+                    <a>Date</a>
+                    <a>User</a>
+                </div>
+            </div>
         </div>
         <div>
             {% if sort == 'date' %}

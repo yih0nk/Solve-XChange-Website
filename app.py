@@ -109,6 +109,10 @@ def register():
 
 #region Filters
 @app.template_filter()
+def capitalize(message):
+    return message.capitalize()
+
+@app.template_filter()
 def calculate_time(time):
     time_delta = datetime.now() - time
     days = time_delta.days

@@ -1,16 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins');
-input:not([type="checkbox"]), textarea, select {
+:root {
+    --shadow-colour: black;
+
+    /*Dark Colours*/
+    --dark-background-colour: #121212;
+    --dark-main-colour: white;
+    --dark-disabled-colour: #afafaf;
+    --dark-border-colour: white;
+    --dark-primary-colour: #1f1f1f;
+    --dark-secondary-colour: #2f2f2f;
+    --dark-tertiary-colour: #292929;
+
+    /*Light Colours*/
+}
+
+input:not([type="checkbox"]), textarea, .dropdown {
     all: unset;
-    background-color: #121212;
+    background-color: var(--dark-background-colour);
     text-align: left;
 }
 
 body {
-    color: white;
+    color: var(--dark-main-colour);
     margin: 0;
     padding: 0;
     font-family: "Poppins";
-    background-color: #121212;
+    background-color: var(--dark-background-colour);
     font-size: 1.75vh;
 }
 
@@ -20,18 +35,18 @@ textarea {
 }
 
 input:not([type="checkbox"]), textarea {
-    border: solid 1px white;
+    border: solid 1px var(--dark-border-colour);
     padding: 10px;
     border-radius: 10px;
 }
 
 input[type="submit"] {
-    background-color: #2f2f2f;
+    background-color: var(--dark-primary-colour);
     transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #1f1f1f;
+    background-color: var(--dark-secondary-colour);
 }
 
 label {
@@ -44,7 +59,7 @@ label {
 }
 
 .wrapper-border {
-    border: solid 1px white;
+    border: solid 1px var(--dark-border-colour);
     border-radius: 10px;
     padding: 10px;
 }
@@ -109,3 +124,50 @@ h1 {
     display: flex;
     justify-content: space-between;
 }
+
+header {
+    height: 2.5rem;
+    position: sticky;
+    top: 0;
+    background-color: var(--dark-primary-colour);
+    box-shadow: 0 0 .5rem var(--shadow-colour);
+    transition: height 0.3s ease;
+    z-index: 2;
+}
+
+header:hover {
+    height: 5rem;
+}
+
+.dropdown {
+    padding: 10px;
+    border-radius: 5px;
+    user-select: none;
+    align-items: flex-start;
+    position: relative;
+}
+
+.dropdown-selected {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown > .dropdown-values {
+    position: absolute;
+    display: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+}
+
+.dropdown > .dropdown-values > a {
+    display: block;
+}
+
+.dropdown:hover > .dropdown-values {
+    display: block;
+}
+
+/* .dropdown:hover > .dropdown-selected {
+    display: none;
+} */

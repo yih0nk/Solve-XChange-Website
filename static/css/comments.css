@@ -1,11 +1,10 @@
 #post-form {
-    margin: 0 auto;
-    width: 40vw;
     background-color: var(--dark-primary-colour);
-    text-align: right;
     color: var(--dark-main-colour);
-    padding: 25px;
     border-radius: 0 0 1dvh 1dvh;
+    margin: 0 auto;
+    padding: 25px;
+    width: 40vw;
 }
 
 #username {
@@ -14,15 +13,15 @@
 }
 
 #comments { 
-    color: var(--dark-main-colour);
-    margin: 0 auto;
-    text-align: center;
-    width: 40vw;
-    height: 100%;
-    overflow-y: auto;
     background-color: var(--dark-secondary-colour);
-    opacity: 0;
+    color: var(--dark-main-colour);
     transition: opacity 0.3s ease;
+    text-align: center;
+    overflow-y: auto;
+    margin: 0 auto;
+    height: 100%;
+    width: 40vw;
+    opacity: 0;
 }
 
 #content {
@@ -40,20 +39,20 @@
 
 .post-content {
     background-color: var(--dark-primary-colour);
-    border-radius: 5px;
-    padding: 10px;
-    text-align: left;
     overflow-wrap: break-word;
+    border-radius: 5px;
+    text-align: left;
+    padding: 10px;
     margin: 0;
 }
 
 .post-metadata {
     background-color: var(--dark-background-colour);
+    color: var(--dark-disabled-colour);
     border-radius: 0 0 5px 5px;
+    text-align: center;
     font-size: .8rem;
     padding: 5px;
-    color: var(--dark-disabled-colour);
-    text-align: center;
     width: auto;
     margin: 0;
 }
@@ -62,19 +61,19 @@
     color: var(--dark-main-colour);
 }
 
-#sort-form {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    width: 41.5vw;
+#sort-wrapper {
     background-color: var(--dark-tertiary-colour);
     color: var(--dark-main-colour);
-    height: 10vh;
     border-radius: 0 0 1dvh 1dvh;
+    align-items: center;
     text-align: center;
+    margin: 0 auto;
+    display: flex;
+    width: 41.5vw;
+    height: 10vh;
 }
 
-#sort-form > .wrapper {
+#sort-form {
     width: 100%;
     margin: 10px;
 }
@@ -97,9 +96,9 @@
 }
 
 .replies {
-    overflow: hidden;
-    background-color: inherit;
     border-radius: 0 0 5px 5px;
+    background-color: inherit;
+    overflow: hidden;
 }
 
 .replies > .wrapper {
@@ -107,12 +106,12 @@
 }
 
 .reply-button {
-    margin: calc(5px + 1rem) 0;
-    font-size: 1rem;
-    height: 1rem;
-    display: flex;
-    align-items: center;
     justify-content: space-around;
+    margin: calc(5px + 1rem) 0;
+    align-items: center;
+    font-size: 1rem;
+    display: flex;
+    height: 1rem;
 }
 
 .add-label {
@@ -120,14 +119,14 @@
 }
 
 .reply-form {
-    border: none;
-    transform: translate(.5rem);
     background-color: var(--dark-background-colour);
-    align-items: center;
     border-radius: 10px 2rem 2rem 10px;
+    transform: translate(.5rem);
+    align-items: center;
     padding-right: 0;
     overflow: hidden;
     display: flex;
+    border: none;
     height: 0;
     width: 0;
 }

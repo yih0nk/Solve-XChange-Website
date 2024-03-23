@@ -1,7 +1,9 @@
 //#region Constants
 const sortUsernameInput = document.getElementById('sort-username'),
     sortDropdown = document.getElementById('sort-by'),
-    sortForm = document.getElementById('sort-form');
+    sortForm = document.getElementById('sort-form'),
+    sortInput = document.getElementById('sort-by-input'),
+    sortDisplay = document.getElementById('sort-by-display');
 
 const offset = '(3rem)';
 
@@ -123,11 +125,14 @@ function ToggleReplyInput(id) {
 //#endregion
 
 //#region Functions
-function changeFilter() {
-    if (sortDropdown.value == 'user')
-        sortUsernameInput.style.display = 'inline'; 
-    else{
-        sortUsernameInput.style.display = 'none';
+function ChangeFilter(value) {
+    if (value == 'user') {
+        sortUsernameInput.style.display = 'inline';
+        sortInput.value = 'user';
+        sortDisplay.innerHTML = 'User';
+    }
+    else {
+        sortInput.value = 'date';        
         sortForm.submit();
     }
 }

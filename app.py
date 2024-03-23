@@ -1,3 +1,4 @@
+from templates import *
 from database import *
 
 #region Functions
@@ -9,10 +10,10 @@ def sort(request, channel_id):
     if sort_filter == 'user':
         comments = comments.filter_by(username=sort_value)
     
-    comments = comments.order_by(Comment.time_posted).all()
+    comments = comments.order_by(Comment.time_posted)
     
     return render_template('comments.html', 
-                           comments=comments.filter_by(channel_posted=channel_id)[::-1],
+                           comments=comments.filter_by(channel_posted=channel_id).all()[::-1],
                            sort=sort_filter, 
                            s_user=sort_value,
                            channel_id=channel_id)

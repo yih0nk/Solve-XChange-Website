@@ -5,10 +5,10 @@
 <link href="{{ url_for('static', filename='css/comments.css') }}" rel="stylesheet">
 {% endblock %}
 
+{% block header %}
+{% endblock %}
+
 {% block body %}
-<header>
-    
-</header>
 <section id="post-form">
     <form action="/comments" method="POST">
         <div class="wrapper split">
@@ -21,16 +21,17 @@
         <input type="hidden" name="channel" value="{{channel_id}}">
     </form>
 </section>
-<section id="sort-form">
-    <form class="wrapper split" action="/comments" method="POST">
+<section id="sort-wrapper">
+    <form id="sort-form" class="wrapper split" action="/comments" method="POST">
         <div>
-            Sort by: <div name="sort-by" id="sort-by" class="dropdown inline" onchange="changeFilter()" >
-                <p class="dropdown-selected">{{ sort | capitalize }}</p>
+            Sort by: <div id="sort-by" class="dropdown inline">
+                <p id="sort-by-display" class="dropdown-selected">{{ sort | capitalize }}</p>
                 <div class="dropdown-values">
-                    <a>Date</a>
-                    <a>User</a>
+                    <a onclick="ChangeFilter('date')">Date</a>
+                    <a onclick="ChangeFilter('user')">User</a>
                 </div>
             </div>
+            <input type="hidden" name="sort-by" id="sort-by-input" value="{{ sort }}">
         </div>
         <div>
             {% if sort == 'date' %}

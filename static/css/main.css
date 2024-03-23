@@ -15,18 +15,18 @@
 }
 
 input:not([type="checkbox"]), textarea, .dropdown {
-    all: unset;
     background-color: var(--dark-background-colour);
     text-align: left;
+    all: unset;
 }
 
 body {
-    color: var(--dark-main-colour);
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins";
     background-color: var(--dark-background-colour);
+    color: var(--dark-main-colour);
+    font-family: "Poppins";
     font-size: 1.75vh;
+    padding: 0;
+    margin: 0;
 }
 
 textarea {
@@ -36,8 +36,8 @@ textarea {
 
 input:not([type="checkbox"]), textarea {
     border: solid 1px var(--dark-border-colour);
-    padding: 10px;
     border-radius: 10px;
+    padding: 10px;
 }
 
 input[type="submit"] {
@@ -77,24 +77,24 @@ label:hover, input[type="submit"]:hover {
 }
 
 .fstretch {
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
 }
 
 .vcenter {
-    display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
 }
 
 .hcenter {
-    display: flex;
     justify-content: space-around;
+    display: flex;
 }
 
 .center {
-    display: flex;
     justify-content: space-between;
+    display: flex;
 }
 
 h1 {
@@ -102,8 +102,8 @@ h1 {
 }
 
 .split {
-    display: flex;
     justify-content: space-between;
+    display: flex;
 }
 
 .hright {
@@ -121,18 +121,21 @@ h1 {
 }
 
 .spaced {
-    display: flex;
     justify-content: space-between;
+    display: flex;
 }
 
 header {
-    height: 2.5rem;
-    position: sticky;
-    top: 0;
     background-color: var(--dark-primary-colour);
     box-shadow: 0 0 .5rem var(--shadow-colour);
     transition: height 0.3s ease;
-    z-index: 2;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+    height: 2.5rem;
+    display: flex;
+    z-index: 10;
+    top: 0;
 }
 
 header:hover {
@@ -140,24 +143,30 @@ header:hover {
 }
 
 .dropdown {
-    padding: 10px;
-    border-radius: 5px;
-    user-select: none;
     align-items: flex-start;
     position: relative;
+    user-select: none;
 }
 
 .dropdown-selected {
-    padding: 0;
+    background-color: var(--dark-background-colour);
+    padding: 10px;
+    border-radius: 5px;
     margin: 0;
 }
 
 .dropdown > .dropdown-values {
+    background-color: var(--dark-background-colour);
+    border-radius: 5px;
     position: absolute;
+    text-align: center;
+    overflow: hidden;
     display: none;
+    width: 100%;
     padding: 0;
     margin: 0;
     top: 100%;
+    left: 0%;
 }
 
 .dropdown > .dropdown-values > a {
@@ -166,8 +175,9 @@ header:hover {
 
 .dropdown:hover > .dropdown-values {
     display: block;
+    z-index: 2;
 }
 
-/* .dropdown:hover > .dropdown-selected {
-    display: none;
-} */
+.dropdown > .dropdown-values > a:hover {
+    background-color: var(--dark-disabled-colour);
+}

@@ -5,11 +5,20 @@
 <link href="{{ url_for('static', filename='css/login.css') }}" rel="stylesheet">
 {% endblock %}
 
+{% block lHeader %}
+{% endblock %}
+
+{% block cHeader %}
+{% endblock %}
+
+{% block rHeader %}
+{% endblock %}
+
 {% block body %}
 <div class="vcenter fstretch">
     <form id="main">
         <h1>Log in</h1>
-        Don't have an account? <a href="/register">Register here!</a><br>
+        Don't have an account? <a href="{{link}}">Register here!</a><br>
         <div class="text-input">
             <input type="text" placeholder="HDSB Email"><br>
         </div>
@@ -24,20 +33,5 @@
     </form>
 </div>
 
-<script>
-    const showLabel = document.querySelector('#show-text'),
-          showCheckbox = document.querySelector('#show-password'),
-          passwordInput = document.querySelector('#password-input')
-
-    function showPassword() {
-        if (showCheckbox.checked){
-            showLabel.innerHTML = 'Hide';
-            passwordInput.type = 'text';
-        }
-        else{
-            showLabel.innerHTML = 'Show';
-            passwordInput.type = 'password';
-        }
-    }
-</script>
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
 {% endblock %}

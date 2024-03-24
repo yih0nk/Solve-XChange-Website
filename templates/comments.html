@@ -5,7 +5,13 @@
 <link href="{{ url_for('static', filename='css/comments.css') }}" rel="stylesheet">
 {% endblock %}
 
-{% block header %}
+{% block lHeader %}
+{% endblock %}
+
+{% block cHeader %}
+{% endblock %}
+
+{% block rHeader %}
 {% endblock %}
 
 {% block body %}
@@ -35,9 +41,9 @@
         </div>
         <div>
             {% if sort == 'date' %}
-            <input name="sort-username" style="display: none;" type="text" id="sort-username" placeholder="Username..." value="{{ s_user }}">
+            <input name="sort-username" autocomplete="off" spellcheck="false" style="display: none;" type="text" id="sort-username" placeholder="Username..." value="{{ s_user }}">
             {% else %}
-            <input name="sort-username" style="display: inline;" type="text" id="sort-username" placeholder="Username..." value="{{ s_user }}">
+            <input name="sort-username" autocomplete="off" spellcheck="false" style="display: inline;" type="text" id="sort-username" placeholder="Username..." value="{{ s_user }}">
             {% endif %}
         </div>
     </form>

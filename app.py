@@ -1,6 +1,12 @@
 from templates import *
 from database import *
 
+google_login_link = 'https://accounts.google.com/o/oauth2/auth?response_type=code' + \
+    '&client_id=957531445666-f5fmiapt42a1c7gehkl9icjvldfnvh7p.apps.googleusercontent.com' + \
+    '&redirect_uri=http://127.0.0.1:5000/register' + \
+    '&scope=email%20profile' + \
+    '&state=12345'
+
 #region Functions
 def sort(request, channel_id):
     sort_filter = request.form['sort-by']
@@ -98,7 +104,7 @@ def get_replies():
 #region Users
 @app.route('/login')
 def login():
-    return render_template('login.html')
+    return render_template('login.html', link=google_login_link)
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():

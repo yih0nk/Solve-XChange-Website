@@ -7,8 +7,10 @@
         {% block head %}{% endblock %}
     </head>
     <body>
-        <header>
-            {% block header %}{% endblock %}
+        <header class="spread">
+            <div>{% block lHeader %}{% endblock %}</div>
+            <div>{% block cHeader %}{% endblock %}</div>
+            <div>{% block rHeader %}{% endblock %}</div>
         </header>
         {% block body %}{% endblock %}
     </body>

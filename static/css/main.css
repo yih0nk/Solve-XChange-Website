@@ -77,8 +77,8 @@ label:hover, input[type="submit"]:hover {
 }
 
 .fstretch {
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
+    max-height: 100vh;
 }
 
 .vcenter {
@@ -142,6 +142,12 @@ header:hover {
     height: 5rem;
 }
 
+header > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .dropdown {
     align-items: flex-start;
     position: relative;
@@ -180,4 +186,9 @@ header:hover {
 
 .dropdown > .dropdown-values > a:hover {
     background-color: var(--dark-disabled-colour);
+}
+
+.spread {
+    display: flex;
+    justify-content: space-between;
 }

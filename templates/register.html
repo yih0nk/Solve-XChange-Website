@@ -20,24 +20,12 @@
                 <label id="show-text" for="show-password">Show</label>
             </div>
         </div>
+        <div class="text-input">
+            <input id="confirm-input" type="password" placeholder="Password">
+        </div>
         <input type="submit" value="Register!">
     </form>
 </div>
 
-<script>
-    const showLabel = document.querySelector('#show-text'),
-          showCheckbox = document.querySelector('#show-password'),
-          passwordInput = document.querySelector('#password-input')
-
-    function showPassword() {
-        if (showCheckbox.checked){
-            showLabel.innerHTML = 'Hide';
-            passwordInput.type = 'text';
-        }
-        else{
-            showLabel.innerHTML = 'Show';
-            passwordInput.type = 'password';
-        }
-    }
-</script>
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
 {% endblock %}

@@ -3,3 +3,9 @@
  - Reworked all how the server communicates with the client.
  - Made it so that replies only load if clicked instead of loading everything in the beginning.
  - Added Channels database for future use.
+
+2024-03-23
+ - Changed how dropdown menus worked.
+ - Added a blank header.
+ - Added a README.
+ - Less spaghetti code.

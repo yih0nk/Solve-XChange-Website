@@ -40,3 +40,13 @@ a {
     height: 100%;
     width: min(100%, 50rem);
 }
+
+#error-box {
+    color: #FBA190;
+    font-weight: 600;
+}
+
+#success-box {
+    color: #BEFB90;
+    font-weight: 600;
+}

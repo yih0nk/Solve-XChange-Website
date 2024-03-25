@@ -101,11 +101,17 @@ def get_replies():
     return jsonify(replies_json)
 #endregion
 
-#region Users
+#region Login
 @app.route('/login')
 def login():
     return render_template('login.html')
 
+@app.route('/user-login')
+def user_login():
+    return 'logged in!'
+#endregion
+
+#region Registration
 @app.route('/register')
 def register():
     email = request.args.get('email')
@@ -116,19 +122,24 @@ def register():
                                token=token)
     else:
         return render_template('register.html')
-#endregion
-
-#region Verification
+    
 @app.route('/send-verify-email', methods=['POST'])
 def send_verification_email():
     data = json.loads(request.data)
+
+    if User.query.filter_by(email=data['email']).first():
+        return jsonify({ 'result' : 'user already exists' })
+
     current_token = Token.query.filter_by(email=data['email']).first()
 
-    token = current_token if current_token else generate_token()
+    token = current_token.token if current_token else generate_token()
 
     msg = Message('Verify your email', sender='test.jeric.jiang@gmail.com', recipients=[data['email']])
     msg.body = f'click link please\nhttp://127.0.0.1:5000/register?email={data["email"]}&token={token}'
     mail.send(msg)
+
+    if current_token:
+        return jsonify({ 'result' : 'success' })
 
     new_token = Token(email=data['email'], 
                       token=token)
@@ -144,7 +155,24 @@ def send_verification_email():
 def create_account():
     data = json.loads(request.data)
 
-    #finish this, just add to the db.
+    token = data['token']
+
+    db_token = Token.query.filter_by(email=data['email']).first()
+    
+    if token != db_token.token:
+        return jsonify({ 'result' : 'token mismatch' })
+
+    new_user = User(email=data['email'],
+                    password=data['password'],
+                    account_type='user',
+                    creation_date=datetime.now())
+    try:
+        db.session.delete(db_token)
+        db.session.add(new_user)
+        db.session.commit()
+        return jsonify({ 'result' : 'success' })
+    except:
+        return jsonify({ 'result' : 'database error' })
 #endregion
 
 #region Filters

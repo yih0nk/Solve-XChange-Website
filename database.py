@@ -50,7 +50,6 @@ class User(db.Model):
     password = db.Column(db.String, nullable=False)
     account_type = db.Column(db.String, default='user')
     creation_date = db.Column(db.DateTime)
-    verified = db.Column(db.Boolean, nullable=False)
 
     def __repr__(self):
         return f'<User {self.id}>'

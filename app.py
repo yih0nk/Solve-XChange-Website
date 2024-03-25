@@ -106,9 +106,18 @@ def get_replies():
 def login():
     return render_template('login.html')
 
-@app.route('/user-login')
+@app.route('/user-login', methods=['POST'])
 def user_login():
-    return 'logged in!'
+    data = json.loads(request.data)
+
+    user = User.query.filter_by(email=data['email']).first()
+
+    if not user:
+        return jsonify({ 'result' : 'user does not exist' })
+    elif user.password == data['password']:
+        return jsonify({ 'result' : 'success' })
+    else:
+        return jsonify({ 'result' : 'invalid credentials' })
 #endregion
 
 #region Registration
@@ -163,6 +172,7 @@ def create_account():
         return jsonify({ 'result' : 'token mismatch' })
 
     new_user = User(email=data['email'],
+                    display_name=data['name'],
                     password=data['password'],
                     account_type='user',
                     creation_date=datetime.now())

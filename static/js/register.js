@@ -3,7 +3,8 @@ const showLabel = document.getElementById('show-text'),
     emailInput = document.getElementById('email-input'),
     passwordInput = document.getElementById('password-input'),
     confirmInput = document.getElementById('confirm-input'),
-    tokenInput = document.getElementById('token-input');
+    tokenInput = document.getElementById('token-input'),
+    nameInput = document.getElementById('name-input');
 
 const errorBox = document.getElementById('error-box'),
       successBox = document.getElementById('success-box');
@@ -63,6 +64,11 @@ function verify(event) {
 function createAccount(event) {
     event.preventDefault();
 
+    if (!emailInput.value || !nameInput.value || !tokenInput.value || !passwordInput.value) {
+        logError('Please fill in all the fields.');
+        return
+    }
+
     if (passwordInput.value != confirmInput.value) {
         logError('Passwords must match.');
         return
@@ -73,6 +79,7 @@ function createAccount(event) {
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({ 'email' : emailInput.value,
+                               'name' : nameInput.value,
                                'token' : tokenInput.value,
                                'password' : passwordInput.value }),
         success: function(response) {

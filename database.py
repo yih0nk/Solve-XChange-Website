@@ -47,6 +47,7 @@ class User(db.Model):
     __tablename__ = 'Users'
 
     email = db.Column(db.String, primary_key=True, nullable=False)
+    display_name = db.Column(db.String, nullable=False)
     password = db.Column(db.String, nullable=False)
     account_type = db.Column(db.String, default='user')
     creation_date = db.Column(db.DateTime)

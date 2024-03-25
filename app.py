@@ -1,11 +1,5 @@
-from templates import *
 from database import *
-
-google_login_link = 'https://accounts.google.com/o/oauth2/auth?response_type=code' + \
-    '&client_id=957531445666-f5fmiapt42a1c7gehkl9icjvldfnvh7p.apps.googleusercontent.com' + \
-    '&redirect_uri=http://127.0.0.1:5000/register' + \
-    '&scope=email%20profile' + \
-    '&state=12345'
+import secrets
 
 #region Functions
 def sort(request, channel_id):
@@ -23,6 +17,9 @@ def sort(request, channel_id):
                            sort=sort_filter, 
                            s_user=sort_value,
                            channel_id=channel_id)
+
+def generate_token():
+    return secrets.token_urlsafe(16)
 #endregion
 
 #region Comments
@@ -104,14 +101,23 @@ def get_replies():
 #region Users
 @app.route('/login')
 def login():
-    return render_template('login.html', link=google_login_link)
+    return render_template('login.html')
 
-@app.route('/register', methods=['POST', 'GET'])
+@app.route('/register')
 def register():
-    if request.method == 'POST':
-        pass
-    else:
-        return render_template('register.html')
+    return render_template('register.html')
+#endregion
+
+#region Verification
+@app.route('/send-verify-email', methods=['POST'])
+def send_verification_email():
+    data = json.loads(request.data)
+
+    pass
+
+@app.route('/verify/<token>')
+def verify(token):
+    pass
 #endregion
 
 #region Filters

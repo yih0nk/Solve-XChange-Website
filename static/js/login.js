@@ -1,6 +1,6 @@
-const showLabel = document.querySelector('#show-text'),
-    showCheckbox = document.querySelector('#show-password'),
-    passwordInput = document.querySelector('#password-input');
+const showLabel = document.getElementById('show-text'),
+    showCheckbox = document.getElementById('show-password'),
+    passwordInput = document.getElementById('password-input');
 
 function showPassword() {
     if (showCheckbox.checked){
@@ -11,10 +11,6 @@ function showPassword() {
         showLabel.innerHTML = 'Show';
         passwordInput.type = 'password';
     }
-}
-
-function register() {
-
 }
 
 function login() {

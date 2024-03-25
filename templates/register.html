@@ -1,31 +1,21 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Login</title>
+<title>Register</title>
 <link href="{{ url_for('static', filename='css/login.css') }}" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
 <div class="vcenter fstretch">
-    <form id="main">
+    <form id="main" onsubmit="verify(event)">
         <h1>Register</h1>
         Create a new account!<br>
         <div class="text-input">
-            <input type="text" placeholder="HDSB Email"><br>
+            <input type="text" id="email-input" placeholder="HDSB Email" autocomplete="off" spellcheck="false"><br>
         </div>
-        <div class="text-input">
-            <input type="checkbox" style="display: none;" id="show-password" onclick="showPassword()">
-            <div class="stretch flex">
-                <input id="password-input" type="password" placeholder="Password">
-                <label id="show-text" for="show-password">Show</label>
-            </div>
-        </div>
-        <div class="text-input">
-            <input id="confirm-input" type="password" placeholder="Password">
-        </div>
-        <input type="submit" value="Register!">
+        <input type="submit" value="Verify!">
     </form>
 </div>
 
-<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+<script src="{{ url_for('static', filename='js/register.js') }}"></script>
 {% endblock %}

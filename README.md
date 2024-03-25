@@ -24,7 +24,7 @@
 
 1. Using either IDLE or Visual Studio Code, create a terminal.
 2. Type in `pip install flask` and hit enter. If this does not work, try `pip3` or `py3` instead of `pip`.
-3. Repeat with `pip install flask flask-sqlalchemy` and `pip install flask_sqlalchemy`.
+3. Repeat with `pip install flask flask-sqlalchemy`, `pip install flask_sqlalchemy` and `pip install flask_mail`.
 4. Run the `app.py` file then open the website at [`127.0.0.1:5000/comments`](http://127.0.0.1:5000/comments)
 
 

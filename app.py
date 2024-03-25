@@ -19,7 +19,10 @@ def sort(request, channel_id):
                            channel_id=channel_id)
 
 def generate_token():
-    return secrets.token_urlsafe(16)
+    token = secrets.token_urlsafe(16)
+    while Token.query.filter_by(token=token).first():
+        token = secrets.token_urlsafe(16)
+    return token
 #endregion
 
 #region Comments
@@ -105,19 +108,43 @@ def login():
 
 @app.route('/register')
 def register():
-    return render_template('register.html')
+    email = request.args.get('email')
+    token = request.args.get('token')
+    if email and token:
+        return render_template('register-verified.html', 
+                               email=email, 
+                               token=token)
+    else:
+        return render_template('register.html')
 #endregion
 
 #region Verification
 @app.route('/send-verify-email', methods=['POST'])
 def send_verification_email():
     data = json.loads(request.data)
+    current_token = Token.query.filter_by(email=data['email']).first()
 
-    pass
+    token = current_token if current_token else generate_token()
 
-@app.route('/verify/<token>')
-def verify(token):
-    pass
+    msg = Message('Verify your email', sender='test.jeric.jiang@gmail.com', recipients=[data['email']])
+    msg.body = f'click link please\nhttp://127.0.0.1:5000/register?email={data["email"]}&token={token}'
+    mail.send(msg)
+
+    new_token = Token(email=data['email'], 
+                      token=token)
+
+    try:
+        db.session.add(new_token)
+        db.session.commit()
+        return jsonify({ 'result' : 'success' })
+    except:
+        return jsonify({ 'result' : 'database error' })
+    
+@app.route('/create-account', methods=['POST'])
+def create_account():
+    data = json.loads(request.data)
+
+    #finish this, just add to the db.
 #endregion
 
 #region Filters

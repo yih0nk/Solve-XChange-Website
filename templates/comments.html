@@ -29,7 +29,7 @@
     </form>
 </section>
 <section id="sort-wrapper">
-    <form id="sort-form" class="wrapper split" onsubmit="FilterComments(event)">
+    <form id="sort-form" class="wrapper split" action="/comments" method="POST">
         <div>
             Sort by: <div id="sort-by" class="dropdown inline">
                 <p id="sort-by-display" class="dropdown-selected">{{ sort | capitalize }}</p>

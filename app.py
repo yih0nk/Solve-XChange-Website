@@ -15,11 +15,15 @@ def sort(request, channel_id):
     
     comments = comments.order_by(Comment.time_posted)
     
-    return render_template('comments.html', 
+    html = render_template('comments.html', 
                            comments=comments.filter_by(channel_posted=channel_id).all()[::-1],
                            sort=sort_filter, 
                            s_user=sort_value,
                            channel_id=channel_id)
+
+    print(html)
+
+    return html
 
 def generate_token():
     token = secrets.token_urlsafe(16)
@@ -34,7 +38,7 @@ def index():
     channel_id = 1
     
     try: 
-        channel_id = request.form['channel_id']
+        channel_id = request.form['channel']
     except:
         pass
 

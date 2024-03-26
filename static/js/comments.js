@@ -1,5 +1,6 @@
 //#region Constants
 const commentUsernameInput = document.getElementById('username-input'),
+      commentContentInput = document.getElementById('content'),
       commentForm = document.getElementById('comment-form');
 
 const sortUsernameInput = document.getElementById('sort-username'),
@@ -20,7 +21,8 @@ const usernameInput = document.getElementById('username-input'),
 //Variables
 let currentOpenReplyIndex = -1,
     addReplyInputOpen = false,
-    animating = { replyInput: false };
+    animating = { replyInput: false },
+    username = '';
 //#endregion
 
 //#region Initialization
@@ -32,10 +34,14 @@ replies.forEach((reply) => {
 
 
 if (getCookie('user-info')) {
-    let uncutName = getCookie('user-info').split('/')[0],
-        username = uncutName.substring(1, uncutName.length);
+    let uncutName = getCookie('user-info').split('/')[0];
+    username = uncutName.substring(1, uncutName.length);
 
     displayName.innerHTML = `<span class="background-text">Logged in as </span><span style="font-weight:600;">${username}</span>`;
+}
+else {
+    commentContentInput.disabled = true;
+    commentContentInput.value = 'Please log in to post a comment.'
 }
 
 setTimeout(() => posts.style.opacity = '1', 300)
@@ -154,6 +160,9 @@ function ChangeFilter(value) {
 function PostComment(event) {
     event.preventDefault();
 
+    if (!username)
+        return;
+
     usernameInput.value = username;
 
     commentForm.removeAttribute('onsubmit');
@@ -162,6 +171,9 @@ function PostComment(event) {
 
 function AddReply(id, event) {
     event.preventDefault();
+
+    if (!username)
+        return;
 
     const replyInput = document.querySelector(`#reply-input-${id}`);
 

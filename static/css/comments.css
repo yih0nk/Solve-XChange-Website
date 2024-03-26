@@ -1,10 +1,13 @@
 #post-form {
     background-color: var(--dark-primary-colour);
+    box-shadow: 0 0 .5rem var(--shadow-colour);
     color: var(--dark-main-colour);
     border-radius: 0 0 1dvh 1dvh;
+    position: relative;
     margin: 0 auto;
     padding: 25px;
     width: 40vw;
+    z-index: 2;
 }
 
 #username {
@@ -20,14 +23,17 @@
 
 #comments { 
     background-color: var(--dark-secondary-colour);
+    box-shadow: 0 0 .5rem var(--shadow-colour);
     color: var(--dark-main-colour);
     transition: opacity 0.3s ease;
+    position: relative;
     text-align: center;
     overflow-y: auto;
     margin: 0 auto;
     height: 100%;
     width: 40vw;
     opacity: 0;
+    z-index: 0;
 }
 
 #content {
@@ -69,14 +75,17 @@
 
 #sort-wrapper {
     background-color: var(--dark-tertiary-colour);
+    box-shadow: 0 0 .5rem var(--shadow-colour);
     color: var(--dark-main-colour);
     border-radius: 0 0 1dvh 1dvh;
     align-items: center;
+    position: relative;
     text-align: center;
     margin: 0 auto;
     display: flex;
     width: 41.5vw;
     height: 10vh;
+    z-index: 1;
 }
 
 #sort-form {

@@ -12,7 +12,9 @@
             <div>{% block cHeader %}{% endblock %}</div>
             <div>{% block rHeader %}{% endblock %}</div>
         </header>
-        {% block body %}{% endblock %}
+        <div id="body">
+            {% block body %}{% endblock %}
+        </div>
     </body>
     <script src="{{ url_for('static', filename='js/global.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

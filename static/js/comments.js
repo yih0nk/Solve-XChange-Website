@@ -1,4 +1,7 @@
 //#region Constants
+const commentUsernameInput = document.getElementById('username-input'),
+      commentForm = document.getElementById('comment-form');
+
 const sortUsernameInput = document.getElementById('sort-username'),
     sortDropdown = document.getElementById('sort-by'),
     sortForm = document.getElementById('sort-form'),
@@ -75,14 +78,14 @@ function ToggleReplyInput(id) {
     if (animating.replyInput)
         return;
 
-    const label = document.getElementById(`add-label-${id}`),
-          button = document.getElementById(`add-reply-${id}`),
-          form = document.getElementById(`reply-form-${id}`),
-          submit = document.getElementById(`reply-submit-${id}`),
-          input = document.getElementById(`reply-input-${id}`);
+    let label = document.getElementById(`add-label-${id}`),
+        button = document.getElementById(`add-reply-${id}`),
+        form = document.getElementById(`reply-form-${id}`),
+        replySubmit = document.getElementById(`reply-submit-${id}`),
+        input = document.getElementById(`reply-input-${id}`);
 
-          addReplyInputOpen = !addReplyInputOpen;
-          animating.replyInput = true;
+    addReplyInputOpen = !addReplyInputOpen;
+    animating.replyInput = true;
 
     if (addReplyInputOpen) {
         button.value = specialCharacters.doubleSpace + 'Cancel';
@@ -96,13 +99,13 @@ function ToggleReplyInput(id) {
         form.animate(keyframes,
         { duration: 1000, fill: 'forwards', easing: 'ease' }).onfinish = 
             () => {
-                submit.animate({ opacity: '1' }, 
+                replySubmit.animate({ opacity: '1' }, 
                 { duration: 300, fill: 'forwards', easing: 'ease' });
                 animating.replyInput = false;
             };
     }
     else {
-        submit.animate({ opacity: '0' }, 
+        replySubmit.animate({ opacity: '0' }, 
         { duration: 300, fill: 'forwards', easing: 'ease' }).onfinish = () => {
             button.value = specialCharacters.doubleSpace + 'Post Reply';
             label.animate({ scale: '0' }, { duration: 250, fill: 'forwards', easing: 'ease' }).onfinish 
@@ -139,6 +142,18 @@ function ChangeFilter(value) {
 //#endregion
 
 //#region Server Messages
+function PostComment(event) {
+    event.preventDefault();
+
+    let uncutName = getCookie('user-info').split('/')[0];
+        username = uncutName.substring(1, uncutName.length);
+
+    usernameInput.value = username;
+
+    commentForm.removeAttribute('onsubmit');
+    commentForm.submit();
+}
+
 function AddReply(id, event) {
     event.preventDefault();
 

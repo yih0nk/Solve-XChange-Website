@@ -1,6 +1,9 @@
 from database import *
 import secrets
 
+login_expiration_time = timedelta(days=1, hours=0, minutes=0, seconds=0)
+domain = '127.0.0.1:5000'
+
 #region Functions
 def sort(request, channel_id):
     sort_filter = request.form['sort-by']
@@ -29,6 +32,7 @@ def generate_token():
 @app.route('/comments', methods=['POST', 'GET'])
 def index():
     channel_id = 1
+    
     try: 
         channel_id = request.form['channel_id']
     except:
@@ -115,7 +119,12 @@ def user_login():
     if not user:
         return jsonify({ 'result' : 'user does not exist' })
     elif user.password == data['password']:
-        return jsonify({ 'result' : 'success' })
+        response = jsonify({ 'result' : 'success' })
+        response.set_cookie('user-info', 
+                            f'{user.display_name}/{data["email"]}', 
+                            max_age=login_expiration_time.total_seconds(),
+                            expires=datetime.now() + login_expiration_time)
+        return response
     else:
         return jsonify({ 'result' : 'invalid credentials' })
 #endregion
@@ -172,7 +181,7 @@ def create_account():
         return jsonify({ 'result' : 'token mismatch' })
 
     new_user = User(email=data['email'],
-                    display_name=data['name'],
+                    display_name=data['name'].title(),
                     password=data['password'],
                     account_type='user',
                     creation_date=datetime.now())

@@ -16,19 +16,19 @@
 
 {% block body %}
 <section id="post-form">
-    <form action="/comments" method="POST">
+    <form id="comment-form" action="/comments" method="POST" onsubmit="PostComment(event)">
         <div class="wrapper split">
             <div id="username">
-                <input id="username-input" name="username" type="text" autocomplete="off" placeholder="Username...">
+                <input id="username-input" name="username" type="hidden" autocomplete="off" placeholder="Username...">
             </div>
-            <input id="submit" type="submit" value="Post!">
+            <input id="post-submit" type="submit" value="Post!">
         </div>
         <textarea id="content" wrap="soft" name="content" rows="5" placeholder="What would you like to share?"></textarea>
-        <input type="hidden" name="channel" value="{{channel_id}}">
+        <input type="hidden" id="channel-input" name="channel" value="{{channel_id}}">
     </form>
 </section>
 <section id="sort-wrapper">
-    <form id="sort-form" class="wrapper split" action="/comments" method="POST">
+    <form id="sort-form" class="wrapper split" onsubmit="FilterComments(event)">
         <div>
             Sort by: <div id="sort-by" class="dropdown inline">
                 <p id="sort-by-display" class="dropdown-selected">{{ sort | capitalize }}</p>

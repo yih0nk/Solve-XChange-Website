@@ -44,8 +44,10 @@ function login(event) {
                 logError('Invalid email or password.');
             else if (response.result == 'user does not exist')
                 logError('Account does not exist.');
-            else
+            else {
                 logSuccess('Successfully logged in.');
+                setTimeout(() => window.location.href = `${url}/comments`, '500');
+            }
         },
         error: function(xhr, status, error) {
             console.error('Error: ', error);

@@ -66,12 +66,17 @@ function createAccount(event) {
 
     if (!emailInput.value || !nameInput.value || !tokenInput.value || !passwordInput.value) {
         logError('Please fill in all the fields.');
-        return
+        return;
+    }
+
+    if (!/^[a-zA-Z\s]+$/.test(nameInput.value)) {
+        logError('Your name can only contain letters.');
+        return;
     }
 
     if (passwordInput.value != confirmInput.value) {
         logError('Passwords must match.');
-        return
+        return;
     }
 
     $.ajax({

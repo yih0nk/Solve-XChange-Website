@@ -19,6 +19,7 @@
     <form id="comment-form" action="/comments" method="POST" onsubmit="PostComment(event)">
         <div class="wrapper split">
             <div id="username">
+                <p id="display-name">Not Signed in.</p>
                 <input id="username-input" name="username" type="hidden" autocomplete="off" placeholder="Username...">
             </div>
             <input id="post-submit" type="submit" value="Post!">
@@ -84,6 +85,8 @@
     </div>
     {% endfor %}
 </section>
+{% endblock %}
 
+{% block scripts %}
 <script src="{{ url_for('static', filename='js/comments.js') }}"></script>
 {% endblock %}

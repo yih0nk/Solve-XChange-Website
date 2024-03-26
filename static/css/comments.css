@@ -8,8 +8,14 @@
 }
 
 #username {
-    display: inline-block;
+    display: inline-flex;
     text-align: left;
+    align-items: center;
+}
+
+#display-name {
+    padding: 0;
+    margin: 0;
 }
 
 #comments { 

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600');
 :root {
     --shadow-colour: black;
 
@@ -191,4 +192,8 @@ header > div {
 .spread {
     display: flex;
     justify-content: space-between;
+}
+
+.background-text {
+    color: var(--dark-disabled-colour);
 }

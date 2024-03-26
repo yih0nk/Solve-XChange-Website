@@ -15,7 +15,8 @@ const posts = document.getElementById('comments'),
 
 const specialCharacters = { space: '\u00A0', doubleSpace: '\u00A0 \u00A0' };
 
-const usernameInput = document.getElementById('username-input');
+const usernameInput = document.getElementById('username-input'),
+      displayName = document.getElementById('display-name');
 //Variables
 let currentOpenReplyIndex = -1,
     addReplyInputOpen = false,
@@ -28,6 +29,14 @@ posts.style.opacity = '0';
 replies.forEach((reply) => {
     reply.firstElementChild.style.margin = `calc(-${reply.firstElementChild.clientHeight}px - ${offset}) 0 0 0`;
 });
+
+
+if (getCookie('user-info')) {
+    let uncutName = getCookie('user-info').split('/')[0],
+        username = uncutName.substring(1, uncutName.length);
+
+    displayName.innerHTML = `<span class="background-text">Logged in as </span><span style="font-weight:600;">${username}</span>`;
+}
 
 setTimeout(() => posts.style.opacity = '1', 300)
 //#endregion
@@ -145,9 +154,6 @@ function ChangeFilter(value) {
 function PostComment(event) {
     event.preventDefault();
 
-    let uncutName = getCookie('user-info').split('/')[0];
-        username = uncutName.substring(1, uncutName.length);
-
     usernameInput.value = username;
 
     commentForm.removeAttribute('onsubmit');
@@ -163,7 +169,7 @@ function AddReply(id, event) {
         url: '/reply',
         type: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify({ 'username': usernameInput.value,
+        data: JSON.stringify({ 'username': username,
                                'reply-content': replyInput.value,
                                'reply-to': id }),
         success: function(response) {
@@ -177,11 +183,11 @@ function AddReply(id, event) {
                     parentId = response.parentId;
 
                 const newReplyHTML = `
-                <div id="post">
-                    <p id="post-content">${content}</p>
+                <div class="post">
+                    <p class="post-content">${content}</p>
                     <div class="hright">
-                        <p id="post-metadata" class="inline">
-                            Posted by <a id="post-username">${username},</a> ${timeElapsed} ago
+                        <p class="post-metadata inline">
+                            Posted by <a class="post-username">${username},</a> ${timeElapsed} ago
                         </p>
                     </div>
                 </div>`;

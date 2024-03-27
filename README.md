@@ -1,3 +1,17 @@
+# For Front-end Developers
+
+## How to use this repo:
+
+**PLEASE WORK ON YOUR OWN BRANCH**
+*If your branch doesn't exist please create your own as a branch off of main.*
+
+First when opening this folder, there will be a `static` and `templates` folder. These are used to hold all the html, css and js files.
+When creating a new html doc, instead of using the standard format, refer to the `base.html` file.
+`base.html` has a few things that you will need to know about.
+1. Firstly, `{% block name %}` and `{% endblock %}` are used to contain stuff that would eventually replace where it exists in `base.html`
+2. `{{var_name}}`, this is used when you want to add a variable to the html. If you do use this, please add a comment at the top of the doc saying which are needed. I do need to add it to the backend.
+3. `{{var_name | filter}}`, this is the same as #2 but use this if you want `var_name` to be altered in some way. Please name the filter accordingly and also say what it needs to do for in the comment as well.
+
 # How to GitHub
 
 ## Using GitHub:

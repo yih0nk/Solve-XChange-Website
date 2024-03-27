@@ -1,7 +1,8 @@
 //#region Constants
 const commentUsernameInput = document.getElementById('username-input'),
       commentContentInput = document.getElementById('content'),
-      commentForm = document.getElementById('comment-form');
+      commentForm = document.getElementById('comment-form'),
+      postButton = document.getElementById('post-submit');
 
 const sortUsernameInput = document.getElementById('sort-username'),
     sortDropdown = document.getElementById('sort-by'),
@@ -40,6 +41,7 @@ if (getCookie('user-info')) {
     displayName.innerHTML = `<span class="background-text">Logged in as </span><span style="font-weight:600;">${username}</span>`;
 }
 else {
+    postButton.style.display = 'none';
     commentContentInput.disabled = true;
     commentContentInput.value = 'Please log in to post a comment.'
 }

@@ -15,11 +15,6 @@
     /*Light Colours*/
 }
 
-* {
-    scrollbar-width: thin;
-    scrollbar-base-color: transparent;
-}
-
 input:not([type="checkbox"]), textarea, .dropdown {
     background-color: var(--dark-background-colour);
     text-align: left;
@@ -156,13 +151,10 @@ header > div {
 }
 
 #body {
-    overflow-y: auto;
+    overflow-y: scroll;
     height: calc(100vh - 2.5rem);
     transition: all 0.3s ease;
-}
-
-header:hover ~ #body {
-    height: calc(100vh - 5rem);
+    padding: 0;
 }
 
 .dropdown {

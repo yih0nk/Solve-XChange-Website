@@ -4,7 +4,7 @@
 
 **PLEASE WORK ON YOUR OWN BRANCH**
 
-*If your branch doesn't exist please create your own as a branch off of main.*
+*If your branch doesn't exist please create your own as a branch off of main. (Please name it after yourself)*
 
 First when opening this folder, there will be a `static` and `templates` folder. These are used to hold all the html, css and js files. When creating a new html doc, instead of using the standard format, refer to the `base.html` file.
 

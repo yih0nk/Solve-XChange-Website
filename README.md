@@ -13,6 +13,24 @@ First when opening this folder, there will be a `static` and `templates` folder.
 2. `{{var_name}}`, this is used when you want to add a variable to the html. If you do use this, please add a comment at the top of the doc saying which are needed. I do need to add it to the backend.
 3. `{{var_name | filter}}`, this is the same as #2 but use this if you want `var_name` to be altered in some way. Please name the filter accordingly and also say what it needs to do for in the comment as well.
 
+If you want to test your code, run the file named `app.py`.
+
+When creating a new html document, in the file `app.py`, add the following lines of code:
+```python
+@app.route('/name')
+def name():
+    return render_template('name.html')
+```
+Where `name` would be then name of your html document.
+Go to the link `127.0.0.1:5000/name` and your document should pop up.
+
+If you want to add a styling sheet, instead of putting the direct path (i.e. `static/css/stylesheet.css`), use `{{url_for('static', 'css/stylesheet.css')}}` instead.
+
+Currently working pages:
+1. `127.0.0.1:5000/comments`
+2. `127.0.0.1:5000/register`
+3. `127.0.0.1:5000/login`
+
 Lastly, if you have any other questions about some implementation or something else, either email me at *1jiangjer3@hdsb.ca* or add me on discord (paidvbux_).
 
 # How to GitHub

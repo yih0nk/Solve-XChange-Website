@@ -51,7 +51,7 @@ Lastly, if you have any other questions about some implementation or something e
 
 ## How to use after forking this repository:      
 
-1. Click 1Fetch origin1 to update the code to the latest version.
+1. Click "Fetch origin" to update the code to the latest version.
 
 # How to run the code
 

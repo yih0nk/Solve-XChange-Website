@@ -37,11 +37,6 @@ def generate_token():
 def index():
     return render_template('index.html')
 
-
-@app.route('/link')
-def link():
-    return render_template('index.html')
-
 @app.route('/comments', methods=['POST', 'GET'])
 def comments():
     channel_id = 1

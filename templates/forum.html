@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Comments</title>
-<link href="{{ url_for('static', filename='css/comments.css') }}" rel="stylesheet">
+<title>Forum</title>
+<link href="{{ url_for('static', filename='css/forum.css') }}" rel="stylesheet">
 {% endblock %}
 
 {% block lHeader %}
@@ -86,5 +86,5 @@
     {% endfor %}
 </section>
 
-<script src="{{ url_for('static', filename='js/comments.js') }}" defer></script>
+<script src="{{ url_for('static', filename='js/forum.js') }}" defer></script>
 {% endblock %}

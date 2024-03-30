@@ -4,41 +4,13 @@ import secrets
 login_expiration_time = timedelta(days=1, hours=0, minutes=0, seconds=0)
 domain = '127.0.0.1:5000'
 
-#region Functions
-def sort(request, channel_id):
-    sort_filter = request.form['sort-by']
-    sort_value = request.form['sort-username']
-    sort_value = '' if sort_value == None else sort_value
-    comments = Comment.query
-    if sort_filter == 'user':
-        comments = comments.filter_by(username=sort_value)
-    
-    comments = comments.order_by(Comment.time_posted)
-    
-    html = render_template('comments.html', 
-                           comments=comments.filter_by(channel_posted=channel_id).all()[::-1],
-                           sort=sort_filter, 
-                           s_user=sort_value,
-                           channel_id=channel_id)
-
-    print(html)
-
-    return html
-
-def generate_token():
-    token = secrets.token_urlsafe(16)
-    while Token.query.filter_by(token=token).first():
-        token = secrets.token_urlsafe(16)
-    return token
-#endregion
-
-#region Comments
+#region Redirects
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/comments', methods=['POST', 'GET'])
-def comments():
+@app.route('/forum', methods=['POST', 'GET'])
+def forum():
     channel_id = 1
     
     try: 
@@ -57,18 +29,61 @@ def comments():
             try:
                 db.session.add(new_comment)
                 db.session.commit()
-                return redirect('/comments')
+                return redirect('/forum')
             except:
                 return 'There was an issue posting your comment.'
         elif 'reply-content' in request.form.keys():
             return 'received return!'
     else:
         comments = Comment.query.order_by(Comment.time_posted).filter_by(channel_posted=channel_id).all()
-        return render_template('comments.html', 
+        return render_template('forum.html', 
                                comments=comments[::-1], 
                                sort='date', 
                                s_user='',
                                channel_posted=channel_id)
+    
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/register')
+def register():
+    email = request.args.get('email')
+    token = request.args.get('token')
+    if email and token:
+        return render_template('register-verified.html', 
+                               email=email, 
+                               token=token)
+    else:
+        return render_template('register.html')
+#endregion
+
+#region Functions
+def sort(request, channel_id):
+    sort_filter = request.form['sort-by']
+    sort_value = request.form['sort-username']
+    sort_value = '' if sort_value == None else sort_value
+    comments = Comment.query
+    if sort_filter == 'user':
+        comments = comments.filter_by(username=sort_value)
+    
+    comments = comments.order_by(Comment.time_posted)
+    
+    html = render_template('forum.html', 
+                           comments=comments.filter_by(channel_posted=channel_id).all()[::-1],
+                           sort=sort_filter, 
+                           s_user=sort_value,
+                           channel_id=channel_id)
+
+    print(html)
+
+    return html
+
+def generate_token():
+    token = secrets.token_urlsafe(16)
+    while Token.query.filter_by(token=token).first():
+        token = secrets.token_urlsafe(16)
+    return token
 #endregion
 
 #region Replies    
@@ -114,10 +129,6 @@ def get_replies():
 #endregion
 
 #region Login
-@app.route('/login')
-def login():
-    return render_template('login.html')
-
 @app.route('/user-login', methods=['POST'])
 def user_login():
     data = json.loads(request.data)
@@ -137,18 +148,7 @@ def user_login():
         return jsonify({ 'result' : 'invalid credentials' })
 #endregion
 
-#region Registration
-@app.route('/register')
-def register():
-    email = request.args.get('email')
-    token = request.args.get('token')
-    if email and token:
-        return render_template('register-verified.html', 
-                               email=email, 
-                               token=token)
-    else:
-        return render_template('register.html')
-    
+#region Registration    
 @app.route('/send-verify-email', methods=['POST'])
 def send_verification_email():
     data = json.loads(request.data)

@@ -6,7 +6,7 @@
 }
 
 .topbar{
-    background-color: #3D5DAF;
+    background-color: white;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -15,23 +15,25 @@
     flex-wrap:nowrap;
     align-items:center;
     padding-top:10px;
+    margin-left:50px;
+    margin-right:200px;
 }
 
 .toplogo{
-    height: 60px;
-    width: 60px;
+    height: 95px;
+    width: 95px;
     margin-left:30px;
     margin-top:10px;
     padding-bottom:10px;
+    padding-right:50px;
 }
 
 .topinteractables{
-    color:white;
+    color:black;
     font-weight:700; /* why this not working? */
     display:flex;
     font-size:20px;
-    margin-left:200px;
-    margin-right:180px;
+    margin-left:100px;
     flex-grow:1;
     justify-content:space-between;
 }

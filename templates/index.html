@@ -28,16 +28,27 @@
 {% endblock %}	
 
 {% block body %}
-<div class="top-bar">
-    <img class="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
-    <div class = "top-interactables">
-        <p class="homepage-link">Home Page</p>
-        <p class="ourimpact-link">Our Impact</p>
-        <p class="forum-link">Forum</p>
-        <p class="resources-link">Resources</p>
-        <p class="getinvolved-link">Get Involved</p>
-        <p class="login-link">Log In</p>
+<div id="top-bar">
+    <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
+    <div id = "top-interactables">
+        <p id="homepage-link">Home Page</p>
+        <p id="ourimpact-link">Our Impact</p>
+        <p id="forum-link">Forum</p>
+        <p id="resources-link">Resources</p>
+        <p id="getinvolved-link">Get Involved</p>
+        <p id="login-link">Log In</p>
     </div>
 </div>    
+<div id="topwrapper">
+    <div id="leftwrappertop">
+        <p id="headertext">Turning Vision into Reality,<br>One Proposal at a Time</p>
+        <button type="button" id="getinvolved-button">GET INVOLVED</button>
+
+    </div>
+    <div id="rightwrappertop">
+        <img id="earth" draggable="false" src="{{ url_for('static', filename='images/earth.png') }}">
+
+    </div>
+</div>
 
 {% endblock %}

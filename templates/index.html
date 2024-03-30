@@ -1,6 +1,5 @@
 {% extends 'basenocss.html' %}
 
-
 <!-- {% block lHeader %}
 {% endblock %}
 {% block cHeader %}
@@ -8,8 +7,6 @@
 {% block rHeader %}
 {% endblock %}
  -->
-
-
 
 {% block head %}
 <title>SolveXChange</title>
@@ -23,18 +20,17 @@
 <meta property="og:description" content="" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css" />
+<!-- <link rel="stylesheet" href="style.css" /> -->
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="32x32" />
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="16x16" />
 <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
-<script src="code.js" defer></script>
+<!-- <script src="code.js" defer></script> -->
 {% endblock %}	
 
 {% block body %}
-<div class="topbar">
-    <img class="toplogo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
-    <div class = "topinteractables">
+<div class="top-bar">
+    <img class="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
+    <div class = "top-interactables">
         <p class="homepage-link">Home Page</p>
         <p class="ourimpact-link">Our Impact</p>
         <p class="forum-link">Forum</p>

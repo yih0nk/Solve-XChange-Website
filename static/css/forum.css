@@ -1,8 +1,7 @@
 #post-form {
     background-color: white;
-    box-shadow: 0 0 .5rem var(--shadow-colour);
     color: var(--dark-main-colour);
-    border-radius: 0 0 1dvh 1dvh;
+    border-radius: 0 0 0 0;
     position: relative;
     margin: 0 auto;
     padding: 25px;
@@ -17,6 +16,7 @@
 }
 
 #display-name {
+    color: black;
     padding: 0;
     margin: 0;
 }
@@ -183,3 +183,6 @@
     font-size: medium;
 }
 
+#topic{
+    border-color: black;
+}

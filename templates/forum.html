@@ -15,6 +15,20 @@
 {% endblock %}
 
 {% block body %}
+<section id="forum-info">
+    <div>
+        <label id="info-title">What should I share?</label>
+    </div>
+    <div id="info-displayed">
+        <p>What are the biggest challenges you face in your community? Is there anything in <br>particular that frustrates you?</p>
+        <br>
+        <p>Are there any social or environmental issues in your community that concern you?</p>
+        <br>
+        <p>What barriers do you or someone you know encounter in accessing essential <br>services in your community?</p>
+        <br>
+        <p>What potential solutions do you envision for the challenges confronting your <br>community?</p>
+    </div>
+</section>
 <section id="post-form">
     <form id="comment-form" action="/comments" method="POST" onsubmit="PostComment(event)">
         <div class="wrapper split">
@@ -23,7 +37,10 @@
                 <input id="username-input" name="username" type="hidden" autocomplete="off" placeholder="Username...">
             </div>
         </div>
-        <textarea id="content" wrap="soft" name="content" rows="5" placeholder="What would you like to share?"></textarea>
+        <div id = "post-topic">
+            <textarea id="topic" name="topic" wrap="soft" rows="1" placeholder="Topic/Heading"></textarea>
+        </div>
+        <textarea id="content" wrap="soft" name="content" rows="5" placeholder="Type in your ideas here..."></textarea>
         <input type="hidden" id="channel-input" name="channel" value="{{channel_id}}">
        <div style="text-align:right"> 
             <input id="post-submit" type="submit" value="Post!">

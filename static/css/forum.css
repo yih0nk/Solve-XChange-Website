@@ -1,5 +1,5 @@
 #post-form {
-    background-color: var(--dark-primary-colour);
+    background-color: white;
     box-shadow: 0 0 .5rem var(--shadow-colour);
     color: var(--dark-main-colour);
     border-radius: 0 0 1dvh 1dvh;
@@ -22,7 +22,7 @@
 }
 
 #comments { 
-    background-color: var(--dark-secondary-colour);
+    background-color: white;
     box-shadow: 0 0 .5rem var(--shadow-colour);
     color: var(--dark-main-colour);
     transition: opacity 0.3s ease;
@@ -42,7 +42,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--dark-tertiary-colour);
+    background-color: white;
     border-radius: 5px;
 }
 
@@ -159,3 +159,27 @@
     height: 0;
     width: 0;
 }
+
+#forum-info{
+    background-color: white;
+    border-radius: 0 0 0 0;
+    position: relative;
+    margin: 0 auto;
+    padding: 25px;
+    width: 40vw;
+    z-index: 2;
+}
+
+#info-title{
+    font-weight: bold;
+    background-color: white;
+    color: blue;
+    font-size: x-large;
+}
+
+#info-displayed{
+    background-color: white;
+    color: black;
+    font-size: medium;
+}
+

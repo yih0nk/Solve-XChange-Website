@@ -162,6 +162,7 @@
 
 #forum-info{
     background-color: white;
+    color: black;
     border-radius: 0 0 0 0;
     position: relative;
     margin: 0 auto;
@@ -173,14 +174,35 @@
 #info-title{
     font-weight: bold;
     background-color: white;
-    color: blue;
-    font-size: x-large;
+    color: rgb(61, 93, 175);
+    font-size: 42px;
+    margin-left: -45px;
+}
+
+@font-face{
+    font-family: "Source Sans Pro";
+    src: url("static/fonts/sourcesanspro-black-webfont.woff") format("woff");
 }
 
 #info-displayed{
+    width: 1000px;
+    font-weight: 50;
+    line-height: 32px;
+    font-family: "Source Sans Pro", sans-serif;
     background-color: white;
     color: black;
-    font-size: medium;
+    font-size: 24.8px;
+    margin-left: -32px;
+}
+
+#forum-reminder{
+    font-style: italic;
+    font-family: "Source Sans Pro", sans-serif;
+    color: rgb(61, 93, 175);
+    font-weight: 650;
+    font-size: 26px;
+    margin-left: -35px;
+    padding-top: 36px;
 }
 
 #topic{

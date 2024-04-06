@@ -46,7 +46,7 @@ function login(event) {
                 logError('Account does not exist.');
             else {
                 logSuccess('Successfully logged in.');
-                setTimeout(() => window.location.href = `${url}/comments`, '500');
+                setTimeout(() => window.location.href = `${url}/forum`, '500');
             }
         },
         error: function(xhr, status, error) {

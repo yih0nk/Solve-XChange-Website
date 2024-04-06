@@ -7,6 +7,13 @@
     box-sizing: border-box;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
 #top-bar{
     background-color: white;
     position: fixed;
@@ -14,11 +21,11 @@
     left: 0px;
     right: 0px;
     display:flex;
-    flex-wrap:nowrap;
     align-items:center;
     padding-top:10px;
-    margin-left:50px;
-    margin-right:200px;
+    padding-left:50px;
+    padding-right:200px;
+    z-index:100;
 }
 
 #top-logo{
@@ -39,10 +46,10 @@
     justify-content:space-between;
 }
 
-#top-interactables > p {
+/* #top-interactables > p {
     font-weight:400;
 }
-
+ */
 #leftwrappertop{
     max-width:700px;
 }
@@ -61,12 +68,13 @@
 
 #getinvolved-button{
     border-radius: 50px;
-    border: 1px solid black;
+    border: none;
     width:275px;
     height:70px;
     padding:8px;
     font-size:22px;
     font-weight:700;
+    color:white;
     background: rgb(114,183,230);
     text-align:center;
     background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
@@ -74,8 +82,132 @@
 
 #earth{
     transform: scaleX(-1);
-    margin-top:-210px;
+    margin-top:-280px;
     margin-right:-30px;
     width:503.2px;
     height:753.6px;
+}
+
+#homepage-link{
+    font-weight:700;
+}
+
+.divider{
+    background-color: #3D5DAF;
+    height:20px;
+    left:0px;
+    right:0px;
+    position:relative;
+}
+
+#lowertop{
+    background: rgb(168,205,234);
+    left:0px;
+    right:0px;
+    position:relative;
+    background: linear-gradient(90deg, rgba(168,205,234,1) 0%, rgba(193,232,224,1) 100%);
+
+}
+
+#lowertopwrap{
+    margin: 0px 200px 0px 200px;
+    padding-top:70px;
+    padding-bottom:70px;
+    display:flex;
+    flex-wrap:nowrap;
+    right:0px;
+    left:0px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#innovate-sector,#impact-sector,#inspire-sector{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.style1-round-image{
+    border-radius: 160px;
+    object-fit: cover;
+    width: 270px;
+    height:400px;
+
+}
+
+.style1-header-text{
+    margin: 20px 0px 10px 0px;
+    font-size:30px;
+    font-weight:700;
+
+}
+
+.style1-desc-text{
+    margin-bottom:23px;
+    font-size:18px;
+    font-weight:400;
+    text-align: center;
+    margin-top:0px;
+}
+
+
+.style1-button{
+    border-radius:25px;
+    border: 2px solid black;
+    font-size:14px;
+    background-color: transparent;
+    color:black;
+    padding:10px 20px 10px 20px;
+}
+
+.style1-right-arrow{
+    width:12px;
+    height:12px;
+}
+
+.style1-button-wrapper{
+    display:flex;
+    align-items: center;
+}
+
+#quotesection{
+    margin:100px 250px 150px 250px;
+    
+}
+
+#image-quote{
+    width:75x;
+    height:59px;
+}
+
+#quote-text-wrapper{
+    margin-left:100px;
+    margin-right:100px;
+}
+
+#quote-text{
+    font-size:35px;
+    font-weight:400;
+    text-align: center;
+}
+
+
+
+
+#lowerbottom{
+    background: rgb(168,205,234);
+    left:0px;
+    right:0px;
+    position:relative;
+    background: linear-gradient(90deg, rgba(168,205,234,1) 0%, rgba(193,232,224,1) 100%);
+
+}
+
+#lowerbottomwrap{
+    margin: 0px 200px 0px 200px;
+    padding-top:70px;
+    padding-bottom:70px;
+    right:0px;
+    left:0px;
 }

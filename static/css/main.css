@@ -22,7 +22,7 @@ input:not([type="checkbox"]), textarea, .dropdown {
 }
 
 body {
-    background-color: var(--dark-background-colour);
+    background-color: white;
     color: var(--dark-main-colour);
     font-family: "Poppins";
     font-size: 1.75vh;

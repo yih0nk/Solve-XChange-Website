@@ -1,11 +1,11 @@
 #post-form {
-    background-color: white;
-    color: var(--dark-main-colour);
+    color: white;
     border-radius: 0 0 0 0;
     position: relative;
     margin: 0 auto;
     margin-top: -20px;
     width: 40vw;
+    padding-bottom: 20px;
 }
 
 #username {
@@ -25,14 +25,13 @@
 
 #comments { 
     background-color: white;
-    box-shadow: 0 0 .5rem var(--shadow-colour);
-    color: var(--dark-main-colour);
+    color: white;
     transition: opacity 0.3s ease;
     position: relative;
     text-align: center;
     overflow-y: auto;
     margin: 0 auto;
-    height: 100%;
+    height: 700px;
     width: 40vw;
     opacity: 0;
     z-index: 0;
@@ -90,16 +89,13 @@
 }
 
 #sort-wrapper {
-    background-color: var(--dark-tertiary-colour);
-    box-shadow: 0 0 .5rem var(--shadow-colour);
-    color: var(--dark-main-colour);
-    border-radius: 0 0 1dvh 1dvh;
+    background-color: white;
     align-items: center;
     position: relative;
     text-align: center;
     margin: 0 auto;
     display: flex;
-    width: 41.5vw;
+    width: 850px;
     height: 10vh;
     z-index: 1;
 }
@@ -214,6 +210,111 @@
     width: 850px;
     font-size: 30px;
     font-weight: 600;
+    letter-spacing: 0.01px;
     margin-left: -40px;
+    color: black;
 }
 
+#content{
+    border-color: black;
+    border-radius: 25px;
+    font-size: 21.5px;
+    width: 850px;
+    height: 285px;
+    margin-left: -40px;
+    color: black;
+}
+
+::placeholder{
+    color: black;
+}
+
+#post-submit{
+    color: black;
+}
+
+#discussion{
+    color: black;
+    text-align: center;
+    margin-left: -650px;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.line{
+    width: 36.5%;
+    height: 1px;
+    margin-right: 470px;
+    margin-top: 0px;
+    background-color: black
+}
+
+#sort-display{
+    color: black;
+    background-color: white;
+    font-size: 20px;
+}
+.dropdown-values{
+    color: white;
+}
+
+#sort-by-display{
+    color: black;
+    background-color: white;
+}
+
+#sort-by{
+    border-color: black;
+}
+
+#post-button{
+    color: black;
+}
+
+#extra-wrapper{
+    color: black;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: rgb(217, 238, 253);
+    width: 1000px;
+    height: 500px;
+}
+
+#extra-title{
+    font-size: 36px;
+    font-weight: 900;
+    padding-top: 25px;
+}
+
+#extra-info{
+    display: flex;
+}
+
+#competition{
+    padding-top: 30px;
+    color: rgb(61, 93, 175);
+    font-size: 21.5px;
+    font-weight: 900;
+}
+
+#competition-info{
+    color: black;
+    font-size: 16px;
+    font-weight:200;
+}
+
+#chapter{
+    padding-top: 30px;
+    color: rgb(61, 93, 175);
+    font-size: 21.5px;
+    font-weight: 900;
+}
+
+#chapter-info{
+    color: black;
+    font-size: 16px;
+    font-weight:200;
+}

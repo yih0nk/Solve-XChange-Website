@@ -40,16 +40,22 @@
         <div id = "post-topic">
             <textarea id='topic' name='topic' wrap="soft" rows="1" placeholder="&nbsp;Topic/Heading"></textarea>
         </div>
-        <textarea id="content" wrap="soft" name="content" rows="5" placeholder="Type in your ideas here..."></textarea>
+        <div>
+            <textarea id="content" wrap="soft" name="content" rows="5" placeholder="&nbsp;Type in your ideas here..."></textarea>
+        </div>
         <input type="hidden" id="channel-input" name="channel" value="{{channel_id}}">
-       <div style="text-align:right"> 
+       <div id="post-button"> 
             <input id="post-submit" type="submit" value="Post!">
         </div>
     </form>
 </section>
+<div id="discussion">
+    <label>Discussions</label>
+    <hr class="line">
+</div>
 <section id="sort-wrapper">
     <form id="sort-form" class="wrapper split" action="/comments" method="POST">
-        <div>
+        <div id="sort-display">
             Sort by: <div id="sort-by" class="dropdown inline">
                 <p id="sort-by-display" class="dropdown-selected">{{ sort | capitalize }}</p>
                 <div class="dropdown-values">
@@ -103,6 +109,25 @@
         </div>
     </div>
     {% endfor %}
+</section>
+<section id="extra-wrapper">
+    <div id="extra-title">
+        <label>Inspired? Take Action Today!</label>
+    </div>
+    <div id="extra-info">
+        <div id="competition">
+            <label>Our Competition</label>
+            <div id="competition-info">
+                <p>Join SolveXchange and work<br>alongside other inspired youth<br>to develop your innovative<br>ideas. Submit your proposal to<br>our competition for a chance<br>to win SolveXchange support,<br>gain recognition and bring<br>your idea to reality.</p>
+            </div>
+        </div>
+        <div id="chapter">
+            <label>Start a Chapter</label>
+            <div id="chapter-info">
+                <p>Interested in becoming a leader?<br>Open a chapter of SolveXchange<br>at your high school! Become a<br>part of our growing executive<br>team by bringing SolveXchange<br>to your own community.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <script src="{{ url_for('static', filename='js/forum.js') }}" defer></script>

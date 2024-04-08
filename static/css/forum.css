@@ -53,6 +53,8 @@
 
 #content {
     width: calc(100% - 25px);
+    padding-left: 20px;
+    padding-top: 15px;
 }
 
 .post * {
@@ -204,8 +206,9 @@
 }
 
 #topic{
-    border-color: black;
     border-radius: 50px;
+    border-color:rgb(61, 93, 175);
+    border-width: 2px;
     margin-left: -17px;
     width: 850px;
     font-size: 30px;
@@ -213,11 +216,13 @@
     letter-spacing: 0.01px;
     margin-left: -40px;
     color: black;
+    padding-left: 20px;
 }
 
 #content{
-    border-color: black;
     border-radius: 25px;
+    border-color:rgb(61, 93, 175);
+    border-width: 2px;
     font-size: 21.5px;
     width: 850px;
     height: 285px;
@@ -279,25 +284,34 @@
     margin: 0 auto;
     border-radius: 20px;
     background-color: rgb(217, 238, 253);
-    width: 1000px;
-    height: 500px;
+    width: 900px;
+    height: 450px;
 }
 
 #extra-title{
     font-size: 36px;
-    font-weight: 900;
+    font-weight: 600;
+}
+
+.extra-title-div{
     padding-top: 25px;
 }
 
 #extra-info{
+    margin-left: 25px;
     display: flex;
+}
+
+.extra-info-subtitle{
+    color: rgb(61, 93, 175);
+    font-size: 22px;
+    font-weight: 700;
 }
 
 #competition{
     padding-top: 30px;
-    color: rgb(61, 93, 175);
-    font-size: 21.5px;
-    font-weight: 900;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #competition-info{
@@ -308,13 +322,40 @@
 
 #chapter{
     padding-top: 30px;
-    color: rgb(61, 93, 175);
-    font-size: 21.5px;
-    font-weight: 900;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #chapter-info{
     color: black;
     font-size: 16px;
     font-weight:200;
+}
+
+#team{
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#team-info{
+    color: black;
+    font-size: 16px;
+    font-weight:200;
+}
+
+#getinvolved-button2{
+    border-radius: 50px;
+    border: 0;
+    color: white;
+    width:195px;
+    height:60px;
+    padding:8px;
+    margin-top: 22px;
+    font-size:20px;
+    font-weight: 600;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
 }

@@ -3,6 +3,7 @@
 {% block head %}
 <title>Forum</title>
 <link href="{{ url_for('static', filename='css/forum.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
 {% endblock %}
 
 {% block lHeader %}
@@ -111,20 +112,27 @@
     {% endfor %}
 </section>
 <section id="extra-wrapper">
-    <div id="extra-title">
-        <label>Inspired? Take Action Today!</label>
+    <div class="extra-title-div">
+        <label id="extra-title">Inspired? Take Action Today!</label>
     </div>
     <div id="extra-info">
         <div id="competition">
-            <label>Our Competition</label>
+            <label class="extra-info-subtitle">Our Competition</label>
             <div id="competition-info">
                 <p>Join SolveXchange and work<br>alongside other inspired youth<br>to develop your innovative<br>ideas. Submit your proposal to<br>our competition for a chance<br>to win SolveXchange support,<br>gain recognition and bring<br>your idea to reality.</p>
             </div>
         </div>
         <div id="chapter">
-            <label>Start a Chapter</label>
+            <label class="extra-info-subtitle">Start a Chapter</label>
             <div id="chapter-info">
                 <p>Interested in becoming a leader?<br>Open a chapter of SolveXchange<br>at your high school! Become a<br>part of our growing executive<br>team by bringing SolveXchange<br>to your own community.</p>
+            </div>
+            <button id="getinvolved-button2" type="button">Get Involved</button>
+        </div>
+        <div id="team">
+            <label class="extra-info-subtitle">Join Our Exec Team</label>
+            <div id="team-info">
+                <p>Are you passionate about<br>the same goals we are? Do<br>you possess skills or ideas<br>that could improve<br>SolveXchange? Join our<br>executive team as we work<br>together towards<br>empowering more youth.</p>
             </div>
         </div>
     </div>

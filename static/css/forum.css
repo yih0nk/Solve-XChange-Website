@@ -31,14 +31,13 @@
 
 #comments { 
     background-color: white;
-    color: white;
+    color: black;
     transition: opacity 0.3s ease;
     position: relative;
     text-align: center;
     overflow-y: auto;
-    margin: 0 auto;
-    height: 700px;
-    width: 40vw;
+    margin-left: 150px;
+    width: 1360px;
     opacity: 0;
     z-index: 0;
 }
@@ -68,32 +67,49 @@
 }
 
 .post {
-    border-radius: 5px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
     margin: 25px;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-bottom: 15px;
 }
 
 .post-content {
-    background-color: var(--dark-primary-colour);
     overflow-wrap: break-word;
-    border-radius: 5px;
     text-align: left;
-    padding: 10px;
-    margin: 0;
+    line-height: 30px;
+    font-size: 22px;
+}
+
+.post-content-by {
+    text-align: left;
+    line-height: 30px;
+    font-size: 20px;
+
+}
+
+.post-content-topic {
+    text-align: left;
+    line-height: 45px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .post-metadata {
-    background-color: var(--dark-background-colour);
-    color: var(--dark-disabled-colour);
-    border-radius: 0 0 5px 5px;
-    text-align: center;
-    font-size: .8rem;
-    padding: 5px;
-    width: auto;
+    background-color: white;
+    color: black;
+    text-align: right;
+    font-size: 20px;
     margin: 0;
 }
 
 .post-username {
-    color: var(--dark-main-colour);
+    color: black;
 }
 
 #sort-wrapper {
@@ -191,6 +207,7 @@
     background-color: white;
     color: black;
     font-size: 36px;
+    line-height: 48px;
     margin-left: 200px;
 }
 
@@ -200,6 +217,7 @@
     color: rgb(61, 93, 175);
     font-weight: 650;
     font-size: 32px;
+    line-height: 48px;
     margin-left: 200px;
     padding-top: 36px;
 }
@@ -247,16 +265,15 @@
 
 #discussion{
     color: black;
-    text-align: center;
-    margin-left: -650px;
-    font-size: 40px;
+    font-size: 56px;
     font-weight: 700;
+    margin-left: 180px;
 }
 
 .line{
-    width: 36.5%;
+    width: 1330px;
     height: 1px;
-    margin-right: 470px;
+    margin-left: -10px;
     margin-top: 0px;
     background-color: black
 }
@@ -305,6 +322,7 @@
 .extra-title-div{
     padding-top: 75px;
     padding-bottom: 30px;
+    margin-top: 50px;
 }
 
 #extra-info{

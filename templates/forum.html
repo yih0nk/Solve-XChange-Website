@@ -93,20 +93,27 @@
 <section id="comments">
     {% for comment in comments %}
     <div class="post">
+        <div class="post-metadata">
+            Posted {{ comment.time_posted | calculate_time }} ago
+        </div>
+        <p class="post-content-by">
+            <a class="post-username">{{ comment.username }}</a>
+        </p>
+        <p class="post-content-topic">
+            ***Posted topic goes here{{ comment.topic }}***
+        </p>
         <p class="post-content">
             {{ comment.content | replace('\r\n', '<br>') | safe }}
         </p>
+        
+    </div>
+    <div>
         <div id="post-footer-{{comment.id}}" class="post-footer">
             <div class="spaced">
                 <div class="inline">
                     <label for="show-{{comment.id}}"><img id="arrow-{{comment.id}}" src="{{ url_for('static', filename='images/drarrow-dark.png') }}" class="icon"></label>
                     <input id="show-{{comment.id}}" type="submit" value="View Replies" onclick="ToggleReplies('{{comment.id}}')">
                 </div>
-                <p class="post-metadata inline">
-                    Posted by 
-                    <a class="post-username">{{ comment.username }},</a> 
-                    {{ comment.time_posted | calculate_time }} ago
-                </p>
             </div>
             <div id="replies-{{comment.id}}" class="replies" data-displayed="no" data-replies-loaded="no">
                 <div class="wrapper">

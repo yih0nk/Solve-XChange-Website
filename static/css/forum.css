@@ -1,10 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face{
+    font-family: "Source Sans Pro", sans-serif;
+    src: url("../fonts/sourcesanspro-black-webfont.woff") format("woff");
+}
+
 #post-form {
     color: white;
     border-radius: 0 0 0 0;
     position: relative;
     margin: 0 auto;
+    margin-left: 200px;
     margin-top: -20px;
-    width: 40vw;
     padding-bottom: 20px;
 }
 
@@ -12,7 +19,6 @@
     display: inline-flex;
     text-align: left;
     align-items: center;
-    margin-left: -40px;
     font-size: 20px;
     padding-top: 20px;
 }
@@ -25,14 +31,13 @@
 
 #comments { 
     background-color: white;
-    color: white;
+    color: black;
     transition: opacity 0.3s ease;
     position: relative;
     text-align: center;
     overflow-y: auto;
-    margin: 0 auto;
-    height: 700px;
-    width: 40vw;
+    margin-left: 150px;
+    width: 1360px;
     opacity: 0;
     z-index: 0;
 }
@@ -53,6 +58,8 @@
 
 #content {
     width: calc(100% - 25px);
+    padding-left: 20px;
+    padding-top: 15px;
 }
 
 .post * {
@@ -60,32 +67,49 @@
 }
 
 .post {
-    border-radius: 5px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
     margin: 25px;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-bottom: 15px;
 }
 
 .post-content {
-    background-color: var(--dark-primary-colour);
     overflow-wrap: break-word;
-    border-radius: 5px;
     text-align: left;
-    padding: 10px;
-    margin: 0;
+    line-height: 30px;
+    font-size: 22px;
+}
+
+.post-content-by {
+    text-align: left;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.post-content-topic {
+    text-align: left;
+    line-height: 45px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .post-metadata {
-    background-color: var(--dark-background-colour);
-    color: var(--dark-disabled-colour);
-    border-radius: 0 0 5px 5px;
-    text-align: center;
-    font-size: .8rem;
-    padding: 5px;
-    width: auto;
+    background-color: white;
+    color: black;
+    text-align: right;
+    font-size: 20px;
+    font-style: italic;
     margin: 0;
 }
 
 .post-username {
-    color: var(--dark-main-colour);
+    color: black;
 }
 
 #sort-wrapper {
@@ -164,65 +188,60 @@
     border-radius: 0 0 0 0;
     position: relative;
     margin: 0 auto;
-    width: 40vw;
+    width: 100%;
     z-index: 2;
 }
 
 #info-title{
-    font-weight: bold;
+    font-weight: 700;
     background-color: white;
     color: rgb(61, 93, 175);
-    font-size: 42px;
-    margin-left: -45px;
-}
-
-@font-face{
-    font-family: "Source Sans Pro";
-    src: url("static/fonts/sourcesanspro-black-webfont.woff") format("woff");
+    font-size: 60px;
+    margin-left: 190px;
 }
 
 #info-displayed{
-    width: 1000px;
     font-weight: 50;
     line-height: 32px;
     font-family: "Source Sans Pro", sans-serif;
     background-color: white;
     color: black;
-    font-size: 24.8px;
-    margin-left: -32px;
+    font-size: 36px;
+    line-height: 48px;
+    margin-left: 200px;
 }
 
 #forum-reminder{
-    width: 1000px;
     font-style: italic;
     font-family: "Source Sans Pro", sans-serif;
     color: rgb(61, 93, 175);
     font-weight: 650;
-    font-size: 25.5px;
-    margin-left: -35px;
+    font-size: 32px;
+    line-height: 48px;
+    margin-left: 200px;
     padding-top: 36px;
 }
 
 #topic{
-    border-color: black;
     border-radius: 50px;
-    margin-left: -17px;
-    width: 850px;
+    border-color:rgb(61, 93, 175);
+    border-width: 2px;
+    width: 1250px;
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 0.01px;
-    margin-left: -40px;
     color: black;
+    padding-left: 20px;
 }
 
 #content{
-    border-color: black;
     border-radius: 25px;
-    font-size: 21.5px;
-    width: 850px;
+    border-color:rgb(61, 93, 175);
+    border-width: 2px;
+    font-size: 32px;
+    width: 1250px;
     height: 285px;
-    margin-left: -40px;
-    color: black;
+    color: rgb(180, 174, 174);
 }
 
 ::placeholder{
@@ -230,21 +249,31 @@
 }
 
 #post-submit{
-    color: black;
+    border-radius: 50px;
+    border: 0;
+    color: white;
+    width:135px;
+    height:45px;
+    margin-top: 22px;
+    font-size:24px;
+    font-weight: 700;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
 }
 
 #discussion{
     color: black;
-    text-align: center;
-    margin-left: -650px;
-    font-size: 40px;
-    font-weight: 900;
+    font-size: 56px;
+    font-weight: 700;
+    margin-left: 180px;
 }
 
 .line{
-    width: 36.5%;
+    width: 1330px;
     height: 1px;
-    margin-right: 470px;
+    margin-left: -10px;
     margin-top: 0px;
     background-color: black
 }
@@ -253,6 +282,7 @@
     color: black;
     background-color: white;
     font-size: 20px;
+    margin-left: -370px;
 }
 .dropdown-values{
     color: white;
@@ -268,7 +298,10 @@
 }
 
 #post-button{
-    color: black;
+    width: 1250px;
+    text-align: right;
+    margin-left: 40px;
+    margin-top: -19px;
 }
 
 #extra-wrapper{
@@ -279,42 +312,208 @@
     margin: 0 auto;
     border-radius: 20px;
     background-color: rgb(217, 238, 253);
-    width: 1000px;
-    height: 500px;
+    width: 95%;
 }
 
 #extra-title{
-    font-size: 36px;
-    font-weight: 900;
-    padding-top: 25px;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.extra-title-div{
+    padding-top: 75px;
+    padding-bottom: 30px;
+    margin-top: 50px;
 }
 
 #extra-info{
+    margin-left: 100px;
     display: flex;
 }
 
-#competition{
-    padding-top: 30px;
+.extra-info-subtitle{
     color: rgb(61, 93, 175);
-    font-size: 21.5px;
-    font-weight: 900;
+    font-size: 48px;
+    font-weight: 700;
 }
 
-#competition-info{
+.extra-info-subtext{
     color: black;
-    font-size: 16px;
+    font-size: 32px;
     font-weight:200;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 48px;
 }
 
-#chapter{
-    padding-top: 30px;
-    color: rgb(61, 93, 175);
-    font-size: 21.5px;
-    font-weight: 900;
+.extra-format{
+    padding:40px;
 }
 
-#chapter-info{
+#getinvolved-button2{
+    border-radius: 50px;
+    border: 0;
+    color: white;
+    width:320px;
+    height:85px;
+    padding:8px;
+    margin-top: 22px;
+    font-family: "Poppins", sans-serif;
+    font-size:28px;
+    font-weight: 600;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+}
+
+
+#top-wrapper{
     color: black;
-    font-size: 16px;
-    font-weight:200;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(217, 238, 253);
+    width: 100%;
+}
+
+#top-title{
+    font-size: 100px;
+    font-weight: 700;
+}
+
+#top-title-div{
+    padding-top: 75px;
+    padding-bottom: 30px;
+}
+
+#forum-slogan{
+    font-size: 35px;
+}
+
+#forum-button{
+    border-radius: 75px;
+    border: 0;
+    color: white;
+    width:600px;
+    height:150px;
+    padding:8px;
+    margin-top: 22px;
+    font-family: "Poppins", sans-serif;
+    font-size:50px;
+    font-weight: 700;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+}
+
+#top-bar{
+    background-color: white;
+    left: 0px;
+    right: 0px;
+    display:flex;
+    flex-wrap:nowrap;
+    align-items:center;
+    padding-top:10px;
+    margin-left:50px;
+    margin-right:200px;
+}
+
+#top-logo{
+    height: 95px;
+    width: 95px;
+    margin-left:30px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right:50px;
+}
+
+#top-interactables{
+    color:black;
+    display:flex;
+    font-size:20px;
+    margin-left:100px;
+    flex-grow:1;
+    justify-content:space-between;
+}
+
+#top-interactables > p {
+    font-weight:400;
+}
+
+.curved {
+    background-color: rgb(114,183,230);
+    color: blue;
+}
+
+#join-wrapper{
+    width: 100%;
+    margin-top: 90px;
+    background-color: rgb(61, 93, 175);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.white-line{
+    width: 90%;
+    height: 1px;
+    margin-top: 0px;
+    background-color: white;
+}
+
+#join-title-div{
+    padding-top: 10px;
+}
+
+#join-title{
+    font-size: 70px;
+    font-weight: 600;
+}
+
+#join-slogan{
+    font-size: 38px;
+    margin-top: -25px;
+}
+
+#join-below{
+    display: flex;
+    margin-left: 220px;
+}
+
+#signup-button{
+    border-radius: 50px;
+    border: 0;
+    color: white;
+    width:475px;
+    height:100px;
+    padding:8px;
+    font-family: "Poppins", sans-serif;
+    font-size:42px;
+    font-weight: 600;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+}
+
+.join-subtitles-div{
+    padding-top: 50px;
+    padding-left: 220px;
+    padding-right: 220px;
+}
+
+.join-subtitles{
+    font-size: 48px;
+    font-weight: 600;
+}
+
+#action-info{
+    align-items: center;
+    display: grid;
+}
+
+a{
+    color: white;
 }

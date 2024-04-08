@@ -5,16 +5,32 @@
 <link href="{{ url_for('static', filename='css/forum.css') }}" rel="stylesheet">
 {% endblock %}
 
-{% block lHeader %}
-{% endblock %}
-
-{% block cHeader %}
-{% endblock %}
-
-{% block rHeader %}
-{% endblock %}
-
 {% block body %}
+<section id="top-menu">
+    <div id="top-bar">
+        <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
+        <div id = "top-interactables">
+            <p id="homepage-link">Home Page</p>
+            <p id="ourimpact-link">Our Impact</p>
+            <p id="forum-link">Forum</p>
+            <p id="resources-link">Resources</p>
+            <p id="getinvolved-link">Get Involved</p>
+            <p id="login-link">Log In</p>
+        </div>
+    </div>
+</section>
+<section id="top-wrapper">
+    <div id="top-title-div">
+        <label id="top-title">SolveXchange Forum</label>
+    </div>
+    <div id="forum-slogan">
+        <p>Your voice and experiences matter. Contribute to<br>your commuity by sharing your ideas.</p>
+    </div>
+    <button id="forum-button" type="button">See The Discussion</button>
+    <div id="curved-line">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,288L80,266.7C160,245,320,203,480,202.7C640,203,800,245,960,250.7C1120,256,1280,224,1360,208L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+    </div>
+</section>
 <section id="forum-info">
     <div id="info-title">
         <label>What should I share?</label>
@@ -37,7 +53,7 @@
                 <input id="username-input" name="username" type="hidden" autocomplete="off" placeholder="Username...">
             </div>
         </div>
-        <div id = "post-topic">
+        <div id="post-topic">
             <textarea id='topic' name='topic' wrap="soft" rows="1" placeholder="&nbsp;Topic/Heading"></textarea>
         </div>
         <div>
@@ -45,7 +61,7 @@
         </div>
         <input type="hidden" id="channel-input" name="channel" value="{{channel_id}}">
        <div id="post-button"> 
-            <input id="post-submit" type="submit" value="Post!">
+            <input id="post-submit" type="submit" value="POST">
         </div>
     </form>
 </section>
@@ -77,20 +93,27 @@
 <section id="comments">
     {% for comment in comments %}
     <div class="post">
+        <div class="post-metadata">
+            Posted {{ comment.time_posted | calculate_time }} ago
+        </div>
+        <div class="post-content-by">
+            <a class="post-username">{{ comment.username }}</a>
+        </div>
+        <p class="post-content-topic">
+            ***Posted topic goes here{{ comment.topic }}*** <!--confirm with jeric-->
+        </p>
         <p class="post-content">
             {{ comment.content | replace('\r\n', '<br>') | safe }}
         </p>
+        
+    </div>
+    <div>
         <div id="post-footer-{{comment.id}}" class="post-footer">
             <div class="spaced">
                 <div class="inline">
                     <label for="show-{{comment.id}}"><img id="arrow-{{comment.id}}" src="{{ url_for('static', filename='images/drarrow-dark.png') }}" class="icon"></label>
                     <input id="show-{{comment.id}}" type="submit" value="View Replies" onclick="ToggleReplies('{{comment.id}}')">
                 </div>
-                <p class="post-metadata inline">
-                    Posted by 
-                    <a class="post-username">{{ comment.username }},</a> 
-                    {{ comment.time_posted | calculate_time }} ago
-                </p>
             </div>
             <div id="replies-{{comment.id}}" class="replies" data-displayed="no" data-replies-loaded="no">
                 <div class="wrapper">
@@ -111,23 +134,54 @@
     {% endfor %}
 </section>
 <section id="extra-wrapper">
-    <div id="extra-title">
-        <label>Inspired? Take Action Today!</label>
+    <div class="extra-title-div">
+        <label id="extra-title">Inspired? Take Action Today!</label>
     </div>
     <div id="extra-info">
-        <div id="competition">
-            <label>Our Competition</label>
-            <div id="competition-info">
+        <div class="extra-format">
+            <label class="extra-info-subtitle">Our Competition</label>
+            <div class="extra-info-subtext">
                 <p>Join SolveXchange and work<br>alongside other inspired youth<br>to develop your innovative<br>ideas. Submit your proposal to<br>our competition for a chance<br>to win SolveXchange support,<br>gain recognition and bring<br>your idea to reality.</p>
             </div>
         </div>
-        <div id="chapter">
-            <label>Start a Chapter</label>
-            <div id="chapter-info">
+        <div class="extra-format">
+            <label class="extra-info-subtitle">Start a Chapter</label>
+            <div class="extra-info-subtext">
                 <p>Interested in becoming a leader?<br>Open a chapter of SolveXchange<br>at your high school! Become a<br>part of our growing executive<br>team by bringing SolveXchange<br>to your own community.</p>
+            </div>
+            <button id="getinvolved-button2" type="button">Get Involved</button>
+        </div>
+        <div class="extra-format">
+            <label class="extra-info-subtitle">Join Our Exec Team</label>
+            <div class="extra-info-subtext">
+                <p>Are you passionate about<br>the same goals we are? Do<br>you possess skills or ideas<br>that could improve<br>SolveXchange? Join our<br>executive team as we work<br>together towards<br>empowering more youth.</p>
             </div>
         </div>
     </div>
+</section>
+<section id="join-wrapper">
+    <hr class="white-line">
+    <div id="join-title-div">
+        <label id="join-title">JOIN SOLVEXCHANGE</label>
+    </div>
+    <div id="join-slogan">
+        <p>Join a community of inspring youth leaders.<br>Beome the driving force behind transformative change.</p>
+    </div>
+    <button id="signup-button" type="button">SIGN UP</button>
+    <div id="join-below">
+        <div class="join-subtitles-div">
+            <label class="join-subtitles">Take Action</label>
+            <div id="action-info">
+                <a href="http://127.0.0.1:5000/forum">Forum</a>
+                <a href="#">Become an executive</a>
+                <a href="#">Start a chapter</a>
+            </div>
+        </div>
+        <div class="join-subtitles-div">
+            <label class="join-subtitles">Connect</label>
+        </div>
+    </div>
+    <hr class="white-line">
 </section>
 
 <script src="{{ url_for('static', filename='js/forum.js') }}" defer></script>

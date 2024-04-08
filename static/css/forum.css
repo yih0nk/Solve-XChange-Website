@@ -277,12 +277,44 @@
     position: relative;
     text-align: center;
     margin: 0 auto;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: rgb(217, 238, 253);
-    width: 1400px;
+    width: 1000px;
+    height: 500px;
 }
 
 #extra-title{
     font-size: 36px;
     font-weight: 900;
+    padding-top: 25px;
+}
+
+#extra-info{
+    display: flex;
+}
+
+#competition{
+    padding-top: 30px;
+    color: rgb(61, 93, 175);
+    font-size: 21.5px;
+    font-weight: 900;
+}
+
+#competition-info{
+    color: black;
+    font-size: 16px;
+    font-weight:200;
+}
+
+#chapter{
+    padding-top: 30px;
+    color: rgb(61, 93, 175);
+    font-size: 21.5px;
+    font-weight: 900;
+}
+
+#chapter-info{
+    color: black;
+    font-size: 16px;
+    font-weight:200;
 }

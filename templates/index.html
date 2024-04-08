@@ -28,27 +28,64 @@
 {% endblock %}	
 
 {% block body %}
-<div id="top-bar">
-    <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
-    <div id = "top-interactables">
-        <p id="homepage-link">Home Page</p>
-        <p id="ourimpact-link">Our Impact</p>
-        <p id="forum-link">Forum</p>
-        <p id="resources-link">Resources</p>
-        <p id="getinvolved-link">Get Involved</p>
-        <p id="login-link">Log In</p>
-    </div>
-</div>    
-<div id="topwrapper">
-    <div id="leftwrappertop">
-        <p id="headertext">Turning Vision into Reality,<br>One Proposal at a Time</p>
-        <button type="button" id="getinvolved-button">GET INVOLVED</button>
+<div id="everything">
+    <div id="top-bar">
+        <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
+        <div id = "top-interactables">
+            <p id="homepage-link">Home Page</p>
+            <p id="ourimpact-link">Our Impact</p>
+            <p id="forum-link">Forum</p>
+            <p id="resources-link">Resources</p>
+            <p id="getinvolved-link">Get Involved</p>
+            <p id="login-link">Log In</p>
+        </div>
+    </div>    
+    <div id="topwrapper">
+        <div id="leftwrappertop">
+            <p id="headertext">Turning Vision into Reality,<br>One Proposal at a Time</p>
+            <button type="button" id="getinvolved-button">GET INVOLVED</button>
 
-    </div>
-    <div id="rightwrappertop">
-        <img id="earth" draggable="false" src="{{ url_for('static', filename='images/earth.png') }}">
+        </div>
+        <div id="rightwrappertop">
+            <img id="earth" draggable="false" src="{{ url_for('static', filename='images/earth.png') }}">
 
+        </div>
     </div>
+    <div class="divider"></div>
+    <div id="lowertop">
+        <div id="lowertopwrap">
+            <div id="innovate-sector">
+                <img class="style1-round-image" draggable="false"src="{{ url_for('static', filename='images/image-innovate.png') }}">
+                <p class="style1-header-text">Innovate</p>
+                <p class="style1-desc-text">Small blurb about<br>innovation in the<br>community</p>
+                <div class="style1-button-wrapper"><button type="button" class="style1-button">Join now <img class="style1-right-arrow" draggable="false "src="{{ url_for('static', filename='images/right-arrow.png') }}"> </button></div>
+            </div>
+            <div id="impact-sector">
+                <img class="style1-round-image" draggable="false" src="{{ url_for('static', filename='images/image-impact.png') }}">
+                <p class="style1-header-text">Impact</p>
+                <p class="style1-desc-text">Small blurb about<br>the impact students<br>can make</p>
+                <div class="style1-button-wrapper"><button type="button" class="style1-button">Join now <img class="style1-right-arrow" draggable="false "src="{{ url_for('static', filename='images/right-arrow.png') }}"> </button></div>
+            </div>
+            <div id="inspire-sector">
+                <img class="style1-round-image" draggable="false" src="{{ url_for('static', filename='images/image-inspire.png') }}">
+                <p class="style1-header-text">Inspire</p>
+                <p class="style1-desc-text">Small blurb about<br>the people you can<br>inspire</p>
+                <div class="style1-button-wrapper"><button type="button" class="style1-button">Join now <img class="style1-right-arrow" draggable="false "src="{{ url_for('static', filename='images/right-arrow.png') }}"> </button></div>
+            </div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div id="quotewrap">
+        <div id="quotesection">
+            <img id="image-quote" draggable="false" src="{{ url_for('static', filename='images/quote.png') }}">
+            <div id="quote-text-wrapper"><p id="quote-text"><strong>Some quote about the club and our goals to for students to become the driving for behind transformative change.</strong> Some quote about the club and our goals to for students to become the driving for behind transformative change.</p></div>
+        </div>
+    </div>
+    <div id="lowerbottom">
+        <div id="lowerbottomwrap">
+            <p>hi</p>
+        </div>
+    </div>
+
 </div>
-
 {% endblock %}

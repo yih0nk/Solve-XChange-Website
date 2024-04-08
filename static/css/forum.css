@@ -1,28 +1,30 @@
 #post-form {
-    background-color: var(--dark-primary-colour);
-    box-shadow: 0 0 .5rem var(--shadow-colour);
+    background-color: white;
     color: var(--dark-main-colour);
-    border-radius: 0 0 1dvh 1dvh;
+    border-radius: 0 0 0 0;
     position: relative;
     margin: 0 auto;
-    padding: 25px;
+    margin-top: -20px;
     width: 40vw;
-    z-index: 2;
 }
 
 #username {
     display: inline-flex;
     text-align: left;
     align-items: center;
+    margin-left: -40px;
+    font-size: 20px;
+    padding-top: 20px;
 }
 
 #display-name {
+    color: black;
     padding: 0;
     margin: 0;
 }
 
 #comments { 
-    background-color: var(--dark-secondary-colour);
+    background-color: white;
     box-shadow: 0 0 .5rem var(--shadow-colour);
     color: var(--dark-main-colour);
     transition: opacity 0.3s ease;
@@ -42,7 +44,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--dark-tertiary-colour);
+    background-color: white;
     border-radius: 5px;
 }
 
@@ -159,3 +161,59 @@
     height: 0;
     width: 0;
 }
+
+#forum-info{
+    background-color: white;
+    color: black;
+    border-radius: 0 0 0 0;
+    position: relative;
+    margin: 0 auto;
+    width: 40vw;
+    z-index: 2;
+}
+
+#info-title{
+    font-weight: bold;
+    background-color: white;
+    color: rgb(61, 93, 175);
+    font-size: 42px;
+    margin-left: -45px;
+}
+
+@font-face{
+    font-family: "Source Sans Pro";
+    src: url("static/fonts/sourcesanspro-black-webfont.woff") format("woff");
+}
+
+#info-displayed{
+    width: 1000px;
+    font-weight: 50;
+    line-height: 32px;
+    font-family: "Source Sans Pro", sans-serif;
+    background-color: white;
+    color: black;
+    font-size: 24.8px;
+    margin-left: -32px;
+}
+
+#forum-reminder{
+    width: 1000px;
+    font-style: italic;
+    font-family: "Source Sans Pro", sans-serif;
+    color: rgb(61, 93, 175);
+    font-weight: 650;
+    font-size: 25.5px;
+    margin-left: -35px;
+    padding-top: 36px;
+}
+
+#topic{
+    border-color: black;
+    border-radius: 50px;
+    margin-left: -17px;
+    width: 850px;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: -40px;
+}
+

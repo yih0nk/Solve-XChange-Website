@@ -96,11 +96,11 @@
         <div class="post-metadata">
             Posted {{ comment.time_posted | calculate_time }} ago
         </div>
-        <p class="post-content-by">
+        <div class="post-content-by">
             <a class="post-username">{{ comment.username }}</a>
-        </p>
+        </div>
         <p class="post-content-topic">
-            ***Posted topic goes here{{ comment.topic }}***
+            ***Posted topic goes here{{ comment.topic }}*** <!--confirm with jeric-->
         </p>
         <p class="post-content">
             {{ comment.content | replace('\r\n', '<br>') | safe }}
@@ -158,6 +158,30 @@
             </div>
         </div>
     </div>
+</section>
+<section id="join-wrapper">
+    <hr class="white-line">
+    <div id="join-title-div">
+        <label id="join-title">JOIN SOLVEXCHANGE</label>
+    </div>
+    <div id="join-slogan">
+        <p>Join a community of inspring youth leaders.<br>Beome the driving force behind transformative change.</p>
+    </div>
+    <button id="signup-button" type="button">SIGN UP</button>
+    <div id="join-below">
+        <div class="join-subtitles-div">
+            <label class="join-subtitles">Take Action</label>
+            <div id="action-info">
+                <a href="http://127.0.0.1:5000/forum">Forum</a>
+                <a href="#">Become an executive</a>
+                <a href="#">Start a chapter</a>
+            </div>
+        </div>
+        <div class="join-subtitles-div">
+            <label class="join-subtitles">Connect</label>
+        </div>
+    </div>
+    <hr class="white-line">
 </section>
 
 <script src="{{ url_for('static', filename='js/forum.js') }}" defer></script>

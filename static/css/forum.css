@@ -90,7 +90,6 @@
     text-align: left;
     line-height: 30px;
     font-size: 20px;
-
 }
 
 .post-content-topic {
@@ -105,6 +104,7 @@
     color: black;
     text-align: right;
     font-size: 20px;
+    font-style: italic;
     margin: 0;
 }
 
@@ -282,6 +282,7 @@
     color: black;
     background-color: white;
     font-size: 20px;
+    margin-left: -370px;
 }
 .dropdown-values{
     color: white;
@@ -444,4 +445,74 @@
 .curved {
     background-color: rgb(114,183,230);
     color: blue;
+}
+
+#join-wrapper{
+    width: 100%;
+    margin-top: 90px;
+    background-color: rgb(61, 93, 175);
+    padding: 40px;
+    text-align: center;
+}
+
+.white-line{
+    width: 90%;
+    height: 1px;
+    margin-top: 0px;
+    background-color: white;
+}
+
+#join-title-div{
+    padding-top: 10px;
+}
+
+#join-title{
+    font-size: 70px;
+    font-weight: 600;
+}
+
+#join-slogan{
+    font-size: 38px;
+    margin-top: -25px;
+}
+
+#join-below{
+    display: flex;
+    margin-left: 220px;
+}
+
+#signup-button{
+    border-radius: 50px;
+    border: 0;
+    color: white;
+    width:475px;
+    height:100px;
+    padding:8px;
+    font-family: "Poppins", sans-serif;
+    font-size:42px;
+    font-weight: 600;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+}
+
+.join-subtitles-div{
+    padding-top: 50px;
+    padding-left: 220px;
+    padding-right: 220px;
+}
+
+.join-subtitles{
+    font-size: 48px;
+    font-weight: 600;
+}
+
+#action-info{
+    align-items: center;
+    display: grid;
+}
+
+a{
+    color: white;
 }

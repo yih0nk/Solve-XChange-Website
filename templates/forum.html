@@ -5,16 +5,18 @@
 <link href="{{ url_for('static', filename='css/forum.css') }}" rel="stylesheet">
 {% endblock %}
 
-{% block lHeader %}
-{% endblock %}
-
-{% block cHeader %}
-{% endblock %}
-
-{% block rHeader %}
-{% endblock %}
-
 {% block body %}
+<div id="top-bar">
+    <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
+    <div id = "top-interactables">
+        <p id="homepage-link">Home Page</p>
+        <p id="ourimpact-link">Our Impact</p>
+        <p id="forum-link">Forum</p>
+        <p id="resources-link">Resources</p>
+        <p id="getinvolved-link">Get Involved</p>
+        <p id="login-link">Log In</p>
+    </div>
+</div>
 <section id="top-wrapper">
     <div id="top-title-div">
         <label id="top-title">SolveXchange Forum</label>

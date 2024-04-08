@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face{
+    font-family: "Source Sans Pro", sans-serif;
+    src: url("../fonts/sourcesanspro-black-webfont.woff") format("woff");
+}
+
 #post-form {
     color: white;
     border-radius: 0 0 0 0;
@@ -178,11 +185,6 @@
     margin-left: -45px;
 }
 
-@font-face{
-    font-family: "Source Sans Pro";
-    src: url("static/fonts/sourcesanspro-black-webfont.woff") format("woff");
-}
-
 #info-displayed{
     width: 1000px;
     font-weight: 50;
@@ -227,7 +229,7 @@
     width: 850px;
     height: 285px;
     margin-left: -40px;
-    color: black;
+    color: rgb(180, 174, 174);
 }
 
 ::placeholder{
@@ -235,7 +237,19 @@
 }
 
 #post-submit{
-    color: black;
+    border-radius: 50px;
+    border: 0;
+    color: white;
+    width:135px;
+    height:45px;
+    padding:8px;
+    margin-top: 22px;
+    font-size:24px;
+    font-weight: 700;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
 }
 
 #discussion{
@@ -243,7 +257,7 @@
     text-align: center;
     margin-left: -650px;
     font-size: 40px;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .line{
@@ -273,7 +287,9 @@
 }
 
 #post-button{
-    color: black;
+    text-align: right;
+    margin-left: 692px;
+    margin-top: -19px;
 }
 
 #extra-wrapper{
@@ -284,78 +300,66 @@
     margin: 0 auto;
     border-radius: 20px;
     background-color: rgb(217, 238, 253);
-    width: 900px;
-    height: 450px;
+    width: 95%;
 }
 
 #extra-title{
-    font-size: 36px;
-    font-weight: 600;
+    font-size: 80px;
+    font-weight: 700;
 }
 
 .extra-title-div{
-    padding-top: 25px;
+    padding-top: 75px;
+    padding-bottom: 30px;
 }
 
 #extra-info{
-    margin-left: 25px;
+    margin-left: 100px;
     display: flex;
 }
 
 .extra-info-subtitle{
     color: rgb(61, 93, 175);
-    font-size: 22px;
+    font-size: 48px;
     font-weight: 700;
 }
 
-#competition{
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-#competition-info{
+.extra-info-subtext{
     color: black;
-    font-size: 16px;
+    font-size: 32px;
     font-weight:200;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 48px;
 }
 
-#chapter{
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-#chapter-info{
-    color: black;
-    font-size: 16px;
-    font-weight:200;
-}
-
-#team{
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-#team-info{
-    color: black;
-    font-size: 16px;
-    font-weight:200;
+.extra-format{
+    padding:40px;
 }
 
 #getinvolved-button2{
     border-radius: 50px;
     border: 0;
     color: white;
-    width:195px;
-    height:60px;
+    width:320px;
+    height:85px;
     padding:8px;
     margin-top: 22px;
-    font-size:20px;
+    font-family: "Poppins", sans-serif;
+    font-size:28px;
     font-weight: 600;
     word-spacing: 1.5px;
     background: rgb(114,183,230);
     text-align:center;
     background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+}
+
+
+#top-wrapper{
+    color: black;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(217, 238, 253);
+    width: 100%;
 }

@@ -428,3 +428,8 @@
 #top-interactables > p {
     font-weight:400;
 }
+
+.curved {
+    background-color: rgb(114,183,230);
+    color: blue;
+}

@@ -79,6 +79,7 @@ body, html {
     background: rgb(114,183,230);
     text-align:center;
     background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+    transition: all 0.3s ease;
 }
 
 #earth{
@@ -313,3 +314,11 @@ body, html {
     border-radius:20px;
 }
 
+#getinvolved-button:hover {
+    border: solid 1px lightblue;
+    transform: scale(1.1);
+}
+
+#carousel-wrapper * {
+    user-select: none;
+}

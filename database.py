@@ -13,8 +13,8 @@ app.config['SECRET_KEY'] = 'TEST_KEY'
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'test.jeric.jiang@gmail.com'
-app.config['MAIL_PASSWORD'] = 'uvqd wkoc wpwf siau'
+app.config['MAIL_USERNAME'] = '1jiangjer3@hdsb.com'
+app.config['MAIL_PASSWORD'] = 'urhc qehp cwis gnbb'
 
 mail = Mail(app)
 

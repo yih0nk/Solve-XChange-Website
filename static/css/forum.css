@@ -21,6 +21,7 @@
     align-items: center;
     font-size: 20px;
     padding-top: 20px;
+    line-height: 40px;
 }
 
 #display-name {
@@ -72,7 +73,22 @@
     border: 1px;
     border-color: black;
     border-style: solid;
-    margin: 25px;
+    margin-left: 25px;
+    margin-top: 25px;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+.post-reply{
+    background-color: white;
+    border-radius: 20px;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    margin-left: 160px;
+    margin-top: 10px;
     padding-left: 100px;
     padding-top: 20px;
     padding-right: 15px;
@@ -105,6 +121,7 @@
     text-align: right;
     font-size: 20px;
     font-style: italic;
+    padding-right: 10px;
     margin: 0;
 }
 
@@ -119,14 +136,13 @@
     text-align: center;
     margin: 0 auto;
     display: flex;
-    width: 80%;
-    height: 10vh;
     z-index: 1;
 }
 
 #sort-form {
-    width: 100%;
-    margin: 10px;
+    width: 80%;
+    margin-left: 200px;
+    padding: 0px;
 }
 
 .post > :not(#post-content) {
@@ -142,13 +158,13 @@
 }
 
 .post-footer {
-    background-color: var(--dark-secondary-colour);
+    background-color: white;
     border-radius: 0 0 5px 5px;
 }
 
 .replies {
     border-radius: 0 0 5px 5px;
-    background-color: inherit;
+    background-color: white;
     overflow: hidden;
 }
 
@@ -218,7 +234,7 @@
     font-size: 27px;
     line-height: 48px;
     margin-left: 200px;
-    padding-top: 36px;
+    padding-top: 20px;
 }
 
 #topic{
@@ -269,8 +285,8 @@
     margin-left: 180px;
 }
 
-.line{
-    width: 90%;
+.discussion-line{
+    width: 89%;
     height: 1px;
     margin-left: -10px;
     margin-top: 0px;
@@ -297,9 +313,8 @@
 }
 
 #post-button{
-    width: 1250px;
+    width: 80%;
     text-align: right;
-    margin-left: 40px;
     margin-top: -19px;
 }
 
@@ -312,16 +327,17 @@
     border-radius: 20px;
     background-color: rgb(217, 238, 253);
     width: 95%;
+    padding-bottom: 32px;
 }
 
 #extra-title{
-    font-size: 80px;
+    font-size: 60px;
     font-weight: 700;
 }
 
 .extra-title-div{
-    padding-top: 75px;
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 15px;
     margin-top: 50px;
 }
 
@@ -332,32 +348,32 @@
 
 .extra-info-subtitle{
     color: rgb(61, 93, 175);
-    font-size: 48px;
+    font-size: 38px;
     font-weight: 700;
 }
 
 .extra-info-subtext{
     color: black;
-    font-size: 32px;
+    font-size: 22px;
     font-weight:200;
     font-family: "Source Sans Pro", sans-serif;
-    line-height: 48px;
+    line-height: 30px;
 }
 
 .extra-format{
-    padding:40px;
+    padding:25px;
 }
 
 #getinvolved-button2{
     border-radius: 50px;
     border: 0;
     color: white;
-    width:320px;
-    height:85px;
+    width:225px;
+    height:70px;
     padding:8px;
     margin-top: 22px;
     font-family: "Poppins", sans-serif;
-    font-size:28px;
+    font-size:24px;
     font-weight: 600;
     word-spacing: 1.5px;
     background: rgb(114,183,230);
@@ -371,7 +387,7 @@
     align-items: center;
     position: relative;
     text-align: center;
-    margin: 0 auto;
+    margin-top:180px;
     background-color: rgb(217, 238, 253);
     width: 100%;
 }
@@ -407,15 +423,18 @@
 }
 
 #top-bar{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0px;
     left: 0px;
     right: 0px;
     display:flex;
-    flex-wrap:nowrap;
     align-items:center;
     padding-top:10px;
-    margin-left:50px;
-    margin-right:200px;
+    padding-left:50px;
+    padding-right:200px;
+    z-index:100;
 }
 
 #top-logo{
@@ -449,8 +468,8 @@
     width: 100%;
     margin-top: 90px;
     background-color: rgb(61, 93, 175);
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
 }
 
@@ -462,33 +481,33 @@
 }
 
 #join-title-div{
-    padding-top: 10px;
+    padding-top: 25px;
 }
 
 #join-title{
-    font-size: 70px;
+    font-size: 52px;
     font-weight: 600;
 }
 
 #join-slogan{
-    font-size: 38px;
+    font-size: 28px;
     margin-top: -25px;
 }
 
 #join-below{
     display: flex;
-    margin-left: 220px;
+    margin-left: 260px;
 }
 
 #signup-button{
     border-radius: 50px;
     border: 0;
     color: white;
-    width:475px;
-    height:100px;
+    width:370px;
+    height:80px;
     padding:8px;
     font-family: "Poppins", sans-serif;
-    font-size:42px;
+    font-size:32px;
     font-weight: 600;
     word-spacing: 1.5px;
     background: rgb(114,183,230);
@@ -498,20 +517,48 @@
 
 .join-subtitles-div{
     padding-top: 50px;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .join-subtitles{
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 600;
 }
 
 #action-info{
     align-items: center;
     display: grid;
+    font-size: 28px;
+    line-height: 60px;
+}
+
+#connect-info{
+    margin-top: 15px;
+}
+
+#email{
+    font-size: 28px;
+    margin-top: -8px;
+}
+#insta{
+    padding-right: 20px;
+}
+
+#linkedin{
+    padding-left: 15px;
 }
 
 a{
     color: white;
+}
+
+.comments-nav{
+    color:black;
+    display:flex;
+    font-size:20px;
+    flex-grow:1;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 15px;
 }

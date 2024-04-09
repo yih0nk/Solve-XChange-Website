@@ -67,7 +67,7 @@
 </section>
 <div id="discussion">
     <label>Discussions</label>
-    <hr class="line">
+    <hr class="discussion-line">
 </div>
 <section id="sort-wrapper">
     <form id="sort-form" class="wrapper split" action="/comments" method="POST">
@@ -105,28 +105,28 @@
         <p class="post-content">
             {{ comment.content | replace('\r\n', '<br>') | safe }}
         </p>
-        
+        <div>
+            <div class="comments-nav">
+                <img id="likes" src="{{ url_for('static', filename='images/likes.png') }}" height="30">
+                <img id="replies" src="{{ url_for('static', filename='images/replies.png') }}" height="30" onclick="ToggleReplies('{{comment.id}}')">
+                <div id="add-replies-div-{{comment.id}}" class="hcenter">
+                    <div id="reply-button-{{comment.id}}" class="reply-button">
+                        <form id="reply-form-{{comment.id}}" class="reply-form" onsubmit="AddReply('{{comment.id}}', event)">
+                            <input type="text" id="reply-input-{{comment.id}}" class="reply-input" style="width:100%;text-align:left;" autocomplete="off">
+                            <input type="submit" id="reply-submit-{{comment.id}}" class="reply-submit" value=">" style="opacity:0;border-radius:50%;width:1rem;height:1rem;text-align:center;line-height:.2rem;">
+                        </form>
+                        <label id="add-label-{{comment.id}}" class="add-label" for="add-reply-{{comment.id}}"></label>
+                        <img id="add-reply" src="{{ url_for('static', filename='images/add-reply.png') }}" height="30" onclick="ToggleReplyInput('{{comment.id}}')">
+                        <input id="add-reply-{{comment.id}}" type="submit" value="&nbsp;&nbsp;Post Reply">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div>
         <div id="post-footer-{{comment.id}}" class="post-footer">
-            <div class="spaced">
-                <div class="inline">
-                    <label for="show-{{comment.id}}"><img id="arrow-{{comment.id}}" src="{{ url_for('static', filename='images/drarrow-dark.png') }}" class="icon"></label>
-                    <input id="show-{{comment.id}}" type="submit" value="View Replies" onclick="ToggleReplies('{{comment.id}}')">
-                </div>
-            </div>
             <div id="replies-{{comment.id}}" class="replies" data-displayed="no" data-replies-loaded="no">
                 <div class="wrapper">
-                    <div id="add-replies-div-{{comment.id}}" class="hcenter">
-                        <div id="reply-button-{{comment.id}}" class="reply-button">
-                            <form id="reply-form-{{comment.id}}" class="reply-form" onsubmit="AddReply('{{comment.id}}', event)">
-                                <input type="text" id="reply-input-{{comment.id}}" class="reply-input" style="width:100%;text-align:left;" autocomplete="off">
-                                <input type="submit" id="reply-submit-{{comment.id}}" class="reply-submit" value=">" style="opacity:0;border-radius:50%;width:1rem;height:1rem;text-align:center;line-height:.2rem;">
-                            </form>
-                            <label id="add-label-{{comment.id}}" class="add-label" for="add-reply-{{comment.id}}">+</label>
-                            <input id="add-reply-{{comment.id}}" type="submit" value="&nbsp;&nbsp;Post Reply" onclick="ToggleReplyInput('{{comment.id}}')">
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -179,6 +179,13 @@
         </div>
         <div class="join-subtitles-div">
             <label class="join-subtitles">Connect</label>
+            <div id="connect-info">
+                <img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="100">
+                <img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="100">
+            </div>
+            <div id="email">
+                <p>solvexchange.info@gmail.com</p>
+            </div>
         </div>
     </div>
     <hr class="white-line">

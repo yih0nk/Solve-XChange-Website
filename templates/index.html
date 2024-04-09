@@ -117,12 +117,38 @@
             <button type="button" class="button-style2">Share Ideas</button>
         </div>
         <img id="filler-image" draggable="false" src="{{ url_for('static', filename='images/filler.png') }}">
-<<<<<<< Updated upstream
-            <p>hi</p>
-=======
->>>>>>> Stashed changes
-        </div>
     </div>
 
 </div>
+<footer id="join-wrapper">
+    <hr class="white-line">
+    <div id="join-title-div">
+        <label id="join-title">JOIN SOLVEXCHANGE</label>
+    </div>
+    <div id="join-slogan">
+        <p>Join a community of inspring youth leaders.<br>Beome the driving force behind transformative change.</p>
+    </div>
+    <button id="signup-button" type="button">SIGN UP</button>
+    <div id="join-below">
+        <div class="join-subtitles-div">
+            <label class="join-subtitles">Take Action</label>
+            <div id="action-info">
+                <p id="linkwrap"><a class="link" href="http://127.0.0.1:5000/forum">Forum</a><br><a class="link" href="#">Become an executive</a><br><a class="link" href="#">Start a chapter</a></p>
+            </div>
+        </div>
+        <div class="join-subtitles-div">
+            <label class="join-subtitles">Connect</label>
+            <div id="connect-info">
+                <img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="100">
+                <img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="100">
+            </div>
+            <div id="email">
+                <a id="link2" href="mailto:solvexchange.info@gmail.com">solvexchange.info@gmail.com</a>
+            </div>
+        </div>
+    </div>
+    <hr class="white-line">
+</footer>
+
+
 {% endblock %}

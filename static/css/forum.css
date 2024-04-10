@@ -5,6 +5,10 @@
     src: url("../fonts/sourcesanspro-black-webfont.woff") format("woff");
 }
 
+#forum-link{
+    font-weight:700;
+}
+
 #post-form {
     color: white;
     border-radius: 0 0 0 0;
@@ -41,20 +45,6 @@
     width: 80%;
     opacity: 0;
     z-index: 0;
-}
-
-::-webkit-scrollbar {
-    background-color: transparent;
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: white;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--dark-secondary-colour);
 }
 
 #content {
@@ -454,10 +444,6 @@
     margin-left:100px;
     flex-grow:1;
     justify-content:space-between;
-}
-
-#top-interactables > p {
-    font-weight:400;
 }
 
 .curved {

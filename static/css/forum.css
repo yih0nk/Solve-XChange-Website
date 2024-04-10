@@ -5,6 +5,10 @@
     src: url("../fonts/sourcesanspro-black-webfont.woff") format("woff");
 }
 
+#forum-link{
+    font-weight:700;
+}
+
 #post-form {
     color: white;
     border-radius: 0 0 0 0;
@@ -41,20 +45,6 @@
     width: 80%;
     opacity: 0;
     z-index: 0;
-}
-
-::-webkit-scrollbar {
-    background-color: transparent;
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: white;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--dark-secondary-colour);
 }
 
 #content {
@@ -343,8 +333,9 @@
 }
 
 #extra-info{
-    margin-left: 100px;
     display: flex;
+    align-items: top;
+    justify-content: center;
 }
 
 .extra-info-subtitle{
@@ -421,6 +412,7 @@
     background: rgb(114,183,230);
     text-align:center;
     background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+    cursor: pointer;
 }
 
 #top-bar{
@@ -454,10 +446,6 @@
     margin-left:100px;
     flex-grow:1;
     justify-content:space-between;
-}
-
-#top-interactables > p {
-    font-weight:400;
 }
 
 .curved {

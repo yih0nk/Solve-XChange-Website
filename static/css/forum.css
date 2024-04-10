@@ -412,6 +412,7 @@
     background: rgb(114,183,230);
     text-align:center;
     background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+    cursor: pointer;
 }
 
 #top-bar{

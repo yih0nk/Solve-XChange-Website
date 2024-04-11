@@ -13,6 +13,13 @@ body, html {
     overflow-x: hidden;
 }
 
+button:hover{
+    transition:0.3s;
+    background-color:#3D5DAF;
+    color:#ffffff;
+    cursor:pointer;
+}
+
 
 #top-bar{
     background-color: rgba(255, 255, 255, 0.9);
@@ -89,8 +96,18 @@ body, html {
     height:753.6px;
 }
 
-#homepage-link{
-    font-weight:700;
+.toplinka{
+    text-decoration:none;
+    color:black;
+    position: relative;
+    background: linear-gradient(#3D5DAF 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.08em);
+    transition: .2s var(--t,0s), background-position .1s calc(.3s - var(--t,0s));
+}
+
+.toplinka:hover{
+    --p: 100%;
+    --t: .3s;
+    color: #fff;
 }
 
 .divider{

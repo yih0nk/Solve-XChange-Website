@@ -191,4 +191,40 @@ body, html {
 
 .line{
     border: 1px solid black;
+    margin-bottom:60px;
+}
+
+.presentationcontainer{
+    display:flex;
+    justify-content: space-between;
+}
+
+.presentationwrap{
+    border-radius:20px;
+    background-color: #F6F6F6;
+    display:flex;
+    flex-grow:1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width:300px;
+}
+
+.ptb{
+    object-fit:cover;
+    max-width:300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.presentationimagedivider{
+    border: 3px solid #C0C2C1;
+    width:100%;
+    margin:0;
+}
+
+.pnum{
+    font-weight:200;
+    margin:10px 0px 0px 10px;
+    align-self:flex-start;
 }

@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face{
+    font-family: "Source Sans Pro", sans-serif;
+    src: url("../fonts/sourcesanspro-black-webfont.woff") format("woff");
+}
+
+#getinvolved-link{
+    font-weight:700;
+}
+
+#curved-line{
+    margin-top: -180px;
+}
+
+#ways-info-title{
+    font-weight: 700;
+    background-color: white;
+    color: rgb(61, 93, 175);
+    font-size: 65px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+#ways-extra-info{
+    width: 90%;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+}
+
+#ways-extra-format1{
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    text-align: center;
+    padding:25px;
+    width: 400px;
+    margin-top: 200px;
+}
+
+#ways-extra-format2{
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    text-align: center;
+    padding:25px;
+    width: 400px;
+    margin-bottom: 250px;
+}
+
+#ways-extra-format3{
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    text-align: center;
+    padding:25px;
+    width: 400px;
+    margin-top: 300px;
+    margin-bottom: 100px;
+}
+
+#ways-info-displayed{
+    font-weight: 50;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    line-height: 48px;
+    margin-left: 200px;
+}
+
+.ways-img{
+    padding: 20px;
+}
+
+.ways-extra-info-subtitle{
+    color: black;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.ways-extra-info-subtext{
+    color: black;
+    font-size: 34.5px;
+    font-weight: 400;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 50px;
+}
+
+#topic{
+    border-radius: 50px;
+    border-color:rgb(61, 93, 175);
+    border-width: 2px;
+    width: 80%;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.01px;
+    color: black;
+    padding-left: 20px;
+}
+
+#content{
+    border-radius: 25px;
+    border-color:rgb(61, 93, 175);
+    border-width: 2px;
+    font-size: 32px;
+    width: 80%;
+    height: 285px;
+    color: rgb(180, 174, 174);
+}
+
+::placeholder{
+    color: black;
+}
+
+#post-submit{
+    border-radius: 50px;
+    border: 0;
+    color: white;
+    width:135px;
+    height:45px;
+    margin-top: 22px;
+    font-size:24px;
+    font-weight: 700;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+}
+
+#discussion{
+    color: black;
+    font-size: 56px;
+    font-weight: 700;
+    margin-left: 180px;
+    padding-top: 30px;
+}
+
+.discussion-line{
+    width: 89%;
+    height: 1px;
+    margin-left: -10px;
+    margin-top: 0px;
+    background-color: black
+}
+
+#sort-display{
+    color: black;
+    background-color: white;
+    font-size: 20px;
+    margin-left: 0px;
+}
+.dropdown-values{
+    color: white;
+}
+
+#sort-by-display{
+    color: black;
+    background-color: white;
+}
+
+#sort-by{
+    border-color: black;
+}
+
+#post-button{
+    width: 80%;
+    text-align: right;
+    margin-top: -19px;
+}
+
+#extra-wrapper{
+    color: black;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: rgb(217, 238, 253);
+    width: 95%;
+    padding-bottom: 32px;
+}
+
+#extra-title{
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.extra-title-div{
+    padding-top: 50px;
+    padding-bottom: 15px;
+    margin-top: 50px;
+}
+
+#extra-info{
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+.extra-info-subtitle{
+    color: rgb(61, 93, 175);
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.extra-info-subtext{
+    color: black;
+    font-size: 22px;
+    font-weight:200;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 30px;
+}
+
+.extra-format{
+    padding:25px;
+}
+
+#findoutmore-button{
+    border-radius: 50px;
+    border: 0;
+    color: white;
+    width:325px;
+    height:70px;
+    padding:8px;
+    margin-bottom: 25px;
+    font-family: "Poppins", sans-serif;
+    font-size:24px;
+    font-weight: 600;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+}
+
+
+#top-wrapper{
+    color: black;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    margin-top: 125px;
+    background-color: rgb(217, 238, 253);
+    width: 100%;
+}
+
+#top-title{
+    font-size: 126px;
+    font-weight: 700;
+}
+
+#top-title-div{
+    padding-top: 150px;
+}
+
+#getinvolved-slogan{
+    font-size: 35px;
+}
+
+#top-bar{
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display:flex;
+    align-items:center;
+    padding-top:10px;
+    padding-left:50px;
+    padding-right:200px;
+    z-index:100;
+}
+
+#top-logo{
+    height: 95px;
+    width: 95px;
+    margin-left:30px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right:50px;
+}
+
+#top-interactables{
+    color:black;
+    display:flex;
+    font-size:20px;
+    margin-left:100px;
+    flex-grow:1;
+    justify-content:space-between;
+}
+
+.curved {
+    background-color: rgb(114,183,230);
+    color: blue;
+}
+
+#join-wrapper{
+    width: 100%;
+    margin-top: 90px;
+    background-color: rgb(61, 93, 175);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.white-line{
+    width: 90%;
+    height: 1px;
+    margin-top: 0px;
+    background-color: white;
+}
+
+#join-title-div{
+    padding-top: 25px;
+}
+
+#join-title{
+    font-size: 52px;
+    font-weight: 600;
+}
+
+#join-slogan{
+    font-size: 28px;
+    margin-top: -25px;
+}
+
+#join-below{
+    display: flex;
+    margin-left: 260px;
+}
+
+#signup-button{
+    border-radius: 50px;
+    border: 0;
+    color: white;
+    width:370px;
+    height:80px;
+    padding:8px;
+    font-family: "Poppins", sans-serif;
+    font-size:32px;
+    font-weight: 600;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+}
+
+.join-subtitles-div{
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.join-subtitles{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+#action-info{
+    align-items: center;
+    display: grid;
+    font-size: 28px;
+    line-height: 60px;
+}
+
+#connect-info{
+    margin-top: 15px;
+}
+
+#email{
+    font-size: 28px;
+    margin-top: -8px;
+}
+#insta{
+    padding-right: 20px;
+}
+
+#linkedin{
+    padding-left: 15px;
+}
+
+a{
+    color: white;
+}
+
+.comments-nav{
+    color:black;
+    display:flex;
+    font-size:20px;
+    flex-grow:1;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}

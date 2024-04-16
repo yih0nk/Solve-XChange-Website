@@ -41,6 +41,10 @@ def forum():
                                sort='date', 
                                s_user='',
                                channel_posted=channel_id)
+
+@app.route('/getinvolved')
+def getinvolved():
+    return render_template('getinvolved.html')
     
 @app.route('/login')
 def login():

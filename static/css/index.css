@@ -13,12 +13,6 @@ body, html {
     overflow-x: hidden;
 }
 
-button:hover{
-    transition:0.3s;
-    background-color:#3D5DAF;
-    color:#ffffff;
-    cursor:pointer;
-}
 
 
 #top-bar{
@@ -110,6 +104,22 @@ button:hover{
     color: #fff;
 }
 
+.toplinka_{
+    font-weight: 700;
+    text-decoration:none;
+    color:black;
+    position: relative;
+    background: linear-gradient(#3D5DAF 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.08em);
+    transition: .2s var(--t,0s), background-position .1s calc(.3s - var(--t,0s));
+}
+
+.toplinka_:hover{
+    --p: 100%;
+    --t: .3s;
+    color: #fff;
+}
+
+
 .divider{
     background-color: #3D5DAF;
     height:20px;
@@ -177,11 +187,28 @@ button:hover{
     background-color: transparent;
     color:black;
     padding:10px 20px 10px 20px;
+    transition:0.3s;
 }
+
+
+.style1-button:hover{
+    border: 2px solid transparent;
+    background-color: #243281;
+    color:white;
+    cursor:pointer;
+    
+}
+
+
+.style1-button:hover  .style1-right-arrow{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(185deg) brightness(101%) contrast(105%);
+}
+
 
 .style1-right-arrow{
     width:12px;
     height:12px;
+    transition:0.3s;
 }
 
 .style1-button-wrapper{

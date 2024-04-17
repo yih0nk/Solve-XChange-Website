@@ -76,8 +76,72 @@
                 <p class = "pdesc">Small blurb about the lesson and what students can gain from the slideshow for the designated week.</p>
                 <p class="pdate">March 19, 2024</p>
             </div>
+            <div class="presentationwrap">
+                <img class="ptb" src="{{ url_for('static', filename='images/lesson1.png') }}">
+                <hr class="presentationimagedivider">
+                <p class = "pnum"><em>Lesson 1</em></p>
+                <p class = "ptitle"><b>Brainstorming & Idea Generation</b></p>
+                <p class = "pdesc">Small blurb about the lesson and what students can gain from the slideshow for the designated week.</p>
+                <p class="pdate">March 26, 2024</p>
+            </div>
+            <div class="presentationwrap">
+                <img class="ptb" src="{{ url_for('static', filename='images/lesson1.png') }}">
+                <hr class="presentationimagedivider">
+                <p class = "pnum"><em>Lesson 3</em></p>
+                <p class = "ptitle"><b>Project Proposal Exemplar</b></p>
+                <p class = "pdesc">Small blurb about the lesson and what students can gain from the slideshow for the designated week.</p>
+                <p class="pdate">Date</p>
+            </div>
         </div>
+        
     </section>
+    <section id="quote">  
+        <div id="quotetextwrap">
+            <p id="quotetext">Quote: Small blurb about the lesson and what students can gain from the slideshow for the designated week. Small blurb about the lesson and what students can gain from the slideshow for the designated week.</p>
+        </div>
+
+    </section>
+    <section id="joinus">
+        <div id="join-left">
+            <p id="join-headertext">Join Us</p>
+            <p id="join-subtitle">Make a difference in your community today.<br>See how you can get involved</p>
+            <button type="button" id="signup-button">SIGN UP</button>
+        </div>
+        <div id="join-right">
+            <img id="joinus-image" src="{{ url_for('static', filename='images/joinus.png') }}">
+        </div>
+
+    </section>
+
+    <footer id="join-wrapper">
+        <hr class="white-line">
+        <div id="join-title-div">
+            <label id="join-title">JOIN SOLVEXCHANGE</label>
+        </div>
+        <div id="join-slogan">
+            <p>Join a community of inspring youth leaders.<br>Beome the driving force behind transformative change.</p>
+        </div>
+        <button id="signup-button" type="button">SIGN UP</button>
+        <div id="join-below">
+            <div class="join-subtitles-div">
+                <label class="join-subtitles">Take Action</label>
+                <div id="action-info">
+                    <p id="linkwrap"><a class="link" href="http://127.0.0.1:5000/forum">Forum</a><br><a class="link" href="#">Become an executive</a><br><a class="link" href="#">Start a chapter</a></p>
+                </div>
+            </div>
+            <div class="join-subtitles-div">
+                <label class="join-subtitles">Connect</label>
+                <div id="connect-info">
+                    <img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="100">
+                    <img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="100">
+                </div>
+                <div id="email">
+                    <a id="link2" href="mailto:solvexchange.info@gmail.com">solvexchange.info@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <hr class="white-line">
+    </footer>
 
 </div>
 

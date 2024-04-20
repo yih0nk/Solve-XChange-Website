@@ -24,10 +24,10 @@
 }
 
 #ways-extra-info{
-    width: 90%;
     display: flex;
     align-items: top;
     justify-content: space-between;
+    text-align: center;
 }
 
 #ways-extra-format1{
@@ -64,7 +64,8 @@
     color: black;
     font-size: 25px;
     line-height: 48px;
-    margin-left: 200px;
+    width: 80%;
+    margin: auto;
 }
 
 .ways-img{
@@ -221,7 +222,7 @@
     width:325px;
     height:70px;
     padding:8px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     font-family: "Poppins", sans-serif;
     font-size:24px;
     font-weight: 600;
@@ -291,6 +292,82 @@
 .curved {
     background-color: rgb(114,183,230);
     color: blue;
+}
+
+#second-wrapper{
+    color: black;
+    position: relative;
+    margin-top: 80px;
+    background-color: rgb(217, 238, 253);
+    width: 100%;
+    display:flex;
+    justify-content:space-between;
+    padding: 0px;
+}
+
+#second-wrapper-left{
+    margin-left: 180px;
+    margin-top:80px;
+}
+
+#second-wrapper-right{
+    margin: 0px;
+}
+
+.second-wrapper-subtitle{
+    color: black;
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.second-wrapper-subtext{
+    color: black;
+    font-size: 34.5px;
+    font-weight: 300;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 50px;
+}
+
+#second-wrapper-bottom-block{
+    background-color: white;
+    border-radius: 30px;
+    margin-top: 60px;
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+}
+
+#second-wrapper-email{
+    color: black;
+    font-size: 34px;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 50px;
+}
+
+#email-button{
+    border-radius: 50px;
+    border: 0;
+    color: white;
+    width:600px;
+    height:100px;
+    padding:8px;
+    font-family: "Poppins", sans-serif;
+    font-size:30px;
+    font-weight: 300;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+button > img,
+button > span {
+  vertical-align: middle;
 }
 
 #join-wrapper{

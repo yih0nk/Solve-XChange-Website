@@ -370,6 +370,56 @@ button > span {
   vertical-align: middle;
 }
 
+.third-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.third-wrapper-div{
+    width: 1250px;
+    padding: 50px;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.third-wrapper-title{
+    color: black;
+    font-size: 34px;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 50px;
+}
+
+.third-wrapper-subtext{
+    color: black;
+    font-size: 35px;
+    font-weight: 300;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 50px;
+}
+
+.third-wrapper-button{
+    border-radius: 50px;
+    border: 0;
+    color: white;
+    width:325px;
+    height:70px;
+    padding:8px;
+    font-family: "Poppins", sans-serif;
+    font-size:26px;
+    font-weight: 400;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+    cursor: pointer;
+}
+
+
+
+
+
 #join-wrapper{
     width: 100%;
     margin-top: 90px;

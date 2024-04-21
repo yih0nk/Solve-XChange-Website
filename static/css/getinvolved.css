@@ -5,6 +5,20 @@
     src: url("../fonts/sourcesanspro-black-webfont.woff") format("woff");
 }
 
+.toplinka{
+    text-decoration:none;
+    color:black;
+    position: relative;
+    background: linear-gradient(#3D5DAF 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.08em);
+    transition: .2s var(--t,0s), background-position .1s calc(.3s - var(--t,0s));
+}
+
+.toplinka:hover{
+    --p: 100%;
+    --t: .3s;
+    color: #fff;
+}
+
 #getinvolved-link{
     font-weight:700;
 }
@@ -232,7 +246,6 @@
     background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
 }
 
-
 #top-wrapper{
     color: black;
     align-items: center;
@@ -399,6 +412,28 @@ button > span {
     line-height: 50px;
 }
 
+.third-wrapper-expand{
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 28px;
+}
+
+.third-wrapper-expandtext{
+    color: black;
+    font-size: 22px;
+    font-weight: 300;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 32px;
+    margin-left: 50px;
+}
+
+.third-wrapper-expandsubtext{
+    line-height: 45px; 
+    margin-left: -15px;
+}
+
 .third-wrapper-button{
     border-radius: 50px;
     border: 0;
@@ -416,8 +451,99 @@ button > span {
     cursor: pointer;
 }
 
+#eligibility{
+    display: none;
+}
 
+#rubricCriteria{
+    display: none;
+}
 
+#positions{
+    display: none;
+}
+
+#forth-wrapper{
+    color: black;
+    position: relative;
+    margin-top: 80px;
+    background-color: rgb(217, 238, 253);
+    width: 100%;
+    display:flex;
+    justify-content:space-between;
+    padding: 0px;
+}
+
+#forth-wrapper-inner{
+    margin-left: 180px;
+    margin-top:80px;
+}
+
+#forth-wrapper-subtitle{
+    color: black;
+    font-size: 52px;
+    font-weight: 700;
+}
+
+#forth-wrapper-subtitle2{
+    color: black;
+    font-size: 33px;
+    font-weight: 500;
+    font-family: "Source Sans Pro", sans-serif;
+    margin-top: 10px;
+    margin-bottom: 55px;
+}
+
+.forth-wrapper-subtext{
+    color: black;
+    font-size: 26.5px;
+    font-weight: 350;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 50x;
+    margin-top: -15px;
+}
+
+.fifth-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.fifth-wrapper-div{
+    width: 1150px;
+    padding: 100px;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fifth-wrapper-title{
+    color: black;
+    font-size: 65px;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 50px;
+}
+
+#qa-button{
+    border-radius: 100px;
+    border: 0;
+    color: white;
+    width:450px;
+    height:130px;
+    padding:8px;
+    margin-bottom: 50px;
+    font-family: "Poppins", sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+    cursor: pointer;
+}
 
 
 #join-wrapper{
@@ -451,8 +577,12 @@ button > span {
 }
 
 #join-below{
+    width: 1000px;
     display: flex;
-    margin-left: 260px;
+    align-items: top;
+    text-align: center;
+    margin: auto;
+    justify-content: space-between;
 }
 
 #signup-button{

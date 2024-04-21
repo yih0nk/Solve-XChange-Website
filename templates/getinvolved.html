@@ -10,12 +10,12 @@
     <div id="top-bar">
         <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
         <div id = "top-interactables">
-            <p id="homepage-link">Home Page</p>
-            <p id="ourimpact-link">Our Impact</p>
-            <p id="forum-link">Forum</p>
-            <p id="resources-link">Resources</p>
-            <p id="getinvolved-link">Get Involved</p>
-            <p id="login-link">Log In</p>
+            <p class="toplink"><a class="toplinka" href="http://127.0.0.1:5000/">Home Page</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/">Our Impact</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/forum">Forum</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/">Resources</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/getinvolved"><b>Get Involved</b></a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/login">Log In</a></p>
         </div>
     </div>
 </section>
@@ -113,6 +113,28 @@
         <div class="third-wrapper-subtext">
             <p>Learn how to craft a professional business proposal and how to effectively<br>market and promote your idea through detailed lessons. Join weekly google<br>meetings to share your ideas, gain feedback and ask questions to ensure your<br>success throughout the competition.</p>
         </div>
+        <div class="third-wrapper-expand">
+            <p><label id="labeleligibility" onclick="expandDiv('eligibility')">+</label> Eligibility</p>
+            <div class="third-wrapper-expandtext" id="eligibility">
+                <li>Must be a student attending a high school in Halton</li>
+                <li>Within the grades of 9-12</li>
+                <li>An HDSB email address and account</li>
+                <li>Can be completed individually or in small groups (1-4 people)</li>
+            </div>
+            <p><label id="labelrubricCriteria" onclick="expandDiv('rubricCriteria')">+</label> Rubric Criteria</p>
+            <div class="third-wrapper-expandtext" id="rubricCriteria">
+                <span class="third-wrapper-expandsubtext">You will be graded based off:</span>
+                <li>Feasibility/Viability</li>
+                <li>Creativity/Innovative</li>
+                <li>Professionalism</li>
+                <li>Value of Proposition (benefits and impact)</li>
+                <li>Sustainability</li>
+                <li>Clarity</li>
+                <li>Visual Appeal</li>
+                <li>Implementation Plan</li>
+                <br>
+            </div>
+        </div>
         <button class="third-wrapper-button" type="button">Sign Up</button>
     </div>
 </section>
@@ -123,36 +145,56 @@
         <div class="third-wrapper-subtext">
             <p>Share your passion for our goals, and contribute your ideas to improve<br>SolveXchange within our community. Join our executive team to support and<br>empower youth across Halton, and provide an accessible platform to voice<br>their concerns. Get the opportunity to work alongside like-minded, passionate<br>individuals and create a difference in your community!</p>
         </div>
+        <div class="third-wrapper-expand">
+            <p><label id="labelpositions" onclick="expandDiv('positions')">+</label> Positions</p>
+            <div class="third-wrapper-expandtext" id="positions">
+                <span class="third-wrapper-expandsubtext">Below are available positions if you are interested in becoming a part of the executive team:</span>
+                <li>Secretary</li>
+                <li>Grade 9 Rep</li>
+                <li>Grade 10 Rep</li>
+                <li>Promotions Team</li>
+                <li>Event/Competition Coordinator</li>
+                <li>Head of Communications</li>
+                <li>Business/Marketing Trainer</li>
+                <br>
+            </div>
+        </div>
         <button class="third-wrapper-button" type="button">Apply Now</button>
     </div>
 </section>
 
-<section id="extra-wrapper">
-    <div class="extra-title-div">
-        <label id="extra-title">Inspired? Take Action Today!</label>
-    </div>
-    <div id="extra-info">
-        <div class="extra-format">
-            <label class="extra-info-subtitle">Our Competition</label>
-            <div class="extra-info-subtext">
-                <p>Join SolveXchange and work<br>alongside other inspired youth<br>to develop your innovative<br>ideas. Submit your proposal to<br>our competition for a chance<br>to win SolveXchange support,<br>gain recognition and bring<br>your idea to reality.</p>
-            </div>
-        </div>
-        <div class="extra-format">
-            <label class="extra-info-subtitle">Start a Chapter</label>
-            <div class="extra-info-subtext">
-                <p>Interested in becoming a leader?<br>Open a chapter of SolveXchange<br>at your high school! Become a<br>part of our growing executive<br>team by bringing SolveXchange<br>to your own community.</p>
-            </div>
-            <button id="getinvolved-button2" type="button">Get Involved</button>
-        </div>
-        <div class="extra-format">
-            <label class="extra-info-subtitle">Join Our Exec Team</label>
-            <div class="extra-info-subtext">
-                <p>Are you passionate about<br>the same goals we are? Do<br>you possess skills or ideas<br>that could improve<br>SolveXchange? Join our<br>executive team as we work<br>together towards<br>empowering more youth.</p>
-            </div>
+<section id="forth-wrapper">
+    <div id="forth-wrapper-inner">
+        <div>
+            <label id="forth-wrapper-subtitle">Start a Chapter</label>        
+            <p id="forth-wrapper-subtitle2">How to start your own chapter</p>
+            <p class="forth-wrapper-subtext"><b>1.</b>&nbsp;&nbsp;Reach out and let us know that you want to start a chapter at your high school school.</p>
+            <p class="forth-wrapper-subtext"><b>2.</b>&nbsp;&nbsp;Depending on your school's club creation process, begin by submitting a request to start a club.</p>
+            <p class="forth-wrapper-subtext"><b>3</b>&nbsp;&nbsp;Find a teacher supervisor to support the competition.</p>
+            <p class="forth-wrapper-subtext"><b>4.</b>&nbsp;&nbsp;Meet with your principal and your school's administration team to determine if it would be possible for a<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;winning solution to be actually implemented within the school.</p>
+            <p class="forth-wrapper-subtext"><b>5.</b>&nbsp;&nbsp;Establish a team of passionate individuals to make up your own executive team.</p>
+            <p class="forth-wrapper-subtext"><b>6.</b>&nbsp;&nbsp;Promote your chapter of SolveXchange throughout your school (ex. create an Instagram account, manage a<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Google Classroom).</p>
+            <p class="forth-wrapper-subtext"><b>7.</b>&nbsp;&nbsp;Begin the competition! Start the lessons and guide your members to a winning proposal. Students should be<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;able to propose a solution to a problem they experience within their school.</p>
+            <p class="forth-wrapper-subtext">&nbsp;</p>
         </div>
     </div>
 </section>
+
+<section class="fifth-wrapper">
+    <div class="fifth-wrapper-div">
+        <div>
+            <label class="fifth-wrapper-title">Got Any Questions?</label>
+            <div class="third-wrapper-subtext">
+                <p>Visit our Q&A page to explore<br>commonly asked questions about the<br>intricacies of SolveXchange.</p>
+            </div>
+        </div>
+        <div>
+            <br><br><br>
+            <a href="/qa"><button id="qa-button" type="button">Q & A</button></a>
+        </div>
+    </div>
+</section>
+
 <section id="join-wrapper">
     <hr class="white-line">
     <div id="join-title-div">
@@ -185,5 +227,5 @@
     <hr class="white-line">
 </section>
 
-<script src="{{ url_for('static', filename='js/forum.js') }}" defer></script>
+<script src="{{ url_for('static', filename='js/getinvolved.js') }}" defer></script>
 {% endblock %}

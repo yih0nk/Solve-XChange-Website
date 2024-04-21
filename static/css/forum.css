@@ -5,6 +5,20 @@
     src: url("../fonts/sourcesanspro-black-webfont.woff") format("woff");
 }
 
+.toplinka{
+    text-decoration:none;
+    color:black;
+    position: relative;
+    background: linear-gradient(#3D5DAF 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.08em);
+    transition: .2s var(--t,0s), background-position .1s calc(.3s - var(--t,0s));
+}
+
+.toplinka:hover{
+    --p: 100%;
+    --t: .3s;
+    color: #fff;
+}
+
 #forum-link{
     font-weight:700;
 }
@@ -484,8 +498,12 @@
 }
 
 #join-below{
+    width: 1000px;
     display: flex;
-    margin-left: 260px;
+    align-items: top;
+    text-align: center;
+    margin: auto;
+    justify-content: space-between;
 }
 
 #signup-button{

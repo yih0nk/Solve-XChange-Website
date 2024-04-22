@@ -19,226 +19,85 @@
     color: #fff;
 }
 
-#forum-link{
+#getinvolved-link{
     font-weight:700;
 }
 
-#post-form {
-    color: white;
-    border-radius: 0 0 0 0;
-    position: relative;
-    margin: 0 auto;
-    margin-left: 200px;
-    margin-top: -20px;
-    padding-bottom: 20px;
+#curved-line{
+    margin-top: -180px;
 }
 
-#username {
-    display: inline-flex;
-    text-align: left;
-    align-items: center;
-    font-size: 20px;
-    padding-top: 20px;
-    line-height: 40px;
-}
-
-#display-name {
-    color: black;
-    padding: 0;
-    margin: 0;
-}
-
-#comments { 
-    background-color: white;
-    color: black;
-    transition: opacity 0.3s ease;
-    position: relative;
-    text-align: center;
-    overflow-y: auto;
-    margin-left: 150px;
-    width: 80%;
-    opacity: 0;
-    z-index: 0;
-}
-
-#content {
-    width: calc(100% - 25px);
-    padding-left: 20px;
-    padding-top: 15px;
-}
-
-.post * {
-    user-select: none;
-}
-
-.post {
-    background-color: white;
-    border-radius: 20px;
-    border: 1px;
-    border-color: black;
-    border-style: solid;
-    margin-left: 25px;
-    margin-top: 25px;
-    padding-left: 100px;
-    padding-top: 20px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-}
-
-.post-reply{
-    background-color: white;
-    border-radius: 20px;
-    border: 1px;
-    border-color: black;
-    border-style: solid;
-    margin-left: 160px;
-    margin-top: 10px;
-    padding-left: 100px;
-    padding-top: 20px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-}
-
-.post-content {
-    overflow-wrap: break-word;
-    text-align: left;
-    line-height: 30px;
-    font-size: 22px;
-}
-
-.post-content-by {
-    text-align: left;
-    line-height: 30px;
-    font-size: 20px;
-}
-
-.post-content-topic {
-    text-align: left;
-    line-height: 45px;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.post-metadata {
-    background-color: white;
-    color: black;
-    text-align: right;
-    font-size: 20px;
-    font-style: italic;
-    padding-right: 10px;
-    margin: 0;
-}
-
-.post-username {
-    color: black;
-}
-
-#sort-wrapper {
-    background-color: white;
-    align-items: center;
-    position: relative;
-    text-align: center;
-    margin: 0 auto;
-    display: flex;
-    z-index: 1;
-}
-
-#sort-form {
-    width: 80%;
-    margin-left: 200px;
-    padding: 0px;
-}
-
-.post > :not(#post-content) {
-    margin: 0 5px;
-}
-
-.post input:not(.reply-submit) {
-    all: unset;
-}
-
-.post-footer label:not(.add-label) {
-    padding-left: 10px;
-}
-
-.post-footer {
-    background-color: white;
-    border-radius: 0 0 5px 5px;
-}
-
-.replies {
-    border-radius: 0 0 5px 5px;
-    background-color: white;
-    overflow: hidden;
-}
-
-.replies > .wrapper {
-    transition: margin 0.3s ease;
-}
-
-.reply-button {
-    justify-content: space-around;
-    margin: calc(5px + 1rem) 0;
-    align-items: center;
-    font-size: 1rem;
-    display: flex;
-    height: 1rem;
-}
-
-.add-label {
-    width: 1rem;
-}
-
-.reply-form {
-    background-color: var(--dark-background-colour);
-    border-radius: 10px 2rem 2rem 10px;
-    transform: translate(.5rem);
-    align-items: center;
-    padding-right: 0;
-    overflow: hidden;
-    display: flex;
-    border: none;
-    height: 0;
-    width: 0;
-}
-
-#forum-info{
-    background-color: white;
-    color: black;
-    border-radius: 0 0 0 0;
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    z-index: 2;
-}
-
-#info-title{
+#ways-info-title{
     font-weight: 700;
     background-color: white;
     color: rgb(61, 93, 175);
-    font-size: 50px;
-    margin-left: 190px;
+    font-size: 65px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 100px;
 }
 
-#info-displayed{
+#ways-extra-info{
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#ways-extra-format1{
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    text-align: center;
+    padding:25px;
+    width: 400px;
+    margin-top: 200px;
+}
+
+#ways-extra-format2{
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    text-align: center;
+    padding:25px;
+    width: 400px;
+    margin-bottom: 250px;
+}
+
+#ways-extra-format3{
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    text-align: center;
+    padding:25px;
+    width: 400px;
+    margin-top: 300px;
+    margin-bottom: 100px;
+}
+
+#ways-info-displayed{
     font-weight: 50;
-    font-family: "Source Sans Pro", sans-serif;
     background-color: white;
     color: black;
     font-size: 25px;
     line-height: 48px;
-    margin-left: 200px;
+    width: 80%;
+    margin: auto;
 }
 
-#forum-reminder{
-    font-style: italic;
+.ways-img{
+    padding: 20px;
+}
+
+.ways-extra-info-subtitle{
+    color: black;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.ways-extra-info-subtext{
+    color: black;
+    font-size: 34.5px;
+    font-weight: 400;
     font-family: "Source Sans Pro", sans-serif;
-    color: rgb(61, 93, 175);
-    font-weight: 650;
-    font-size: 27px;
-    line-height: 48px;
-    margin-left: 200px;
-    padding-top: 20px;
+    line-height: 50px;
 }
 
 #topic{
@@ -370,14 +229,14 @@
     padding:25px;
 }
 
-#getinvolved-button2{
+#findoutmore-button{
     border-radius: 50px;
     border: 0;
     color: white;
-    width:225px;
+    width:325px;
     height:70px;
     padding:8px;
-    margin-top: 22px;
+    margin-bottom: 50px;
     font-family: "Poppins", sans-serif;
     font-size:24px;
     font-weight: 600;
@@ -387,46 +246,27 @@
     background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
 }
 
-
 #top-wrapper{
     color: black;
     align-items: center;
     position: relative;
     text-align: center;
-    margin-top:180px;
+    margin-top: 125px;
     background-color: rgb(217, 238, 253);
     width: 100%;
 }
 
 #top-title{
-    font-size: 82px;
+    font-size: 126px;
     font-weight: 700;
 }
 
 #top-title-div{
-    padding-top: 75px;
+    padding-top: 150px;
 }
 
-#forum-slogan{
-    font-size: 30px;
-}
-
-#forum-button{
-    border-radius: 75px;
-    border: 0;
-    color: white;
-    width:530px;
-    height:130px;
-    padding:8px;
-    margin-top: 22px;
-    font-family: "Poppins", sans-serif;
-    font-size:42px;
-    font-weight: 700;
-    word-spacing: 1.5px;
-    background: rgb(114,183,230);
-    text-align:center;
-    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
-    cursor: pointer;
+#getinvolved-slogan{
+    font-size: 35px;
 }
 
 #top-bar{
@@ -466,6 +306,245 @@
     background-color: rgb(114,183,230);
     color: blue;
 }
+
+#second-wrapper{
+    color: black;
+    position: relative;
+    margin-top: 80px;
+    background-color: rgb(217, 238, 253);
+    width: 100%;
+    display:flex;
+    justify-content:space-between;
+    padding: 0px;
+}
+
+#second-wrapper-left{
+    margin-left: 180px;
+    margin-top:80px;
+}
+
+#second-wrapper-right{
+    margin: 0px;
+}
+
+.second-wrapper-subtitle{
+    color: black;
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.second-wrapper-subtext{
+    color: black;
+    font-size: 34.5px;
+    font-weight: 300;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 50px;
+}
+
+#second-wrapper-bottom-block{
+    background-color: white;
+    border-radius: 30px;
+    margin-top: 60px;
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+}
+
+#second-wrapper-email{
+    color: black;
+    font-size: 34px;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 50px;
+}
+
+#email-button{
+    border-radius: 50px;
+    border: 0;
+    color: white;
+    width:600px;
+    height:100px;
+    padding:8px;
+    font-family: "Poppins", sans-serif;
+    font-size:30px;
+    font-weight: 300;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+button > img,
+button > span {
+  vertical-align: middle;
+}
+
+.third-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.third-wrapper-div{
+    width: 1250px;
+    padding: 50px;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.third-wrapper-title{
+    color: black;
+    font-size: 34px;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 50px;
+}
+
+.third-wrapper-subtext{
+    color: black;
+    font-size: 35px;
+    font-weight: 300;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 50px;
+}
+
+.third-wrapper-expand{
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 28px;
+}
+
+.third-wrapper-expandtext{
+    color: black;
+    font-size: 22px;
+    font-weight: 300;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 32px;
+    margin-left: 50px;
+}
+
+.third-wrapper-expandsubtext{
+    line-height: 45px; 
+    margin-left: -15px;
+}
+
+.third-wrapper-button{
+    border-radius: 50px;
+    border: 0;
+    color: white;
+    width:325px;
+    height:70px;
+    padding:8px;
+    font-family: "Poppins", sans-serif;
+    font-size:26px;
+    font-weight: 400;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+    cursor: pointer;
+}
+
+#eligibility{
+    display: none;
+}
+
+#rubricCriteria{
+    display: none;
+}
+
+#positions{
+    display: none;
+}
+
+#forth-wrapper{
+    color: black;
+    position: relative;
+    margin-top: 80px;
+    background-color: rgb(217, 238, 253);
+    width: 100%;
+    display:flex;
+    justify-content:space-between;
+    padding: 0px;
+}
+
+#forth-wrapper-inner{
+    margin-left: 180px;
+    margin-top:80px;
+}
+
+#forth-wrapper-subtitle{
+    color: black;
+    font-size: 52px;
+    font-weight: 700;
+}
+
+#forth-wrapper-subtitle2{
+    color: black;
+    font-size: 33px;
+    font-weight: 500;
+    font-family: "Source Sans Pro", sans-serif;
+    margin-top: 10px;
+    margin-bottom: 55px;
+}
+
+.forth-wrapper-subtext{
+    color: black;
+    font-size: 26.5px;
+    font-weight: 350;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 50x;
+    margin-top: -15px;
+}
+
+.fifth-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.fifth-wrapper-div{
+    width: 1150px;
+    padding: 100px;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fifth-wrapper-title{
+    color: black;
+    font-size: 65px;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 50px;
+}
+
+#qa-button{
+    border-radius: 100px;
+    border: 0;
+    color: white;
+    width:450px;
+    height:130px;
+    padding:8px;
+    margin-bottom: 50px;
+    font-family: "Poppins", sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+    cursor: pointer;
+}
+
 
 #join-wrapper{
     width: 100%;

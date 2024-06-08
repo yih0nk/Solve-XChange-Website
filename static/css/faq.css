@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+
+#top-bar{
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display:flex;
+    align-items:center;
+    padding-top:10px;
+    padding-left:50px;
+    padding-right:200px;
+    z-index:100;
+}
+
+#top-logo{
+    height: 95px;
+    width: 95px;
+    margin-left:30px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right:50px;
+}
+
+#top-interactables{
+    color:black;
+    display:flex;
+    font-size:20px;
+    margin-left:100px;
+    flex-grow:1;
+    justify-content:space-between;
+}
+
+.toplinka{
+    text-decoration:none;
+    color:black;
+    position: relative;
+    background: linear-gradient(#3D5DAF 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.08em);
+    transition: .2s var(--t,0s), background-position .1s calc(.3s - var(--t,0s));
+}
+
+.toplinka:hover{
+    --p: 100%;
+    --t: .3s;
+    color: #fff;
+}
+
+.toplinka_{
+    font-weight: 700;
+    text-decoration:none;
+    color:black;
+    position: relative;
+    background: linear-gradient(#3D5DAF 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.08em);
+    transition: .2s var(--t,0s), background-position .1s calc(.3s - var(--t,0s));
+}
+
+.toplinka_:hover{
+    --p: 100%;
+    --t: .3s;
+    color: #fff;
+}
+
+#topportion{
+    margin-top:125px;
+    display:block;
+    align-items: center;
+    background-color: #D9EEFD;
+}
+
+#headertext{
+    font-weight:800;
+    font-size:70px;
+    text-align: center;
+    margin:0px;
+    padding-top:80px;
+}
+
+#desctext{
+    font-weight:300;
+    font-size:23px;
+    text-align: center;
+    margin:15px 0px 0px 0px;
+    padding-bottom:80px;
+}
+
+.divider{
+    background-color: #3D5DAF;
+    height:15px;
+    left:0px;
+    right:0px;
+    position:relative;
+}
+
+#headerwrap-1{
+    margin: 80px 0px 0px 15px;
+}
+
+#headertext-1{
+    font-size:32px;
+    font-weight:700;
+    padding-left:80px;
+}
+
+.collapsible{
+    background-color: green;
+    color: black;
+    cursor: pointer;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-left:80px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-weight:500;
+}
+  
+  /* Style the collapsible content. Note: hidden by default */
+.content{
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight:300;
+    color:black;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}

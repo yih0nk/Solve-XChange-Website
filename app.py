@@ -54,6 +54,11 @@ def login():
 def resources():
     return render_template('resources.html')
 
+@app.route('/faq')
+def faq():
+    return render_template('faq.html')
+
+
 @app.route('/register')
 def register():
     email = request.args.get('email')

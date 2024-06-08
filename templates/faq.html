@@ -1,0 +1,66 @@
+{% extends 'basenocss.html' %}
+
+<!-- {% block lHeader %}
+{% endblock %}
+{% block cHeader %}
+{% endblock %}
+{% block rHeader %}
+{% endblock %}
+ -->
+
+{% block head %}
+<title>SolveXChange</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="light only" />
+<meta name="description" content="SolveXChange Resources" />
+<meta property="og:site_name" content="SolveXChange" />
+<meta property="og:title" content="SolveXChange" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link rel="stylesheet" href="style.css" /> -->
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="32x32" />
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="16x16" />
+<link href="{{ url_for('static', filename='css/faq.css') }}" rel="stylesheet">
+<script src="{{ url_for('static', filename='js/faq.js') }}"></script>
+
+{% endblock %}	
+
+{% block body %}
+<div id="everything">
+    <div id="top-bar">
+        <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
+        <div id = "top-interactables">
+            <p class="toplink"><a class="toplinka" href="http://127.0.0.1:5000/">Home Page</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/">Our Impact</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/forum">Forum</a></p>
+            <p class="toplink"><a class="toplinka_"href="http://127.0.0.1:5000/resources">Resources</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/">Get Involved</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/login">Log In</a></p>
+        </div>
+    </div>    
+    <section id="topportion">
+        <p id="headertext">FAQ</p>
+        <p id="desctext">Do you have a question about SolveXchange that you want<br>answered? Check out some Frequently Asked Questions that<br>students have commonly asked below.</p>
+    </section>
+    <div class="divider"></div>
+
+    <section id="comp-specifics">
+        <div id="headerwrap-1">
+            <a id="headertext-1">Competition Specifics</a>
+        </div>
+        <div id="collapses-container-1">
+            <button type="button" class="collapsible"> + What exactly do I have to create?</button>
+            <div class="contentwrap">
+                <p>You must create a mandatory formal business proposal. Additional visual aids or creative components are recommended to be created to supplement the compulsory written document. This can include slideshows, presentations or creative videos. It’s up to you!</p>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+
+
+{% endblock %}

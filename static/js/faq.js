@@ -1,14 +1,21 @@
-var coll = document.getElementsByClassName("collapsible");
-var i;
+//#region Constants
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = document.getElementsByClassName("contentwrap");
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
+//#endregion
+
+//#region Initialization
+
+//#endregion
+
+//#region Functions
+function expandDiv(obj) {
+  var x = document.getElementById(obj);
+  var y = document.getElementById('label' + obj);
+  if (x.style.display == "block") {
+    x.style.display = "none";
+    y.innerHTML = "+";
+  } else {
+    x.style.display = "block";
+    y.innerHTML = "-";
+  }
 }
+//#endregion

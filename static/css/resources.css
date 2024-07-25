@@ -48,48 +48,6 @@ body, html {
     justify-content:space-between;
 }
 
-/* #top-interactables > p {
-    font-weight:400;
-}
- */
-#leftwrappertop{
-    max-width:700px;
-}
-
-#topwrapper{
-    display:flex;
-    margin-left:200px;
-    margin-top:180px;
-    justify-content: space-between;
-}
-
-#headertext{
-    font-size:40px;
-    font-weight:700;
-}
-
-#getinvolved-button{
-    border-radius: 50px;
-    border: none;
-    width:275px;
-    height:70px;
-    padding:8px;
-    font-size:22px;
-    font-weight:700;
-    color:white;
-    background: rgb(114,183,230);
-    text-align:center;
-    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
-}
-
-#earth{
-    transform: scaleX(-1);
-    margin-top:-280px;
-    margin-right:-30px;
-    width:503.2px;
-    height:753.6px;
-}
-
 .toplinka{
     text-decoration:none;
     color:black;
@@ -119,242 +77,246 @@ body, html {
     color: #fff;
 }
 
+#topportion{
+    margin-top:125px;
+    display:block;
+    align-items: center;
+    background-color: #D9EEFD;
+}
+
+#headertext{
+    font-weight:800;
+    font-size:70px;
+    text-align: center;
+    margin:0px;
+    padding-top:80px;
+}
+
+#desctext{
+    font-weight:300;
+    font-size:23px;
+    text-align: center;
+    margin:15px 0px 0px 0px;
+    padding-bottom:80px;
+}
 
 .divider{
     background-color: #3D5DAF;
-    height:20px;
+    height:15px;
     left:0px;
     right:0px;
     position:relative;
 }
 
-#lowertop{
-    background: rgb(168,205,234);
-    left:0px;
-    right:0px;
-    position:relative;
-    background: linear-gradient(90deg, rgba(168,205,234,1) 0%, rgba(193,232,224,1) 100%);
-
+#mainbody{
+    margin-top:30px;
 }
 
-#lowertopwrap{
-    margin: 0px 200px 0px 200px;
-    padding-top:70px;
-    padding-bottom:70px;
+.lessoncontainer{
+    margin:0px 350px 20px 350px;
+    max-width: 770px;
     display:flex;
-    flex-wrap:nowrap;
-    right:0px;
-    left:0px;
-    justify-content: space-between;
+    border: 1.5px solid black;
     align-items: center;
+    border-radius: 20px;
 }
 
-#innovate-sector,#impact-sector,#inspire-sector{
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+.lesson1{
+    background: rgb(114,183,230);
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);   
 }
 
-.style1-round-image{
-    border-radius: 160px;
-    object-fit: cover;
-    width: 270px;
-    height:400px;
-
+.lesson2{
+    background: rgb(114,183,230);
+    background: linear-gradient(90deg, rgba(114,183,230,0.6069021358543417) 0%, rgba(150,224,211,0.590095413165266) 100%);
 }
 
-.style1-header-text{
-    margin: 20px 0px 10px 0px;
+.lesson3{
+    background: rgb(114,183,230);
+    background: linear-gradient(90deg, rgba(114,183,230,0.3660057773109243) 0%, rgba(150,224,211,0.3688068977591037) 100%);
+}
+
+#updatesheadertext{
+    margin-left:350px;
+    margin-top:70px;
+    font-weight: 600;
+    color:#3D5DAF;
     font-size:30px;
+}
+
+.lessonnum{
     font-weight:700;
-
-}
-
-.style1-desc-text{
-    margin-bottom:23px;
-    font-size:18px;
-    font-weight:400;
-    text-align: center;
-    margin-top:0px;
-}
-
-
-.style1-button{
-    border-radius:25px;
-    border: 2px solid black;
-    font-size:14px;
-    background-color: transparent;
-    color:black;
-    padding:10px 20px 10px 20px;
-    transition:0.3s;
-}
-
-
-.style1-button:hover{
-    border: 2px solid transparent;
-    background-color: #243281;
-    color:white;
-    cursor:pointer;
-    
-}
-
-
-.style1-button:hover  .style1-right-arrow{
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(185deg) brightness(101%) contrast(105%);
-}
-
-
-.style1-right-arrow{
-    width:12px;
-    height:12px;
-    transition:0.3s;
-}
-
-.style1-button-wrapper{
-    display:flex;
-    align-items: center;
-}
-
-#quotesection{
-    margin:100px 250px 150px 250px;
-    
-}
-
-#image-quote{
-    width:75x;
-    height:59px;
-}
-
-#quote-text-wrapper{
-    margin-left:100px;
-    margin-right:100px;
-}
-
-#quote-text{
-    font-size:35px;
-    font-weight:400;
-    text-align: center;
-}
-
-
-
-
-#lowerbottom{
-    background: rgb(168,205,234);
-    left:0px;
-    right:0px;
-    position:relative;
-    background: linear-gradient(90deg, rgba(168,205,234,1) 0%, rgba(193,232,224,1) 100%);
-
-}
-
-#lowerbottomwrap{
-    margin: 0px 200px 0px 200px;
-    padding-top:70px;
-    padding-bottom:70px;
-    right:0px;
-    left:0px;
-}
-#lowerbottomheader{
-    font-weight:800;
-    font-size:45px;
+    font-size:36px;
     margin:0;
 }
 
-#lowerbottomdesc{
-    font-size:25px;
-    margin:0 0 20px 0;
+.lessondetails{
+    font-size:19px;
+    font-weight:300;
 }
 
-#carousel-wrapper{
-    margin-top:40px;
-    padding-bottom:40px;
-    display:flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
+.findthelesson{
+    font-size:19px;
+    font-weight:600;
 }
 
-.carousel-element{
+.numwrap{
+    width:50px;
+    margin-left:15px;
+    margin-right:5px;
     display:flex;
-    align-items: center;
+    justify-content:center;
+}
+.detailwrap{
+    display:flex;
+    flex-grow:1;
+    justify-content: flex-start;
+}
+.lessonwrap{
+    display:flex;
+    flex-grow:1;
+    justify-content: flex-end;
     margin-right:25px;
 }
 
-.carousel-image{
-    border-radius: 200px;
-    object-fit:cover;
-    width: 150px;
-    height:250px;
+#lessons{
+    margin:100px 0px 100px 200px;
 }
 
-.right-carousel-wrapper{
-    max-width:450px;
-    margin-left:20px;
-    background-color: white;
-    padding:20px;
-    border-radius: 30px;
-}
-
-.carousel-header{
-    font-weight:800;
-    font-size:35px;
+#lessonsheadertext{
+    font-weight:600;
+    font-size:42px;
     margin:0;
 }
 
-.carousel-description{
-    font-size:21x;
+.line{
+    border: 1px solid black;
+    margin-bottom:60px;
 }
 
-.location-image{
-    width:10.5px;
-    height:13.29375px;
-}
-
-#lowermorebottom{
+#presentationcontainer{
     display:flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width:88%
 }
 
-#lowermorebottomleft{
-    margin:100px 60px 50px 300px;
+.presentationwrap{
+    border-radius:20px;
+    background-color: #F6F6F6;
     display:flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    max-width:400px;
+    max-width:350px;
 }
 
-#lmbl_header{
-    font-weight:700;
-    font-size:30px;
+.ptb{
+    object-fit:cover;
+    max-width:350px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.presentationimagedivider{
+    border: 3px solid #C0C2C1;
+    width:100%;
     margin:0;
 }
 
-#lmbl_desc{
-    text-align: center;
-    font-size:20px;
-    margin: 15px 0px 25px 0px;
+.pnum{
+    font-weight:400;
+    font-size:17.5px;
+    margin:15px 0px 0px 20px;
+    align-self:flex-start;
 }
 
-.button-style2{
+.ptitle{
+    font-weight:700;
+    font-size:17.5px;
+    margin:8px 0px 0px 20px;
+    align-self:flex-start;
+}
+.pdesc{
+    font-weight:300;
+    font-size:15px;
+    margin:15px 0px 0px 20px;
+    align-self:flex-start;
+}
+
+.pdate{
+    font-weight:300;
+    font-size:13.5px;
+    margin:15px 0px 25px 20px;
+    align-self:flex-start;
+    color:#A6A6A6;
+}
+
+#quote{
+    margin:150px 0px 80px 0px;
+    background: rgb(114,183,230);
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+}
+
+#quotetextwrap{
+    margin:0px 150px 0px 150px;
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+
+#quotetext{
+    color:white;
+    text-align: center;
+    font-size:25px;
+}
+
+#signup-button{
     border-radius: 50px;
     border: none;
-    width:250px;
-    height:50px;
+    width:275px;
+    height:70px;
     padding:8px;
-    font-size:20px;
+    font-size:22px;
     font-weight:700;
     color:white;
     background: rgb(114,183,230);
     text-align:center;
     background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
-    margin-bottom:15px;
 }
 
-#filler-image{
-    width:432px;
-    height:288px;
-    border-radius:20px;
+#joinus{
+    background:#D9EEFD;
+    margin:0px 0px 80px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+#join-left{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left:230px;
+    /* padding-top:80px;
+    padding-bottom:60px; */
+}
+
+#joinus-image{
+    max-height: 100%;
+    width:auto;
+}
+
+#join-headertext{
+    font-weight:700;
+    font-size:42px;
+    margin:0;
+}
+
+#join-subtitle{
+    text-align: center;
+    font-size:18px;
+
 }
 
 
@@ -444,6 +406,7 @@ body, html {
 #linkedin{
     padding-left: 15px;
 }
+
 
 .link,.link:visited,.link:active{
     font-size:20px;

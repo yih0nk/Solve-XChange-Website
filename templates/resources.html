@@ -1,0 +1,150 @@
+{% extends 'basenocss.html' %}
+
+<!-- {% block lHeader %}
+{% endblock %}
+{% block cHeader %}
+{% endblock %}
+{% block rHeader %}
+{% endblock %}
+ -->
+
+{% block head %}
+<title>SolveXChange</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="light only" />
+<meta name="description" content="SolveXChange Resources" />
+<meta property="og:site_name" content="SolveXChange" />
+<meta property="og:title" content="SolveXChange" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link rel="stylesheet" href="style.css" /> -->
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="32x32" />
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="16x16" />
+<link href="{{ url_for('static', filename='css/resources.css') }}" rel="stylesheet">
+{% endblock %}	
+
+{% block body %}
+<div id="everything">
+    <div id="top-bar">
+        <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
+        <div id = "top-interactables">
+            <p class="toplink"><a class="toplinka" href="http://127.0.0.1:5000/">Home Page</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/">Our Impact</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/forum">Forum</a></p>
+            <p class="toplink"><a class="toplinka_"href="http://127.0.0.1:5000/resources">Resources</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/">Get Involved</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/login">Log In</a></p>
+        </div>
+    </div>    
+    <section id="topportion">
+        <p id="headertext">Resources</p>
+        <p id="desctext">Explore weekly slideshows and lessons designed to enhance your<br>proposal submission for the competition, empowering you with<br>essential knowledge and strategies for success.</p>
+    </section>
+    <div class="divider"></div>
+    <section id="mainbody">
+        <section id="updates">
+            <p id="updatesheadertext">Most Recent Updates</p>
+            <div class="lessoncontainer lesson1">
+                <div class='numwrap'><p class="lessonnum">2</p></div>
+                <div class='detailwrap'><p class="lessondetails"><strong>Week 3:</strong> Project Proposal Exemplar</p></div>
+                <div class="lessonwrap"><p class="findthelesson">FIND THE LESSON</p></div>
+            </div>
+            <div class="lessoncontainer lesson2">
+                <div class='numwrap'><p class="lessonnum">1</p></div>
+                <div class='detailwrap'><p class="lessondetails"><strong>Week 2:</strong> Brainstorming & Idea Generation</p></div>
+                <div class="lessonwrap"><p class="findthelesson">FIND THE LESSON</p></div>
+            </div>
+            <div class="lessoncontainer lesson3">
+                <div class='numwrap'><p class="lessonnum">0</p></div>
+                <div class='detailwrap'><p class="lessondetails"><strong>Week 1:</strong> Welcome to SolveXchange</p></div>
+                <div class="lessonwrap"><p class="findthelesson">FIND THE LESSON</p></div>
+            </div>
+        </section>
+    </section>
+    <section id="lessons">
+        <p id="lessonsheadertext">Lessons</p>
+        <hr class="line">
+        <div id="presentationcontainer">
+            <div class="presentationwrap">
+                <img class="ptb" src="{{ url_for('static', filename='images/lesson0.png') }}">
+                <hr class="presentationimagedivider">
+                <p class = "pnum"><em>Lesson 0</em></p>
+                <p class = "ptitle"><b>Welcome to SolveXChange</b></p>
+                <p class = "pdesc">Small blurb about the lesson and what students can gain from the slideshow for the designated week.</p>
+                <p class="pdate">March 19, 2024</p>
+            </div>
+            <div class="presentationwrap">
+                <img class="ptb" src="{{ url_for('static', filename='images/lesson1.png') }}">
+                <hr class="presentationimagedivider">
+                <p class = "pnum"><em>Lesson 1</em></p>
+                <p class = "ptitle"><b>Brainstorming & Idea Generation</b></p>
+                <p class = "pdesc">Small blurb about the lesson and what students can gain from the slideshow for the designated week.</p>
+                <p class="pdate">March 26, 2024</p>
+            </div>
+            <div class="presentationwrap">
+                <img class="ptb" src="{{ url_for('static', filename='images/lesson1.png') }}">
+                <hr class="presentationimagedivider">
+                <p class = "pnum"><em>Lesson 3</em></p>
+                <p class = "ptitle"><b>Project Proposal Exemplar</b></p>
+                <p class = "pdesc">Small blurb about the lesson and what students can gain from the slideshow for the designated week.</p>
+                <p class="pdate">Date</p>
+            </div>
+        </div>
+        
+    </section>
+    <section id="quote">  
+        <div id="quotetextwrap">
+            <p id="quotetext">Quote: Small blurb about the lesson and what students can gain from the slideshow for the designated week. Small blurb about the lesson and what students can gain from the slideshow for the designated week.</p>
+        </div>
+
+    </section>
+    <section id="joinus">
+        <div id="join-left">
+            <p id="join-headertext">Join Us</p>
+            <p id="join-subtitle">Make a difference in your community today.<br>See how you can get involved</p>
+            <button type="button" id="signup-button">SIGN UP</button>
+        </div>
+        <div id="join-right">
+            <img id="joinus-image" src="{{ url_for('static', filename='images/joinus.png') }}">
+        </div>
+
+    </section>
+
+    <footer id="join-wrapper">
+        <hr class="white-line">
+        <div id="join-title-div">
+            <label id="join-title">JOIN SOLVEXCHANGE</label>
+        </div>
+        <div id="join-slogan">
+            <p>Join a community of inspring youth leaders.<br>Beome the driving force behind transformative change.</p>
+        </div>
+        <button id="signup-button" type="button">SIGN UP</button>
+        <div id="join-below">
+            <div class="join-subtitles-div">
+                <label class="join-subtitles">Take Action</label>
+                <div id="action-info">
+                    <p id="linkwrap"><a class="link" href="http://127.0.0.1:5000/forum">Forum</a><br><a class="link" href="#">Become an executive</a><br><a class="link" href="#">Start a chapter</a></p>
+                </div>
+            </div>
+            <div class="join-subtitles-div">
+                <label class="join-subtitles">Connect</label>
+                <div id="connect-info">
+                    <img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="100">
+                    <img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="100">
+                </div>
+                <div id="email">
+                    <a id="link2" href="mailto:solvexchange.info@gmail.com">solvexchange.info@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <hr class="white-line">
+    </footer>
+
+</div>
+
+
+
+{% endblock %}

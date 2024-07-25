@@ -56,15 +56,11 @@ function ToggleReplies(id) {
     }
 
     const reply = document.getElementById(`replies-${id}`),
-        showButton = document.getElementById(`show-${id}`),
-        arrow = document.getElementById(`arrow-${id}`),
         postFooter = document.getElementById(`post-footer-${id}`);
 
     if (reply.dataset.displayed == 'no'){
         currentOpenReplyIndex = id;
         reply.dataset.displayed = 'yes'
-        showButton.value = 'Hide Replies';
-        arrow.animate({ rotate: '90deg' }, { duration: 300, fill: 'forwards', easing: 'ease' });
         postFooter.animate({ backgroundColor: '#292929' }, { duration: 300, fill: 'forwards', easing: 'ease' });
         reply.firstElementChild.style.margin = '0';
         if (reply.dataset.repliesLoaded == 'no')
@@ -76,8 +72,6 @@ function ToggleReplies(id) {
         currentOpenReplyIndex = -1;
         addReplyInputOpen = false;
         reply.dataset.displayed = 'no'
-        showButton.value = 'View Replies';
-        arrow.animate({ rotate: '0deg' }, { duration: 300, fill: 'forwards', easing: 'ease' });
         postFooter.animate({ backgroundColor: '#2f2f2f' }, { duration: 300, fill: 'forwards', easing: 'ease' });
         reply.firstElementChild.style.margin = `calc(-${reply.firstElementChild.clientHeight}px - ${offset}) 0 0 0`;
     }
@@ -108,7 +102,7 @@ function ToggleReplyInput(id) {
         button.value = specialCharacters.doubleSpace + 'Cancel';
         label.animate({ scale: '0' }, { duration: 500, fill: 'forwards', easing: 'ease' }).onfinish 
             = () => {
-                label.innerHTML = '-'
+                label.innerHTML = ''
                 label.animate({ scale: '1' }, { duration: 250, fill: 'forwards', easing: 'ease' }) 
             }
         label.animate({ rotate: '180deg', translate: '1vw 0', margin: '0 1vw' }, 
@@ -127,7 +121,7 @@ function ToggleReplyInput(id) {
             button.value = specialCharacters.doubleSpace + 'Post Reply';
             label.animate({ scale: '0' }, { duration: 250, fill: 'forwards', easing: 'ease' }).onfinish 
                 = () => {
-                label.innerHTML = '+'
+                label.innerHTML = ''
                 label.animate({ scale: '1' }, { duration: 500, fill: 'forwards', easing: 'ease' }) 
             }
             label.animate({ rotate: '0deg', translate: '0', margin: '0' }, 
@@ -136,7 +130,7 @@ function ToggleReplyInput(id) {
             { duration: 1000, fill: 'forwards', easing: 'ease' }).onfinish =
                 () => {
                     animating.replyInput = false; 
-                    label.innerHTML = '+';
+                    label.innerHTML = '';
                     input.value = '';
                 };
         }
@@ -232,17 +226,16 @@ function InstantiateReplies(id) {
                         timeElapsed = response.timeElapsed[i];
                     
                     const replyHTML = `
-                    <div class="post">
+                    <div class="post-reply">
+                        <div class="post-metadata">
+                            Posted ${timeElapsed} ago
+                        </div>
+                        <div class="post-content-by">
+                            <a class="post-username">${username}</a>
+                        </div>
                         <p class="post-content">
                             ${content}
                         </p>
-                        <div class="hright">
-                            <p class="post-metadata" class="inline">
-                                Posted by
-                                <a class="post-username">${username},</a> 
-                                ${timeElapsed} ago
-                            </p>
-                        </div>
                     </div>`
                     commentReplies.firstElementChild.insertAdjacentHTML('afterbegin', replyHTML);
                 }

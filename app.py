@@ -41,10 +41,18 @@ def forum():
                                sort='date', 
                                s_user='',
                                channel_posted=channel_id)
+
+@app.route('/getinvolved')
+def getinvolved():
+    return render_template('getinvolved.html')
     
 @app.route('/login')
 def login():
     return render_template('login.html')
+
+@app.route('/resources')
+def resources():
+    return render_template('resources.html')
 
 @app.route('/register')
 def register():

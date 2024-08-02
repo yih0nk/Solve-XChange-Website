@@ -207,7 +207,6 @@ body, html {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     max-width:350px;
 }
 
@@ -406,7 +405,6 @@ body, html {
 #linkedin{
     padding-left: 15px;
 }
-
 
 .link,.link:visited,.link:active{
     font-size:20px;

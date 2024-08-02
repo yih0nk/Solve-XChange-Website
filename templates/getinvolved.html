@@ -71,6 +71,7 @@
 
 
 <section id="second-wrapper">
+<a id="startachapter-position"></a>
     <div id="second-wrapper-left">
         <div>
             <label class="second-wrapper-subtitle">Start a Chapter</label>
@@ -162,7 +163,6 @@
         <button class="third-wrapper-button" type="button">Apply Now</button>
     </div>
 </section>
-
 <section id="forth-wrapper">
     <div id="forth-wrapper-inner">
         <div>
@@ -194,8 +194,7 @@
         </div>
     </div>
 </section>
-
-<section id="join-wrapper">
+<footer id="join-wrapper">
     <hr class="white-line">
     <div id="join-title-div">
         <label id="join-title">JOIN SOLVEXCHANGE</label>
@@ -208,9 +207,7 @@
         <div class="join-subtitles-div">
             <label class="join-subtitles">Take Action</label>
             <div id="action-info">
-                <a href="http://127.0.0.1:5000/forum">Forum</a>
-                <a href="#">Become an executive</a>
-                <a href="#">Start a chapter</a>
+                <p id="linkwrap"><a class="link" href="http://127.0.0.1:5000/forum">Forum</a><br><a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSeCGVtuVXWlC578r75UTw5MChgcqfPj03GsJfgxkf7ms8XMHw/viewform">Become an executive</a><br><a class="link" href='http://127.0.0.1:5000/getinvolved#startachapter-position'>Start a chapter</a></p>
             </div>
         </div>
         <div class="join-subtitles-div">
@@ -220,12 +217,12 @@
                 <img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="100">
             </div>
             <div id="email">
-                <p>solvexchange.info@gmail.com</p>
+                <a id="link2" href="mailto:solvexchange.info@gmail.com">solvexchange.info@gmail.com</a>
             </div>
         </div>
     </div>
     <hr class="white-line">
-</section>
+</footer>
 
 <script src="{{ url_for('static', filename='js/getinvolved.js') }}" defer></script>
 {% endblock %}

@@ -553,10 +553,11 @@ button > span {
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
+    color:white;
 }
 
 .white-line{
-    width: 90%;
+    width: 85%;
     height: 1px;
     margin-top: 0px;
     background-color: white;
@@ -567,33 +568,29 @@ button > span {
 }
 
 #join-title{
-    font-size: 52px;
+    font-size: 40px;
     font-weight: 600;
 }
 
 #join-slogan{
-    font-size: 28px;
-    margin-top: -25px;
+    font-size: 20px;
+    margin-top: -15px;
 }
 
 #join-below{
-    width: 1000px;
     display: flex;
-    align-items: top;
-    text-align: center;
-    margin: auto;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 #signup-button{
     border-radius: 50px;
     border: 0;
     color: white;
-    width:370px;
-    height:80px;
+    width:270px;
+    height:72px;
     padding:8px;
     font-family: "Poppins", sans-serif;
-    font-size:32px;
+    font-size:26px;
     font-weight: 600;
     word-spacing: 1.5px;
     background: rgb(114,183,230);
@@ -608,15 +605,15 @@ button > span {
 }
 
 .join-subtitles{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
 }
 
 #action-info{
-    align-items: center;
-    display: grid;
+    display:block;
     font-size: 28px;
     line-height: 60px;
+    max-height: 150px;
 }
 
 #connect-info{
@@ -624,9 +621,9 @@ button > span {
 }
 
 #email{
-    font-size: 28px;
-    margin-top: -8px;
+    margin:0px 0px 15px 0px;
 }
+
 #insta{
     padding-right: 20px;
 }
@@ -635,16 +632,31 @@ button > span {
     padding-left: 15px;
 }
 
-a{
-    color: white;
+.link,.link:visited,.link:active{
+    font-size:20px;
+    color:white;
+    text-decoration: none;
+    font-weight:300;
+    margin:0px 0px 0px 0px;
 }
 
-.comments-nav{
-    color:black;
-    display:flex;
-    font-size:20px;
-    flex-grow:1;
-    text-align: left;
-    padding-top: 20px;
-    padding-bottom: 15px;
+.link:hover{
+    text-decoration: underline;
+}
+
+#linkwrap{
+    margin:0;
+    line-height: normal;
+}
+
+#link2,#link2:visited,#link2:active{
+    font-size:18px;
+    color:white;
+    text-decoration: none;
+    font-weight:300;
+
+}
+
+#link2:hover{
+    text-decoration: underline;
 }

@@ -30,8 +30,7 @@
     border-radius: 0 0 0 0;
     position: relative;
     margin: 0 auto;
-    margin-left: 200px;
-    margin-top: -20px;
+    margin-left: 17%;
     padding-bottom: 20px;
 }
 
@@ -57,14 +56,14 @@
     position: relative;
     text-align: center;
     overflow-y: auto;
-    margin-left: 150px;
-    width: 80%;
+    margin-left: 13%;
+    width: 70%;
     opacity: 0;
     z-index: 0;
 }
 
 #content {
-    width: calc(100% - 25px);
+    width: 60%;
     padding-left: 20px;
     padding-top: 15px;
 }
@@ -85,6 +84,7 @@
     padding-top: 20px;
     padding-right: 15px;
     padding-bottom: 15px;
+    place-content: center;
 }
 
 .post-reply{
@@ -93,12 +93,7 @@
     border: 1px;
     border-color: black;
     border-style: solid;
-    margin-left: 160px;
-    margin-top: 10px;
-    padding-left: 100px;
-    padding-top: 20px;
-    padding-right: 15px;
-    padding-bottom: 15px;
+    text-align: left;
 }
 
 .post-content {
@@ -167,7 +162,9 @@
     background-color: white;
     border-radius: 0 0 5px 5px;
 }
-
+.comments-nav{
+    text-align: left;
+}
 .replies {
     border-radius: 0 0 5px 5px;
     background-color: white;
@@ -241,37 +238,37 @@
     font-style: italic;
     font-family: "Poppins", sans-serif;
     color: rgb(61, 93, 175);
-    font-weight: 650;
-    font-size: 27px;
-    line-height: 48px;
-    margin-left: 200px;
-    padding-top: 20px;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 32px;
+    margin-left: 17%;
+    padding-top: 12px;
 }
 
 #topic{
     border-radius: 50px;
     border-color:rgb(61, 93, 175);
     border-width: 2px;
-    width: 80%;
-    font-size: 30px;
+    width: 70%;
+    font-size: 28px;
     font-weight: 600;
     letter-spacing: 0.01px;
-    color: black;
     padding-left: 20px;
+    color: black;
 }
 
 #content{
     border-radius: 25px;
     border-color:rgb(61, 93, 175);
     border-width: 2px;
-    font-size: 32px;
-    width: 80%;
+    font-size: 26px;
+    width: 70%;
     height: 285px;
     color: rgb(180, 174, 174);
 }
 
 ::placeholder{
-    color: black;
+    color: rgb(133, 129, 129);
 }
 
 #post-submit{
@@ -289,18 +286,21 @@
     background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
 }
 
+#discussion-div{
+    padding-top: 100px;
+}
+
 #discussion{
     color: black;
     font-size: 56px;
     font-weight: 700;
     margin-left: 180px;
-    padding-top: 30px;
 }
 
 .discussion-line{
-    width: 89%;
+    width: 80%;
     height: 1px;
-    margin-left: -10px;
+    margin-left: 12%;
     margin-top: 0px;
     background-color: black
 }
@@ -312,14 +312,14 @@
     margin-left: 0px;
 }
 .dropdown-values{
-    color: white;
+    color: black;
+    background-color: white;
 }
 
 #sort-by-display{
     color: black;
     background-color: white;
 }
-
 #sort-by{
     border-color: black;
 }

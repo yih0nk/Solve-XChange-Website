@@ -58,6 +58,10 @@ def resources():
 def faq():
     return render_template('faq.html')
 
+@app.route('/aboutus')
+def aboutus():
+    return render_template('aboutus.html')
+
 
 @app.route('/register')
 def register():

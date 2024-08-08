@@ -1,8 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+
+#top-bar{
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display:flex;
+    align-items:center;
+    padding-top:10px;
+    padding-left:50px;
+    padding-right:200px;
+    z-index:100;
+}
+
+#top-logo{
+    height: 95px;
+    width: 95px;
+    margin-left:30px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right:50px;
+}
+
+#top-interactables{
+    color:black;
+    display:flex;
+    font-size:20px;
+    margin-left:100px;
+    flex-grow:1;
+    justify-content:space-between;
+}
+
+/* #top-interactables > p {
+    font-weight:400;
+}
+ */
+#leftwrappertop{
+    max-width:700px;
+}
+
+#topwrapper{
+    display:flex;
+    margin-left:200px;
+    margin-top:180px;
+    justify-content: space-between;
+}
+
+#headertext{
+    font-size:40px;
+    font-weight:700;
+}
+
+#getinvolved-button{
+    border-radius: 50px;
+    border: none;
+    width:275px;
+    height:70px;
+    padding:8px;
+    font-size:22px;
+    font-weight:700;
+    color:white;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+}
+
+#earth{
+    transform: scaleX(-1);
+    margin-top:-280px;
+    margin-right:-30px;
+    width:503.2px;
+    height:753.6px;
+}
+
+.toplinka{
+    text-decoration:none;
+    color:black;
+    position: relative;
+    background: linear-gradient(#3D5DAF 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.08em);
+    transition: .2s var(--t,0s), background-position .1s calc(.3s - var(--t,0s));
+}
+
+.toplinka:hover{
+    --p: 100%;
+    --t: .3s;
+    color: #fff;
+}
+
+.toplinka_{
+    font-weight: 700;
+    text-decoration:none;
+    color:black;
+    position: relative;
+    background: linear-gradient(#3D5DAF 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.08em);
+    transition: .2s var(--t,0s), background-position .1s calc(.3s - var(--t,0s));
+}
+
+.toplinka_:hover{
+    --p: 100%;
+    --t: .3s;
+    color: #fff;
+}
+
+
+.divider{
+    background-color: #3D5DAF;
+    height:20px;
+    left:0px;
+    right:0px;
+    position:relative;
+}
+
+.link,.link:visited,.link:active{
+    font-size:20px;
+    color:white;
+    text-decoration: none;
+    font-weight:300;
+    margin:0px 0px 0px 0px;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
+
+#linkwrap{
+    margin:0;
+    line-height: normal;
+}
+
+#link2,#link2:visited,#link2:active{
+    font-size:18px;
+    color:white;
+    text-decoration: none;
+    font-weight:300;
+
+}
+
+#link2:hover{
+    text-decoration: underline;
+}
+
 #main {
-    background-color: #1f1f1f;
+    background-color: white;
     padding: 5vw;
     border-radius: 10px;
     width: min(100%, 50rem);
+    margin-top: 50px;
+    margin-left: 100px;
 }
 
 .text-input {
@@ -26,13 +187,6 @@
     margin: 0 0 1vh 0;
 }
 
-a {
-    color: white;
-    font-weight: 800;
-    text-decoration: underline white;
-    text-decoration-thickness: 2px;
-}
-
 #verification {
     background-color: #1f1f1f;
     padding: 5vw;
@@ -49,4 +203,16 @@ a {
 #success-box {
     color: #BEFB90;
     font-weight: 600;
+}
+
+#box-wrapper{
+    color: black;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: rgb(217, 238, 253);
+    width: 80%;
+    padding-bottom: 28px;
 }

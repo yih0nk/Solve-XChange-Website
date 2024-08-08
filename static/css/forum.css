@@ -15,6 +15,15 @@
     transition: .2s var(--t,0s), background-position .1s calc(.3s - var(--t,0s));
 }
 
+.toplinka_{
+    font-weight: 700;
+    text-decoration:none;
+    color:black;
+    position: relative;
+    background: linear-gradient(#3D5DAF 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.08em);
+    transition: .2s var(--t,0s), background-position .1s calc(.3s - var(--t,0s));
+}
+
 .toplinka:hover{
     --p: 100%;
     --t: .3s;
@@ -93,7 +102,6 @@
     border: 1px;
     border-color: black;
     border-style: solid;
-    text-align: left;
 }
 
 .post-content {
@@ -338,12 +346,12 @@
     margin: 0 auto;
     border-radius: 20px;
     background-color: rgb(217, 238, 253);
-    width: 95%;
-    padding-bottom: 32px;
+    width: 80%;
+    padding-bottom: 28px;
 }
 
 #extra-title{
-    font-size: 60px;
+    font-size: 52px;
     font-weight: 700;
 }
 
@@ -361,13 +369,13 @@
 
 .extra-info-subtitle{
     color: rgb(61, 93, 175);
-    font-size: 38px;
+    font-size: 30px;
     font-weight: 700;
 }
 
 .extra-info-subtext{
     color: black;
-    font-size: 22px;
+    font-size: 17px;
     font-weight:200;
     font-family: "Poppins", sans-serif;
     line-height: 30px;
@@ -381,12 +389,12 @@
     border-radius: 50px;
     border: 0;
     color: white;
-    width:225px;
-    height:70px;
+    width:235px;
+    height:75px;
     padding:8px;
-    margin-top: 22px;
+    margin-top: 60px;
     font-family: "Poppins", sans-serif;
-    font-size:24px;
+    font-size:26px;
     font-weight: 600;
     word-spacing: 1.5px;
     background: rgb(114,183,230);

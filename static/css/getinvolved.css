@@ -197,11 +197,15 @@
     display:flex;
     justify-content:space-between;
     margin-top: -5%;
-    height: 1170px;
+    height: 1200px;
 }
 
 #second-wrapper-left{
     margin-top:80px;
+}
+
+#sponsor{
+    margin-top: 60px;
 }
 
 #second-wrapper-right{
@@ -210,7 +214,7 @@
 
 #img-displayed{
     width: 605px;
-    height: 1170px;
+    height: 1200px;
 }
 
 .second-wrapper-subtitle{
@@ -375,7 +379,6 @@ button > span {
     color: black;
     font-size: 32px;
     font-weight: 500;
-    font-family: "Source Sans Pro", sans-serif;
     margin-top: 10px;
     margin-bottom: 55px;
 }

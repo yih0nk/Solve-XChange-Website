@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-@font-face{
-    font-family: "Source Sans Pro", sans-serif;
-    src: url("../fonts/sourcesanspro-black-webfont.woff") format("woff");
+*{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    box-sizing: border-box;
 }
 
 .toplinka{
@@ -32,17 +33,13 @@
     font-weight:700;
 }
 
-#curved-line{
-    margin-top: -180px;
-}
-
 #ways-info-title{
     font-weight: 700;
     background-color: white;
     color: rgb(61, 93, 175);
-    font-size: 65px;
+    font-size: 44px;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 100px;
     margin-bottom: 100px;
 }
 
@@ -51,15 +48,17 @@
     align-items: top;
     justify-content: space-between;
     text-align: center;
+    margin-top: -2%;
 }
 
 #ways-extra-format1{
     background-color: #f6f6f6;
     border-radius: 20px;
     text-align: center;
-    padding:25px;
-    width: 400px;
-    margin-top: 200px;
+    padding: 25px;
+    width: 30%;
+    height: 22%;
+    margin-top: 130px;
 }
 
 #ways-extra-format2{
@@ -67,7 +66,8 @@
     border-radius: 20px;
     text-align: center;
     padding:25px;
-    width: 400px;
+    width: 30%;
+    height: 22%;
     margin-bottom: 250px;
 }
 
@@ -76,8 +76,9 @@
     border-radius: 20px;
     text-align: center;
     padding:25px;
-    width: 400px;
-    margin-top: 300px;
+    width: 30%;
+    height: 22%;
+    margin-top: 210px;
     margin-bottom: 100px;
 }
 
@@ -98,144 +99,16 @@
 .ways-extra-info-subtitle{
     color: black;
     font-size: 32px;
+    line-height: 36px;
     font-weight: 700;
 }
 
 .ways-extra-info-subtext{
     color: black;
-    font-size: 34.5px;
-    font-weight: 400;
-    font-family: "Source Sans Pro", sans-serif;
-    line-height: 50px;
-}
-
-#topic{
-    border-radius: 50px;
-    border-color:rgb(61, 93, 175);
-    border-width: 2px;
-    width: 80%;
-    font-size: 30px;
-    font-weight: 600;
-    letter-spacing: 0.01px;
-    color: black;
-    padding-left: 20px;
-}
-
-#content{
-    border-radius: 25px;
-    border-color:rgb(61, 93, 175);
-    border-width: 2px;
-    font-size: 32px;
-    width: 80%;
-    height: 285px;
-    color: rgb(180, 174, 174);
-}
-
-::placeholder{
-    color: black;
-}
-
-#post-submit{
-    border-radius: 50px;
-    border: 0;
-    color: white;
-    width:135px;
-    height:45px;
-    margin-top: 22px;
-    font-size:24px;
-    font-weight: 700;
-    word-spacing: 1.5px;
-    background: rgb(114,183,230);
-    text-align:center;
-    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
-}
-
-#discussion{
-    color: black;
-    font-size: 56px;
-    font-weight: 700;
-    margin-left: 180px;
-    padding-top: 30px;
-}
-
-.discussion-line{
-    width: 89%;
-    height: 1px;
-    margin-left: -10px;
-    margin-top: 0px;
-    background-color: black
-}
-
-#sort-display{
-    color: black;
-    background-color: white;
-    font-size: 20px;
-    margin-left: 0px;
-}
-.dropdown-values{
-    color: white;
-}
-
-#sort-by-display{
-    color: black;
-    background-color: white;
-}
-
-#sort-by{
-    border-color: black;
-}
-
-#post-button{
-    width: 80%;
-    text-align: right;
-    margin-top: -19px;
-}
-
-#extra-wrapper{
-    color: black;
-    align-items: center;
-    position: relative;
-    text-align: center;
-    margin: 0 auto;
-    border-radius: 20px;
-    background-color: rgb(217, 238, 253);
-    width: 95%;
-    padding-bottom: 32px;
-}
-
-#extra-title{
-    font-size: 60px;
-    font-weight: 700;
-}
-
-.extra-title-div{
-    padding-top: 50px;
-    padding-bottom: 15px;
-    margin-top: 50px;
-}
-
-#extra-info{
-    display: flex;
-    align-items: top;
-    justify-content: center;
-}
-
-.extra-info-subtitle{
-    color: rgb(61, 93, 175);
-    font-size: 38px;
-    font-weight: 700;
-}
-
-.extra-info-subtext{
-    color: black;
     font-size: 22px;
-    font-weight:200;
-    font-family: "Source Sans Pro", sans-serif;
-    line-height: 30px;
-}
-
-.extra-format{
-    padding:25px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    line-height: 32px;
 }
 
 #findoutmore-button{
@@ -266,16 +139,20 @@
 }
 
 #top-title{
-    font-size: 126px;
-    font-weight: 700;
+    font-weight:800;
+    font-size:64px;
+    text-align: center;
+    margin:0px;
 }
 
 #top-title-div{
-    padding-top: 150px;
+    padding-top: 135px;
 }
 
 #getinvolved-slogan{
-    font-size: 35px;
+    font-size: 24px;
+    padding-bottom: 135px;
+    font-weight: 300;
 }
 
 #top-bar{
@@ -311,11 +188,6 @@
     justify-content:space-between;
 }
 
-.curved {
-    background-color: rgb(114,183,230);
-    color: blue;
-}
-
 #second-wrapper{
     color: black;
     position: relative;
@@ -324,59 +196,63 @@
     width: 100%;
     display:flex;
     justify-content:space-between;
-    padding: 0px;
+    margin-top: -5%;
+    height: 1170px;
 }
 
 #second-wrapper-left{
-    margin-left: 180px;
     margin-top:80px;
 }
 
 #second-wrapper-right{
-    margin: 0px;
+    height: 100%;
+}
+
+#img-displayed{
+    width: 605px;
+    height: 1170px;
 }
 
 .second-wrapper-subtitle{
     color: black;
-    font-size: 52px;
+    font-size: 38px;
     font-weight: 700;
 }
 
 .second-wrapper-subtext{
     color: black;
-    font-size: 34.5px;
-    font-weight: 300;
-    font-family: "Source Sans Pro", sans-serif;
-    line-height: 50px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 38px;
 }
 
 #second-wrapper-bottom-block{
     background-color: white;
     border-radius: 30px;
     margin-top: 60px;
-    padding-left: 50px;
-    padding-top: 30px;
-    padding-right: 50px;
-    padding-bottom: 30px;
+    width: 600px;
+    height: 200px;
 }
 
 #second-wrapper-email{
     color: black;
-    font-size: 34px;
+    font-size: 24px;
     font-weight: 600;
     font-family: "Source Sans Pro", sans-serif;
     line-height: 50px;
+    padding-left: 5%;
+    padding-top: 2%;
 }
 
 #email-button{
     border-radius: 50px;
     border: 0;
     color: white;
-    width:600px;
+    width:500px;
     height:100px;
     padding:8px;
     font-family: "Poppins", sans-serif;
-    font-size:30px;
+    font-size:24px;
     font-weight: 300;
     word-spacing: 1.5px;
     background: rgb(114,183,230);
@@ -384,6 +260,7 @@
     background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
     margin-top: 15px;
     margin-bottom: 20px;
+    margin-left: 30px;
     cursor: pointer;
 }
 
@@ -398,7 +275,7 @@ button > span {
 }
 
 .third-wrapper-div{
-    width: 1250px;
+    width: 75%;
     padding: 50px;
     background-color: #F6F6F6;
     border-radius: 20px;
@@ -407,7 +284,7 @@ button > span {
 
 .third-wrapper-title{
     color: black;
-    font-size: 34px;
+    font-size: 28px;
     font-weight: 600;
     font-family: "Source Sans Pro", sans-serif;
     line-height: 50px;
@@ -415,10 +292,10 @@ button > span {
 
 .third-wrapper-subtext{
     color: black;
-    font-size: 35px;
+    font-size: 24px;
     font-weight: 300;
     font-family: "Source Sans Pro", sans-serif;
-    line-height: 50px;
+    line-height: 44px;
 }
 
 .third-wrapper-expand{
@@ -452,7 +329,7 @@ button > span {
     padding:8px;
     font-family: "Poppins", sans-serif;
     font-size:26px;
-    font-weight: 400;
+    font-weight: 500;
     word-spacing: 1.5px;
     background: rgb(114,183,230);
     text-align:center;
@@ -484,19 +361,19 @@ button > span {
 }
 
 #forth-wrapper-inner{
-    margin-left: 180px;
-    margin-top:80px;
+    margin-left: 120px;
+    margin-top:50px;
 }
 
 #forth-wrapper-subtitle{
     color: black;
-    font-size: 52px;
+    font-size: 42px;
     font-weight: 700;
 }
 
 #forth-wrapper-subtitle2{
     color: black;
-    font-size: 33px;
+    font-size: 32px;
     font-weight: 500;
     font-family: "Source Sans Pro", sans-serif;
     margin-top: 10px;
@@ -505,9 +382,8 @@ button > span {
 
 .forth-wrapper-subtext{
     color: black;
-    font-size: 26.5px;
+    font-size: 22px;
     font-weight: 350;
-    font-family: "Source Sans Pro", sans-serif;
     line-height: 50x;
     margin-top: -15px;
 }
@@ -519,20 +395,23 @@ button > span {
 
 .fifth-wrapper-div{
     width: 1150px;
-    padding: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 40px;
+    padding-top: 100px;
     background-color: #F6F6F6;
     border-radius: 20px;
-    margin-top: 150px;
-    margin-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
+    text-align: center;
 }
 
 .fifth-wrapper-title{
     color: black;
-    font-size: 65px;
-    font-weight: 600;
-    font-family: "Source Sans Pro", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
     line-height: 50px;
 }
 
@@ -540,12 +419,12 @@ button > span {
     border-radius: 100px;
     border: 0;
     color: white;
-    width:450px;
-    height:130px;
+    width:320px;
+    height: 90px;
     padding:8px;
     margin-bottom: 50px;
     font-family: "Poppins", sans-serif;
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 600;
     word-spacing: 1.5px;
     background: rgb(114,183,230);

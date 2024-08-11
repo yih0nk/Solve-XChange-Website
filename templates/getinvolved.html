@@ -42,7 +42,6 @@
                 <div class="ways-extra-info-subtext">
                     <p>Join in an ongoing<br>discussion to share<br>your ideas for<br>improving various<br>aspects of Halton.<br>Learn about your<br>peers' experiences and<br>contribute your<br>thoughts to a live<br>forum. </p>
                 </div>
-                <button id="findoutmore-button" type="button">Find out more</button>
             </div>
             <div id="ways-extra-format2">
                 <div class="ways-img"><img src="{{ url_for('static', filename='images/EnterTheCompetition.png') }}" height="131"></div>
@@ -50,7 +49,6 @@
                 <div class="ways-extra-info-subtext">
                     <p>Have an idea to fix an<br>issue you experience<br>in Halton? Sign up to<br>enter the community-<br>wide competition and<br>have the chance to<br>bring your idea to life<br>with actual<br>implementation.</p>
                 </div>
-                <button id="findoutmore-button" type="button">Find out more</button>
             </div>
             <div id="ways-extra-format3">
                 <div class="ways-img"><img src="{{ url_for('static', filename='images/BecomeAnExecutive.png') }}" height="131"></div>
@@ -58,7 +56,6 @@
                 <div class="ways-extra-info-subtext">
                     <p>Apply to become a part<br>of our executive team<br>and play a pivotal role<br>in the operational<br>framework of<br>SolveXchange.</p>
                 </div>
-                <button id="findoutmore-button" type="button">Find out more</button>
             </div>
         </div>
     </div>
@@ -75,9 +72,8 @@
             <label class="second-wrapper-subtitle">Start a Chapter</label>
         </div>
         <div class="second-wrapper-subtext">
-            <p>Are you passionate about leadership? Take<br>the initiative to establish a SolveXchange<br>chapter at your high school! Join our<br>expanding executive team and make a<br>difference in your community by<br>introducing SolveXchange to your peers.</p>
+            <p>Are you passionate about leadership?<br>Take the initiative to establish a<br>SolveXchange chapter at your high<br>school! Join our expanding executive<br>team and make a difference in your<br>community by introducing SolveXchange<br>to your peers.</p>
         </div>
-        <button id="findoutmore-button" type="button">Find out more</button>
         <div>
             <label class="second-wrapper-subtitle">Sponsor Our Initiative</label>
         </div>
@@ -85,14 +81,14 @@
             <p>SolveXchange presents a unique<br>opportunity to align your brand with a<br>socially impactful cause, gaining exposure<br>while contributing to positive change in the<br>Halton community. Play an integral role in<br>bringing students' ideas to life, by<br>supporting and empowering future leaders<br>to inspire change throughout Halton.</p>
         </div>
         <div id="second-wrapper-bottom-block">
-            <div>
-                <label id="second-wrapper-email">Reach out to us through email:</label>
+            <div id="second-wrapper-email">
+                <label>Reach out to us through email:</label>
             </div>
             <a href="mailto: solvexchange.info@gmail.com"><button id="email-button" type="button"><img src="{{ url_for('static', filename='images/email-button.jpg') }}" width="40"> <span>solvexchange.info@gmail.com</span></button></a>
         </div>
     </div>
     <div id="second-wrapper-right">
-        <img src="{{ url_for('static', filename='images/hands-together.jpg') }}" width="800">
+        <img id="img-displayed" src="{{ url_for('static', filename='images/hands-together.jpg') }}" width="800">
     </div>
 </section>
 
@@ -134,7 +130,7 @@
                 <br>
             </div>
         </div>
-        <button class="third-wrapper-button" type="button">Sign Up</button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScwHzsuwB6qbjoAch0NWq4nf40U7KF-nRHoqGN5gFPpYORP2w/viewform"><button class="third-wrapper-button" type="button">Sign Up</button></a>
     </div>
 </section>
 
@@ -158,7 +154,7 @@
                 <br>
             </div>
         </div>
-        <button class="third-wrapper-button" type="button">Apply Now</button>
+        <a href="https://docs.google.com/forms/d/13MJiQ7BG2r6cklOLLFUuLM13Pi9HD4VDI_M2zGmdmf0/edit"><button class="third-wrapper-button" type="button">Apply Now</button></a>
     </div>
 </section>
 <section id="forth-wrapper">
@@ -183,12 +179,12 @@
         <div>
             <label class="fifth-wrapper-title">Got Any Questions?</label>
             <div class="third-wrapper-subtext">
-                <p>Visit our Q&A page to explore<br>commonly asked questions about the<br>intricacies of SolveXchange.</p>
+                <p>Send us an email or DM!<br>Visit our FAQ page to explore<br>commonly asked questions. </p>
             </div>
         </div>
         <div>
             <br><br><br>
-            <a href="/qa"><button id="qa-button" type="button">Q & A</button></a>
+            <a href="/faq"><button id="qa-button" type="button">FAQ</button></a>
         </div>
     </div>
 </section>
@@ -200,7 +196,7 @@
     <div id="join-slogan">
         <p>Join a community of inspring youth leaders.<br>Beome the driving force behind transformative change.</p>
     </div>
-    <button id="signup-button" type="button">SIGN UP</button>
+    <button id="signup-button" type="button" onclick="document.location='https://docs.google.com/forms/d/e/1FAIpQLScwHzsuwB6qbjoAch0NWq4nf40U7KF-nRHoqGN5gFPpYORP2w/viewform'">SIGN UP</button>
     <div id="join-below">
         <div class="join-subtitles-div">
             <label class="join-subtitles">Take Action</label>

@@ -72,3 +72,4 @@ class Token(db.Model):
 
     def __repr__(self):
         return f'<{self.email}\'s Token>'
+

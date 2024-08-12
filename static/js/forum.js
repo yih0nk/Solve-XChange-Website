@@ -80,8 +80,8 @@ function ToggleReplies(id) {
 const keyframes = [{width:'0', height:'0', padding:'0', border:'solid 1px transparent', offset: 0},
         {width:'22.5vw', height:'0', padding:'0', border:'solid 1px transparent', offset: 0.75},
         {width:'22.5vw', height:'1rem', padding:'10px 0 10px 10px', border:'solid 1px transparent'},
-        {width:'22.5vw', height:'1rem', padding:'10px 0 10px 10px', border:'solid 1px white', offset: 1}],
-      reversedKeyframes = [{width:'22.5vw', height:'1rem', padding:'10px 0 10px 10px', border:'solid 1px white', offset: 0},
+        {width:'22.5vw', height:'1rem', padding:'10px 0 10px 10px', border:'solid 1px black', offset: 1}],
+      reversedKeyframes = [{width:'22.5vw', height:'1rem', padding:'10px 0 10px 10px', border:'solid 1px black', offset: 0},
         {width:'22.5vw', height:'1rem', padding:'10px 0 10px 10px', border:'solid 1px transparent'},
         {width:'22.5vw', height:'0', padding:'0', border:'solid 1px transparent', offset: 0.25},
         {width:'0', height:'0', padding:'0', border:'solid 1px transparent', offset: 1}];

@@ -1,4 +1,5 @@
 from database import *
+from sqlalchemy import func
 import secrets
 
 login_expiration_time = timedelta(days=1, hours=0, minutes=0, seconds=0)
@@ -36,11 +37,18 @@ def forum():
             return 'received return!'
     else:
         comments = Comment.query.order_by(Comment.time_posted).filter_by(channel_posted=channel_id).all()
+        
+        replyCountDict = {}
+        for comment in comments:
+            replyCount = db.session.query(Reply).filter(comment.id == Reply.parent_id).count()
+            replyCountDict[comment.id] = replyCount
+            
         return render_template('forum.html', 
                                comments=comments[::-1], 
                                sort='date', 
                                s_user='',
-                               channel_posted=channel_id)
+                               channel_posted=channel_id,
+                               replyCountDict=replyCountDict)
 
 @app.route('/getinvolved')
 def getinvolved():

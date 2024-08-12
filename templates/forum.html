@@ -45,7 +45,7 @@
     </div>
 </section>
 <section id="post-form">
-    <form id="comment-form" action="/comments" method="POST" onsubmit="PostComment(event)">
+    <form id="comment-form" action="/forum" method="POST" onsubmit="PostComment(event)">
         <div class="wrapper split">
             <div id="username">
                 <p id="display-name">Not Signed in.</p>
@@ -55,7 +55,7 @@
         <div id="post-topic">
             <textarea id='topic' name='topic' wrap="soft" rows="1" placeholder="&nbsp;Topic/Heading"></textarea>
         </div>
-        <div>
+        <div id="content-div">
             <textarea id="content" wrap="soft" name="content" rows="5" placeholder="&nbsp;Type in your ideas here..."></textarea>
         </div>
         <input type="hidden" id="channel-input" name="channel" value="{{channel_id}}">
@@ -70,7 +70,7 @@
     <hr class="discussion-line">
 </div>
 <section id="sort-wrapper">
-    <form id="sort-form" class="wrapper split" action="/comments" method="POST">
+    <form id="sort-form" class="wrapper split" action="/forum" method="POST">
         <div id="sort-display">
             Sort by: <div id="sort-by" class="dropdown inline">
                 <p id="sort-by-display" class="dropdown-selected">{{ sort | capitalize }}</p>

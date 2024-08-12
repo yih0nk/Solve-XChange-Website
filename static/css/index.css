@@ -343,16 +343,33 @@ body, html {
     height:76.7px;
 }
 
+#image-quote-bottom{
+    width:97.5px;
+    height:76.7px;
+    transform:rotate(180deg);
+    float:inline-end;
+}
+
 #quote-text-wrapper{
     margin-left:100px;
     margin-right:100px;
 }
 
 #quote-text{
-    font-size:35px;
-    font-weight:400;
+    font-size:25px;
+    font-weight:300;
     text-align: center;
+    line-height:50px;
 }
+
+#quote-author-wrapper{
+    font-size:21.5px;
+    font-weight:300;
+    text-align: center;
+    line-height:65px;
+    color:#3D5DAF;
+}
+
 
 
 
@@ -363,11 +380,12 @@ body, html {
     right:0px;
     position:relative;
     background: linear-gradient(90deg, rgba(168,205,234,1) 0%, rgba(193,232,224,1) 100%);
-
+    margin-top:100px;
 }
 
 #lowerbottomwrap{
-    margin: 0px 200px 0px 200px;
+    margin-right: 200px;
+    margin-left:200px;
     padding-top:70px;
     padding-bottom:70px;
     right:0px;

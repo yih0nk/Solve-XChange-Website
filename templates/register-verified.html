@@ -2,36 +2,45 @@
 
 {% block head %}
 <title>Register</title>
-<link href="{{ url_for('static', filename='css/login.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/register-verified.css') }}" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
-<div class="vcenter fstretch">
+<div id="everything">
+    <div id="top-bar">
+        <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
+        <div id = "top-interactables">
+            <p class="toplink"><a class="toplinka" href="http://127.0.0.1:5000/">Home Page</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/aboutus">Our Impact</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/forum">Forum</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/resources">Resources</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/faq">FAQ</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/getinvolved">Get Involved</a></p>
+            <p class="toplink"><a class="toplinka_"href="http://127.0.0.1:5000/login">Log In</a></p>
+        </div>
+    </div>    
+</div>
+
+<div class="vcenter-fstretch">
     <form id="main" onsubmit="createAccount(event)">
         <h1>Register</h1>
         Create a new account!<br>
-        <div id="error-box"></div>
-        <div id="success-box"></div>
-        <div class="text-input">
-            <input value="{{email}}" type="text" id="email-input" placeholder="HDSB Email" autocomplete="off" spellcheck="false"><br>
-        </div>
-        <div class="text-input">
-            <input id="token-input" type="text" value="{{token}}" placeholder="Token">
-        </div>
-        <div class="text-input">
-            <input id="name-input" type="text" autocomplete="off" placeholder="Full name">
-        </div>
-        <div class="text-input">
-            <input type="checkbox" style="display: none;" id="show-password" onclick="showPassword()">
-            <div class="stretch flex">
-                <input id="password-input" type="password" placeholder="Password">
-                <label id="show-text" for="show-password">Show</label>
+        <div id="box-wrapper">
+            <div id="error-box"></div>
+            <div id="success-box"></div>
+            <div class="text-input">
+                <input id="firstname-input" type="text" autocomplete="off" placeholder="First Name">
             </div>
+            <div class="text-input">
+                <div class="stretch flex">
+                    <input id="lastname-input" type="text" autocomplete="off" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="text-input">
+                <input id="password-input" type="password" placeholder="Password">
+            </div>
+            <input id="register-button" type="submit" value="Register!">
         </div>
-        <div class="text-input">
-            <input id="confirm-input" type="password" placeholder="Confirm Password">
-        </div>
-        <input type="submit" value="Create Account!">
     </form>
 </div>
 

@@ -102,6 +102,10 @@
     border: 1px;
     border-color: black;
     border-style: solid;
+    padding: 20px;
+    margin-left: 150px;
+    margin-top: 13px;
+    margin-bottom: 13px;
 }
 
 .post-content {
@@ -172,6 +176,8 @@
 }
 .comments-nav{
     text-align: left;
+    display: flex;
+    align-items: center;
 }
 .replies {
     border-radius: 0 0 5px 5px;
@@ -184,7 +190,6 @@
 }
 
 .reply-button {
-    justify-content: space-around;
     margin: calc(5px + 1rem) 0;
     align-items: center;
     font-size: 1rem;
@@ -197,14 +202,14 @@
 }
 
 .reply-form {
-    background-color: var(--dark-background-colour);
+    background-color: white;
     border-radius: 10px 2rem 2rem 10px;
     transform: translate(.5rem);
     align-items: center;
     padding-right: 0;
     overflow: hidden;
     display: flex;
-    border: none;
+    border: 1px;
     height: 0;
     width: 0;
 }
@@ -300,6 +305,7 @@
 
 #discussion{
     color: black;
+    background-color: white;
     font-size: 56px;
     font-weight: 700;
     margin-left: 180px;
@@ -310,7 +316,7 @@
     height: 1px;
     margin-left: 12%;
     margin-top: 0px;
-    background-color: black
+    background-color: black;
 }
 
 #sort-display{

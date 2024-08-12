@@ -56,13 +56,13 @@ body, html {
     font-weight:700;
 }
 
-#login-button{
+#register-button{
     border-radius: 50px;
     border: none;
     width: 20%;
     height:14%;
     padding: 1.7%;
-    margin-left: -67%;
+    margin-left: 6%;
     font-size:22px;
     font-weight:700;
     color:white;
@@ -149,6 +149,7 @@ body, html {
 
 #main {
     background-color: white;
+    color: black;
     padding: 5vw;
     border-radius: 10px;
     width: min(100%, 50rem);
@@ -174,7 +175,7 @@ body, html {
     width: 87%;
     margin-left: 6%;
     margin-top: 5%;
-    color: rgb(165, 165, 165);
+    color: black;
 }
 
 .text-input input {
@@ -219,7 +220,7 @@ body, html {
     color: black;
     align-items: center;
     position: relative;
-    text-align: center;
+    text-align: left;
     border-radius: 30px;
     background-color: rgb(217, 238, 253);
     width: 650px;

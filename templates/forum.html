@@ -14,6 +14,7 @@
             <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/aboutus">About Us</a></p>
             <p class="toplink"><a class="toplinka_"href="http://127.0.0.1:5000/forum">Forum</a></p>
             <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/resources">Resources</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/faq">FAQ</a></p>
             <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/getinvolved">Get Involved</a></p>
             <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/login">Log In</a></p>
         </div>
@@ -106,13 +107,13 @@
         </p>
         <div>
             <div class="comments-nav">
-                <img id="likes" src="{{ url_for('static', filename='images/likes.png') }}" height="30">
-                <img id="replies" src="{{ url_for('static', filename='images/replies.png') }}" height="30" onclick="ToggleReplies('{{comment.id}}')">
+                <img id="likes" src="{{ url_for('static', filename='images/likes.png') }}" height="30" onclick="">
+                <img id="replies" src="{{ url_for('static', filename='images/replies.png') }}" height="30" onclick="ToggleReplies('{{comment.id}}')"> <label id="reply-count-{{comment.id}}">{{ replyCountDict[comment.id] }}</label>
                 <div id="add-replies-div-{{comment.id}}" class="hcenter">
                     <div id="reply-button-{{comment.id}}" class="reply-button">
                         <form id="reply-form-{{comment.id}}" class="reply-form" onsubmit="AddReply('{{comment.id}}', event)">
                             <input type="text" id="reply-input-{{comment.id}}" class="reply-input" style="width:100%;text-align:left;" autocomplete="off">
-                            <input type="submit" id="reply-submit-{{comment.id}}" class="reply-submit" value=">" style="opacity:0;border-radius:50%;width:1rem;height:1rem;text-align:center;line-height:.2rem;">
+                            <input type="submit" id="reply-submit-{{comment.id}}" class="reply-submit" value=">" style="opacity:0;border-radius:50%;width:1rem;height:1rem;text-align:center;line-height:.2rem;background-color: white;">
                         </form>
                         <label id="add-label-{{comment.id}}" class="add-label" for="add-reply-{{comment.id}}"></label>
                         <img id="add-reply" src="{{ url_for('static', filename='images/add-reply.png') }}" height="30" onclick="ToggleReplyInput('{{comment.id}}')">

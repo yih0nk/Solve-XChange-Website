@@ -33,7 +33,7 @@
         <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
         <div id = "top-interactables">
             <p class="toplink"><a class="toplinka_" href="http://127.0.0.1:5000/">Home Page</a></p>
-            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/aboutus">Our Impact</a></p>
+            <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/aboutus">About Us</a></p>
             <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/forum">Forum</a></p>
             <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/resources">Resources</a></p>
             <p class="toplink"><a class="toplinka"href="http://127.0.0.1:5000/getinvolved">Get Involved</a></p>
@@ -44,42 +44,56 @@
         <div id="leftwrappertop">
             <p id="headertext">SolveXChange</p>
             <p id="subtitletext">Turning Vision into Reality, One Proposal at a Time</p>
-            <button type="button" id="getinvolved-button">GET INVOLVED</button>
+            <a href="http://127.0.0.1:5000/aboutus"><button type="button" id="aboutus-button">ABOUT US</button></a>
 
         </div>
-        <div id="rightwrappertop">
-            <img id="earth" draggable="false" src="{{ url_for('static', filename='images/earth.png') }}">
 
-        </div>
+        <img id="earth" draggable="false" src="{{ url_for('static', filename='images/earth.png') }}">
+
     </div>
-    <div class="divider"></div>
+    <div class="divider">
+        <div class="divider1"></div>
+        <div class="divider2"></div>
+    </div>
     <div id="lowertop">
         <div id="lowertopwrap">
             <div id="innovate-sector">
-                <img class="style1-round-image" draggable="false"src="{{ url_for('static', filename='images/image-innovate.png') }}">
-                <p class="style1-header-text">Innovate</p>
-                <p class="style1-desc-text">Small blurb about<br>innovation in the<br>community</p>
-                <div class="style1-button-wrapper"><button type="button" class="style1-button">Join now <img class="style1-right-arrow" draggable="false "src="{{ url_for('static', filename='images/right-arrow.png') }}"> </button></div>
+                <div id="innovate-text-section">
+                    <p class="style1-header-text">Innovate</p>
+                    <p class="style1-desc-text">Students spark novel ideas and approaches by creating<br>inventive solutions and utilizing problem-solving and creative<br>thinking skills.</p>
+                    <div class="style1-button-wrapper"><a href=""><button type="button" class="style1-button">Join now <img class="style1-right-arrow" draggable="false "src="{{ url_for('static', filename='images/right-arrow.png') }}"> </button></a></div>
+                </div>
+                <img class="style1-round-image" draggable="false"src="{{ url_for('static', filename='images/lightbulb.png') }}">
             </div>
             <div id="impact-sector">
-                <img class="style1-round-image" draggable="false" src="{{ url_for('static', filename='images/image-impact.png') }}">
-                <p class="style1-header-text">Impact</p>
-                <p class="style1-desc-text">Small blurb about<br>the impact students<br>can make</p>
-                <div class="style1-button-wrapper"><button type="button" class="style1-button">Join now <img class="style1-right-arrow" draggable="false "src="{{ url_for('static', filename='images/right-arrow.png') }}"> </button></div>
+                <img class="style1-round-image" draggable="false" src="{{ url_for('static', filename='images/hand.png') }}">
+                <div id="impact-text-section">
+                    <p class="style2-header-text">Impact</p>
+                    <p class="style2-desc-text">Students make a tangible impact by implementing sustainable<br>solutions that address real-world challenges in their communities.</p>
+                    <div class="style2-button-wrapper"><button type="button" class="style1-button">Resources<img class="style1-right-arrow" draggable="false "src="{{ url_for('static', filename='images/right-arrow.png') }}"> </button></div>
+                </div>
+                
             </div>
+                
             <div id="inspire-sector">
-                <img class="style1-round-image" draggable="false" src="{{ url_for('static', filename='images/image-inspire.png') }}">
-                <p class="style1-header-text">Inspire</p>
-                <p class="style1-desc-text">Small blurb about<br>the people you can<br>inspire</p>
-                <div class="style1-button-wrapper"><button type="button" class="style1-button">Join now <img class="style1-right-arrow" draggable="false "src="{{ url_for('static', filename='images/right-arrow.png') }}"> </button></div>
+                <div id="inspire-text-section">
+                    <p class="style1-header-text">Inspire</p>
+                    <p class="style1-desc-text">Students inspire others by demonstrating dedication in serving</br>their community, and motivating peers to contribute to change.</p>
+                    <div class="style1-button-wrapper"><button type="button" class="style1-button">Share ideas <img class="style1-right-arrow" draggable="false "src="{{ url_for('static', filename='images/right-arrow.png') }}"> </button></div>
+                </div>
+                <img class="style1-round-image" draggable="false" src="{{ url_for('static', filename='images/mic.png') }}">
             </div>
         </div>
     </div>
-    <div class="divider"></div>
+    <div class="divider">
+        <div class="divider3"></div>
+        <div class="divider1"></div>
+    </div>
     <div id="quotewrap">
         <div id="quotesection">
             <img id="image-quote" draggable="false" src="{{ url_for('static', filename='images/quote.png') }}">
-            <div id="quote-text-wrapper"><p id="quote-text"><strong>Some quote about the club and our goals to for students to become the driving for behind transformative change.</strong> Some quote about the club and our goals to for students to become the driving for behind transformative change.</p></div>
+            <div id="quote-text-wrapper"><p id="quote-text">“I’ve always heard students casually throw around valuable ideas to improve our community. Unfortunately, many of these ideas are often disregarded because students lack a platform to bring them to life. This became the main inspiration behind SolveXchange, to create an accessible platform with a focus on empowering students to become the driving force behind transformative change.”</p></div>
+            <div id="quote-author-wrapper"><p id="author-text">- Emily Liu (SolveXchange Founder & President)</p></div>
         </div>
     </div>
     <div id="lowerbottom">

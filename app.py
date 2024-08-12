@@ -14,15 +14,18 @@ def index():
 def forum():
     channel_id = 1
     
-    try: 
-        channel_id = request.form['channel']
-    except:
-        pass
+    #try: 
+        #channel_id = request.form['channel']
+    #except:
+        #pass
+
+    
 
     if request.method == 'POST':
         if 'sort-by' in request.form.keys():
             return sort(request, channel_id)
         elif 'content' in request.form.keys():
+            print(request.form['content'], channel_id)
             new_comment = Comment(username=request.form['username'], 
                 content=request.form['content'],
                 time_posted=datetime.now(),
@@ -30,7 +33,7 @@ def forum():
             try:
                 db.session.add(new_comment)
                 db.session.commit()
-                return redirect('/forum')
+                return redirect('/forum#discussion-position')
             except:
                 return 'There was an issue posting your comment.'
         elif 'reply-content' in request.form.keys():

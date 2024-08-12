@@ -140,12 +140,7 @@ body, html {
 
 
 .divider{
-/*     background-color: #3D5DAF;
-    height:20px;
-    left:0px;
-    right:0px;
-    position:relative;
-*/
+
     position:relative;
     width:100%;
 }
@@ -334,7 +329,7 @@ body, html {
 }
 
 #quotesection{
-    margin:100px 250px 150px 250px;
+    margin:100px 250px 0px 250px;
     
 }
 
@@ -343,11 +338,16 @@ body, html {
     height:76.7px;
 }
 
+
+#image-quote-bottom-wrapper{
+    display:flex;
+    justify-content:flex-end;
+}
+
 #image-quote-bottom{
     width:97.5px;
     height:76.7px;
     transform:rotate(180deg);
-    float:inline-end;
 }
 
 #quote-text-wrapper{
@@ -438,7 +438,7 @@ body, html {
 }
 
 .carousel-description{
-    font-size:21x;
+    font-size:21px;
 }
 
 .location-image{
@@ -449,14 +449,18 @@ body, html {
 #lowermorebottom{
     display:flex;
     align-items: center;
+    padding-top:120px;
+    margin: 0 auto;
+    width:80%;
+    justify-content: center;
 }
 
 #lowermorebottomleft{
-    margin:100px 60px 50px 300px;
+    max-width:450px;
+    margin-right:140px;
     display:flex;
     flex-direction: column;
     align-items: center;
-    max-width:400px;
 }
 
 #lmbl_header{
@@ -487,8 +491,8 @@ body, html {
 }
 
 #filler-image{
-    width:432px;
-    height:288px;
+    width: 100%;
+    height: auto;
     border-radius:20px;
 }
 
@@ -607,4 +611,79 @@ body, html {
 
 #link2:hover{
     text-decoration: underline;
+}
+
+#extra-wrapper-parent{
+    margin-top:200px;
+}
+
+
+
+#extra-wrapper{
+    color: black;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: rgb(217, 238, 253);
+    width: 80%;
+    padding-bottom: 28px;
+}
+
+#extra-title{
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.extra-title-div{
+    padding-top: 50px;
+    padding-bottom: 15px;
+    margin-top: 50px;
+}
+
+#extra-info{
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+.extra-info-subtitle{
+    color: rgb(61, 93, 175);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.extra-info-subtext{
+    color: black;
+    font-size: 17px;
+    font-weight:200;
+    font-family: "Poppins", sans-serif;
+    line-height: 30px;
+}
+
+.extra-format{
+    padding:25px;
+}
+
+#getinvolved-button2{
+    cursor:default;
+    border-radius: 50px;
+    border: 0;
+    color: white;
+    width:235px;
+    height:75px;
+    padding:8px;
+    margin-top: 60px;
+    font-family: "Poppins", sans-serif;
+    font-size:26px;
+    font-weight: 600;
+    word-spacing: 1.5px;
+    background: rgb(114,183,230);
+    text-align:center;
+    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
+}
+
+#getinvolved-button2:hover{
+    cursor:pointer;
 }

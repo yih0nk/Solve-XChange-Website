@@ -128,6 +128,8 @@ body, html {
     z-index:100;
 }
 
+
+
 .divider3{
     clip-path: polygon(0% 0%,100% 0%, 50% 70%);
     background: #D9EEFD;
@@ -167,6 +169,7 @@ body, html {
     background: rgb(114,183,230);
     background: linear-gradient(90deg, rgba(114,183,230,0.3660057773109243) 0%, rgba(150,224,211,0.3688068977591037) 100%);
 }
+
 
 #updatesheadertext{
     margin-left:350px;
@@ -230,6 +233,7 @@ body, html {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap:wrap;
     width:88%
 }
 
@@ -240,6 +244,12 @@ body, html {
     flex-direction: column;
     justify-content: center;
     max-width:350px;
+    margin-bottom:20px;
+}
+
+.blankpresentationwrap{
+    width:350px;
+    margin-bottom:20px;
 }
 
 .ptb{
@@ -263,7 +273,7 @@ body, html {
 }
 
 .ptitle{
-    font-weight:700;
+    font-weight:600;
     font-size:17.5px;
     margin:8px 0px 0px 20px;
     align-self:flex-start;
@@ -271,7 +281,7 @@ body, html {
 .pdesc{
     font-weight:300;
     font-size:15px;
-    margin:15px 0px 0px 20px;
+    margin:15px 20px 0px 20px;
     align-self:flex-start;
 }
 
@@ -281,24 +291,6 @@ body, html {
     margin:15px 0px 25px 20px;
     align-self:flex-start;
     color:#A6A6A6;
-}
-
-#quote{
-    margin:150px 0px 80px 0px;
-    background: rgb(114,183,230);
-    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
-}
-
-#quotetextwrap{
-    margin:0px 150px 0px 150px;
-    padding-top:30px;
-    padding-bottom: 30px;
-}
-
-#quotetext{
-    color:white;
-    text-align: center;
-    font-size:25px;
 }
 
 #signup-button{
@@ -319,32 +311,43 @@ body, html {
     background:#D9EEFD;
     margin:0px 0px 80px 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
 }
 
-#join-left{
+.join-left{
     display:flex;
     flex-direction: column;
     align-items: center;
-    margin-left:230px;
-    /* padding-top:80px;
-    padding-bottom:60px; */
+    max-width:250px;
+    margin:0px 30px 0px 60px;
 }
+
+.join-right{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    max-width:250px;
+    margin:0px 60px 0px 30px;
+}
+
+
+
 
 #joinus-image{
-    max-height: 100%;
-    width:auto;
+    width:100%;
+    height:auto;
 }
 
-#join-headertext{
+.join-headertext{
     font-weight:700;
     font-size:42px;
     margin:0;
+    text-align: center;
 }
 
-#join-subtitle{
+.join-subtitle{
     text-align: center;
     font-size:18px;
 
@@ -355,11 +358,114 @@ body, html {
 #join-wrapper{
     width: 100%;
     margin-top: 90px;
-    background-color: rgb(61, 93, 175);
+    background-color: #3d5daf;
     padding-top: 50px;
     padding-bottom: 50px;
-    text-align: center;
     color:white;
+}
+
+#join-body{
+    display:flex;
+    justify-content: space-around;
+    margin: 50px 60px 0px 100px;
+
+    height:300px;
+}
+
+
+#join-body-r{
+
+    flex-direction: column;
+    max-width:350px;
+
+}
+
+#join-body-r-1{
+    font-weight:800;
+    font-size:32px;
+    margin:0px 0px 20px 0px;
+
+}
+
+#join-body-r-2-wrap,#join-body-r-3-wrap,#join-body-r-4-wrap{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    height:60px;
+}
+
+#join-body-r-2,#join-body-r-3,#join-body-r-4{
+    font-weight:400;
+    font-size:21px;
+    padding-left:20px;
+}
+
+
+#join-body-m{
+
+    flex-direction: column;
+    max-width:350px;
+
+}
+
+
+#join-body-m-1{
+    font-weight:800;
+    font-size:32px;
+    margin:0px 0px 20px 0px;
+
+}
+
+#join-body-m-2,#join-body-m-3{
+    font-weight:400;
+    font-size:21px;
+
+}
+
+#join-body-m-4{
+    font-weight:400;
+    font-size:21px;
+
+}
+
+#join-body-m-5{
+    height:15px;
+
+}
+
+#join-body-l{
+    display:flex;
+    flex-direction: column;
+    max-width:350px;
+}
+
+#join-body-l-1,#join-body-l-3{
+    font-weight:800;
+    font-size:40px;
+    color:white;
+    margin:0px;
+    padding:0px;
+    text-align: left;
+    line-height:40px;
+}
+
+#join-body-l-2{
+    font-weight:800;
+    font-size:40px;
+    color:white;
+    -webkit-text-fill-color: #3d5daf;
+    -webkit-text-stroke: 1.5px white;
+    margin:0px;
+    padding:0px;
+    text-align: left;
+}
+
+#join-body-l-4{
+    font-weight:300;
+    font-size:18px;
+    color:white;
+    margin:20px 0px 0px 0px;
+    text-align: left;
 }
 
 .white-line{
@@ -369,100 +475,16 @@ body, html {
     background-color: white;
 }
 
-#join-title-div{
-    padding-top: 25px;
-}
-
-#join-title{
-    font-size: 40px;
-    font-weight: 600;
-}
-
-#join-slogan{
-    font-size: 20px;
-    margin-top: -15px;
-}
-
-#join-below{
-    display: flex;
-    justify-content: center;
-}
-
-#signup-button{
-    border-radius: 50px;
-    border: 0;
-    color: white;
-    width:270px;
-    height:72px;
-    padding:8px;
-    font-family: "Poppins", sans-serif;
-    font-size:26px;
-    font-weight: 600;
-    word-spacing: 1.5px;
-    background: rgb(114,183,230);
-    text-align:center;
-    background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
-}
-
-.join-subtitles-div{
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-.join-subtitles{
-    font-size: 30px;
-    font-weight: 600;
-}
-
-#action-info{
-    display:block;
-    font-size: 28px;
-    line-height: 60px;
-    max-height: 150px;
-}
-
-#connect-info{
-    margin-top: 15px;
-}
-
-#email{
-    margin:0px 0px 15px 0px;
-}
-
-#insta{
-    padding-right: 20px;
-}
-
-#linkedin{
-    padding-left: 15px;
-}
-
-.link,.link:visited,.link:active{
-    font-size:20px;
-    color:white;
+.linkclass,.linkclass:active,.linkclass:visited{
     text-decoration: none;
-    font-weight:300;
-    margin:0px 0px 0px 0px;
+    color:black;
 }
 
-.link:hover{
+.linkclass:hover{
     text-decoration: underline;
+    color:black;
 }
 
-#linkwrap{
-    margin:0;
-    line-height: normal;
-}
-
-#link2,#link2:visited,#link2:active{
-    font-size:18px;
+.white,.white:visited,.white:active,.white:hover{
     color:white;
-    text-decoration: none;
-    font-weight:300;
-
-}
-
-#link2:hover{
-    text-decoration: underline;
 }

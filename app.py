@@ -1,6 +1,9 @@
 from database import *
 from sqlalchemy import func
+from flask_migrate import Migrate
 import secrets
+
+migrate = Migrate(app, db)
 
 login_expiration_time = timedelta(days=1, hours=0, minutes=0, seconds=0)
 domain = '127.0.0.1:5000'
@@ -27,6 +30,7 @@ def forum():
         elif 'content' in request.form.keys():
             print(request.form['content'], channel_id)
             new_comment = Comment(username=request.form['username'], 
+                topic=request.form['topic'],
                 content=request.form['content'],
                 time_posted=datetime.now(),
                 channel_posted=channel_id)
@@ -188,7 +192,7 @@ def send_verification_email():
 
     token = current_token.token if current_token else generate_token()
 
-    msg = Message('Verify your email', sender='test.jeric.jiang@gmail.com', recipients=[data['email']])
+    msg = Message('Verify your email', sender='solvexchange@hotmail.com', recipients=[data['email']])
     msg.body = f'click link please\nhttp://127.0.0.1:5000/register?email={data["email"]}&token={token}'
     mail.send(msg)
 
@@ -217,7 +221,7 @@ def create_account():
         return jsonify({ 'result' : 'token mismatch' })
 
     new_user = User(email=data['email'],
-                    display_name=data['name'].title(),
+                    display_name=data['firstname'].title() + ' ' + data['lastname'].title(),
                     password=data['password'],
                     account_type='user',
                     creation_date=datetime.now())

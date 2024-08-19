@@ -4,7 +4,8 @@ const showLabel = document.getElementById('show-text'),
     passwordInput = document.getElementById('password-input'),
     confirmInput = document.getElementById('confirm-input'),
     tokenInput = document.getElementById('token-input'),
-    nameInput = document.getElementById('name-input');
+    firstnameInput = document.getElementById('firstname-input'),
+    lastnameInput = document.getElementById('lastname-input');
 
 const errorBox = document.getElementById('error-box'),
       successBox = document.getElementById('success-box');
@@ -64,18 +65,13 @@ function verify(event) {
 function createAccount(event) {
     event.preventDefault();
 
-    if (!emailInput.value || !nameInput.value || !tokenInput.value || !passwordInput.value) {
+    if (!firstnameInput.value || !lastnameInput.value || !passwordInput.value) {
         logError('Please fill in all the fields.');
         return;
     }
 
-    if (!/^[a-zA-Z\s]+$/.test(nameInput.value)) {
+    if ((!/^[a-zA-Z\s]+$/.test(firstnameInput.value)) || (!/^[a-zA-Z\s]+$/.test(lastnameInput.value))){
         logError('Your name can only contain letters.');
-        return;
-    }
-
-    if (passwordInput.value != confirmInput.value) {
-        logError('Passwords must match.');
         return;
     }
 
@@ -84,7 +80,8 @@ function createAccount(event) {
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({ 'email' : emailInput.value,
-                               'name' : nameInput.value,
+                               'firstname' : firstnameInput.value,
+                               'lastname' : lastnameInput.value,
                                'token' : tokenInput.value,
                                'password' : passwordInput.value }),
         success: function(response) {

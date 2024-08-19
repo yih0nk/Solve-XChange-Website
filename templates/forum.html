@@ -114,7 +114,7 @@
         </p>
         <div>
             <div class="comments-nav">
-                <img id="likes" src="{{ url_for('static', filename='images/likes.png') }}" height="30" onclick="">
+                <img id="likes" src="{{ url_for('static', filename='images/likes.png') }}" height="30" onclick="AddLike('{{comment.id}}')"> <label id="like-count-{{comment.id}}">{{comment.likecount}}</label>
                 <img id="replies" src="{{ url_for('static', filename='images/replies.png') }}" height="30" onclick="ToggleReplies('{{comment.id}}')"> <label id="reply-count-{{comment.id}}">{{ replyCountDict[comment.id] }}</label>
                 <div id="add-replies-div-{{comment.id}}" class="hcenter">
                     <div id="reply-button-{{comment.id}}" class="reply-button">

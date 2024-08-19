@@ -32,6 +32,16 @@ class Comment(db.Model):
     def __repr__(self):
         return f'<Comment {self.id}>'
     
+class Like(db.Model):
+    __tablename__ = 'Likes'
+
+    id = db.Column(db.Integer, primary_key=True)
+    parent_id = db.Column(db.Integer, db.ForeignKey('Comments.id'), nullable=False)
+    username = db.Column(db.String, nullable=False)
+
+    def __repr__(self):
+        return f'<Like {self.id}>'   
+
 class Reply(db.Model):
     __tablename__ = 'Replies'
 

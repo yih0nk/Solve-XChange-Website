@@ -227,7 +227,7 @@ function AddReply(id, event) {
                 <div class="post">
                     <p class="post-content">${content}</p>
                     <div class="hright">
-                        <p class="post-metadata inline">
+                        <p class="post-metadata-inline">
                             Posted by <a class="post-username">${username},</a> ${timeElapsed} ago
                         </p>
                     </div>

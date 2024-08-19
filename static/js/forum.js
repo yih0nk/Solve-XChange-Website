@@ -48,6 +48,39 @@ else {
 
 setTimeout(() => posts.style.opacity = '1', 300)
 //#endregion
+function AddLike(id){
+    username = ""
+    if (getCookie('user-info')) {
+        let uncutName = getCookie('user-info').split('/')[0];
+        username = uncutName.substring(1, uncutName.length);displayName.innerHTML = `<span class="background-text">Logged in as </span><span style="font-weight:600;">${username}</span>`;
+    }
+    else
+    {
+        alert('You must sign in to like a topic!')
+        return;
+    }
+
+    const likes = document.getElementById(`like-count-${id}`);
+    currentLikes = parseInt(likes.innerHTML);
+    currentLikes++;
+
+    $.ajax({
+        url: '/addlike',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ 'id' : id, 'username' : username}),
+        success: function(response){
+            if (response['result'] == 'success'){
+                likes.innerHTML = currentLikes.toString();
+            }
+            else{
+                alert('You have liked this topic!')
+            }
+        },
+        error: function(xhr, status, error) {
+        }
+    });
+}
 
 //#region Animations
 function ToggleReplies(id) {

@@ -234,6 +234,25 @@ def create_account():
         return jsonify({ 'result' : 'database error' })
 #endregion
 
+@app.route('/addlike', methods=['POST'])
+def add_like():
+    data = json.loads(request.data)
+    id = data['id']
+    username = data['username']
+    new_like = Like.query.filter_by(parent_id=id, username=username).first()
+    if new_like == None:
+        c = Comment.query.filter_by(id=id).first()
+        c.likecount = c.likecount + 1
+        db.session.commit()
+
+        new_like = Like(parent_id=id,
+                        username=username)
+        db.session.add(new_like)
+        db.session.commit()
+        return jsonify({ 'result' : 'success' })
+    else:
+        return jsonify({ 'result' : 'error' })
+
 #region Filters
 @app.template_filter()
 def capitalize(message):

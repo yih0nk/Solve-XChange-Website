@@ -107,7 +107,7 @@
             <a class="post-username">{{ comment.username }}</a>
         </div>
         <p class="post-content-topic">
-            ***Posted topic goes here{{ comment.topic }}*** <!--confirm with jeric-->
+            {{ comment.topic }}
         </p>
         <p class="post-content">
             {{ comment.content | replace('\r\n', '<br>') | safe }}

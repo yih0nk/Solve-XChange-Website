@@ -10,11 +10,11 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = SQLAlchemy(app)
 
 app.config['SECRET_KEY'] = 'TEST_KEY'
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_SERVER'] = 'smtp-mail.outlook.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = '1jiangjer3@hdsb.com'
-app.config['MAIL_PASSWORD'] = 'urhc qehp cwis gnbb'
+app.config['MAIL_USERNAME'] = 'solvexchange@hotmail.com'
+app.config['MAIL_PASSWORD'] = 'website123'
 
 mail = Mail(app)
 
@@ -23,7 +23,9 @@ class Comment(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, nullable=False)
+    topic = db.Column(db.String, nullable=False, default='')
     content = db.Column(db.String, nullable=False)
+    likecount = db.Column(db.Integer, nullable=True, default=0)
     time_posted = db.Column(db.DateTime)
     channel_posted = db.Column(db.Integer, db.ForeignKey('Channels.id'), nullable=False)
 

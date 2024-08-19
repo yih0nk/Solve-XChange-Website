@@ -384,12 +384,15 @@ body, html {
 }
 
 #lowerbottomwrap{
-    margin-right: 200px;
-    margin-left:200px;
     padding-top:70px;
     padding-bottom:70px;
     right:0px;
     left:0px;
+}
+
+#lowerbottomtextwrap{
+    margin-right: 200px;
+    margin-left:200px;
 }
 #lowerbottomheader{
     font-weight:800;
@@ -399,17 +402,108 @@ body, html {
 
 #lowerbottomdesc{
     font-size:25px;
-    margin:0 0 20px 0;
+    margin:0 0 40px 0;
 }
 
-#carousel-wrapper{
-    margin-top:40px;
-    padding-bottom:40px;
+.carousel-track-container{
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;
+
+}
+
+.carousel-track-container:before,.carousel-track-container:after{
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.carousel-track-container:before{
+    left:0;
+}
+
+.carousel-track-container:after{
+    right: 0;
+}
+
+.carousel-track-container:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+.carousel-track {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+  
+.carousel-track img {
+    height: 350px;
+    margin: 0 40px;
+}
+
+
+/* 
+.carousel-image{
+    width:36%;
+}
+
+
+.carousel-track{
+
+    list-style: none;
     display:flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
+    align-items: center;
+    flex-shrink:0;
+    animation:scroll 10s linear infinite;
+    gap: var(--gap);
+} 
+ */
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
 }
 
+
+/* 
+#carousel-wrapper{
+    position:relative;
+    height:600px;
+    width:80%;
+    margin:0 auto;
+}
+
+.carousel-image{
+    width:70%;
+    animation:infinite
+}
+
+.carousel-track-container{
+    height:100%;
+    position:relative;
+
+}
+
+.carousel-track{
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+
+.carousel-slide{
+    position: absolute;
+    top:0;
+    bottom:0;
+
+} */
+
+/* 
 .carousel-element{
     display:flex;
     align-items: center;
@@ -440,7 +534,7 @@ body, html {
 .carousel-description{
     font-size:21px;
 }
-
+ */
 .location-image{
     width:10.5px;
     height:13.29375px;

@@ -13,6 +13,17 @@ body, html {
     overflow-x: hidden;
 }
 
+button:hover{
+    cursor:pointer;
+}
+/* 
+.button-animation{
+    
+    
+} */
+
+
+
 
 
 #top-bar{
@@ -78,7 +89,7 @@ body, html {
 }
 
 
-#aboutus-button{
+.button-style3{
     border-radius: 50px;
     border: none;
     width:220px;
@@ -88,13 +99,32 @@ body, html {
     font-weight:700;
     color:white;
     background: rgb(114,183,230);
+    
     text-align:center;
     cursor:default;
+    outline:none;
+   
     background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
 }
 
-#aboutus-button:hover{
+.button-style3,.button-style2{
+    transition: all 0.3s ease;
+    opacity:100%;
+}
+
+.button-style3:hover,.button-style2:hover{
     cursor:pointer;
+    opacity:70%;
+
+
+}
+
+.button-style3:hover{
+    font-size:27.5px;
+}
+
+.button-style2:hover{
+    font-size:22px;
 }
 
 

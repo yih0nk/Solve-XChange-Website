@@ -45,7 +45,7 @@
         <div id="leftwrappertop">
             <p id="headertext">SolveXChange</p>
             <p id="subtitletext">Turning Vision into Reality, One Proposal at a Time</p>
-            <a href="http://127.0.0.1:5000/aboutus"><button type="button" id="aboutus-button">ABOUT US</button></a>
+            <a href="http://127.0.0.1:5000/aboutus"><button type="button" class="button-style3 button-animation">ABOUT US</button></a>
 
         </div>
 
@@ -62,7 +62,7 @@
                 <div id="innovate-text-section">
                     <p class="style1-header-text">Innovate</p>
                     <p class="style1-desc-text">Students spark novel ideas and approaches by creating<br>inventive solutions and utilizing problem-solving and creative<br>thinking skills.</p>
-                    <div class="style1-button-wrapper"><a href="https://docs.google.com/forms/d/e/1FAIpQLScwHzsuwB6qbjoAch0NWq4nf40U7KF-nRHoqGN5gFPpYORP2w/viewform"><button type="button" class="style1-button">Join now <img class="style1-right-arrow" draggable="false "src="{{ url_for('static', filename='images/right-arrow.png') }}"> </button></a></div>
+                    <div class="style1-button-wrapper"><a href="https://docs.google.com/forms/d/e/1FAIpQLScwHzsuwB6qbjoAch0NWq4nf40U7KF-nRHoqGN5gFPpYORP2w/viewform"><button type="button" class="style1-button ">Join now <img class="style1-right-arrow" draggable="false "src="{{ url_for('static', filename='images/right-arrow.png') }}"> </button></a></div>
                 </div>
                 <img class="style1-round-image" draggable="false"src="{{ url_for('static', filename='images/lightbulb.png') }}">
             </div>
@@ -109,50 +109,8 @@
                 <p id="lowerbottomheader">SUCCESS STORIES</p>
                 <p id="lowerbottomdesc"><em>It all begins with an idea.</em></p>
             </div>
-            <div id="carousel-wrapper"><!-- 
-                <div class="carousel-element">
-                    <img class="carousel-image" draggable="false" src="{{ url_for('static', filename='images/testimonial1.png') }}">
-                    <div class="right-carousel-wrapper">
-                        <p class="carousel-header">JIBRIL MIAN</p>
-                        <p class="carousel-description">Information about their proposal<br><br></nr>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis velit nec diam sodales, non ultricies magna rutrum.</p>
-                        <p class="carousel-footer"><img class="location-image" draggable="false" src="{{ url_for('static', filename='images/location.png') }}"> Iroquous Ridge High School</p>
-                    </div>
-                </div>
-                <div class="carousel-element">
-                    <img class="carousel-image" draggable="false" src="{{ url_for('static', filename='images/testimonial2.jpeg') }}">
-                    <div class="right-carousel-wrapper">
-                        <p class="carousel-header">DANIEL & LOGAN</p>
-                        <p class="carousel-description">Information about their proposal<br><br></nr>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis velit nec diam sodales, non ultricies magna rutrum.</p>
-                        <p class="carousel-footer"><img class="location-image" draggable="false" src="{{ url_for('static', filename='images/location.png') }}"> Iroquous Ridge High School</p>
-                    </div>
-                </div> -->
-                <!-- <div id="carousel-track-container">
-                    <ul class="carousel-track">
-                        <li class="carousel-slide">
-                            <img class="carousel-image" src="{{ url_for('static', filename='images/slide1.png') }}">
-                        </li>
-                        <li class="carousel-slide">
-                            <img class="carousel-image" src="{{ url_for('static', filename='images/slide2.png') }}">
-                        </li>
-                        <li class="carousel-slide">
-                            <img class="carousel-image" src="{{ url_for('static', filename='images/slide3.png') }}">
-                        </li>
-                        <li class="carousel-slide">
-                            <img class="carousel-image"  src="{{ url_for('static', filename='images/slide4.png') }}">
-                        </li>
-                        <li class="carousel-slide">
-                            <img class="carousel-image" src="{{ url_for('static', filename='images/slide5.png') }}">
-                        </li>
-                        <li class="carousel-slide">
-                            <img class="carousel-image" src="{{ url_for('static', filename='images/slide6.png') }}">
-                        </li>
-
-                    </ul>
-                </div>
-
-                <script src="{{ url_for('static', filename='js/carousel.js') }}"></script> -->
-            
-                <div class="carousel-track-container"> <!-- stock-ticker-->
+            <div id="carousel-wrapper">
+                <div class="carousel-track-container">
                     <div class="carousel-track"> 
                         <img class="carousel-image" src="{{ url_for('static', filename='images/slide1.png') }}">
                         
@@ -212,7 +170,7 @@
                 <div class="extra-info-subtext">
                     <p>Interested in becoming a leader?<br>Open a chapter of SolveXchange<br>at your high school! Become a<br>part of our growing executive<br>team by bringing SolveXchange<br>to your own community.</p>
                 </div>
-                <a href="http://127.0.0.1:5000/getinvolved"><button id="getinvolved-button2" type="button">Get Involved</button></a>
+                <a href="http://127.0.0.1:5000/getinvolved"><button class="button-style3 button-animation" type="button">Get Involved</button></a>
             </div>
             <div class="extra-format">
                 <label class="extra-info-subtitle">Join Our Exec Team</label>
@@ -227,8 +185,8 @@
         <div id="lowermorebottomleft">
             <p id="lmbl_header">Are you interested?</p>
             <p id="lmbl_desc">Sign up to be a part of SolveXchange today or share your ideas on a community-wide forum!</p>
-            <button type="button" class="button-style2">Join Now</button>
-            <button type="button" class="button-style2">Share Ideas</button>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScwHzsuwB6qbjoAch0NWq4nf40U7KF-nRHoqGN5gFPpYORP2w/viewform"><button type="button" class="button-style2 button-animation">Join Now</button></a>
+            <a href="http://127.0.0.1:5000/forum"><button type="button" class="button-style2 button-animation">Share Ideas</button></a>
         </div>
         <img id="filler-image" draggable="false" src="{{ url_for('static', filename='images/filler.png') }}">
     </div>

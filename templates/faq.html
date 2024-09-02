@@ -1,0 +1,182 @@
+ not 120/1200{% extends 'basenocss.html' %}
+
+<!-- {% block lHeader %}
+{% endblock %}
+{% block cHeader %}
+{% endblock %}
+{% block rHeader %}
+{% endblock %}
+ -->
+
+{% block head %}
+<title>SolveXChange</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="light only" />
+<meta name="description" content="SolveXChange Resources" />
+<meta property="og:site_name" content="SolveXChange" />
+<meta property="og:title" content="SolveXChange" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link rel="stylesheet" href="style.css" /> -->
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="32x32" />
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="16x16" />
+<link href="{{ url_for('static', filename='css/faq.css') }}" rel="stylesheet">
+<script src="{{ url_for('static', filename='js/faq.js') }}"></script>
+
+{% endblock %}
+
+{% block body %}
+<div id="everything">
+    <div id="top-bar">
+        <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
+        <div id = "top-interactables">
+            <p class="toplink"><a class="toplinka" href="/">Home Page</a></p>
+            <p class="toplink"><a class="toplinka"href="/aboutus">About Us</a></p>
+            <p class="toplink"><a class="toplinka"href="/forum">Forum</a></p>
+            <p class="toplink"><a class="toplinka"href="/resources">Resources</a></p>
+            <p class="toplink"><a class="toplinka_"href="/faq">FAQ</a></p>
+            <p class="toplink"><a class="toplinka"href="/getinvolved">Get Involved</a></p>
+            <p class="toplink"><a class="toplinka"href="/login">Log In</a></p>
+        </div>
+    </div>
+    <section id="topportion">
+        <p id="headertext">FAQ</p>
+        <p id="desctext">Do you have a question about SolveXchange that you want<br>answered? Check out some Frequently Asked Questions that<br>students have commonly asked below.</p>
+    </section>
+    <div class="divider">
+        <div class="divider3"></div>
+        <div class="divider1"></div>
+    </div>
+
+    <section id="comp-specifics">
+        <div id="headerwrap-1">
+            <a id="headertext-1">Competition Specifics</a>
+        </div>
+        <div class="collapsible">
+            <p class="collapsibleTitle"><label id="labelCompetitionSpecifics1" onclick="expandDiv('CompetitionSpecifics1')" style="cursor: pointer;">+</label> What exactly do I have to create?</p>
+            <div class="contentwrap" id="CompetitionSpecifics1">
+                <p>You must create a mandatory formal business proposal. Additional visual aids or creative components are recommended to be created to supplement the compulsory written document. This can include slideshows, presentations or creative videos. It’s up to you!</p>
+            </div>
+            <hr class="split-line">
+        </div>
+        <div class="collapsible">
+            <p class="collapsibleTitle"><label id="labelCompetitionSpecifics2" onclick="expandDiv('CompetitionSpecifics2')" style="cursor: pointer;">+</label> Can I compete in groups?</p>
+            <div class="contentwrap" id="CompetitionSpecifics2">
+                <p>Yes! You are able to join the competition with a group of up to 4 members, with the option to work individually as well.</p>
+            </div>
+            <hr class="split-line">
+        </div>
+        <div class="collapsible">
+            <p class="collapsibleTitle"><label id="labelCompetitionSpecifics3" onclick="expandDiv('CompetitionSpecifics3')" style="cursor: pointer;">+</label> When do I have to submit my proposal?</p>
+            <div class="contentwrap" id="CompetitionSpecifics3">
+                <p>The proposal deadline has been set to May 21, 2024. The final winner and runner-ups will be announced on May 31, 2024. </p>
+            </div>
+            <hr class="split-line">
+        </div>
+        <div class="collapsible">
+            <p class="collapsibleTitle"><label id="labelCompetitionSpecifics4" onclick="expandDiv('CompetitionSpecifics4')" style="cursor: pointer;">+</label> How often does SolveXchange run?</p>
+            <div class="contentwrap" id="CompetitionSpecifics4">
+                <p>During the school year, we conduct two rounds of competitions, one from September to January, and the other from February to June. Students will have the opportunity to compete in both throughout the year. Lessons take place weekly throughout each term.</p>
+            </div>
+            <hr class="split-line">
+        </div>
+        <div class="collapsible">
+            <p class="collapsibleTitle"><label id="labelCompetitionSpecifics5" onclick="expandDiv('CompetitionSpecifics5')" style="cursor: pointer;">+</label> How do I know if I am eligible to compete?</p>
+            <div class="contentwrap" id="CompetitionSpecifics5">
+                <p>Generally, students must be attending a secondary school (from grade 9-12) within Halton in order to compete. For more info, find the Eligibility guidelines on the <a class="link3" href="/getinvolved">Get Involved</a> tab.</p>
+            </div>
+            <hr class="split-line">
+        </div>
+    </section>
+
+    <section id="funding">
+        <div id="headerwrap-2">
+            <a id="headertext-1">Funding</a>
+        </div>
+        <div class="collapsible">
+            <p class="collapsibleTitle"><label id="labelFunding1" onclick="expandDiv('Funding1')" style="cursor: pointer;">+</label> Will we get funding?</p>
+            <div class="contentwrap" id="Funding1">
+                <p>The winner of the competition will have $500 to work with in order to bring their ideas to life. This money is provided by the Halton District School Board and additional sponsors. Students are encouraged to plan a detailed budget and aim to use all of the funding available.</p>
+            </div>
+            <hr class="split-line">
+        </div>
+        <div class="collapsible">
+            <p class="collapsibleTitle"><label id="labelFunding2" onclick="expandDiv('Funding2')" style="cursor: pointer;">+</label> What if my idea needs more than the budget?</p>
+            <div class="contentwrap" id="Funding2">
+                <p>No problem! While we do want you to consider the viability aspect of your plan, we also want all participants to think big!
+                    If you find that your idea is ambitious and the costs exceed the budget, don't let this deter you! While we may not be able to fully fund your project, we are able to explore alternative avenues to help bring your idea to life. This includes arranging meetings with industry professionals, providing social media coverage, and assisting you in securing personal sponsors!</p>
+            </div>
+            <hr class="split-line">
+        </div>
+    </section>
+
+    <section id="benefits">
+        <div id="headerwrap-3">
+            <a id="headertext-1">Benefits and Recognition</a>
+        </div>
+        <div class="collapsible">
+            <p class="collapsibleTitle"><label id="labelBenefits1" onclick="expandDiv('Benefits1')" style="cursor: pointer;">+</label> Why should I join, and how will this benefit me?</p>
+            <div class="contentwrap" id="Benefits1">
+                <p>Submit your proposal to our community-wide competition for the opportunity to secure funding and turn your idea into reality. The winner will not only receive financial support but also be recognized by the HDSB, including a signed certificate from the Superintendent. Furthermore, there's a chance to be featured in Halton media, such as newspapers, and on our website.</p>
+                <p>By participating, you'll collaborate with like-minded individuals, forge new connections, and experience the meaningful impact of initiating change in your community. </p>
+            </div>
+            <hr class="split-line">
+        </div>
+        <div class="collapsible">
+            <p class="collapsibleTitle"><label id="labelBenefits2" onclick="expandDiv('Benefits2')" style="cursor: pointer;">+</label> Can I use this as something to add to my post-secondary applications?</p>
+            <div class="contentwrap" id="Benefits2">
+                <p>Of course! Certainly! SolveXchange offers a valuable opportunity to learn and showcase your entrepreneurial skills, initiative, community action, collaboration and creativity. Participating in our competitions can provide a rich experience to enhance your applications. Feel free to connect with us on LinkedIn and add us to your profile!</p>
+            </div>
+            <hr class="split-line">
+        </div>
+    </section>
+
+    <section id="keep-exploring">
+        <div id="keep-exploring-left">
+            <a class="headertext-2">Keep<br>Exploring</a>
+            <button type="button" class="gradient-button">Get Involved → </button>
+            <button type="button" class="gradient-button">Share Your Ideas → </button>
+            <button type="button" class="gradient-button">Contact Us → </button>
+        </div>
+
+        <div id="keep-exploring-right">
+            <img id="keep-exploring-right-image" src="{{ url_for('static', filename='images/working-together.png') }}" >
+        </div>
+
+    </section>
+
+    <footer id="join-wrapper">
+        <hr class="white-line">
+        <div id="join-body">
+            <div id="join-body-l">
+                <p id="join-body-l-1">JOIN</p>
+                <p id="join-body-l-2">SOLVEXCHANGE</p>
+                <p id="join-body-l-3">TODAY</p>
+                <p id="join-body-l-4">Join a community of inspiring youth leaders. Become the driving force behind transformative change.</p>
+            </div>
+            <div id="join-body-m">
+                <p id="join-body-m-1">Take Action</p>
+                <p id="join-body-m-2"><a class="white linkclass" href="https://docs.google.com/forms/d/e/1FAIpQLScwHzsuwB6qbjoAch0NWq4nf40U7KF-nRHoqGN5gFPpYORP2w/viewform">Sign Up</a></p>
+                <p id="join-body-m-3"><a class="white linkclass" href="https://docs.google.com/forms/d/e/1FAIpQLSeCGVtuVXWlC578r75UTw5MChgcqfPj03GsJfgxkf7ms8XMHw/viewform?usp=sf_link">Become an executive</a></p>
+                <p id="join-body-m-4"><a class="white linkclass"  href="https://www.instagram.com/p/C9nvJi9PVgE/">Start a chapter</a></p>
+
+            </div>
+            <div id="join-body-r">
+                <p id="join-body-r-1">Connect With Us</p>
+                <div id="join-body-r-2-wrap"><img id="classroom" src="{{ url_for('static', filename='images/classroom.png') }}" width="35" height="25.68"><p id="join-body-r-2"><a class="white linkclass" href="https://classroom.google.com/c/NjIzMzAwNzg1NTkz?cjc=fiylhtx">Join our Google Classroom</a></p></div>
+                <div id="join-body-r-2-wrap"><img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="35" height="35" ><p id="join-body-r-2"><a class="white linkclass" href="https://www.instagram.com/solvexchange/">@solvexchange</a></p></div>
+                <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXChange</a></p></div>
+                <div id="join-body-r-4-wrap"><img id="email" src="{{ url_for('static', filename='images/email.png') }}" width="35" height="25.68"><p id="join-body-r-4"><a class="white linkclass" href="mailto:solvexchange@gmail.com">solvexchange@gmail.com</a></p></div>
+            </div>
+
+        </div>
+        <hr class="white-line">
+    </footer>
+</div>
+
+
+
+{% endblock %}

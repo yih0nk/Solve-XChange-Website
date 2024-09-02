@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600');
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+:root {
+    --shadow-colour: black;
+
+    /*Dark Colours*/
+    --dark-background-colour: #121212;
+    --dark-main-colour: white;
+    --dark-disabled-colour: #afafaf;
+    --dark-border-colour: white;
+    --dark-primary-colour: #1f1f1f;
+    --dark-secondary-colour: #2f2f2f;
+    --dark-tertiary-colour: #292929;
+
+    /*Light Colours*/
+}
+
+input:not([type="checkbox"]), textarea, .dropdown {
+    background-color: var(--dark-background-colour);
+    text-align: left;
+    all: unset;
+}
+
+body {
+    background-color: white;
+    color: var(--dark-main-colour);
+    font-family: "Poppins";
+    font-size: 1.75vh;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+#body {
+    height: calc(100vh - 2.5rem);
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+textarea {
+    overflow-wrap: break-word;
+    resize: none;
+}
+
+input:not([type="checkbox"]), textarea {
+    border: solid 1px var(--dark-border-colour);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+input[type="submit"] {
+    background-color: var(--dark-primary-colour);
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--dark-secondary-colour);
+}
+
+label {
+    user-select: none;
+}
+
+.wrapper {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.wrapper-border {
+    border: solid 1px var(--dark-border-colour);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+label:hover, input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex .stretch {
+    flex: 1;
+}
+
+.fstretch {
+    width: 100%;
+    max-height: 100vh;
+}
+
+.vcenter {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.hcenter {
+    justify-content: space-around;
+    display: flex;
+}
+
+.center {
+    justify-content: space-between;
+    display: flex;
+}
+
+h1 {
+    margin: 0;
+}
+
+.split {
+    justify-content: space-between;
+    display: flex;
+}
+
+.hright {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.icon {
+    height: 1rem;
+    width: 1rem;
+}
+
+.spaced {
+    justify-content: space-between;
+    display: flex;
+}
+
+header {
+    background-color: var(--dark-primary-colour);
+    box-shadow: 0 0 .5rem var(--shadow-colour);
+    transition: height 0.3s ease;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+    height: 2.5rem;
+    display: flex;
+    z-index: 10;
+    top: 0;
+}
+
+header:hover {
+    height: 5rem;
+}
+
+header > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    align-items: flex-start;
+    position: relative;
+    user-select: none;
+}
+
+.dropdown-selected {
+    background-color: var(--dark-background-colour);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.dropdown > .dropdown-values {
+    background-color: var(--dark-background-colour);
+    border-radius: 5px;
+    position: absolute;
+    text-align: center;
+    overflow: hidden;
+    display: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0%;
+}
+
+.dropdown > .dropdown-values > a {
+    display: block;
+}
+
+.dropdown:hover > .dropdown-values {
+    display: block;
+    z-index: 2;
+}
+
+.dropdown > .dropdown-values > a:hover {
+    background-color: var(--dark-disabled-colour);
+}
+
+.spread {
+    display: flex;
+    justify-content: space-between;
+}
+
+.background-text {
+    color: var(--dark-disabled-colour);
+}

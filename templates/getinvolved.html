@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Get Involved</title>
+<link href="{{ url_for('static', filename='css/getinvolved.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<section id="top-menu">
+    <div id="top-bar">
+        <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
+        <div id = "top-interactables">
+            <p class="toplink"><a class="toplinka" href="/">Home Page</a></p>
+            <p class="toplink"><a class="toplinka"href="/aboutus">About Us</a></p>
+            <p class="toplink"><a class="toplinka"href="/forum">Forum</a></p>
+            <p class="toplink"><a class="toplinka"href="/resources">Resources</a></p>
+            <p class="toplink"><a class="toplinka"href="/faq">FAQ</a></p>
+            <p class="toplink"><a class="toplinka_"href="/getinvolved">Get Involved</a></p>
+            <p class="toplink"><a class="toplinka"href="/login">Log In</a></p>
+        </div>
+    </div>
+</section>
+
+<section id="top-wrapper">
+    <div id="top-title-div">
+        <label id="top-title">Get Involved</label>
+    </div>
+    <div id="getinvolved-slogan">
+        <p>You can contribute to SolveXchange in numerous ways, helping to<br>inspire transformative change in Halton and enhance the lives of<br>students throughout our community.</p>
+    </div>
+</section>
+
+<div class="divider">
+    <div class="divider3"></div>
+    <div class="divider1"></div>
+</div>
+
+<section id="ways-info">
+    <div id="ways-info-title">
+        <label>Ways You Can Get Involved</label>
+    </div>
+    <div id="ways-info-displayed">
+        <div id="ways-extra-info">
+            <div id="ways-extra-format1">
+                <div class="ways-img"><img src="{{ url_for('static', filename='images/ShareYourIdeas.png') }}" height="131"></div>
+                <label class="ways-extra-info-subtitle">Share Your Ideas</label>
+                <div class="ways-extra-info-subtext">
+                    <p>Join in an ongoing<br>discussion to share<br>your ideas for<br>improving various<br>aspects of Halton.<br>Learn about your<br>peers' experiences and<br>contribute your<br>thoughts to a live<br>forum. </p>
+                </div>
+            </div>
+            <div id="ways-extra-format2">
+                <div class="ways-img"><img src="{{ url_for('static', filename='images/EnterTheCompetition.png') }}" height="131"></div>
+                <label class="ways-extra-info-subtitle">Enter the Competition</label>
+                <div class="ways-extra-info-subtext">
+                    <p>Have an idea to fix an<br>issue you experience<br>in Halton? Sign up to<br>enter the community-<br>wide competition and<br>have the chance to<br>bring your idea to life<br>with actual<br>implementation.</p>
+                </div>
+            </div>
+            <div id="ways-extra-format3">
+                <div class="ways-img"><img src="{{ url_for('static', filename='images/BecomeAnExecutive.png') }}" height="131"></div>
+                <label class="ways-extra-info-subtitle">Become an Executive</label>
+                <div class="ways-extra-info-subtext">
+                    <p>Apply to become a part<br>of our executive team<br>and play a pivotal role<br>in the operational<br>framework of<br>SolveXchange.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="forum-reminder">
+        <p>Feel Free to reply to the comments of others.<br>Please be respectful.</p>
+    </div>
+</section>
+
+
+<section id="second-wrapper">
+<a id="startachapter-position"></a>
+    <div id="second-wrapper-left">
+        <div>
+            <label class="second-wrapper-subtitle">Start a Chapter</label>
+        </div>
+        <div class="second-wrapper-subtext">
+            <p>Are you passionate about leadership?<br>Take the initiative to establish a<br>SolveXchange chapter at your high<br>school! Join our expanding executive<br>team and make a difference in your<br>community by introducing SolveXchange<br>to your peers.</p>
+        </div>
+        <div id="sponsor">
+            <label class="second-wrapper-subtitle">Sponsor Our Initiative</label>
+        </div>
+        <div class="second-wrapper-subtext">
+            <p>SolveXchange presents a unique<br>opportunity to align your brand with a<br>socially impactful cause, gaining exposure<br>while contributing to positive change in the<br>Halton community. Play an integral role in<br>bringing students' ideas to life, by<br>supporting and empowering future leaders<br>to inspire change throughout Halton.</p>
+        </div>
+        <div id="second-wrapper-bottom-block">
+            <div id="second-wrapper-email">
+                <label>Reach out to us through email:</label>
+            </div>
+            <a href="mailto: solvexchange.info@gmail.com"><button id="email-button" type="button"><img src="{{ url_for('static', filename='images/email-button.jpg') }}" width="40"> <span>solvexchange.info@gmail.com</span></button></a>
+        </div>
+    </div>
+    <div id="second-wrapper-right">
+        <img id="img-displayed" src="{{ url_for('static', filename='images/hands-together.jpg') }}" width="800">
+    </div>
+</section>
+
+<section class="third-wrapper" style="margin-top: 150px;">
+    <div class="third-wrapper-div">
+        <label class="third-wrapper-title">Share Your Ideas</label>
+        <div class="third-wrapper-subtext">
+            <p>What issues do you find present within your community? Have you thought of<br>a solution to a problem you experience as a member of Halton? Share your<br>ideas through a community-wide forum to hear the opinions of others, and<br>further expand your plan. See what others have to share and collaborate with<br>your peers!</p>
+        </div>
+        <a href="/forum"><button class="third-wrapper-button" type="button">See the Forum</button></a>
+    </div>
+</section>
+
+<section class="third-wrapper">
+    <div class="third-wrapper-div">
+        <label class="third-wrapper-title">Enter the Competition</label>
+        <div class="third-wrapper-subtext">
+            <p>Learn how to craft a professional business proposal and how to effectively<br>market and promote your idea through detailed lessons. Join weekly google<br>meetings to share your ideas, gain feedback and ask questions to ensure your<br>success throughout the competition.</p>
+        </div>
+        <div class="third-wrapper-expand">
+            <p><label id="labeleligibility" onclick="expandDiv('eligibility')">+</label> Eligibility</p>
+            <div class="third-wrapper-expandtext" id="eligibility">
+                <li>Must be a student attending a high school in Halton</li>
+                <li>Within the grades of 9-12</li>
+                <li>An HDSB email address and account</li>
+                <li>Can be completed individually or in small groups (1-4 people)</li>
+            </div>
+            <p><label id="labelrubricCriteria" onclick="expandDiv('rubricCriteria')">+</label> Rubric Criteria</p>
+            <div class="third-wrapper-expandtext" id="rubricCriteria">
+                <span class="third-wrapper-expandsubtext">You will be graded based off:</span>
+                <li>Feasibility/Viability</li>
+                <li>Creativity/Innovative</li>
+                <li>Professionalism</li>
+                <li>Value of Proposition (benefits and impact)</li>
+                <li>Sustainability</li>
+                <li>Clarity</li>
+                <li>Visual Appeal</li>
+                <li>Implementation Plan</li>
+                <br>
+            </div>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScwHzsuwB6qbjoAch0NWq4nf40U7KF-nRHoqGN5gFPpYORP2w/viewform"><button class="third-wrapper-button" type="button">Sign Up</button></a>
+    </div>
+</section>
+
+<section class="third-wrapper">
+    <div class="third-wrapper-div">
+        <label class="third-wrapper-title">Become an Executive</label>
+        <div class="third-wrapper-subtext">
+            <p>Share your passion for our goals, and contribute your ideas to improve<br>SolveXchange within our community. Join our executive team to support and<br>empower youth across Halton, and provide an accessible platform to voice<br>their concerns. Get the opportunity to work alongside like-minded, passionate<br>individuals and create a difference in your community!</p>
+        </div>
+        <div class="third-wrapper-expand">
+            <p><label id="labelpositions" onclick="expandDiv('positions')">+</label> Positions</p>
+            <div class="third-wrapper-expandtext" id="positions">
+                <span class="third-wrapper-expandsubtext">Below are available positions if you are interested in becoming a part of the executive team:</span>
+                <li>Secretary</li>
+                <li>Grade 9 Rep</li>
+                <li>Grade 10 Rep</li>
+                <li>Promotions Team</li>
+                <li>Event/Competition Coordinator</li>
+                <li>Head of Communications</li>
+                <li>Business/Marketing Trainer</li>
+                <br>
+            </div>
+        </div>
+        <a href="https://docs.google.com/forms/d/13MJiQ7BG2r6cklOLLFUuLM13Pi9HD4VDI_M2zGmdmf0/edit"><button class="third-wrapper-button" type="button">Apply Now</button></a>
+    </div>
+</section>
+<section id="forth-wrapper">
+    <div id="forth-wrapper-inner">
+        <div>
+            <label id="forth-wrapper-subtitle">Start a Chapter</label>
+            <p id="forth-wrapper-subtitle2">How to start your own chapter</p>
+            <p class="forth-wrapper-subtext"><b>1.</b>&nbsp;&nbsp;Reach out and let us know that you want to start a chapter at your high school school.</p>
+            <p class="forth-wrapper-subtext"><b>2.</b>&nbsp;&nbsp;Depending on your school's club creation process, begin by submitting a request to start a club.</p>
+            <p class="forth-wrapper-subtext"><b>3</b>&nbsp;&nbsp;Find a teacher supervisor to support the competition.</p>
+            <p class="forth-wrapper-subtext"><b>4.</b>&nbsp;&nbsp;Meet with your principal and your school's administration team to determine if it would be possible for a<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;winning solution to be actually implemented within the school.</p>
+            <p class="forth-wrapper-subtext"><b>5.</b>&nbsp;&nbsp;Establish a team of passionate individuals to make up your own executive team.</p>
+            <p class="forth-wrapper-subtext"><b>6.</b>&nbsp;&nbsp;Promote your chapter of SolveXchange throughout your school (ex. create an Instagram account, manage a<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Google Classroom).</p>
+            <p class="forth-wrapper-subtext"><b>7.</b>&nbsp;&nbsp;Begin the competition! Start the lessons and guide your members to a winning proposal. Students should be<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;able to propose a solution to a problem they experience within their school.</p>
+            <p class="forth-wrapper-subtext">&nbsp;</p>
+        </div>
+    </div>
+</section>
+
+<section class="fifth-wrapper">
+    <div class="fifth-wrapper-div">
+        <div>
+            <label class="fifth-wrapper-title">Got Any Questions?</label>
+            <div class="third-wrapper-subtext">
+                <p>Send us an email or DM!<br>Visit our FAQ page to explore<br>commonly asked questions. </p>
+            </div>
+        </div>
+        <div>
+            <br><br><br>
+            <a href="/faq"><button id="qa-button" type="button">FAQ</button></a>
+        </div>
+    </div>
+</section>
+<footer id="join-wrapper">
+    <hr class="white-line">
+    <div id="join-body">
+        <div id="join-body-l">
+            <p id="join-body-l-1">JOIN</p>
+            <p id="join-body-l-2">SOLVEXCHANGE</p>
+            <p id="join-body-l-3">TODAY</p>
+            <p id="join-body-l-4">Join a community of inspiring youth leaders. Become the driving force behind transformative change.</p>
+        </div>
+        <div id="join-body-m">
+            <p id="join-body-m-1">Take Action</p>
+            <p id="join-body-m-2"><a class="white linkclass" href="https://docs.google.com/forms/d/e/1FAIpQLScwHzsuwB6qbjoAch0NWq4nf40U7KF-nRHoqGN5gFPpYORP2w/viewform">Sign Up</a></p>
+            <p id="join-body-m-3"><a class="white linkclass" href="https://docs.google.com/forms/d/e/1FAIpQLSeCGVtuVXWlC578r75UTw5MChgcqfPj03GsJfgxkf7ms8XMHw/viewform?usp=sf_link">Become an executive</a></p>
+            <p id="join-body-m-4"><a class="white linkclass"  href="https://www.instagram.com/p/C9nvJi9PVgE/">Start a chapter</a></p>
+
+        </div>
+        <div id="join-body-r">
+            <p id="join-body-r-1">Connect With Us</p>
+            <div id="join-body-r-2-wrap"><img id="classroom" src="{{ url_for('static', filename='images/classroom.png') }}" width="35" height="25.68"><p id="join-body-r-2"><a class="white linkclass" href="https://classroom.google.com/c/NjIzMzAwNzg1NTkz?cjc=fiylhtx">Join our Google Classroom</a></p></div>
+            <div id="join-body-r-2-wrap"><img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="35" height="35" ><p id="join-body-r-2"><a class="white linkclass" href="https://www.instagram.com/solvexchange/">@solvexchange</a></p></div>
+            <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXChange</a></p></div>
+            <div id="join-body-r-4-wrap"><img id="email" src="{{ url_for('static', filename='images/email.png') }}" width="35" height="25.68"><p id="join-body-r-4"><a class="white linkclass" href="mailto:solvexchange@gmail.com">solvexchange@gmail.com</a></p></div>
+        </div>
+
+    </div>
+    <hr class="white-line">
+</footer>
+
+<script src="{{ url_for('static', filename='js/getinvolved.js') }}" defer></script>
+{% endblock %}

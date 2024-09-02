@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+#vision{
+    margin-top:100px;
+    padding-top:20px;
+}
+
+
+.divider{
+
+    position:relative;
+    width:100%;
+}
+
+.divider1{
+    clip-path: polygon(0% 0%, 50% 70%, 100% 0%, 100% 30%, 50% 100%, 0% 30%);
+    background-color: #A2C3D9;
+    height:100px;
+    position:absolute;
+    width:100%;
+    top:0;
+    z-index:101;
+}
+
+.divider2{
+    clip-path: polygon(0% 30%, 50% 100%, 100% 30%, 100% 100%, 50% 100%, 0% 100%);
+    background: linear-gradient(90deg, rgba(168,205,234,1) 0%, rgba(193,232,224,1) 100%);
+    height:100px;
+    position:absolute;
+    width:100%;
+    top:0px;
+    z-index:100;
+}
+
+.divider3{
+    clip-path: polygon(0% 0%,100% 0%, 50% 70%);
+    background: #D9EEFD;
+    height:100px;
+    position:absolute;
+    width:100%;
+    top:0px;
+    z-index:103;
+}
+
+#top-bar{
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display:flex;
+    align-items:center;
+    padding-top:10px;
+    padding-left:50px;
+    padding-right:200px;
+    z-index:200;
+}
+
+#top-logo{
+    height: 95px;
+    width: 95px;
+    margin-left:30px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right:50px;
+}
+
+#top-interactables{
+    color:black;
+    display:flex;
+    font-size:20px;
+    margin-left:100px;
+    flex-grow:1;
+    justify-content:space-between;
+}
+
+.toplinka{
+    text-decoration:none;
+    color:black;
+    position: relative;
+    background: linear-gradient(#3D5DAF 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.08em);
+    transition: .2s var(--t,0s), background-position .1s calc(.3s - var(--t,0s));
+}
+
+.toplinka:hover{
+    --p: 100%;
+    --t: .3s;
+    color: #fff;
+}
+
+.toplinka_{
+    font-weight: 700;
+    text-decoration:none;
+    color:black;
+    position: relative;
+    background: linear-gradient(#3D5DAF 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.08em);
+    transition: .2s var(--t,0s), background-position .1s calc(.3s - var(--t,0s));
+}
+
+.toplinka_:hover{
+    --p: 100%;
+    --t: .3s;
+    color: #fff;
+}
+
+#topportion{
+    margin-top:125px;
+    display:block;
+    align-items: center;
+    background-color: #D9EEFD;
+}
+
+#headertext{
+    font-weight:800;
+    font-size:70px;
+    text-align: center;
+    margin:0px;
+    padding-top:80px;
+}
+
+.title{
+    font-weight: 700;
+    font-size: 45px;
+    margin-left: 15%;
+    margin-bottom: 2%;
+}
+.text{
+    font-weight:300;
+    font-size:23px;
+    margin-left: 17%;
+}
+
+#desctext{
+    font-weight:300;
+    font-size:23px;
+    text-align: center;
+    margin:15px 0px 0px 0px;
+    padding-bottom:80px;
+}
+
+
+#values{
+    margin-top: 5%;
+}
+
+#values-wrapper{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-left: 18.5%;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    background-color: rgb(61, 93, 175);
+    color: white;
+    transform: rotateY(180deg);
+    height: 273px;
+    border-radius: 30px;
+  }
+
+  .backtext{
+    margin-top: 12%;
+  }
+
+#values-images{
+    object-fit: cover;
+    width: 70%;
+}
+
+#whatwedo{
+    margin-top: 11%;
+}
+
+/*#whatwedo-wrapper{
+
+}
+*/
+
+.whatwedo-content{
+    display: flex;
+    color: black;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: rgb(217, 238, 253);
+    width: 65%;
+    height: 225px;
+    align-items: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.title1{
+    font-weight: 700;
+    font-size: 36px;
+    margin-left: 6%;
+}
+
+#text1{
+    font-size: 21.5px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 1%;
+    margin-left: 9%;
+}
+#text2{
+    font-size: 21.5px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 1%;
+    margin-left: 5.3%;
+}
+#text3{
+    font-size: 21.5px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 1%;
+    margin-left: 4.1%;
+}
+
+
+
+#join-wrapper{
+    width: 100%;
+    margin-top: 90px;
+    background-color: #3d5daf;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color:white;
+}
+
+#join-body{
+    display:flex;
+    justify-content: space-around;
+    margin: 50px 60px 50px 100px;
+
+    height:300px;
+}
+
+
+#join-body-r{
+
+    flex-direction: column;
+    max-width:350px;
+
+}
+
+#join-body-r-1{
+    font-weight:800;
+    font-size:32px;
+    margin:0px 0px 20px 0px;
+
+}
+
+#join-body-r-2-wrap,#join-body-r-3-wrap,#join-body-r-4-wrap{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    height:60px;
+}
+
+#join-body-r-2,#join-body-r-3,#join-body-r-4{
+    font-weight:400;
+    font-size:21px;
+    padding-left:20px;
+}
+
+
+#join-body-m{
+
+    flex-direction: column;
+    max-width:350px;
+
+}
+
+
+#join-body-m-1{
+    font-weight:800;
+    font-size:32px;
+    margin:0px 0px 20px 0px;
+
+}
+
+#join-body-m-2,#join-body-m-3{
+    font-weight:400;
+    font-size:21px;
+
+}
+
+#join-body-m-4{
+    font-weight:400;
+    font-size:21px;
+
+}
+
+#join-body-m-5{
+    height:15px;
+
+}
+
+#join-body-l{
+    display:flex;
+    flex-direction: column;
+    max-width:350px;
+}
+
+#join-body-l-1,#join-body-l-3{
+    font-weight:800;
+    font-size:40px;
+    color:white;
+    margin:0px;
+    padding:0px;
+    text-align: left;
+    line-height:40px;
+}
+
+#join-body-l-2{
+    font-weight:800;
+    font-size:40px;
+    color:white;
+    -webkit-text-fill-color: #3d5daf;
+    -webkit-text-stroke: 1.5px white;
+    margin:0px;
+    padding:0px;
+    text-align: left;
+}
+
+#join-body-l-4{
+    font-weight:300;
+    font-size:18px;
+    color:white;
+    margin:20px 0px 0px 0px;
+    text-align: left;
+}
+
+.white-line{
+    width: 85%;
+    height: 1px;
+    margin-top: 0px;
+    background-color: white;
+}
+
+.linkclass,.linkclass:active,.linkclass:visited{
+    text-decoration: none;
+    color:black;
+}
+
+.linkclass:hover{
+    text-decoration: underline;
+    color:black;
+}
+
+.white,.white:visited,.white:active,.white:hover{
+    color:white;
+}
+
+
+
+.headertext-2{
+    font-size:40px;
+    font-weight:700;
+    text-align: center;
+    padding-bottom:50px;
+    padding-top:50px;
+}

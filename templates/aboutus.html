@@ -1,0 +1,154 @@
+{% extends 'basenocss.html' %}
+
+<!-- {% block lHeader %}
+{% endblock %}
+{% block cHeader %}
+{% endblock %}
+{% block rHeader %}
+{% endblock %}
+ -->
+
+{% block head %}
+<title>About Us</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="light only" />
+<meta name="description" content="SolveXChange Resources" />
+<meta property="og:site_name" content="SolveXChange" />
+<meta property="og:title" content="SolveXChange" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link rel="stylesheet" href="style.css" /> -->
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="32x32" />
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="16x16" />
+<link href="{{ url_for('static', filename='css/aboutus.css') }}" rel="stylesheet">
+
+{% endblock %}
+
+{% block body %}
+<div id="everything">
+    <div id="top-bar">
+        <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
+        <div id = "top-interactables">
+            <p class="toplink"><a class="toplinka" href="/">Home Page</a></p>
+            <p class="toplink"><a class="toplinka_"href="/aboutus">About Us</a></p>
+            <p class="toplink"><a class="toplinka"href="/forum">Forum</a></p>
+            <p class="toplink"><a class="toplinka"href="/resources">Resources</a></p>
+            <p class="toplink"><a class="toplinka"href="/faq">FAQ</a></p>
+            <p class="toplink"><a class="toplinka"href="/getinvolved">Get Involved</a></p>
+            <p class="toplink"><a class="toplinka"href="/login">Log In</a></p>
+        </div>
+    </div>
+    <section id="topportion">
+        <p id="headertext">About Us</p>
+        <p id="desctext">SolveXchange is a student-led initiative that empowers <br>youth to become the driving force behind transformative <br>change, one idea at a time. </p>
+    </section>
+    <div class="divider">
+        <div class="divider3"></div>
+        <div class="divider1"></div>
+    </div>
+    <section id="vision">
+        <p class="title">Our Vision</p>
+        <p class="text">SolveXChange provides students with a unique platform to identify, analyze, and<br>propose solutions to various challenges present within their communities</p>
+        <p class="text">Aspiring student entrepreneurs are given the chance to develop tangible<br>business proposals that allow their voices to be heard and creativity to flourish. </p>
+        <p class="text">Students are introduced to the fundamentals of entrepreneurship, business<br>planning, and project execution, fostering skills that are valuable both in school<br>and beyond. </p>
+        <p class="text">SolveXchange provides a hands-on experience where students can apply their<br>academic knowledge to real-world scenarios, using their passion to take<br>accountability and leadership in their communities.</p>
+    </section>
+    <section id="values">
+        <p class="title">Our Values</p>
+        <div id="values-wrapper">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img id="leader" src="{{ url_for('static', filename='images/leader.png') }}" style="width:300px;height:275px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <p class="backtext">SolveXchange strives to<br>develop the next<br>generation of leaders by<br>empowering students to<br>become the leading force<br>behind transformative<br>change in their<br>communities.</p>
+                  </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img id="passion" src="{{ url_for('static', filename='images/passion.png') }}" style="width:300px;height:275px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <p class="backtext">SolveXchange aims to ignite<br>students' passion for<br>entrepreneurship and<br>problem-solving. By engaging<br>in projects that are meaningful<br>to them, they can develop a<br>true drive to make a positive<br>impact in the world. </p>
+                  </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img id="account" src="{{ url_for('static', filename='images/account.png') }}" style="width:300px;height:275px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <p class="backtext">SolveXchange aims to<br>cultivate a sense of<br>accountability among<br>students toward their<br>communities, fostering<br>responsibility and integrity<br>that prepare them for future<br>leadership roles.<p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="whatwedo">
+        <p class="title">What We Do</p>
+        <div id="whatwedo-wrapper">
+            <div class="whatwedo-content">
+                <div class="title1">
+                    Platform
+                </div>
+                <div id="text1">
+                    SolveXchange provides students with various platforms<br>to collaborate, share ideas, showcase their work and<br>gain recognition. Our forum, social media , and<br>professional connections all serve as avenues for<br>students to network and amplify their voices.
+                </div>
+            </div>
+            <div class="whatwedo-content">
+                <div class="title1">
+                    Resources
+                </div>
+                <div id="text2">
+                    SolveXchange is dedicated to providing students with<br>access to a wide range of resources, aiming to empower<br>students to turn their ideas into reality. This includes<br>mentorship, funding, lessons and more.
+                </div>
+            </div>
+            <div class="whatwedo-content">
+                <div class="title1">
+                    Inspiration
+                </div>
+                <div id="text3">
+                    SolveXchange seeks to ignite a creative spark in<br>students, encouraging them to take channel their<br>genuine passion to positively impact their<br>communities. Our forum serves as a space to foster a<br>community dedicated to making meaningful change.
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="join-wrapper">
+        <hr class="white-line">
+        <div id="join-body">
+            <div id="join-body-l">
+                <p id="join-body-l-1">JOIN</p>
+                <p id="join-body-l-2">SOLVEXCHANGE</p>
+                <p id="join-body-l-3">TODAY</p>
+                <p id="join-body-l-4">Join a community of inspiring youth leaders. Become the driving force behind transformative change.</p>
+            </div>
+            <div id="join-body-m">
+                <p id="join-body-m-1">Take Action</p>
+                <p id="join-body-m-2"><a class="white linkclass" href="https://docs.google.com/forms/d/e/1FAIpQLSc5NEhSVQaHy6nW7h9o8LTuQKpO2SdaSeUvITF0siizzHJW2Q/viewform">Sign Up</a></p>
+                <p id="join-body-m-3"><a class="white linkclass" href="https://docs.google.com/forms/d/e/1FAIpQLSf4JMWxCfCpApHBJxANWuRUIH8OHHvfWaIxCN_HDPhezT9Ebg/viewform">Become an executive</a></p>
+                <p id="join-body-m-4"><a class="white linkclass"  href="https://www.instagram.com/p/C9nvJi9PVgE/">Start a chapter</a></p>
+
+            </div>
+            <div id="join-body-r">
+                <p id="join-body-r-1">Connect With Us</p>
+                <div id="join-body-r-2-wrap"><img id="classroom" src="{{ url_for('static', filename='images/classroom.png') }}" width="35" height="25.68"><p id="join-body-r-2"><a class="white linkclass" href="https://classroom.google.com/c/NjIzMzAwNzg1NTkz?cjc=fiylhtx">Join our Google Classroom</a></p></div>
+                <div id="join-body-r-2-wrap"><img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="35" height="35" ><p id="join-body-r-2"><a class="white linkclass" href="https://www.instagram.com/solvexchange/">@solvexchange</a></p></div>
+                <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXChange</a></p></div>
+                <div id="join-body-r-4-wrap"><img id="email" src="{{ url_for('static', filename='images/email.png') }}" width="35" height="25.68"><p id="join-body-r-4"><a class="white linkclass" href="mailto:solvexchange@gmail.com">solvexchange@gmail.com</a></p></div>
+            </div>
+
+        </div>
+        <hr class="white-line">
+    </footer>
+</div>
+
+
+
+{% endblock %}

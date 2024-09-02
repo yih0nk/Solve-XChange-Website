@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Forum</title>
+<link href="{{ url_for('static', filename='css/forum.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<section id="top-menu">
+    <div id="top-bar">
+        <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
+        <div id = "top-interactables">
+            <p class="toplink"><a class="toplinka" href="/">Home Page</a></p>
+            <p class="toplink"><a class="toplinka"href="/aboutus">About Us</a></p>
+            <p class="toplink"><a class="toplinka_"href="/forum">Forum</a></p>
+            <p class="toplink"><a class="toplinka"href="/resources">Resources</a></p>
+            <p class="toplink"><a class="toplinka"href="/faq">FAQ</a></p>
+            <p class="toplink"><a class="toplinka"href="/getinvolved">Get Involved</a></p>
+            <p class="toplink"><a class="toplinka"href="/login">Log In</a></p>
+        </div>
+    </div>
+</section>
+<section id="top-wrapper">
+    <div id="top-title-div">
+        <label id="top-title">SolveXchange Forum</label>
+    </div>
+    <div id="forum-slogan">
+        <p>Your voice and experiences matter. Contribute to<br>your commuity by sharing your ideas.</p>
+    </div>
+    <button id="forum-button" type="button" onclick="location.href='#discussion-position'">See The Discussion</button>
+</section>
+<div class="divider">
+    <div class="divider3"></div>
+    <div class="divider1"></div>
+</div>
+
+<section id="forum-info-wrap">
+    <div id="forum-info">
+        <div>
+            <label id="info-title">What should I share?</label>
+        </div>
+        <div id="info-displayed">
+            <p id="ideas">Here are some ideas...</p>
+            <p>What are the biggest challenges you face in your community? Is there anything in <br>particular that frustrates you?</p>
+            <p>Are there any social or environmental issues in your community that concern you?</p>
+            <p>What barriers do you or someone you know encounter in accessing essential <br>services in your community?</p>
+            <p>What potential solutions do you envision for the challenges confronting your <br>community?</p>
+        </div>
+        <div>
+            <p id="forum-reminder">Feel Free to reply to the comments of others.<br>Please be respectful.</p>
+        </div>
+    </div>
+</section>
+<section id="post-form">
+    <form id="comment-form" action="/forum" method="POST" onsubmit="PostComment(event)">
+        <div class="wrapper split">
+            <div id="username">
+                <p id="display-name">Not Signed in.</p>
+                <input id="username-input" name="username" type="hidden" autocomplete="off" placeholder="Username...">
+            </div>
+        </div>
+        <div id="post-topic">
+            <textarea id='topic' name='topic' wrap="soft" rows="1" placeholder="&nbsp;Topic/Heading"></textarea>
+        </div>
+        <div id="content-div">
+            <textarea id="content" wrap="soft" name="content" rows="5" placeholder="&nbsp;Type in your ideas here..."></textarea>
+        </div>
+        <input type="hidden" id="channel-input" name="channel" value="{{channel_id}}">
+       <div id="post-button">
+            <input id="post-submit" type="submit" value="POST">
+        </div>
+    </form>
+</section>
+<a id="discussion-position"></a>
+<div id="discussion-div">
+    <label id="discussion">Discussions</label>
+    <hr class="discussion-line">
+</div>
+<section id="sort-wrapper">
+    <form id="sort-form" class="wrapper split" action="/forum" method="POST">
+        <div id="sort-display">
+            Sort by: <div id="sort-by" class="dropdown inline">
+                <p id="sort-by-display" class="dropdown-selected">{{ sort | capitalize }}</p>
+                <div class="dropdown-values">
+                    <a onclick="ChangeFilter('date')">Date</a>
+                    <a onclick="ChangeFilter('user')">User</a>
+                </div>
+            </div>
+            <input type="hidden" name="sort-by" id="sort-by-input" value="{{ sort }}">
+        </div>
+        <div>
+            {% if sort == 'date' %}
+            <input name="sort-username" autocomplete="off" spellcheck="false" style="display: none;" type="text" id="sort-username" placeholder="Username..." value="{{ s_user }}">
+            {% else %}
+            <input name="sort-username" autocomplete="off" spellcheck="false" style="display: inline;" type="text" id="sort-username" placeholder="Username..." value="{{ s_user }}">
+            {% endif %}
+        </div>
+    </form>
+</section>
+<section id="comments">
+    {% for comment in comments %}
+    <div class="post">
+        <div class="post-metadata">
+            Posted {{ comment.time_posted | calculate_time }} ago
+        </div>
+        <div class="post-content-by">
+            <a class="post-username">{{ comment.username }}</a>
+        </div>
+        <p class="post-content-topic">
+            {{ comment.topic }}
+        </p>
+        <p class="post-content">
+            {{ comment.content | replace('\r\n', '<br>') | safe }}
+        </p>
+        <div>
+            <div class="comments-nav">
+                <img id="likes" src="{{ url_for('static', filename='images/likes.png') }}" height="30" onclick="AddLike('{{comment.id}}')"> <label id="like-count-{{comment.id}}">{{comment.likecount}}</label>
+                <img id="replies" src="{{ url_for('static', filename='images/replies.png') }}" height="30" onclick="ToggleReplies('{{comment.id}}')"> <label id="reply-count-{{comment.id}}">{{ replyCountDict[comment.id] }}</label>
+                <div id="add-replies-div-{{comment.id}}" class="hcenter">
+                    <div id="reply-button-{{comment.id}}" class="reply-button">
+                        <form id="reply-form-{{comment.id}}" class="reply-form" onsubmit="AddReply('{{comment.id}}', event)">
+                            <input type="text" id="reply-input-{{comment.id}}" class="reply-input" style="width:100%;text-align:left;" autocomplete="off">
+                            <input type="submit" id="reply-submit-{{comment.id}}" class="reply-submit" value=">" style="opacity:0;border-radius:50%;width:1rem;height:1rem;text-align:center;line-height:.2rem;background-color: white;">
+                        </form>
+                        <label id="add-label-{{comment.id}}" class="add-label" for="add-reply-{{comment.id}}"></label>
+                        <img id="add-reply" src="{{ url_for('static', filename='images/add-reply.png') }}" height="30" onclick="ToggleReplyInput('{{comment.id}}')">
+                        <input id="add-reply-{{comment.id}}" type="submit" value="&nbsp;&nbsp;Post Reply">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="post-footer-{{comment.id}}" class="post-footer">
+            <div id="replies-{{comment.id}}" class="replies" data-displayed="no" data-replies-loaded="no">
+                <div class="wrapper">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+<footer id="join-wrapper">
+    <hr class="white-line">
+    <div id="join-body">
+        <div id="join-body-l">
+            <p id="join-body-l-1">JOIN</p>
+            <p id="join-body-l-2">SOLVEXCHANGE</p>
+            <p id="join-body-l-3">TODAY</p>
+            <p id="join-body-l-4">Join a community of inspiring youth leaders. Become the driving force behind transformative change.</p>
+        </div>
+        <div id="join-body-m">
+            <p id="join-body-m-1">Take Action</p>
+            <p id="join-body-m-2"><a class="white linkclass" href="https://docs.google.com/forms/d/e/1FAIpQLSc5NEhSVQaHy6nW7h9o8LTuQKpO2SdaSeUvITF0siizzHJW2Q/viewform">Sign Up</a></p>
+            <p id="join-body-m-3"><a class="white linkclass" href="https://docs.google.com/forms/d/e/1FAIpQLSf4JMWxCfCpApHBJxANWuRUIH8OHHvfWaIxCN_HDPhezT9Ebg/viewform">Become an executive</a></p>
+            <p id="join-body-m-4"><a class="white linkclass"  href="https://www.instagram.com/p/C9nvJi9PVgE/">Start a chapter</a></p>
+
+        </div>
+        <div id="join-body-r">
+            <p id="join-body-r-1">Connect With Us</p>
+            <div id="join-body-r-2-wrap"><img id="classroom" src="{{ url_for('static', filename='images/classroom.png') }}" width="35" height="25.68"><p id="join-body-r-2"><a class="white linkclass" href="https://classroom.google.com/c/NjIzMzAwNzg1NTkz?cjc=fiylhtx">Join our Google Classroom</a></p></div>
+            <div id="join-body-r-2-wrap"><img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="35" height="35" ><p id="join-body-r-2"><a class="white linkclass" href="https://www.instagram.com/solvexchange/">@solvexchange</a></p></div>
+            <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXChange</a></p></div>
+            <div id="join-body-r-4-wrap"><img id="email" src="{{ url_for('static', filename='images/email.png') }}" width="35" height="25.68"><p id="join-body-r-4"><a class="white linkclass" href="mailto:solvexchange@gmail.com">solvexchange@gmail.com</a></p></div>
+        </div>
+
+    </div>
+    <hr class="white-line">
+</footer>
+<script src="{{ url_for('static', filename='js/forum.js') }}" defer></script>
+{% endblock %}

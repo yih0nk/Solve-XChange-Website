@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Register</title>
+<link href="{{ url_for('static', filename='css/register-verified.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<div id="everything">
+    <div id="top-bar">
+        <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
+        <div id = "top-interactables">
+            <p class="toplink"><a class="toplinka" href="/">Home Page</a></p>
+            <p class="toplink"><a class="toplinka"href="/aboutus">Our Impact</a></p>
+            <p class="toplink"><a class="toplinka"href="/forum">Forum</a></p>
+            <p class="toplink"><a class="toplinka"href="/resources">Resources</a></p>
+            <p class="toplink"><a class="toplinka"href="/faq">FAQ</a></p>
+            <p class="toplink"><a class="toplinka"href="/getinvolved">Get Involved</a></p>
+            <p class="toplink"><a class="toplinka_"href="/login">Log In</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="vcenter-fstretch">
+    <form id="main" onsubmit="createAccount(event)">
+        <input id="token-input" type="hidden" value="{{token}}">
+        <input id="email-input" type="hidden" value="{{email}}">
+        <h1>Register</h1>
+        Create a new account!<br>
+        <div id="box-wrapper">
+            <div id="error-box"></div>
+            <div id="success-box"></div>
+            <div class="text-input">
+                <input id="firstname-input" type="text" autocomplete="off" placeholder="First Name">
+            </div>
+            <div class="text-input">
+                <div class="stretch flex">
+                    <input id="lastname-input" type="text" autocomplete="off" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="text-input">
+                <input id="password-input" type="password" placeholder="Password">
+            </div>
+            <input id="register-button" type="submit" value="Register!">
+        </div>
+    </form>
+</div>
+
+<script src="{{ url_for('static', filename='js/register.js') }}"></script>
+{% endblock %}

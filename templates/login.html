@@ -1,0 +1,69 @@
+{% extends 'basenocss.html' %}
+
+<!-- {% block lHeader %}
+{% endblock %}
+{% block cHeader %}
+{% endblock %}
+{% block rHeader %}
+{% endblock %}
+ -->
+
+{% block head %}
+<title>SolveXChange</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="light only" />
+<meta name="description" content="SolveXChange Homepage" />
+<meta property="og:site_name" content="SolveXChange" />
+<meta property="og:title" content="SolveXChange" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link rel="stylesheet" href="style.css" /> -->
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="32x32" />
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="16x16" />
+<link href="{{ url_for('static', filename='css/login.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<div id="everything">
+    <div id="top-bar">
+        <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
+        <div id = "top-interactables">
+            <p class="toplink"><a class="toplinka" href="/">Home Page</a></p>
+            <p class="toplink"><a class="toplinka"href="/aboutus">About Us</a></p>
+            <p class="toplink"><a class="toplinka"href="/forum">Forum</a></p>
+            <p class="toplink"><a class="toplinka"href="/resources">Resources</a></p>
+            <p class="toplink"><a class="toplinka"href="/faq">FAQ</a></p>
+            <p class="toplink"><a class="toplinka"href="/getinvolved">Get Involved</a></p>
+            <p class="toplink"><a class="toplinka_"href="/login">Log In</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="vcenter-fstretch">
+    <form id="main" onsubmit="login(event)">
+        <h1>Log in</h1>
+        Don't have an account? <a id='register-link' href="/register">Register here!</a><br>
+        <div id="box-wrapper">
+            <div id="error-box"></div>
+            <div id="success-box"></div>
+            <div class="text-input">
+                <input id="email-input" type="text" placeholder="HDSB Email" autocomplete="off"><br>
+            </div>
+            <div class="text-input">
+                <input type="checkbox" style="display: none;" id="show-password" onclick="showPassword()">
+                <div class="stretch-flex">
+                    <input id="password-input" type="password" placeholder="Password">
+                    <label id="show-text" for="show-password">Show</label>
+                </div>
+            </div>
+            <input id='login-button' type="submit" value="Log in!">
+        </div>
+    </form>
+</div>
+
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+
+{% endblock %}

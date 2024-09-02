@@ -1,0 +1,225 @@
+{% extends 'basenocss.html' %}
+
+<!-- {% block lHeader %}
+{% endblock %}
+{% block cHeader %}
+{% endblock %}
+{% block rHeader %}
+{% endblock %}
+ -->
+
+{% block head %}
+<title>SolveXchange</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="light only" />
+<meta name="description" content="SolveXChange Homepage" />
+<meta property="og:site_name" content="SolveXChange" />
+<meta property="og:title" content="SolveXChange" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link rel="stylesheet" href="style.css" /> -->
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="32x32" />
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="16x16" />
+<link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+<script src="{{ url_for('static', filename='js/index.js') }}" defer></script>
+{% endblock %}
+
+{% block body %}
+<div id="everything">
+    <div id="top-bar">
+        <img id="top-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Organization Logo">
+        <div id = "top-interactables">
+            <p class="toplink"><a class="toplinka_" href="/">Home Page</a></p>
+            <p class="toplink"><a class="toplinka"href="/aboutus">About Us</a></p>
+            <p class="toplink"><a class="toplinka"href="/forum">Forum</a></p>
+            <p class="toplink"><a class="toplinka"href="/resources">Resources</a></p>
+            <p class="toplink"><a class="toplinka"href="/faq">FAQ</a></p>
+            <p class="toplink"><a class="toplinka"href="/getinvolved">Get Involved</a></p>
+            <p class="toplink"><a class="toplinka"href="/login">Log In</a></p>
+        </div>
+    </div>
+    <div id="topwrapper">
+        <div id="leftwrappertop">
+            <p id="headertext">SolveXchange</p>
+            <p id="subtitletext">Turning Vision into Reality, One Proposal at a Time</p>
+            <a href="/aboutus"><button type="button" id="aboutus-button">ABOUT US</button></a>
+
+        </div>
+
+        <img id="earth" draggable="false" src="{{ url_for('static', filename='images/earth.png') }}">
+
+    </div>
+    <div class="divider">
+        <div class="divider1"></div>
+        <div class="divider2"></div>
+    </div>
+    <div id="lowertop">
+        <div id="lowertopwrap">
+            <div id="innovate-sector">
+                <div id="innovate-text-section">
+                    <p class="style1-header-text">Innovate</p>
+                    <p class="style1-desc-text">Students spark novel ideas and approaches by creating<br>inventive solutions and utilizing problem-solving and creative<br>thinking skills.</p>
+                    <div class="style1-button-wrapper"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc5NEhSVQaHy6nW7h9o8LTuQKpO2SdaSeUvITF0siizzHJW2Q/viewform"><button type="button" class="style1-button">Join now <img class="style1-right-arrow" draggable="false "src="{{ url_for('static', filename='images/right-arrow.png') }}"> </button></a></div>
+                </div>
+                <img class="style1-round-image" draggable="false"src="{{ url_for('static', filename='images/lightbulb.png') }}">
+            </div>
+            <div id="impact-sector">
+                <img class="style1-round-image" draggable="false" src="{{ url_for('static', filename='images/hand.png') }}">
+                <div id="impact-text-section">
+                    <p class="style2-header-text">Impact</p>
+                    <p class="style2-desc-text">Students make a tangible impact by implementing sustainable<br>solutions that address real-world challenges in their communities.</p>
+                    <div class="style2-button-wrapper"><a href="/resources"><button type="button" class="style1-button">Resources<img class="style1-right-arrow" draggable="false "src="{{ url_for('static', filename='images/right-arrow.png') }}"> </button></a></div>
+                </div>
+
+            </div>
+
+            <div id="inspire-sector">
+                <div id="inspire-text-section">
+                    <p class="style1-header-text">Inspire</p>
+                    <p class="style1-desc-text">Students inspire others by demonstrating dedication in serving</br>their community, and motivating peers to contribute to change.</p>
+                    <div class="style1-button-wrapper"><a href="/forum"><button type="button" class="style1-button">Share ideas <img class="style1-right-arrow" draggable="false "src="{{ url_for('static', filename='images/right-arrow.png') }}"> </button></a></div>
+                </div>
+                <img class="style1-round-image" draggable="false" src="{{ url_for('static', filename='images/mic.png') }}">
+            </div>
+        </div>
+    </div>
+    <div class="divider">
+        <div class="divider3"></div>
+        <div class="divider1"></div>
+    </div>
+    <div id="quotewrap">
+        <div id="quotesection">
+            <img id="image-quote" draggable="false" src="{{ url_for('static', filename='images/quote.png') }}">
+            <div id="quote-text-wrapper"><p id="quote-text">“I’ve always heard students casually throw around valuable ideas to improve our community. Unfortunately, many of these ideas are often disregarded because students lack a platform to bring them to life. This became the main inspiration behind SolveXchange, to create an accessible platform with a focus on empowering students to become the driving force behind transformative change.”</p></div>
+            <div id="quote-author-wrapper"><p id="author-text">- Emily Liu (SolveXchange Founder & President)</p></div>
+            <div id="image-quote-bottom-wrapper"><img id="image-quote-bottom" draggable="false" src="{{ url_for('static', filename='images/quote.png') }}"></div>
+        </div>
+    </div>
+    <div class="divider">
+        <div class="divider1"></div>
+        <div class="divider2"></div>
+    </div>
+    <div id="lowerbottom">
+        <div id="lowerbottomwrap">
+
+            <div id="lowerbottomtextwrap">
+                <p id="lowerbottomheader">SUCCESS STORIES</p>
+                <p id="lowerbottomdesc"><em>It all begins with an idea.</em></p>
+            </div>
+            <div id="carousel-wrapper">
+
+                <div class="carousel-track-container"> <!-- stock-ticker-->
+                    <div class="carousel-track">
+                        <img class="carousel-image" src="{{ url_for('static', filename='images/slide1.png') }}">
+
+                        <img class="carousel-image" src="{{ url_for('static', filename='images/slide2.png') }}">
+
+                        <img class="carousel-image" src="{{ url_for('static', filename='images/slide3.png') }}">
+
+                        <img class="carousel-image"  src="{{ url_for('static', filename='images/slide4.png') }}">
+
+                        <img class="carousel-image" src="{{ url_for('static', filename='images/slide5.png') }}">
+
+                        <img class="carousel-image" src="{{ url_for('static', filename='images/slide6.png') }}">
+
+
+                    </div>
+
+                    <div class="carousel-track">
+                        <img class="carousel-image" src="{{ url_for('static', filename='images/slide1.png') }}">
+
+                        <img class="carousel-image" src="{{ url_for('static', filename='images/slide2.png') }}">
+
+                        <img class="carousel-image" src="{{ url_for('static', filename='images/slide3.png') }}">
+
+                        <img class="carousel-image"  src="{{ url_for('static', filename='images/slide4.png') }}">
+
+                        <img class="carousel-image" src="{{ url_for('static', filename='images/slide5.png') }}">
+
+                        <img class="carousel-image" src="{{ url_for('static', filename='images/slide6.png') }}">
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="divider">
+        <div class="divider3"></div>
+        <div class="divider1"></div>
+    </div>
+
+    <section id="extra-wrapper-parent"></section>
+    <div id="extra-wrapper">
+        <div class="extra-title-div">
+            <label id="extra-title">Inspired? Take Action Today!</label>
+        </div>
+        <div id="extra-info">
+            <div class="extra-format">
+                <label class="extra-info-subtitle">Our Competition</label>
+                <div class="extra-info-subtext">
+                    <p>Join SolveXchange and work<br>alongside other inspired youth<br>to develop your innovative<br>ideas. Submit your proposal to<br>our competition for a chance<br>to win SolveXchange support,<br>gain recognition and bring<br>your idea to reality.</p>
+                </div>
+            </div>
+            <div class="extra-format">
+                <label class="extra-info-subtitle">Start a Chapter</label>
+                <div class="extra-info-subtext">
+                    <p>Interested in becoming a leader?<br>Open a chapter of SolveXchange<br>at your high school! Become a<br>part of our growing executive<br>team by bringing SolveXchange<br>to your own community.</p>
+                </div>
+                <a href="/getinvolved"><button id="getinvolved-button2" type="button">Get Involved</button></a>
+            </div>
+            <div class="extra-format">
+                <label class="extra-info-subtitle">Join Our Exec Team</label>
+                <div class="extra-info-subtext">
+                    <p>Are you passionate about<br>the same goals we are? Do<br>you possess skills or ideas<br>that could improve<br>SolveXchange? Join our<br>executive team as we work<br>together towards<br>empowering more youth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <div id="lowermorebottom">
+        <div id="lowermorebottomleft">
+            <p id="lmbl_header">Are you interested?</p>
+            <p id="lmbl_desc">Sign up to be a part of SolveXchange today or share your ideas on a community-wide forum!</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5NEhSVQaHy6nW7h9o8LTuQKpO2SdaSeUvITF0siizzHJW2Q/viewform"><button type="button" class="button-style2">Join Now</button></a>
+            <a href="/forum"><button type="button" class="button-style2">Share Ideas</button></a>
+        </div>
+        <img id="filler-image" draggable="false" src="{{ url_for('static', filename='images/filler.png') }}">
+    </div>
+
+</div>
+<footer id="join-wrapper">
+    <hr class="white-line">
+    <div id="join-body">
+        <div id="join-body-l">
+            <p id="join-body-l-1">JOIN</p>
+            <p id="join-body-l-2">SOLVEXCHANGE</p>
+            <p id="join-body-l-3">TODAY</p>
+            <p id="join-body-l-4">Join a community of inspiring youth leaders. Become the driving force behind transformative change.</p>
+        </div>
+        <div id="join-body-m">
+            <p id="join-body-m-1">Take Action</p>
+            <p id="join-body-m-2"><a class="white linkclass" href="https://docs.google.com/forms/d/e/1FAIpQLSc5NEhSVQaHy6nW7h9o8LTuQKpO2SdaSeUvITF0siizzHJW2Q/viewform">Sign Up</a></p>
+            <p id="join-body-m-3"><a class="white linkclass" href="https://docs.google.com/forms/d/e/1FAIpQLSf4JMWxCfCpApHBJxANWuRUIH8OHHvfWaIxCN_HDPhezT9Ebg/viewform">Become an executive</a></p>
+            <p id="join-body-m-4"><a class="white linkclass"  href="https://www.instagram.com/p/C9nvJi9PVgE/">Start a chapter</a></p>
+
+        </div>
+        <div id="join-body-r">
+            <p id="join-body-r-1">Connect With Us</p>
+            <div id="join-body-r-2-wrap"><img id="classroom" src="{{ url_for('static', filename='images/classroom.png') }}" width="35" height="25.68"><p id="join-body-r-2"><a class="white linkclass" href="https://classroom.google.com/c/NjIzMzAwNzg1NTkz?cjc=fiylhtx">Join our Google Classroom</a></p></div>
+            <div id="join-body-r-2-wrap"><img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="35" height="35" ><p id="join-body-r-2"><a class="white linkclass" href="https://www.instagram.com/solvexchange/">@solvexchange</a></p></div>
+            <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXChange</a></p></div>
+            <div id="join-body-r-4-wrap"><img id="email" src="{{ url_for('static', filename='images/email.png') }}" width="35" height="25.68"><p id="join-body-r-4"><a class="white linkclass" href="mailto:solvexchange@gmail.com">solvexchange@gmail.com</a></p></div>
+        </div>
+
+    </div>
+    <hr class="white-line">
+</footer>
+
+
+{% endblock %}

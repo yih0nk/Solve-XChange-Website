@@ -14,6 +14,20 @@ body, html {
 }
 
 
+#image-quote{
+    width:97.5px;
+    height:76.7px;
+}
+
+@media screen and (max-width:1200px)  {
+    #image-quote{
+        width:78px;
+        height:61.36px;
+    }
+
+}
+
+
 
 #top-bar{
     background-color: rgba(255, 255, 255, 0.9);
@@ -333,10 +347,6 @@ body, html {
 
 }
 
-#image-quote{
-    width:97.5px;
-    height:76.7px;
-}
 
 
 #image-quote-bottom-wrapper{

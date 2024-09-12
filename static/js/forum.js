@@ -46,6 +46,8 @@ else {
     commentContentInput.value = 'Please log in to post a comment.'
 }
 
+
+
 setTimeout(() => posts.style.opacity = '1', 300)
 //#endregion
 function AddLike(id){
@@ -132,7 +134,6 @@ function ToggleReplyInput(id) {
     animating.replyInput = true;
 
     if (addReplyInputOpen) {
-        button.value = specialCharacters.doubleSpace + 'Cancel';
         label.animate({ scale: '0' }, { duration: 500, fill: 'forwards', easing: 'ease' }).onfinish 
             = () => {
                 label.innerHTML = ''
@@ -151,7 +152,6 @@ function ToggleReplyInput(id) {
     else {
         replySubmit.animate({ opacity: '0' }, 
         { duration: 300, fill: 'forwards', easing: 'ease' }).onfinish = () => {
-            button.value = specialCharacters.doubleSpace + 'Post Reply';
             label.animate({ scale: '0' }, { duration: 250, fill: 'forwards', easing: 'ease' }).onfinish 
                 = () => {
                 label.innerHTML = ''

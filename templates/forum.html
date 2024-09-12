@@ -3,6 +3,8 @@
 {% block head %}
 <title>Forum</title>
 <link href="{{ url_for('static', filename='css/forum.css') }}" rel="stylesheet">
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="32x32" />
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="16x16" />
 {% endblock %}
 
 {% block body %}
@@ -124,7 +126,7 @@
                         </form>
                         <label id="add-label-{{comment.id}}" class="add-label" for="add-reply-{{comment.id}}"></label>
                         <img id="add-reply" src="{{ url_for('static', filename='images/add-reply.png') }}" height="30" onclick="ToggleReplyInput('{{comment.id}}')">
-                        <input id="add-reply-{{comment.id}}" type="submit" value="&nbsp;&nbsp;Post Reply">
+                        <input id="add-reply-{{comment.id}}" type="submit" value="Post Reply">
                     </div>
                 </div>
             </div>

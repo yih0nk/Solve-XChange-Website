@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+
+
 *{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
     box-sizing: border-box;
+}
+
+:root{
+    --adjustment:1.0;
 }
 
 body, html {
@@ -18,15 +24,6 @@ body, html {
     width:97.5px;
     height:76.7px;
 }
-
-@media screen and (max-width:1200px)  {
-    #image-quote{
-        width:78px;
-        height:61.36px;
-    }
-
-}
-
 
 
 #top-bar{
@@ -56,7 +53,7 @@ body, html {
 #top-interactables{
     color:black;
     display:flex;
-    font-size:20px;
+    font-size:calc(var(--adjustment)*20px);
     margin-left:100px;
     flex-grow:1;
     justify-content:space-between;
@@ -78,7 +75,7 @@ body, html {
 }
 
 #headertext{
-    font-size:60px;
+    font-size:calc(var(--adjustment)*60px);
     font-weight:700;
     margin:0px;
 }
@@ -86,7 +83,7 @@ body, html {
 #subtitletext{
     margin-top:5px;
     margin-bottom:30px;
-    font-size: 30px;
+    font-size: calc(var(--adjustment)*30px);
     font-weight:400;
     padding-right:200px;
 }
@@ -98,7 +95,7 @@ body, html {
     width:220px;
     height:70px;
     padding:8px;
-    font-size:25px;
+    font-size:calc(var(--adjustment)*25px);
     font-weight:700;
     color:white;
     background: rgb(114,183,230);
@@ -267,7 +264,7 @@ body, html {
 
 .style1-header-text{
     margin: 20px 0px 10px 0px;
-    font-size:40px;
+    font-size:calc(var(--adjustment)*40px);
     font-weight:700;
     text-align: right;
 
@@ -275,7 +272,7 @@ body, html {
 
 .style2-header-text{
     margin: 20px 0px 10px 0px;
-    font-size:40px;
+    font-size:calc(var(--adjustment)*40px);
     font-weight:700;
     text-align: left;
 
@@ -283,25 +280,27 @@ body, html {
 
 .style1-desc-text{
     margin-bottom:23px;
-    font-size:22px;
+    font-size:calc(var(--adjustment)*22px);
     font-weight:400;
     text-align: right;
     margin-top:0px;
+    max-width:800px;
 }
 
 .style2-desc-text{
     margin-bottom:23px;
-    font-size:22px;
+    font-size:calc(var(--adjustment)*22px);
     font-weight:400;
     text-align: left;
     margin-top:0px;
+    max-width: 800px;
 }
 
 
 .style1-button{
     border-radius:25px;
     border: 2px solid black;
-    font-size:20px;
+    font-size:calc(var(--adjustment)*20px);
     background-color: transparent;
     color:black;
     padding:10px 25px 10px 25px;
@@ -366,14 +365,14 @@ body, html {
 }
 
 #quote-text{
-    font-size:25px;
+    font-size:calc(var(--adjustment)*25px);
     font-weight:300;
     text-align: center;
     line-height:50px;
 }
 
 #quote-author-wrapper{
-    font-size:21.5px;
+    font-size:calc(var(--adjustment)*21.5px);
     font-weight:300;
     text-align: center;
     line-height:65px;
@@ -406,12 +405,12 @@ body, html {
 }
 #lowerbottomheader{
     font-weight:800;
-    font-size:45px;
+    font-size:calc(var(--adjustment)*45px);
     margin:0;
 }
 
 #lowerbottomdesc{
-    font-size:25px;
+    font-size:calc(var(--adjustment)*25px);
     margin:0 0 40px 0;
 }
 
@@ -481,70 +480,7 @@ body, html {
 }
 
 
-/*
-#carousel-wrapper{
-    position:relative;
-    height:600px;
-    width:80%;
-    margin:0 auto;
-}
 
-.carousel-image{
-    width:70%;
-    animation:infinite
-}
-
-.carousel-track-container{
-    height:100%;
-    position:relative;
-
-}
-
-.carousel-track{
-    padding:0;
-    margin:0;
-    list-style: none;
-}
-
-.carousel-slide{
-    position: absolute;
-    top:0;
-    bottom:0;
-
-} */
-
-/*
-.carousel-element{
-    display:flex;
-    align-items: center;
-    margin-right:25px;
-}
-
-.carousel-image{
-    border-radius: 200px;
-    object-fit:cover;
-    width: 150px;
-    height:250px;
-}
-
-.right-carousel-wrapper{
-    max-width:450px;
-    margin-left:20px;
-    background-color: white;
-    padding:20px;
-    border-radius: 30px;
-}
-
-.carousel-header{
-    font-weight:800;
-    font-size:35px;
-    margin:0;
-}
-
-.carousel-description{
-    font-size:21px;
-}
- */
 .location-image{
     width:10.5px;
     height:13.29375px;
@@ -555,6 +491,7 @@ body, html {
     align-items: center;
     padding-top:120px;
     margin: 0 auto;
+    position: relative;
     width:80%;
     justify-content: center;
 }
@@ -569,8 +506,10 @@ body, html {
 
 #lmbl_header{
     font-weight:700;
-    font-size:30px;
+    font-size:calc(var(--adjustment)*42px);
     margin:0;
+    text-align:center ;
+
 }
 
 #lmbl_desc{
@@ -585,7 +524,7 @@ body, html {
     width:250px;
     height:50px;
     padding:8px;
-    font-size:20px;
+    font-size:calc(var(--adjustment)*20px);
     font-weight:700;
     color:white;
     background: rgb(114,183,230);
@@ -739,7 +678,11 @@ body, html {
     margin-top:200px;
 }
 
-
+#join-body-b{
+    display:flex;
+    flex-direction: row;
+    gap:100px;
+}
 
 #extra-wrapper{
     color: black;
@@ -754,7 +697,7 @@ body, html {
 }
 
 #extra-title{
-    font-size: 52px;
+    font-size: calc(var(--adjustment)*42px);
     font-weight: 700;
 }
 
@@ -772,13 +715,13 @@ body, html {
 
 .extra-info-subtitle{
     color: rgb(61, 93, 175);
-    font-size: 30px;
+    font-size: calc(var(--adjustment)*30px);
     font-weight: 700;
 }
 
 .extra-info-subtext{
     color: black;
-    font-size: 17px;
+    font-size: calc(var(--adjustment)*17px);
     font-weight:200;
     font-family: "Poppins", sans-serif;
     line-height: 30px;
@@ -798,7 +741,7 @@ body, html {
     padding:8px;
     margin-top: 60px;
     font-family: "Poppins", sans-serif;
-    font-size:26px;
+    font-size:calc(var(--adjustment)*26px);
     font-weight: 600;
     word-spacing: 1.5px;
     background: rgb(114,183,230);
@@ -808,4 +751,303 @@ body, html {
 
 #getinvolved-button2:hover{
     cursor:pointer;
+}
+
+
+
+
+
+@media screen and (max-width:1100px)  {
+    
+    #earth{
+        visibility: hidden; 
+        display:none;
+    }
+
+    #innovate-sector, #impact-sector,#inspire-sector{
+        margin-bottom:20px;
+    }
+
+    #image-quote{
+        width:80px;
+        height:62.93px;
+        margin-top:15px;
+    }
+    
+    #image-quote-bottom{
+        width:80px;
+        height:62.93px;
+        margin-bottom:15px;
+    }
+
+    #quote-text-wrapper{
+        margin: 0 20px;
+    }
+
+    #quotesection{
+        margin: 100px 150px 0px 150px;
+    }
+
+    #topwrapper{
+        margin-left:120px;
+    }
+
+    #lowerbottomtextwrap{
+        margin: 0px 150px;
+    }
+
+    .carousel-track-container{
+        padding:40px 0px;
+    }
+
+    #extra-wrapper{
+        width:87%;
+    }
+
+    #lowermorebottom{
+        width:87%;
+    }
+    .button-style2{
+        width:200px;
+        height:40px;
+    }
+    #lowermorebottomleft{
+        margin-right:0px;
+    }
+
+    #filler-image{
+        display:none;
+    }
+
+    #join-body-l1{
+        display:flex;
+        gap:2%;
+        align-items: center;
+    }
+
+    #join-body-l-4{
+        max-width:80%;
+        text-align: center;
+        font-size:16px;
+    }
+
+    #join-body-b{
+        display:flex;
+        gap:20%;
+        margin-top:50px;
+    }
+
+    #join-body{
+        flex-direction: column;
+        height:auto;
+    }
+
+    #join-body-l{
+        max-width:none;
+        align-items: center;
+    }
+
+    #join-body-m{
+        max-width: none;
+    }
+
+    #join-body-r{
+        max-width: none;
+    }
+    #join-body-l-1,#join-body-l-2,#join-body-l-3{
+        font-size:35px;
+    }
+}
+
+@media screen and (max-width:845px)  {
+    :root{
+        --adjustment:0.95;
+    }
+
+
+    #topwrapper{
+        margin-left:10%;
+    }
+
+    #innovate-sector, #impact-sector{
+        margin-bottom:80px;
+    }
+
+    #quotesection{
+        margin: 100px 10% 0px 10%;
+    }
+
+    #lowertopwrap{
+        margin: 0px 10%;
+    }
+
+    #image-quote,#image-quote-bottom{
+        width:70px;
+        height:55px;
+    }
+
+    .style1-desc-text, .style2-desc-text{
+        font-size:18px;
+    }
+
+    #quote-text{
+        font-size:20px;
+        line-height:40px;
+    }
+
+    #lowerbottomwrap{
+        padding: 20px 0px;
+    }
+
+    #lowerbottomtextwrap{
+        margin-left:10%;
+    }
+
+    #join-body-b{
+        gap:15%;
+    }
+}
+
+@media screen and (max-width:700px)  {
+    :root{
+        --adjustment:0.75;
+    }
+
+    #top-bar{
+        padding: 10px 0px 0px 10px;
+    }
+
+    #subtitletext{
+        padding-right:0px;
+    }
+
+    #topwrapper{
+        margin-top:150px;
+        margin-left:8%;
+        
+    }
+
+    #aboutus-button{
+        width:160px;
+        height:55px;
+    }
+
+    #leftwrappertop{
+        height:auto;
+        margin-bottom:40px;
+    }
+
+    .style1-round-image{
+        width:100px;
+        height:50px;
+    }
+
+    .style2-round-image{
+        width:100px;
+        height:50px;
+    }
+    
+
+    #innovate-sector,#inspire-sector{
+        display:flex;
+        flex-direction: column-reverse;
+    }
+
+    #impact-sector{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+
+    .style1-header-text{
+        text-align: center;
+    }
+
+    .style1-desc-text{
+        text-align: center;
+    }
+
+    .style1-button-wrapper{
+        justify-content: center;
+    }
+
+    .style2-header-text{
+        text-align: center;
+    }
+
+    .style2-desc-text{
+        text-align: center;
+    }
+
+    .style2-button-wrapper{
+        justify-content: center;
+    }
+
+
+    #innovate-text-section,#impact-text-section,#inspire-text-section{
+        margin:0;
+    }
+
+    #quotesection{
+        margin: 100px 5% 0px 5%;
+    }
+
+    #image-quote,#image-quote-bottom{
+        width:50px;
+        height:39px;
+    }
+
+    #quote-text-wrapper{
+        margin: 0px 10px;
+    }
+
+    #quote-text{
+        font-size:17px;
+        line-height: 35px;
+    }
+
+    .carousel-track img{
+        height:300px;
+    }
+
+    #extra-wrapper{
+        display:none;
+        visibility: hidden;
+    }
+    #lowermorebottom{
+        padding:0;
+    }
+
+    #join-body-l1{
+        flex-direction: column;
+    }
+    #join-body-l-4{
+        width:100%
+    }
+    #join-body{
+        margin:40px 50px;
+    }
+    #join-body-b{
+        flex-direction: column;
+        gap:20px;
+    }
+
+    #join-body-m-1,#join-body-r-1{
+        font-size:22px;
+    }
+
+    #join-body-m-1,#join-body-m-2,#join-body-m-3,#join-body-m-4{
+        font-size:17px;
+    }
+
+    #join-body-r-1,#join-body-r-2,#join-body-r-3,#join-body-r-4{
+        font-size:17px;
+        margin:15px 0px;
+    }
+
+    #join-body-r img{
+        width:22px;
+        height:auto;
+    }
 }

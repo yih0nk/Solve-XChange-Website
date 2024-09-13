@@ -1,0 +1,4 @@
+SQLAlchemy
+Flask-SQLAlchemy
+Flask-Mail
+Flask-Migrate

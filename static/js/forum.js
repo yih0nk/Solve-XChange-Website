@@ -1,5 +1,6 @@
 //#region Constants
 const commentUsernameInput = document.getElementById('username-input'),
+      commentTopicInput = document.getElementById('topic'),
       commentContentInput = document.getElementById('content'),
       commentForm = document.getElementById('comment-form'),
       postButton = document.getElementById('post-submit');
@@ -42,6 +43,8 @@ if (getCookie('user-info')) {
 }
 else {
     postButton.style.display = 'none';
+    commentTopicInput.disabled = true;
+    commentTopicInput.value = 'Please log in to write a topic.'
     commentContentInput.disabled = true;
     commentContentInput.value = 'Please log in to post a comment.'
 }
@@ -50,11 +53,14 @@ else {
 
 setTimeout(() => posts.style.opacity = '1', 300)
 //#endregion
+
+
+
 function AddLike(id){
     username = ""
     if (getCookie('user-info')) {
         let uncutName = getCookie('user-info').split('/')[0];
-        username = uncutName.substring(1, uncutName.length);displayName.innerHTML = `<span class="background-text">Logged in as </span><span style="font-weight:600;">${username}</span>`;
+        username = uncutName.substring(1, uncutName.length);
     }
     else
     {
@@ -63,25 +69,48 @@ function AddLike(id){
     }
 
     const likes = document.getElementById(`like-count-${id}`);
-    currentLikes = parseInt(likes.innerHTML);
-    currentLikes++;
+    const likesImg = document.getElementById(`likes-${id}`);
 
-    $.ajax({
-        url: '/addlike',
-        type: 'POST',
-        contentType: 'application/json',
-        data: JSON.stringify({ 'id' : id, 'username' : username}),
-        success: function(response){
-            if (response['result'] == 'success'){
-                likes.innerHTML = currentLikes.toString();
+    likesImgSrcString = likesImg.src;
+    currentLikesImg = likesImgSrcString.substring(likesImgSrcString.length - 9);
+    currentLikes = parseInt(likes.innerHTML);
+
+    if (currentLikesImg == 'likes.png'){
+        currentLikes--;
+        likesImgSrcNewString = likesImgSrcString.substring(0, likesImgSrcString.length - 9) + 'likes-grey.png'
+        $.ajax({
+            url: '/deletelike',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ 'id' : id, 'username' : username}),
+            success: function(response){
+                if (response['result'] == 'success'){
+                    likes.innerHTML = currentLikes.toString();
+                    likesImg.src = likesImgSrcNewString;
+                }
+            },
+            error: function(xhr, status, error) {
             }
-            else{
-                alert('You have liked this topic!')
+        });
+    }
+    else{
+        currentLikes++;
+        likesImgSrcNewString = likesImgSrcString.substring(0, likesImgSrcString.length - 14) + 'likes.png'
+        $.ajax({
+            url: '/addlike',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ 'id' : id, 'username' : username}),
+            success: function(response){
+                if (response['result'] == 'success'){
+                    likes.innerHTML = currentLikes.toString();
+                    likesImg.src = likesImgSrcNewString;
+                }
+            },
+            error: function(xhr, status, error) {
             }
-        },
-        error: function(xhr, status, error) {
-        }
-    });
+        });
+    }
 }
 
 //#region Animations
@@ -132,6 +161,11 @@ function ToggleReplyInput(id) {
 
     addReplyInputOpen = !addReplyInputOpen;
     animating.replyInput = true;
+
+    if (! getCookie('user-info')) {
+        input.disabled = true;
+        input.value = 'Please log in to post a reply.'
+    }
 
     if (addReplyInputOpen) {
         label.animate({ scale: '0' }, { duration: 500, fill: 'forwards', easing: 'ease' }).onfinish 
@@ -205,6 +239,7 @@ function AddReply(id, event) {
         return;
 
     const replyInput = document.querySelector(`#reply-input-${id}`);
+    const replyCountInput = document.getElementById(`reply-count-${id}`);
 
     $.ajax({
         url: '/reply',
@@ -232,6 +267,8 @@ function AddReply(id, event) {
                         </p>
                     </div>
                 </div>`;
+
+                replyCountInput.innerHTML = (parseInt(replyCountInput.innerHTML) + 1).toString();
 
                 document.getElementById(`add-replies-div-${parentId}`).insertAdjacentHTML('beforebegin', newReplyHTML);
                 ToggleReplyInput(parentId);

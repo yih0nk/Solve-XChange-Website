@@ -234,6 +234,17 @@ def create_account():
         return jsonify({ 'result' : 'database error' })
 #endregion
 
+@app.route('/checkIfYoulikes', methods=['POST'])
+def checkIfYoulikes():
+    data = json.loads(request.data)
+    id = data['id']
+    username = data['username']
+    you_like = Like.query.filter_by(parent_id=id, username=username).first()
+    if you_like == None:
+        return jsonify({ 'result' : 'success', 'imgSrc' : 'likes-grey.png' })
+    else:
+        return jsonify({ 'result' : 'success', 'imgSrc' : 'likes.png' })
+
 @app.route('/addlike', methods=['POST'])
 def add_like():
     data = json.loads(request.data)
@@ -248,6 +259,23 @@ def add_like():
         new_like = Like(parent_id=id,
                         username=username)
         db.session.add(new_like)
+        db.session.commit()
+        return jsonify({ 'result' : 'success' })
+    else:
+        return jsonify({ 'result' : 'error' })
+
+@app.route('/deletelike', methods=['POST'])
+def deletelike():
+    data = json.loads(request.data)
+    id = data['id']
+    username = data['username']
+    new_like = Like.query.filter_by(parent_id=id, username=username).first()
+    if new_like != None:
+        c = Comment.query.filter_by(id=id).first()
+        c.likecount = c.likecount - 1
+        db.session.commit()
+
+        db.session.delete(new_like)
         db.session.commit()
         return jsonify({ 'result' : 'success' })
     else:

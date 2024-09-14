@@ -913,6 +913,12 @@ body, html {
         --adjustment:0.75;
     }
 
+    #top-logo{
+        margin: 5px 10px;
+        width:75px;
+        height:75px;
+    }
+
     #top-bar{
         padding: 10px 0px 0px 10px;
     }

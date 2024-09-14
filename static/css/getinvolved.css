@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+
+:root{
+    --adjustment:1.0;
+}
+
+
 .toplinka{
     text-decoration:none;
     color:black;
@@ -37,7 +43,7 @@
     font-weight: 700;
     background-color: white;
     color: rgb(61, 93, 175);
-    font-size: 44px;
+    font-size:calc(var(--adjustment)*44px);    
     text-align: center;
     margin-top: 100px;
     padding-top:70px;
@@ -87,7 +93,7 @@
     font-weight: 50;
     background-color: white;
     color: black;
-    font-size: 25px;
+    font-size:calc(var(--adjustment)*25px);
     line-height: 48px;
     width: 80%;
     margin: auto;
@@ -99,14 +105,14 @@
 
 .ways-extra-info-subtitle{
     color: black;
-    font-size: 32px;
+    font-size:calc(var(--adjustment)*32px);
     line-height: 36px;
     font-weight: 700;
 }
 
 .ways-extra-info-subtext{
     color: black;
-    font-size: 22px;
+    font-size:calc(var(--adjustment)*22px);
     font-weight: 400;
     font-family: "Poppins", sans-serif;
     line-height: 32px;
@@ -121,7 +127,7 @@
     padding:8px;
     margin-bottom: 50px;
     font-family: "Poppins", sans-serif;
-    font-size:24px;
+    font-size:calc(var(--adjustment)*24px);
     font-weight: 600;
     word-spacing: 1.5px;
     background: rgb(114,183,230);
@@ -179,7 +185,7 @@
 
 #top-title{
     font-weight:800;
-    font-size:64px;
+    font-size:calc(var(--adjustment)*64px);
     text-align: center;
     margin:0px;
 }
@@ -189,9 +195,10 @@
 }
 
 #getinvolved-slogan{
-    font-size: 24px;
+    font-size:calc(var(--adjustment)*24px);
     padding-bottom: 10px;
     font-weight: 300;
+    margin:0px 350px;
 }
 
 #top-bar{
@@ -234,13 +241,15 @@
     background-color: rgb(217, 238, 253);
     width: 100%;
     display:flex;
-    justify-content:space-between;
+/*     justify-content:space-between; */
     margin-top: -5%;
     height: 1200px;
 }
 
 #second-wrapper-left{
     margin-top:80px;
+    margin-left:100px;
+    margin-right:50px;
 }
 
 #sponsor{
@@ -249,6 +258,7 @@
 
 #second-wrapper-right{
     height: 100%;
+    object-fit: cover;
 }
 
 #img-displayed{
@@ -258,13 +268,13 @@
 
 .second-wrapper-subtitle{
     color: black;
-    font-size: 38px;
+    font-size:calc(var(--adjustment)*38px);
     font-weight: 700;
 }
 
 .second-wrapper-subtext{
     color: black;
-    font-size: 24px;
+    font-size:calc(var(--adjustment)*24px);
     font-weight: 400;
     line-height: 38px;
 }
@@ -279,7 +289,7 @@
 
 #second-wrapper-email{
     color: black;
-    font-size: 24px;
+    font-size:calc(var(--adjustment)*24px);
     font-weight: 600;
     font-family: "Source Sans Pro", sans-serif;
     line-height: 50px;
@@ -295,7 +305,7 @@
     height:100px;
     padding:8px;
     font-family: "Poppins", sans-serif;
-    font-size:24px;
+    font-size:calc(var(--adjustment)*24px);
     font-weight: 300;
     word-spacing: 1.5px;
     background: rgb(114,183,230);
@@ -327,7 +337,7 @@ button > span {
 
 .third-wrapper-title{
     color: black;
-    font-size: 28px;
+    font-size:calc(var(--adjustment)*28px);
     font-weight: 600;
     font-family: "Source Sans Pro", sans-serif;
     line-height: 50px;
@@ -335,7 +345,7 @@ button > span {
 
 .third-wrapper-subtext{
     color: black;
-    font-size: 24px;
+    font-size:calc(var(--adjustment)*24px);
     font-weight: 300;
     font-family: "Source Sans Pro", sans-serif;
     line-height: 44px;
@@ -343,7 +353,7 @@ button > span {
 
 .third-wrapper-expand{
     color: black;
-    font-size: 24px;
+    font-size:calc(var(--adjustment)*24px);
     font-weight: 600;
     font-family: "Source Sans Pro", sans-serif;
     line-height: 28px;
@@ -351,7 +361,7 @@ button > span {
 
 .third-wrapper-expandtext{
     color: black;
-    font-size: 22px;
+    font-size:calc(var(--adjustment)*22px);
     font-weight: 300;
     font-family: "Source Sans Pro", sans-serif;
     line-height: 32px;
@@ -371,7 +381,8 @@ button > span {
     height:70px;
     padding:8px;
     font-family: "Poppins", sans-serif;
-    font-size:26px;
+    font-size:calc(var(--adjustment)*26px);
+
     font-weight: 500;
     word-spacing: 1.5px;
     background: rgb(114,183,230);
@@ -410,13 +421,15 @@ button > span {
 
 #forth-wrapper-subtitle{
     color: black;
-    font-size: 42px;
+    font-size:calc(var(--adjustment)*42px);
+
     font-weight: 700;
 }
 
 #forth-wrapper-subtitle2{
     color: black;
-    font-size: 32px;
+    font-size:calc(var(--adjustment)*32px);
+
     font-weight: 500;
     margin-top: 10px;
     margin-bottom: 55px;
@@ -424,10 +437,15 @@ button > span {
 
 .forth-wrapper-subtext{
     color: black;
-    font-size: 22px;
+    font-size:calc(var(--adjustment)*22px);
+
     font-weight: 350;
     line-height: 50x;
     margin-top: -15px;
+}
+
+.third-wrapper{
+    margin-top: 150px;
 }
 
 .fifth-wrapper{
@@ -452,7 +470,8 @@ button > span {
 
 .fifth-wrapper-title{
     color: black;
-    font-size: 48px;
+    font-size:calc(var(--adjustment)*48px);
+
     font-weight: 700;
     line-height: 50px;
 }
@@ -466,7 +485,8 @@ button > span {
     padding:8px;
     margin-bottom: 50px;
     font-family: "Poppins", sans-serif;
-    font-size: 36px;
+    font-size:calc(var(--adjustment)*36px);
+
     font-weight: 600;
     word-spacing: 1.5px;
     background: rgb(114,183,230);
@@ -474,8 +494,6 @@ button > span {
     background: linear-gradient(90deg, rgba(114,183,230,1) 0%, rgba(150,224,211,1) 100%);
     cursor: pointer;
 }
-
-
 
 
 #join-wrapper{
@@ -491,7 +509,6 @@ button > span {
     display:flex;
     justify-content: space-around;
     margin: 50px 60px 50px 100px;
-
     height:300px;
 }
 
@@ -610,4 +627,265 @@ button > span {
 
 .white,.white:visited,.white:active,.white:hover{
     color:white;
+}
+
+#extra-wrapper-parent{
+    margin-top:200px;
+}
+
+#join-body-b{
+    display:flex;
+    flex-direction: row;
+    gap:100px;
+}
+
+@media screen and (max-width:1100px)  {
+    #join-body-l1{
+        display:flex;
+        gap:2%;
+        align-items: center;
+    }
+
+    #join-body-l-4{
+        max-width:80%;
+        text-align: center;
+        font-size:16px;
+    }
+
+    #join-body-b{
+        display:flex;
+        gap:20%;
+        margin-top:50px;
+    }
+
+    #join-body{
+        flex-direction: column;
+        height:auto;
+    }
+
+    #join-body-l{
+        max-width:none;
+        align-items: center;
+    }
+
+    #join-body-m{
+        max-width: none;
+    }
+
+    #join-body-r{
+        max-width: none;
+    }
+    #join-body-l-1,#join-body-l-2,#join-body-l-3{
+        font-size:35px;
+    }
+
+    #ways-info-displayed{
+        width:90%;
+    }
+    
+    #ways-extra-format1,#ways-extra-format2,#ways-extra-format3{
+        width:32%;
+        padding:20px;
+    }
+
+    #img-displayed{
+        display:none;
+        visibility: hidden;
+        
+    }
+
+    #second-wrapper{
+        height:auto;
+    }
+    #second-wrapper-bottom-block{
+        margin-bottom:100px;
+    }
+
+    .third-wrapper-div{
+        width:85%;
+    }
+
+    #forth-wrapper-inner{
+        margin: 50px 30px 0px 80px;
+    }
+
+    .fifth-wrapper-div{
+        padding: 50px 50px;
+        align-items: center;
+        gap:20px;
+        justify-content: center;
+        flex-direction: column;
+        width:85%;
+    }
+
+    #qa-button{
+        margin:0;
+    }
+
+    #getinvolved-slogan{
+        margin: 0px 150px;
+    }
+}
+
+
+@media screen and (max-width:845px)  {
+
+    :root{
+        --adjustment:0.85;
+    }
+
+    #join-body-b{
+        gap:15%;
+    }
+
+    #top-wrapper{
+        padding-bottom:20px;
+    }
+
+    #ways-info-title{
+        margin: 90px 0px;
+    }
+
+    #second-wrapper-left{
+        margin: 70px 10px 0px 50px;
+    }
+    
+    .third-wrapper{
+        margin-top:100px;
+    }
+
+    .third-wrapper-div{
+        margin-bottom:0px;
+    }
+
+    #getinvolved-slogan{
+        margin: 0px 100px;
+    }
+
+}
+
+@media screen and (max-width:700px)  {
+
+    :root{
+        --adjustment:0.75;
+    }
+
+    #join-body-l1{
+        flex-direction: column;
+    }
+    #join-body-l-4{
+        width:100%
+    }
+    #join-body{
+        margin:40px 50px;
+    }
+    #join-body-b{
+        flex-direction: column;
+        gap:20px;
+    }
+
+    #join-body-m-1,#join-body-r-1{
+        font-size:22px;
+    }
+
+    #join-body-m-1,#join-body-m-2,#join-body-m-3,#join-body-m-4{
+        font-size:17px;
+    }
+
+    #join-body-r-1,#join-body-r-2,#join-body-r-3,#join-body-r-4{
+        font-size:17px;
+        margin:15px 0px;
+    }
+
+    #join-body-r img{
+        width:22px;
+        height:auto;
+    }
+
+    #top-logo{
+        margin: 5px 10px;
+        width:75px;
+        height:75px;
+    }
+
+    #top-bar{
+        padding: 10px 0px 0px 10px;
+    }
+
+    #top-title-div{
+        padding-top:80px;
+    }
+
+    #getinvolved-slogan{
+        margin: 0px 50px;
+    }
+
+    #ways-extra-info{
+        flex-direction: column;
+        gap:40px;
+    }
+
+    #ways-extra-format1,#ways-extra-format2,#ways-extra-format3{
+        width:90%;
+        margin:auto;
+
+    }
+
+    #second-wrapper-left{
+        width:85%;
+        margin: 50px auto 0px auto;
+    }
+
+    .line-height-35{
+        line-height:35px;
+    }
+
+    #second-wrapper-bottom-block{
+        margin: 50px auto;
+        width:100%;
+        height:auto;
+ 
+    }
+
+    #email-button{
+        width:95%;
+        height:30%;
+        margin:10px 0px 20px 10px;
+        font-size:15px;
+    }
+
+    #second-wrapper-email{
+
+        width:95%;
+    }
+
+    .third-wrapper-div{
+        width:85%;
+
+    }
+
+    .third-wrapper{
+        margin-top:50px;
+    }
+
+    .third-wrapper-button{
+        width:auto;
+        height:55px;
+        padding: 8px 35px;
+    }
+
+    #forth-wrapper-inner{
+        margin-left:30px;
+    }
+
+    .fifth-wrapper-div{
+        padding:30px;
+    }
+
+    #qa-button{
+        width:230px;
+        height:60px;
+    }
+
+
 }

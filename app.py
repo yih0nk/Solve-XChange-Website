@@ -193,7 +193,7 @@ def send_verification_email():
     token = current_token.token if current_token else generate_token()
 
     msg = Message('Verify your email', sender='solvexchange@hotmail.com', recipients=[data['email']])
-    msg.body = f'click link please\nhttp://www.solvexchange.ca/register?email={data["email"]}&token={token}'
+    msg.body = f'Here is your verification link! Click to finish your registration.\nhttp://www.solvexchange.ca/register?email={data["email"]}&token={token}'
     mail.send(msg)
 
     if current_token:

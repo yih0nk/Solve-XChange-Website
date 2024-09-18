@@ -227,3 +227,84 @@ body, html {
     padding-bottom: 38px;
     padding-top: 1px;
 }
+
+@media screen and (max-width:900px){
+    #box-wrapper{
+        width: 80%;
+        max-width:700px;
+    }
+    .text-input{
+        width: 86%;
+        max-width:700px;
+    }
+    #login-button{
+        width: 25%;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width:425px){
+    .vcenter-fstretch{
+        margin-left: -23%;
+    }
+    .register-account{
+        font-size:20px;
+    }
+    #box-wrapper{
+        width: 80%;
+        max-width:425px;
+    }
+    .text-input{
+        width: 86%;
+        max-width:425px;
+    }
+    #login-button{
+        margin-top: 20px;
+        width: 40%;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width:375px){
+    .vcenter-fstretch{
+        margin-left: -27%;
+    }
+    .register-account{
+        font-size:17px;
+    }
+    #box-wrapper{
+        width: 78%;
+        max-width:375px;
+    }
+    .text-input{
+        width: 84%;
+        max-width:375px;
+    }
+    #login-button{
+        margin-top: 20px;
+        width: 40%;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width:320px){
+    .vcenter-fstretch{
+        margin-left: -30%;
+    }
+    .register-account{
+        font-size:15px;
+    }
+    #box-wrapper{
+        width: 75%;
+        max-width:320px;
+    }
+    .text-input{
+        width: 86%;
+        max-width:320px;
+    }
+    #login-button{
+        margin-top: 20px;
+        width: 40%;
+        margin-left: 0px;
+    }
+}

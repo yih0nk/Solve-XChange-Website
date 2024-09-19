@@ -110,27 +110,6 @@
     <label id="discussion">Discussions</label>
     <hr class="discussion-line">
 </div>
-<section id="sort-wrapper">
-    <form id="sort-form" class="wrapper split" action="/forum" method="POST">
-        <div id="sort-display">
-            Sort by: <div id="sort-by" class="dropdown inline">
-                <p id="sort-by-display" class="dropdown-selected">{{ sort | capitalize }}</p>
-                <div class="dropdown-values">
-                    <a onclick="ChangeFilter('date')">Date</a>
-                    <a onclick="ChangeFilter('user')">User</a>
-                </div>
-            </div>
-            <input type="hidden" name="sort-by" id="sort-by-input" value="{{ sort }}">
-        </div>
-        <div>
-            {% if sort == 'date' %}
-            <input name="sort-username" autocomplete="off" spellcheck="false" style="display: none;" type="text" id="sort-username" placeholder="Username..." value="{{ s_user }}">
-            {% else %}
-            <input name="sort-username" autocomplete="off" spellcheck="false" style="display: inline;" type="text" id="sort-username" placeholder="Username..." value="{{ s_user }}">
-            {% endif %}
-        </div>
-    </form>
-</section>
 <section id="comments">
     {% for comment in comments %}
     <div class="post">
@@ -183,28 +162,33 @@
     <hr class="white-line">
     <div id="join-body">
         <div id="join-body-l">
-            <p id="join-body-l-1">JOIN</p>
-            <p id="join-body-l-2">SOLVEXCHANGE</p>
-            <p id="join-body-l-3">TODAY</p>
+            <div id="join-body-l1">
+                <p id="join-body-l-1">JOIN</p>
+                <p id="join-body-l-2">SOLVEXCHANGE</p>
+                <p id="join-body-l-3">TODAY</p>
+            </div>
             <p id="join-body-l-4">Join a community of inspiring youth leaders. Become the driving force behind transformative change.</p>
         </div>
-        <div id="join-body-m">
-            <p id="join-body-m-1">Take Action</p>
-            <p id="join-body-m-2"><a class="white linkclass" href="https://docs.google.com/forms/d/e/1FAIpQLSc5NEhSVQaHy6nW7h9o8LTuQKpO2SdaSeUvITF0siizzHJW2Q/viewform">Sign Up</a></p>
-            <p id="join-body-m-3"><a class="white linkclass" href="https://docs.google.com/forms/d/e/1FAIpQLSf4JMWxCfCpApHBJxANWuRUIH8OHHvfWaIxCN_HDPhezT9Ebg/viewform">Become an executive</a></p>
-            <p id="join-body-m-4"><a class="white linkclass"  href="https://www.instagram.com/p/C9nvJi9PVgE/">Start a chapter</a></p>
+        <div id="join-body-b">
+            <div id="join-body-m">
+                <p id="join-body-m-1">Take Action</p>
+                <p id="join-body-m-2"><a class="white linkclass" href="https://docs.google.com/forms/d/e/1FAIpQLSc5NEhSVQaHy6nW7h9o8LTuQKpO2SdaSeUvITF0siizzHJW2Q/viewform">Sign Up</a></p>
+                <p id="join-body-m-3"><a class="white linkclass" href="https://docs.google.com/forms/d/e/1FAIpQLSf4JMWxCfCpApHBJxANWuRUIH8OHHvfWaIxCN_HDPhezT9Ebg/viewform">Become an executive</a></p>
+                <p id="join-body-m-4"><a class="white linkclass"  href="https://www.instagram.com/p/C9nvJi9PVgE/">Start a chapter</a></p>
 
-        </div>
-        <div id="join-body-r">
-            <p id="join-body-r-1">Connect With Us</p>
-            <div id="join-body-r-2-wrap"><img id="classroom" src="{{ url_for('static', filename='images/classroom.png') }}" width="35" height="25.68"><p id="join-body-r-2"><a class="white linkclass" href="https://classroom.google.com/c/NjIzMzAwNzg1NTkz?cjc=fiylhtx">Join our Google Classroom</a></p></div>
-            <div id="join-body-r-2-wrap"><img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="35" height="35" ><p id="join-body-r-2"><a class="white linkclass" href="https://www.instagram.com/solvexchange/">@solvexchange</a></p></div>
-            <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXChange</a></p></div>
-            <div id="join-body-r-4-wrap"><img id="email" src="{{ url_for('static', filename='images/email.png') }}" width="35" height="25.68"><p id="join-body-r-4"><a class="white linkclass" href="mailto:solvexchange@gmail.com">solvexchange@gmail.com</a></p></div>
+            </div>
+            <div id="join-body-r">
+                <p id="join-body-r-1">Connect With Us</p>
+                <div id="join-body-r-2-wrap"><img id="classroom" src="{{ url_for('static', filename='images/classroom.png') }}" width="35" height="25.68"><p id="join-body-r-2"><a class="white linkclass" href="https://classroom.google.com/c/NjIzMzAwNzg1NTkz?cjc=fiylhtx">Join our Google Classroom</a></p></div>
+                <div id="join-body-r-2-wrap"><img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="35" height="35" ><p id="join-body-r-2"><a class="white linkclass" href="https://www.instagram.com/solvexchange/">@solvexchange</a></p></div>
+                <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXChange</a></p></div>
+                <div id="join-body-r-4-wrap"><img id="email" src="{{ url_for('static', filename='images/email.png') }}" width="35" height="25.68"><p id="join-body-r-4"><a class="white linkclass" href="mailto:solvexchange@gmail.com">solvexchange@gmail.com</a></p></div>
+            </div>
         </div>
 
     </div>
     <hr class="white-line">
 </footer>
+
 
 {% endblock %}

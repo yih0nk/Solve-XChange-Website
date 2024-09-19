@@ -379,10 +379,6 @@ body, html {
     color:#3D5DAF;
 }
 
-
-
-
-
 #lowerbottom{
     background: rgb(168,205,234);
     left:0px;
@@ -1055,5 +1051,21 @@ body, html {
     #join-body-r img{
         width:22px;
         height:auto;
+    }
+}
+
+@media screen and (max-width: 540px){
+    #top-logo{
+        margin: 5px 5px;
+        width:60px;
+        height:60px;
+    }
+
+    #top-bar{
+        padding: 10px 0px 0px 10px;
+    }
+
+    #top-interactables{
+        margin-left:50px;
     }
 }

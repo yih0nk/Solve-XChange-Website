@@ -541,7 +541,6 @@
     display:flex;
     justify-content: space-around;
     margin: 50px 60px 50px 100px;
-
     height:300px;
 }
 
@@ -553,93 +552,6 @@
 
 }
 
-#join-body-r-1{
-    font-weight:800;
-    font-size:32px;
-    margin:0px 0px 20px 0px;
-
-}
-
-#join-body-r-2-wrap,#join-body-r-3-wrap,#join-body-r-4-wrap{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    height:60px;
-}
-
-#join-body-r-2,#join-body-r-3,#join-body-r-4{
-    font-weight:400;
-    font-size:21px;
-    padding-left:20px;
-}
-
-
-#join-body-m{
-
-    flex-direction: column;
-    max-width:350px;
-
-}
-
-
-#join-body-m-1{
-    font-weight:800;
-    font-size:32px;
-    margin:0px 0px 20px 0px;
-
-}
-
-#join-body-m-2,#join-body-m-3{
-    font-weight:400;
-    font-size:21px;
-
-}
-
-#join-body-m-4{
-    font-weight:400;
-    font-size:21px;
-
-}
-
-#join-body-m-5{
-    height:15px;
-
-}
-
-#join-body-l{
-    display:flex;
-    flex-direction: column;
-    max-width:350px;
-}
-
-#join-body-l-1,#join-body-l-3{
-    font-weight:800;
-    font-size:40px;
-    color:white;
-    margin:0px;
-    padding:0px;
-    text-align: left;
-    line-height:40px;
-}
-
-#join-body-l-2{
-    font-weight:800;
-    font-size:40px;
-    color:white;
-    -webkit-text-fill-color: #3d5daf;
-    -webkit-text-stroke: 1.5px white;
-    margin:0px;
-    padding:0px;
-    text-align: left;
-}
-
-#join-body-l-4{
-    font-weight:300;
-    font-size:18px;
-    color:white;
-    margin:20px 0px 0px 0px;
-    text-align: left;
-}
 
 .white-line{
     width: 85%;
@@ -660,4 +572,145 @@
 
 .white,.white:visited,.white:active,.white:hover{
     color:white;
+}
+
+/* tablet */
+@media screen and (max-width:1100px)  {
+
+}
+
+/* phone */
+@media screen and (max-width:540px){
+    #top-title{
+        font-size: 44px;
+    }
+
+    #top-title-div{
+        padding-top: 60px;
+    }
+
+    #forum-slogan{
+        font-size: 16px;
+    }
+
+    #forum-button{
+        width:270px;
+        height:60px;
+        padding:6px;
+        margin-top: 18px;
+        font-size: 22px;
+    }
+
+    #top-wrapper{
+        padding-bottom: 40px;
+    }
+
+    #info-title{
+        font-size: 32px;
+        margin-left: 9%;
+    }
+
+    #info-displayed{
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 9%;
+        padding-right: 9%;
+    }
+
+    #forum-reminder{
+        font-size: 16px;
+        line-height: 26px;
+        margin-left: 9%;
+        padding-top: 8px;
+    }
+
+    #post-form{
+        margin-left: 12%;
+    }
+
+    #username{
+        font-size: 18px;
+        padding-top: 10px;
+    }
+
+    #topic{
+        width: 80%;
+        font-size: 20px;
+    }
+
+    #content{
+        width: 80%;
+        height: 200px;
+        font-size:18px;
+    }
+
+    #discussion-div{
+        padding-top: 30px;
+    }
+
+    #discussion{
+        font-size: 36px;
+        margin-left: 60px;
+    }
+
+    #post-button{
+        width: 20%;
+        text-align: right;
+        margin-left: 210px;
+    }
+
+    #post-submit{
+        width:100px;
+        height:35px;
+        margin-top: 10px;
+        font-size:20px;
+    }
+
+    #comments {
+        margin-left: 11%;
+        width: 80%;
+    }
+
+    .post{
+        margin-left: 10px;
+        margin-top: 20px;
+        padding-left: 25px;
+        padding-top: 20px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+    }
+
+    .post-reply{
+        padding: 20px;
+        padding-left: 50px;
+        margin-left: 150px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+    }
+    
+    .post-content {
+        overflow-wrap: break-word;
+        text-align: left;
+        line-height: 30px;
+        font-size: 19px;
+    }
+    
+    .post-content-by {
+        text-align: left;
+        line-height: 22px;
+        font-size: 16px;
+    }
+    
+    .post-content-topic {
+        line-height: 28px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    
+    .post-metadata {
+        font-size: 14px;
+        font-style: italic;
+        padding-right: 5px;
+        margin: 0;
+    }
 }

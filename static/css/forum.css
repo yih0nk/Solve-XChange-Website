@@ -552,6 +552,93 @@
 
 }
 
+#join-body-r-1{
+    font-weight:800;
+    font-size:32px;
+    margin:0px 0px 20px 0px;
+
+}
+
+#join-body-r-2-wrap,#join-body-r-3-wrap,#join-body-r-4-wrap{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    height:60px;
+}
+
+#join-body-r-2,#join-body-r-3,#join-body-r-4{
+    font-weight:400;
+    font-size:21px;
+    padding-left:20px;
+}
+
+
+#join-body-m{
+
+    flex-direction: column;
+    max-width:350px;
+
+}
+
+
+#join-body-m-1{
+    font-weight:800;
+    font-size:32px;
+    margin:0px 0px 20px 0px;
+
+}
+
+#join-body-m-2,#join-body-m-3{
+    font-weight:400;
+    font-size:21px;
+
+}
+
+#join-body-m-4{
+    font-weight:400;
+    font-size:21px;
+
+}
+
+#join-body-m-5{
+    height:15px;
+
+}
+
+#join-body-l{
+    display:flex;
+    flex-direction: column;
+    max-width:350px;
+}
+
+#join-body-l-1,#join-body-l-3{
+    font-weight:800;
+    font-size:40px;
+    color:white;
+    margin:0px;
+    padding:0px;
+    text-align: left;
+    line-height:40px;
+}
+
+#join-body-l-2{
+    font-weight:800;
+    font-size:40px;
+    color:white;
+    -webkit-text-fill-color: #3d5daf;
+    -webkit-text-stroke: 1.5px white;
+    margin:0px;
+    padding:0px;
+    text-align: left;
+}
+
+#join-body-l-4{
+    font-weight:300;
+    font-size:18px;
+    color:white;
+    margin:20px 0px 0px 0px;
+    text-align: left;
+}
 
 .white-line{
     width: 85%;
@@ -574,13 +661,70 @@
     color:white;
 }
 
-/* tablet */
-@media screen and (max-width:1100px)  {
-
+#extra-wrapper-parent{
+    margin-top:200px;
 }
 
+#join-body-b{
+    display:flex;
+    flex-direction: row;
+    gap:100px;
+}
+
+
+
+/* tablet */
+@media screen and (max-width:1100px)  {
+    #join-body-l1{
+        display:flex;
+        gap:2%;
+        align-items: center;
+    }
+
+    #join-body-l-4{
+        max-width:80%;
+        text-align: center;
+        font-size:16px;
+    }
+
+    #join-body-b{
+        display:flex;
+        gap:20%;
+        margin-top:50px;
+    }
+
+    #join-body{
+        flex-direction: column;
+        height:auto;
+    }
+
+    #join-body-l{
+        max-width:none;
+        align-items: center;
+    }
+
+    #join-body-m{
+        max-width: none;
+    }
+
+    #join-body-r{
+        max-width: none;
+    }
+    #join-body-l-1,#join-body-l-2,#join-body-l-3{
+        font-size:35px;
+    }
+}
+
+@media screen and (max-width:845px){
+    #join-body-b{
+        gap:15%;
+    }
+}
+
+
+
 /* phone */
-@media screen and (max-width:540px){
+@media screen and (max-width:700px){
     #top-title{
         font-size: 44px;
     }

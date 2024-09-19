@@ -239,16 +239,16 @@ body, html {
     }
     #login-button{
         width: 25%;
-        margin-left: 0px;
+        margin-left: -65%;
     }
 }
 
 @media screen and (max-width:425px){
     .vcenter-fstretch{
-        margin-left: -23%;
+        margin-left: -28%;
     }
     .register-account{
-        font-size:20px;
+        font-size:18px;
     }
     #box-wrapper{
         width: 80%;
@@ -261,7 +261,7 @@ body, html {
     #login-button{
         margin-top: 20px;
         width: 40%;
-        margin-left: 0px;
+        margin-left: -50%;
     }
 }
 
@@ -283,7 +283,7 @@ body, html {
     #login-button{
         margin-top: 20px;
         width: 40%;
-        margin-left: 0px;
+        margin-left: -50%;
     }
 }
 
@@ -305,6 +305,6 @@ body, html {
     #login-button{
         margin-top: 20px;
         width: 40%;
-        margin-left: 0px;
+        margin-left: -50%;
     }
 }

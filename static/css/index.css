@@ -123,7 +123,6 @@ body, html {
 .toplinka{
     text-decoration:none;
     color:black;
-    position: relative;
     background: linear-gradient(#3D5DAF 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.08em);
     transition: .2s var(--t,0s), background-position .1s calc(.3s - var(--t,0s));
 }
@@ -1057,15 +1056,17 @@ body, html {
 @media screen and (max-width: 540px){
     #top-logo{
         margin: 5px 5px;
-        width:60px;
-        height:60px;
-    }
-
-    #top-bar{
-        padding: 10px 0px 0px 10px;
+        width:20px;
+        height:20px;
     }
 
     #top-interactables{
-        margin-left:50px;
+        margin-left: 5px;
+    }
+
+    .toplink{
+        font-size: 12px;
+        padding: 3px;
+        line-height: 15px;
     }
 }

@@ -353,7 +353,7 @@ body, html {
 
 }
 
-
+/* Footer */
 
 #join-wrapper{
     width: 100%;
@@ -368,7 +368,6 @@ body, html {
     display:flex;
     justify-content: space-around;
     margin: 50px 60px 50px 100px;
-
     height:300px;
 }
 
@@ -487,6 +486,152 @@ body, html {
 
 .white,.white:visited,.white:active,.white:hover{
     color:white;
+}
+
+#extra-wrapper-parent{
+    margin-top:200px;
+}
+
+#join-body-b{
+    display:flex;
+    flex-direction: row;
+    gap:100px;
+}
+
+@media screen and (max-width:1100px)  {
+    #join-body-l1{
+        display:flex;
+        gap:2%;
+        align-items: center;
+    }
+
+    #join-body-l-4{
+        max-width:80%;
+        text-align: center;
+        font-size:16px;
+    }
+
+    #join-body-b{
+        display:flex;
+        gap:20%;
+        margin-top:50px;
+    }
+
+    #join-body{
+        flex-direction: column;
+        height:auto;
+    }
+
+    #join-body-l{
+        max-width:none;
+        align-items: center;
+    }
+
+    #join-body-m{
+        max-width: none;
+    }
+
+    #join-body-r{
+        max-width: none;
+    }
+    #join-body-l-1,#join-body-l-2,#join-body-l-3{
+        font-size:35px;
+    }
+    
+
+}
+
+
+@media screen and (max-width:845px)  {
+    #join-body-b{
+        gap:15%;
+    }
+
+}
+
+@media screen and (max-width:700px)  {
+    #join-body-l1{
+        flex-direction: column;
+    }
+    #join-body-l-4{
+        width:100%
+    }
+    #join-body{
+        margin:40px 50px;
+    }
+    #join-body-b{
+        flex-direction: column;
+        gap:20px;
+    }
+
+    #join-body-m-1,#join-body-r-1{
+        font-size:22px;
+    }
+
+    #join-body-m-1,#join-body-m-2,#join-body-m-3,#join-body-m-4{
+        font-size:17px;
+    }
+
+    #join-body-r-1,#join-body-r-2,#join-body-r-3,#join-body-r-4{
+        font-size:17px;
+        margin:15px 0px;
+    }
+
+    #join-body-r img{
+        width:22px;
+        height:auto;
+    }
+}
+
+/* Footer */
+
+@media screen and (max-width:700px){
+    #topportion{
+        padding:5%;
+    }
+    #headertext{
+        font-size: 65px;
+    }
+    #mainbody{
+        margin-left: 33%;
+    }
+    #updatesheadertext{
+        margin-left: 10%;
+    }
+    #updates{
+        margin-left:-50%;
+    }
+    .lessoncontainer{
+        margin: 10%;
+    }
+    .numwrap{
+        margin: 5%;
+    }
+    .findthelesson{
+        margin: 15%;
+    }
+    .line{
+        margin-right: 7%;
+    }
+    #lessons{
+        flex-direction: column;
+        margin-left: 9%;
+    }
+    #joinus{
+        flex-direction: column;
+    }
+    #joinus-image{
+
+        padding: 5%;
+    }
+    .join-left{
+        margin-left:5%;
+        padding: 8%;
+    }
+    .join-right{
+        margin-left:15%;
+        padding-bottom: 12%;
+    }
 }
 
 @media screen and (max-width:425px){

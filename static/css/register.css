@@ -253,3 +253,26 @@ body, html {
         font-size:18px;
     }
 }
+
+@media screen and (max-width:700px){
+    #box-wrapper{
+        width: 75%;
+        max-width:700px;
+    }
+    #main{
+        margin-top: 25%;
+        font-size: 18px;
+    }
+    #email-input{
+        font-size:18px;
+    }
+    .vcenter-fstretch{
+        margin-left: -23%;
+    }
+    #verify-button{
+        margin-top: 20px;
+        width: 40%;
+        margin-left: -46%;
+        font-size:18px;
+    }
+}

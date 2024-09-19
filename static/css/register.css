@@ -230,3 +230,18 @@ body, html {
     padding-bottom: 45px;
     padding-top: 13px;
 }
+
+@media screen and (max-width:425px){
+    #box-wrapper{
+        width: 80%;
+        
+    }
+    .vcenter-fstretch{
+        margin-left: -28%;
+    }
+    #verify-button{
+        margin-top: 20px;
+        width: 40%;
+        margin-left: -50%;
+    }
+}

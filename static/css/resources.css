@@ -488,3 +488,52 @@ body, html {
 .white,.white:visited,.white:active,.white:hover{
     color:white;
 }
+
+@media screen and (max-width:425px){
+    #topportion{
+        padding:5%;
+    }
+    #headertext{
+        font-size: 65px;
+    }
+    #mainbody{
+        margin-left: 33%;
+    }
+    #updatesheadertext{
+        margin-left: 10%;
+    }
+    #updates{
+        margin-left:-50%;
+    }
+    .lessoncontainer{
+        margin: 10%;
+    }
+    .numwrap{
+        margin: 5%;
+    }
+    .findthelesson{
+        margin: 15%;
+    }
+    .line{
+        margin-right: 7%;
+    }
+    #lessons{
+        flex-direction: column;
+        margin-left: 5%;
+    }
+    #joinus{
+        flex-direction: column;
+    }
+    #joinus-image{
+
+        padding: 5%;
+    }
+    .join-left{
+        margin-left:5%;
+        padding: 8%;
+    }
+    .join-right{
+        margin-left:15%;
+        padding-bottom: 12%;
+    }
+}

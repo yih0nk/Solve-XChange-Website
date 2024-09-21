@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 import random
 
 app = Flask(__name__)
-ServerMode = False
+ServerMode = True
 if (ServerMode):
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/mississaugachessclub/SolveXChange/instance/database.db'
 else:

@@ -5,6 +5,7 @@
 <link href="{{ url_for('static', filename='css/forum.css') }}" rel="stylesheet">
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="32x32" />
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="16x16" />
+<link href="{{ url_for('static', filename='css/global.css') }}" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
@@ -74,7 +75,7 @@
     <div id="forum-slogan">
         <p>Your voice and experiences matter. Contribute to<br>your commuity by sharing your ideas.</p>
     </div>
-    <button id="forum-button" type="button" onclick="location.href='#discussion-position'">See The Discussion</button>
+    <button id="forum-button" class="global-button" type="button" onclick="location.href='#discussion-position'">See The Discussion</button>
 </section>
 <div class="divider">
     <div class="divider3"></div>
@@ -194,7 +195,7 @@
                 <p id="join-body-r-1">Connect With Us</p>
                 <div id="join-body-r-2-wrap"><img id="classroom" src="{{ url_for('static', filename='images/classroom.png') }}" width="35" height="25.68"><p id="join-body-r-2"><a class="white linkclass" href="https://classroom.google.com/c/NjIzMzAwNzg1NTkz?cjc=fiylhtx">Join our Google Classroom</a></p></div>
                 <div id="join-body-r-2-wrap"><img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="35" height="35" ><p id="join-body-r-2"><a class="white linkclass" href="https://www.instagram.com/solvexchange/">@solvexchange</a></p></div>
-                <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXChange</a></p></div>
+                <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXchange</a></p></div>
                 <div id="join-body-r-4-wrap"><img id="email" src="{{ url_for('static', filename='images/email.png') }}" width="35" height="25.68"><p id="join-body-r-4"><a class="white linkclass" href="mailto:solvexchange@gmail.com">solvexchange@gmail.com</a></p></div>
             </div>
         </div>

@@ -13,9 +13,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="color-scheme" content="light only" />
-<meta name="description" content="SolveXChange Resources" />
-<meta property="og:site_name" content="SolveXChange" />
-<meta property="og:title" content="SolveXChange" />
+<meta name="description" content="SolveXchange Resources" />
+<meta property="og:site_name" content="SolveXchange" />
+<meta property="og:title" content="SolveXchange" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +25,8 @@
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="16x16" />
 <link href="{{ url_for('static', filename='css/resources.css') }}" rel="stylesheet">
 <script src="{{ url_for('static', filename='js/resources.js') }}"></script>
+<link href="{{ url_for('static', filename='css/global.css') }}" rel="stylesheet">
+
 
 {% endblock %}
 
@@ -69,17 +71,17 @@
             <div class="lessoncontainer lesson1">
                 <div class='numwrap'><p class="lessonnum">1</p></div>
                 <div class='detailwrap'><p class="lessondetails"><strong>Week 4:</strong> Building a Business Proposal</p></div>
-                <div class="lessonwrap"><a href="https://docs.google.com/presentation/d/1uevSJYok4rFTejS3wKC-4nRpUFvxjQ8Kh0FTmEU997k/edit#slide=id.gc6c548e9cb_0_0" class="findthelesson-link"><p class="findthelesson">FIND THE LESSON</p></a></div>
+                <div class="lessonwrap"><a href="https://docs.google.com/presentation/d/1uevSJYok4rFTejS3wKC-4nRpUFvxjQ8Kh0FTmEU997k/edit#slide=id.gc6c548e9cb_0_0" class="findthelesson-link linkclass"><p class="findthelesson">FIND THE LESSON</p></a></div>
             </div>
             <div class="lessoncontainer lesson2">
                 <div class='numwrap'><p class="lessonnum">2</p></div>
                 <div class='detailwrap'><p class="lessondetails"><strong>Week 5:</strong> Budget and Finance</p></div>
-                <div class="lessonwrap"><a href="https://docs.google.com/presentation/d/19TTLZ8t-UOptR5YmF-eiVuWus7boo03efd9gfyDKnNo/edit#slide=id.ga00a88a2fe_0_377" class="findthelesson-link"><p class="findthelesson">FIND THE LESSON</p></a></div>
+                <div class="lessonwrap"><a href="https://docs.google.com/presentation/d/19TTLZ8t-UOptR5YmF-eiVuWus7boo03efd9gfyDKnNo/edit#slide=id.ga00a88a2fe_0_377" class="findthelesson-link linkclass"><p class="findthelesson">FIND THE LESSON</p></a></div>
             </div>
             <div class="lessoncontainer lesson3">
                 <div class='numwrap'><p class="lessonnum">3</p></div>
                 <div class='detailwrap'><p class="lessondetails"><strong>Week 6:</strong> Marketing Your Idea</p></div>
-                <div class="lessonwrap"><a href="https://docs.google.com/presentation/d/1cDkx4JsBWvCsIR--ehQG3cneQvGLx1DQxd7SAyrDIPo/edit#slide=id.p" class="findthelesson-link"><p class="findthelesson">FIND THE LESSON</p></a></div>
+                <div class="lessonwrap"><a href="https://docs.google.com/presentation/d/1cDkx4JsBWvCsIR--ehQG3cneQvGLx1DQxd7SAyrDIPo/edit#slide=id.p" class="findthelesson-link linkclass"><p class="findthelesson">FIND THE LESSON</p></a></div>
             </div>
 
         </section>
@@ -93,7 +95,7 @@
                 <hr class="presentationimagedivider">
                 <p class = "pnum"><em>Lesson 0</em></p>
                 <a class="linkclass" href="https://docs.google.com/presentation/d/1c9L6FAKbc1HbSy3ddeBd95Xu_Eg1KT9DjUv_uu7BDn4/edit#slide=id.g129635d4b2e_0_0">
-                <p class = "ptitle ">Welcome to SolveXChange</p>
+                <p class = "ptitle ">Welcome to SolveXchange</p>
                 </a>
                 <p class = "pdesc">Learn more about SolveXchange, the rules and guidelines of the competition and understand the full judging criteria. </p>
                 <p class="pdate ">March 19, 2024</p>
@@ -179,7 +181,7 @@
         <div class="join-left">
             <p class="join-headertext">Join Us</p>
             <p class="join-subtitle">Make a difference in your community today. See how you can get involved</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5NEhSVQaHy6nW7h9o8LTuQKpO2SdaSeUvITF0siizzHJW2Q/viewform"><button type="button" id="signup-button">SIGN UP</button></a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5NEhSVQaHy6nW7h9o8LTuQKpO2SdaSeUvITF0siizzHJW2Q/viewform"><button type="button" class="global-button" id="signup-button">SIGN UP</button></a>
         </div>
         <div id="join-center">
             <img id="joinus-image" src="{{ url_for('static', filename='images/joinus.png') }}">
@@ -187,7 +189,7 @@
         <div class="join-right">
             <p class="join-headertext">Any Questions?</p>
             <p class="join-subtitle">Send us an email or DM! See our FAQ page.</p>
-            <a href="/faq"><button type="button" id="signup-button">FAQ</button></a>
+            <a href="/faq"><button type="button" class="global-button"  id="signup-button">FAQ</button></a>
         </div>
         </div>
 
@@ -216,7 +218,7 @@
                     <p id="join-body-r-1">Connect With Us</p>
                     <div id="join-body-r-2-wrap"><img id="classroom" src="{{ url_for('static', filename='images/classroom.png') }}" width="35" height="25.68"><p id="join-body-r-2"><a class="white linkclass" href="https://classroom.google.com/c/NjIzMzAwNzg1NTkz?cjc=fiylhtx">Join our Google Classroom</a></p></div>
                     <div id="join-body-r-2-wrap"><img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="35" height="35" ><p id="join-body-r-2"><a class="white linkclass" href="https://www.instagram.com/solvexchange/">@solvexchange</a></p></div>
-                    <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXChange</a></p></div>
+                    <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXchange</a></p></div>
                     <div id="join-body-r-4-wrap"><img id="email" src="{{ url_for('static', filename='images/email.png') }}" width="35" height="25.68"><p id="join-body-r-4"><a class="white linkclass" href="mailto:solvexchange@gmail.com">solvexchange@gmail.com</a></p></div>
                 </div>
             </div>

@@ -13,7 +13,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="color-scheme" content="light only" />
-<meta name="description" content="SolveXChange FAQ" />
+<meta name="description" content="SolveXchange FAQ" />
 
 <meta property="og:description" content="" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +23,8 @@
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="16x16" />
 <link href="{{ url_for('static', filename='css/faq.css') }}" rel="stylesheet">
 <script src="{{ url_for('static', filename='js/faq.js') }}"></script>
+<link href="{{ url_for('static', filename='css/global.css') }}" rel="stylesheet">
+
 
 {% endblock %}
 
@@ -148,9 +150,9 @@
     <section id="keep-exploring">
         <div id="keep-exploring-left">
             <a class="headertext-2">Keep<br>Exploring</a>
-            <button type="button" class="gradient-button">Get Involved → </button>
-            <button type="button" class="gradient-button">Share Your Ideas → </button>
-            <button type="button" class="gradient-button">Contact Us → </button>
+            <button type="button" class="gradient-button global-button">Get Involved → </button>
+            <button type="button" class="gradient-button global-button">Share Your Ideas → </button>
+            <button type="button" class="gradient-button global-button">Contact Us → </button>
         </div>
 
         <div id="keep-exploring-right">
@@ -182,7 +184,7 @@
                     <p id="join-body-r-1">Connect With Us</p>
                     <div id="join-body-r-2-wrap"><img id="classroom" src="{{ url_for('static', filename='images/classroom.png') }}" width="35" height="25.68"><p id="join-body-r-2"><a class="white linkclass" href="https://classroom.google.com/c/NjIzMzAwNzg1NTkz?cjc=fiylhtx">Join our Google Classroom</a></p></div>
                     <div id="join-body-r-2-wrap"><img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="35" height="35" ><p id="join-body-r-2"><a class="white linkclass" href="https://www.instagram.com/solvexchange/">@solvexchange</a></p></div>
-                    <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXChange</a></p></div>
+                    <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXchange</a></p></div>
                     <div id="join-body-r-4-wrap"><img id="email" src="{{ url_for('static', filename='images/email.png') }}" width="35" height="25.68"><p id="join-body-r-4"><a class="white linkclass" href="mailto:solvexchange@gmail.com">solvexchange@gmail.com</a></p></div>
                 </div>
             </div>

@@ -24,7 +24,9 @@
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="32x32" />
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="16x16" />
 <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/global.css') }}" rel="stylesheet">
 <script src="{{ url_for('static', filename='js/index.js') }}" defer></script>
+
 {% endblock %}
 
 {% block body %}
@@ -58,7 +60,7 @@
         <div id="leftwrappertop">
             <p id="headertext">SolveXchange</p>
             <p id="subtitletext">Turning Vision into Reality, One Proposal at a Time</p>
-            <a href="/aboutus"><button type="button" id="aboutus-button">ABOUT US</button></a>
+            <a href="/aboutus"><button type="button" class="global-button" id="aboutus-button">ABOUT US</button></a>
 
         </div>
 
@@ -184,7 +186,7 @@
                 <div class="extra-info-subtext">
                     <p>Interested in becoming a leader? Open a chapter of SolveXchange at your high school! Become a part of our growing executive team by bringing SolveXchange to your own community.</p>
                 </div>
-                <a href="/getinvolved"><button id="getinvolved-button2" type="button">Get Involved</button></a>
+                <a href="/getinvolved"><button class="global-button"  id="getinvolved-button2" type="button">Get Involved</button></a>
             </div>
             <div class="extra-format">
                 <label class="extra-info-subtitle">Join Our Exec Team</label>
@@ -199,8 +201,8 @@
         <div id="lowermorebottomleft">
             <p id="lmbl_header">Are you interested?</p>
             <p id="lmbl_desc">Sign up to be a part of SolveXchange today or share your ideas on a community-wide forum!</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5NEhSVQaHy6nW7h9o8LTuQKpO2SdaSeUvITF0siizzHJW2Q/viewform"><button type="button" class="button-style2">Join Now</button></a>
-            <a href="/forum"><button type="button" class="button-style2">Share Ideas</button></a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5NEhSVQaHy6nW7h9o8LTuQKpO2SdaSeUvITF0siizzHJW2Q/viewform"><button type="button" class="button-style2 global-button">Join Now</button></a>
+            <a href="/forum"><button type="button" class="button-style2 global-button">Share Ideas</button></a>
         </div>
         <img id="filler-image" draggable="false" src="{{ url_for('static', filename='images/filler.png') }}">
     </div>
@@ -229,7 +231,7 @@
                 <p id="join-body-r-1">Connect With Us</p>
                 <div id="join-body-r-2-wrap"><img id="classroom" src="{{ url_for('static', filename='images/classroom.png') }}" width="35" height="25.68"><p id="join-body-r-2"><a class="white linkclass" href="https://classroom.google.com/c/NjIzMzAwNzg1NTkz?cjc=fiylhtx">Join our Google Classroom</a></p></div>
                 <div id="join-body-r-2-wrap"><img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="35" height="35" ><p id="join-body-r-2"><a class="white linkclass" href="https://www.instagram.com/solvexchange/">@solvexchange</a></p></div>
-                <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXChange</a></p></div>
+                <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXchange</a></p></div>
                 <div id="join-body-r-4-wrap"><img id="email" src="{{ url_for('static', filename='images/email.png') }}" width="35" height="25.68"><p id="join-body-r-4"><a class="white linkclass" href="mailto:solvexchange@gmail.com">solvexchange@gmail.com</a></p></div>
             </div>
         </div>

@@ -24,6 +24,8 @@
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="32x32" />
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="16x16" />
 <link href="{{ url_for('static', filename='css/login.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/global.css') }}" rel="stylesheet">
+
 {% endblock %}
 
 {% block body %}
@@ -72,7 +74,7 @@
                     <label id="show-text" for="show-password">Show</label>
                 </div>
             </div>
-            <input id='login-button' type="submit" value="Log in!">
+            <input id='login-button'class="global-button" type="submit" value="Log in!">
         </div>
     </form>
 </div>

@@ -5,6 +5,8 @@
 <link href="{{ url_for('static', filename='css/getinvolved.css') }}" rel="stylesheet">
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="32x32" />
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}" sizes="16x16" />
+<link href="{{ url_for('static', filename='css/global.css') }}" rel="stylesheet">
+
 {% endblock %}
 
 {% block body %}
@@ -104,7 +106,7 @@
             <div id="second-wrapper-email">
                 <label>Reach out to us through email:</label>
             </div>
-            <a href="mailto: solvexchange.info@gmail.com"><button id="email-button" type="button"><img src="{{ url_for('static', filename='images/email-button.jpg') }}" width="40"> <span id="email-text">solvexchange.info@gmail.com</span></button></a>
+            <a href="mailto: solvexchange.info@gmail.com"><button id="email-button" class="global-button" type="button"><img src="{{ url_for('static', filename='images/email-button.jpg') }}" width="40"> <span id="email-text">solvexchange.info@gmail.com</span></button></a>
         </div>
     </div>
     <div id="second-wrapper-right">
@@ -118,7 +120,7 @@
         <div class="third-wrapper-subtext">
             <p class="line-height-35">What issues do you find present within your community? Have you thought of a solution to a problem you experience as a member of Halton? Share your ideas through a community-wide forum to hear the opinions of others, and further expand your plan. See what others have to share and collaborate with your peers!</p>
         </div>
-        <a href="/forum"><button class="third-wrapper-button" type="button">See the Forum</button></a>
+        <a href="/forum"><button class="third-wrapper-button global-button" type="button">See the Forum</button></a>
     </div>
 </section>
 
@@ -150,7 +152,7 @@
                 <br>
             </div>
         </div>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScwHzsuwB6qbjoAch0NWq4nf40U7KF-nRHoqGN5gFPpYORP2w/viewform"><button class="third-wrapper-button" type="button">Sign Up</button></a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScwHzsuwB6qbjoAch0NWq4nf40U7KF-nRHoqGN5gFPpYORP2w/viewform"><button class="third-wrapper-button global-button" type="button">Sign Up</button></a>
     </div>
 </section>
 
@@ -174,7 +176,7 @@
                 <br>
             </div>
         </div>
-        <a href="https://docs.google.com/forms/d/13MJiQ7BG2r6cklOLLFUuLM13Pi9HD4VDI_M2zGmdmf0/edit"><button class="third-wrapper-button" type="button">Apply Now</button></a>
+        <a href="https://docs.google.com/forms/d/13MJiQ7BG2r6cklOLLFUuLM13Pi9HD4VDI_M2zGmdmf0/edit"><button class="third-wrapper-button global-button" type="button">Apply Now</button></a>
     </div>
 </section>
 <section id="forth-wrapper">
@@ -203,7 +205,7 @@
             </div>
         </div>
         <div>
-            <a href="/faq"><button id="qa-button" type="button">FAQ</button></a>
+            <a href="/faq"><button id="qa-button"  class="global-button" type="button">FAQ</button></a>
         </div>
     </div>
 </section>
@@ -230,7 +232,7 @@
                 <p id="join-body-r-1">Connect With Us</p>
                 <div id="join-body-r-2-wrap"><img id="classroom" src="{{ url_for('static', filename='images/classroom.png') }}" width="35" height="25.68"><p id="join-body-r-2"><a class="white linkclass" href="https://classroom.google.com/c/NjIzMzAwNzg1NTkz?cjc=fiylhtx">Join our Google Classroom</a></p></div>
                 <div id="join-body-r-2-wrap"><img id="insta" src="{{ url_for('static', filename='images/insta.png') }}" width="35" height="35" ><p id="join-body-r-2"><a class="white linkclass" href="https://www.instagram.com/solvexchange/">@solvexchange</a></p></div>
-                <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXChange</a></p></div>
+                <div id="join-body-r-3-wrap"><img id="linkedin" src="{{ url_for('static', filename='images/linkedin.png') }}" width="35" height="35"><p id="join-body-r-3"><a class="white linkclass" href="https://www.linkedin.com/in/solvexchange-irhs-3b6526288/">SolveXchange</a></p></div>
                 <div id="join-body-r-4-wrap"><img id="email" src="{{ url_for('static', filename='images/email.png') }}" width="35" height="25.68"><p id="join-body-r-4"><a class="white linkclass" href="mailto:solvexchange@gmail.com">solvexchange@gmail.com</a></p></div>
             </div>
         </div>

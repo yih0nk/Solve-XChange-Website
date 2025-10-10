@@ -2,11 +2,40 @@ from database import *
 from sqlalchemy import func
 from flask_migrate import Migrate
 import secrets
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from email.mime.application import MIMEApplication
 
 migrate = Migrate(app, db)
 
 login_expiration_time = timedelta(days=1, hours=0, minutes=0, seconds=0)
 #domain = '127.0.0.1:5000'
+
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_ADDRESS = 'solvexchange.noreply@gmail.com'
+EMAIL_PASSWORD = 'sbqv nabc jmmo vbzi'
+
+
+def send_email_register(member_email, message):
+    s = smtplib.SMTP(EMAIL_HOST, EMAIL_PORT)
+    s.starttls()
+    s.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+    
+    msg = MIMEMultipart()
+    msg['From'] = EMAIL_ADDRESS
+    msg['To'] = member_email
+    msg['Subject'] = "Verify your email"
+    msg.attach(MIMEText(message, 'plain'))
+
+    s.sendmail(EMAIL_ADDRESS, member_email, msg.as_string())
+    print("Email sent")
+    del msg
+    s.quit()
+
 
 #region Redirects
 @app.route('/')
@@ -192,9 +221,8 @@ def send_verification_email():
 
     token = current_token.token if current_token else generate_token()
 
-    msg = Message('Verify your email', sender='solvexchange@hotmail.com', recipients=[data['email']])
-    msg.body = f'Here is your verification link! Click to finish your registration.\nhttp://www.solvexchange.ca/register?email={data["email"]}&token={token}'
-    mail.send(msg)
+    msg = f'Here is your verification link! Click to finish your registration.\nhttp://www.solvexchange.ca/register?email={data["email"]}&token={token}'
+    send_email_register(data['email'], msg)
 
     if current_token:
         return jsonify({ 'result' : 'success' })

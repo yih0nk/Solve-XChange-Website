@@ -38,11 +38,6 @@ function showPassword() {
 function verify(event) {
     event.preventDefault();
 
-    if (emailInput.value.substring(emailInput.value.length - 8, emailInput.value.length) != '@hdsb.ca') {
-        logError('The email you entered is either invalid or not an HDSB email.');
-        return
-    }
-
     $.ajax({
         url: '/send-verify-email',
         type: 'POST',
